@@ -445,8 +445,8 @@ h6 p {
 .show-rooms h3 {
   font-family: "estilo-pro",sans-serif;
   font-weight: 400;
-  font-size: 1.7em;
-  text-transform: uppercase;
+  font-size: 1.75em;
+  text-transform: lowercase;
 }
 
 .show-rooms h3:after {

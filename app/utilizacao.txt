@@ -1,0 +1,6 @@
+<link rel="apple-touch-icon" href="/Assets/img/favicons/apple-touch-icon-precomposed.png" />
+<link sizes="72x72" rel="apple-touch-icon" href="/Assets/img/favicons/apple-touch-icon-72x72-precomposed.png" />
+<link sizes="114x114" rel="apple-touch-icon" href="/Assets/img/favicons/apple-touch-icon-114x114-precomposed.png" />
+<link sizes="144x144" rel="apple-touch-icon" href="/Assets/img/favicons/apple-touch-icon-144x144-precomposed.png" />
+<link rel="icon" href="/Assets/img/favicons/favicon.ico" />
+<link sizes="32x32" type="image/png" rel="icon" href="/Assets/img/favicons/favicon-32.ico" />
