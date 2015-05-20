@@ -3,7 +3,7 @@
 ////Date: 05/05/2015
 ////Company:euro-m.pt
 //////////////  AREAS DE JOGO  /////////////////////////
-var app 
+var app;
 var AppEngine = function(){
     var instance = this;
     console.log('ENGINE START')
@@ -52,7 +52,12 @@ AppEngine.prototype.toggleMenu = function(event){
 }
 AppEngine.prototype.toggleLanguage = function(event){
     var target = event.target;
-    event.preventDefault();
+    if(event.preventDefault) {
+        event.preventDefault();
+    } else {
+        event.returnValue = false;
+    }
+    
      var isOpen = parseFloat(target.getAttribute("attrib-open"));
     var el = $('#language-options');
     if (isOpen) {
@@ -68,13 +73,44 @@ AppEngine.prototype.closeMenu = function(event){
     var target = event.target;
     var parent =  target.parentNode;
     var el = $(parent);
-    var eventD = new Event('click');
+    var mousedownEvent;
+    if (event.initMouseEvent) {     // all browsers except IE before version 9
+        mousedownEvent = document.createEvent ("MouseEvent");
+        mousedownEvent.initMouseEvent ("click", true, true, window, 0, 
+                                    event.screenX, event.screenY, event.clientX, event.clientY, 
+                                    event.ctrlKey, event.altKey, event.shiftKey, event.metaKey, 
+                                    0, null);
+        //event.target.dispatchEvent (mousedownEvent);
+    } else {
+        if (document.createEventObject) {   // IE before version 9
+            mousedownEvent = document.createEventObject (window.event);
+            mousedownEvent.button = 1;  // left button is down
+            //event.srcElement.fireEvent ("onmousedown", mousedownEvent);
+        }
+    }
+    var eventD = mousedownEvent;
+    /// var eventD = new MouseEvent('click', {'view': window,'bubbles': true,'cancelable': true});
+    //var eventD = new Event('click');
+    //var eventD = document.createEvent('click');
+
+
+    if (!event.initMouseEvent){
+            console.log(this);
+            console.log(eventD)
+            console.log(event,app);
+        } else {
+            console.log('initMouseEvent');
+        }
+
     if(parent.id=='menu-options'){
-        app.btmenu.setAttribute("attrib-open",1);
-        app.btmenu.dispatchEvent(eventD);
+        
+        //triggerEvent(app.btmenu,'click');
+        //app.btmenu.setAttribute("attrib-open",1);
+        //app.btmenu.dispatchEvent(eventD);
     } else {
         app.btlang.setAttribute("attrib-open",1);
-        app.btlang.dispatchEvent(eventD);
+        triggerEvent(app.btmenu,'click');
+        //app.btlang.dispatchEvent(eventD);
     }
 }
 AppEngine.prototype.closeLang = function(event){
