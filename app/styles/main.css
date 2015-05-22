@@ -11,6 +11,10 @@ body {
   color: #333;
 }
 
+section.content {
+  text-align: center;
+}
+
 .hero-unit {
   margin: 50px auto 0 auto;
   width: 300px;
@@ -52,18 +56,72 @@ body {
 }
 
 .logo {
-  margin-left: 50px;
+  position: absolute;
+  z-index: 2;
+}
+
+div.transparent-shadow {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+}
+
+div.fotorama__stage {
+  width: 100% !important;
+}
+
+div.fotorama__stage__frame.fotorama__active {
+  width: 100% !important;
 }
 
 div.fotorama__nav__shaft {
   display: none;
 }
 
+.featured-content {
+  position: relative;
+}
+
+.featured-content p {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  color: #fff;
+  font-family: "estilo-pro",sans-serif;
+  font-weight: 400;
+  font-size: 2.1em;
+  width: 460px;
+  line-height: 1;
+  z-index: 1;
+}
+
 .cd-nav-trigger a {
   height: 30px;
-  width: 40px;
   display: inline-block;
   cursor: pointer;
+}
+
+.cd-nav-trigger a:hover span,
+.cd-nav-trigger a:hover span::before,
+.cd-nav-trigger a:hover span::after {
+  background-color: #757575;
+}
+
+.cd-nav-trigger a:focus span,
+.cd-nav-trigger a:focus span::before,
+.cd-nav-trigger a:focus span::after,
+.cd-nav-trigger a:active span,
+.cd-nav-trigger a:active span::before,
+.cd-nav-trigger a:active span::after {
+  background-color: #323232;
+}
+
+.cd-nav-trigger a#open-menu:hover title {
+  color: #757575;
 }
 
 .cd-nav-trigger span,
@@ -79,8 +137,8 @@ div.fotorama__nav__shaft {
 
 .cd-nav-trigger span {
   margin-top: 10px;
-  -webkit-transition: background 0.3s 0.3s;
-  transition: background 0.3s 0.3s;
+  -webkit-transition: background 0.1s 0.1s;
+  transition: background 0.1s 0.1s;
   display: inline-block;
 }
 
@@ -96,8 +154,8 @@ div.fotorama__nav__shaft {
   backface-visibility: hidden;
   -webkit-transform-origin: 0% 50%;
   transform-origin: 0% 50%;
-  -webkit-transition: -webkit-transform 0.3s 0.3s;
-  transition: transform 0.3s 0.3s;
+  -webkit-transition: -webkit-transform 0.3s 0.3s, background 0.1s 0.1s;
+  transition: transform 0.3s 0.3s, background 0.1s 0.1s;
 }
 
 .cd-nav-trigger span::before {
@@ -118,6 +176,8 @@ div.fotorama__nav__shaft {
   font-size: 13px;
   font-weight: normal;
   text-transform: uppercase;
+  -webkit-transition: color .1s .1s;
+  transition: color .1s .1s;
 }
 
 body {
@@ -126,10 +186,8 @@ body {
 }
 
 main {
-  padding: 20px;
   margin-bottom: 0px;
   display: inline-block;
-  max-width: 1400px;
   width: 100% !important;
 }
 
@@ -138,7 +196,7 @@ main header {
   text-align: center;
   vertical-align: top;
   position: relative;
-  height: 150px;
+  height: 80px;
 }
 
 .central-block {
@@ -171,7 +229,7 @@ main header {
   top: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
-  width: 200px;
+  width: 230px;
 }
 
 .options button {
@@ -187,28 +245,93 @@ main header {
   padding: 7px;
   font-size: .75em;
   cursor: pointer;
+  padding-left: 15px;
+  padding-right: 15px;
+  -webkit-transition: background 0.1s 0.1s, color 0.1s 0.1s;
+  transition: background 0.1s 0.1s, color 0.1s 0.1s;
+}
+
+.options button.booking:hover {
+  background-color: #323232;
+  color: #D6D6D6;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .options .lang {
   font-family: 'Open Sans', sans-serif;
   display: inline-block;
-  margin-left: 20px;
+  margin-left: 15px;
   font-size: .75em;
   cursor: pointer;
+  padding: 7px;
+  border-radius: 3px;
+  padding-left: 15px;
+  padding-right: 15px;
+  -webkit-transition: background 0.1s 0.1s, color 0.1s 0.1s;
+  transition: background 0.1s 0.1s, color 0.1s 0.1s;
+  -webkit-transition-timing-function: ease-in; /* Safari and Chrome */
+    transition-timing-function: ease-in;
+}
+
+.options .lang:hover {
+  background-color: #333232;
+  color: #D6D6D6;
+}
+
+.options .lang:focus,
+.options .lang:active {
+  background-color: #333232;
+  color: #EBB40F;
 }
 
 .options div.lang span {
-  background-image: url(../images/triangle.png);
-  background-repeat: no-repeat;
+  margin-left: 5px;
   width: 9px;
   height: 4px;
   vertical-align: middle;
   display: inherit;
+  /* -webkit-transform: rotate(-90deg); */
+  /* transform: rotate(-90deg); */
+}
+
+.options .lang:hover span:before,
+.options .lang:hover span:after {
+  background-color: #fff;
+}
+
+.options .lang:focus span:before,
+.options .lang:active span:before,
+.options .lang:focus span:after,
+.options .lang:active span:after {
+  background-color: #EBB30E;
+}
+
+.options div.lang span:before,
+.options div.lang span:after {
+  content: '';
+  width: 6px;
+  height: 1px;
+  background-color: #000;
+  display: inline-block;
+  position: absolute;
+  -webkit-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+  -webkit-transition: -webkit-transform 0.1s 0.1s,background-color 0.1s 0.1s;
+  transition: transform 0.1s 0.1s,background-color 0.1s 0.1s;
+}
+
+.options div.lang span:before {
+  -webkit-transform: translate(-4px,4px) rotate(-135deg);
+  transform: translate(-4px,4px) rotate(-135deg);
+}
+
+.options div.lang span:after {
+  -webkit-transform: translate(-4px,4px) rotate(-45deg);
+  transform: translate(-4px,4px) rotate(-45deg);
 }
 
 .image-frame {
-  padding: 20px;
-  box-shadow: -1px 0px 24px #888888;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -222,9 +345,7 @@ main header {
 }
 
 .frame-inside {
-  padding: 10px;
   position: relative;
-  box-shadow: 0px 0px 15px rgba(136, 136, 136, 0.23) inset;
 }
 
 .frame-inside img {
@@ -244,10 +365,10 @@ main header {
   z-index: 100;
 }
 
-.frame-inside .legenda {
+.frame-inside a.link-legenda {
   position: absolute;
-  right: 11px;
-  bottom: 90px;
+  right: 0px;
+  bottom: 60px;
   height: 114px;
   width: 333px;
   padding: 20px;
@@ -258,17 +379,29 @@ main header {
   text-align: center;
   display: inline-block;
   z-index: 100;
+  text-decoration: none;
+  -webkit-transition: background-color 0.1s 0.1s,color 0.1s 0.1s;
+  transition: background-color 0.1s 0.1s,color 0.1s 0.1s;
 }
 
-.frame-inside .legenda a {
+.frame-inside a.link-legenda:hover {
+  background-color: #D6D6D6;
+  color: #000;
+}
+
+.frame-inside a.link-legenda:focus,
+.frame-inside a.link-legenda:active {
+  background-color: #757575;
+  color: #fff;
+}
+
+.frame-inside a.link-legenda .legenda {
   width: 100%;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
-  text-decoration: none;
-  color: #fff;
 }
 
 .fotorama div.fotorama__arr--prev,
@@ -288,17 +421,17 @@ main header {
 
 .frame-inside .page-marker a.previous {
   top: 25px;
-  left: 60px;
+  left: 40px;
 }
 
 .frame-inside .page-marker a.next {
   top: 25px;
-  right: 60px;
+  right: 40px;
 }
 
 .frame-inside .page-marker a {
-  -webkit-transition: -webkit-transform 0.3s 0.3s;
-  transition: transform 0.3s 0.3s;
+  -webkit-transition: -webkit-transform 0.1s 0.1s;
+  transition: transform 0.1s 0.1s;
 }
 
 .frame-inside .page-marker a.previous:before,
@@ -313,19 +446,14 @@ main header {
   position: absolute;
   -webkit-transform-origin: 0% 50%;
   transform-origin: 0% 50%;
-  -webkit-transition: -webkit-transform 0.3s 0.3s;
-  transition: transform 0.3s 0.3s;
+  -webkit-transition: -webkit-transform 0.1s 0.1s;
+  transition: transform 0.1s 0.1s;
 }
 
 .frame-inside .page-marker a.next:before,
 .frame-inside .page-marker a.next:after {
   -webkit-transform-origin: 100% 50%;
   transform-origin: 100% 50%;
-}
-
-.frame-inside .page-marker a.previous:hover {
-  -webkit-transform: translate(-4px,0px);
-  transform: translate(-4px,0px);
 }
 
 .frame-inside .page-marker a.previous:before {
@@ -336,16 +464,6 @@ main header {
 .frame-inside .page-marker a.previous:after {
   -webkit-transform: translate(-4px,10px) rotate(45deg);
   transform: translate(-4px,10px) rotate(45deg);
-}
-
-.frame-inside .page-marker a.previous:hover::before {
-  -webkit-transform: translate(-4px,10px) rotate(45deg);
-  transform: translate(-4px,10px) rotate(45deg);
-}
-
-.frame-inside .page-marker a.previous:hover::after {
-  -webkit-transform: translate(-4px,11px) rotate(-45deg);
-  transform: translate(-4px,11px) rotate(-45deg);
 }
 
 /*----------------------------------*/
@@ -360,19 +478,11 @@ main header {
   transform: translate(-4px,10px) rotate(-45deg);
 }
 
-.frame-inside .page-marker a.next:hover {
-  -webkit-transform: translate(4px,0px);
-  transform: translate(4px,0px);
-}
-
-.frame-inside .page-marker a.next:hover::before {
-  -webkit-transform: translate(-4px,10px) rotate(-45deg);
-  transform: translate(-4px,10px) rotate(-45deg);
-}
-
-.frame-inside .page-marker a.next:hover::after {
-  -webkit-transform: translate(-4px,10px) rotate(45deg);
-  transform: translate(-4px,10px) rotate(45deg);
+.frame-inside .page-marker a.next:hover::after,
+.frame-inside .page-marker a.next:hover::before,
+.frame-inside .page-marker a.previous:hover::after,
+.frame-inside .page-marker a.previous:hover::before {
+  background-color: #D6D6D6;
 }
 
 /*----------------------------*/
@@ -390,10 +500,12 @@ main header {
 .reasons {
   text-align: center;
   margin-top: 90px;
+  display: inline-block;
+  max-width: 1024px;
 }
 
 .reasons h2 {
-  margin-right: 120px;
+  margin-right: 90px;
 }
 
 h2 {
@@ -404,7 +516,7 @@ h2 {
   text-transform: lowercase;
   vertical-align: top;
   margin: 0;
-  font-size: 2.6em;
+  font-size: 2.625em;
   line-height: 1;
   text-align: right;
 }
@@ -412,7 +524,7 @@ h2 {
 h6 {
   margin: 0;
   display: inline-block;
-  width: 50%;
+  width: 53%;
   vertical-align: top;
   font-family: 'Open Sans', sans-serif;
   font-weight: normal;
@@ -464,40 +576,70 @@ h6 p {
   display: inline-block;
   margin: 10px;
   position: relative;
+  background-color: #fff;
+  color: #000;
+}
+
+.room:hover {
+  background-color: #ccc;
+  /*color: #fff;*/
+}
+
+.room a {
+  text-decoration: none;
+  display: inline-block;
+  color: inherit;
 }
 
 .room h5 {
-  display: inline-block;
-  font-size:1.04em;
-  font-weight:normal;
+  display: block;
+  font-size: 1.04em;
+  font-weight: normal;
+  margin-bottom: 0;
 }
 
 .room h5:after {
   content: '';
   display: block;
-  width: 70px;
+  width: 100%;
   height: 1px;
-  margin-top: 10px;
-  margin-left: 15%;
-  background-color: #ccc;
+  margin-top: 30px;
+  background-color: #D6D6D6;
+}
+
+.room:hover h5:after {
+  /*
+  background-color: #333232;
+  */
 }
 
 .small-frame {
-  width: 270px;
-  height: 283px;
-  padding: 10px;
-  border-style: solid;
-  border-width: 9px;
-  border-color: #000;
-  box-shadow: 2px 0px 7px #000000, 2px 0px 7px #888888 inset;
+  width: 230px;
+  height: 239px;
+  overflow:hidden;
+  position: relative;
+}
+
+.small-frame img {
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transition:-webkit-transform 0.2s 0.2s, width 0.2s 0.2s,height 0.2s 0.2s;
+  transition:-webkit-transform 0.2s 0.2s, width 0.2s 0.2s,height 0.2s 0.2s;
+}
+.room:hover .small-frame img{
+  width: 105%;
+  height:auto;
 }
 
 .small-frame:before {
-  content: url('../images/mola.png');
   position: absolute;
   z-index: -1;
-  left: 125px;
-  top: -27px;
 }
 
 .center-title {
@@ -535,20 +677,43 @@ h6 p {
   text-align: center;
 }
 
-.app-history .description h4 {
+.app-history .description a {
   font-weight: normal;
   border-style: solid;
   border-width: 1px;
+  border-color: #000;
   display: inline-block;
   padding: 15px;
   padding-left: 50px;
   padding-right: 50px;
   font-size: .85em;
+  -webkit-transition: background-color 0.1s 0.1s,border-color 0.1s 0.1s;
+  transition: background-color 0.1s 0.1s,border-color 0.1s 0.1s;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 20px;
 }
 
-.app-history .description h4 a {
+.app-history .description a:hover {
+  background-color: #F2BB1A;
+  border-color: transparent;
+}
+
+.app-history .description a:active,
+.app-history .description a:focus {
+  background-color: #323232;
+  border-color: transparent;
+}
+
+.app-history .description a:active,
+.app-history .description a:focus {
+  background-color: #D6D6D6;
+}
+
+.app-history .description a h4 {
   text-decoration: none;
   color: #000;
+  margin: 0;
 }
 
 .app-history .description h3 {
@@ -563,7 +728,7 @@ h6 p {
   display: inline-block;
   line-height: 1.9;
   font-weight: normal;
-  font-size:15px;
+  font-size: 15px;
 }
 
 .overlay {
@@ -656,11 +821,14 @@ nav ul {
 
 nav ul li {
   margin: 30px;
+  margin-left:0px;
+  margin-right:0px;
 }
 
 nav ul li a {
   text-decoration: none;
   color: #333232;
+  font-size: 1em;
 }
 
 nav.choose-menu {
@@ -671,12 +839,13 @@ nav.choose-menu {
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   font-size: 1em;
+  text-align:left;
 }
 
 nav.choose-menu h3 {
-  margin: 10px;
+  margin: 0px;
   background-color: #333232;
-  padding: 20px;
+  padding: 10px;
   padding-left: 40px;
   padding-right: 40px;
   border-radius: 5px;
@@ -698,9 +867,11 @@ nav.choose-menu ul {
   width: 50px;
   height: 50px;
 }
-footer ul li{
-  text-transform:uppercase;
+
+footer ul li {
+  text-transform: uppercase;
 }
+
 li.review-box {
   border-radius: 6px;
   border-style: solid;
@@ -708,7 +879,6 @@ li.review-box {
   border-color: #fff;
   padding: 15px;
   line-height: .3;
-  
 }
 
 footer {
