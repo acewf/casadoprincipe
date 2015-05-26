@@ -57,12 +57,22 @@ section.content {
 
 .logo {
   position: absolute;
-  z-index: 2;
+  z-index: 8;  
+}
+
+.logo.room{
+  overflow:hidden;
+  height:80px;
+}
+
+.logo.room img{
+  margin-top:-50px;
+  height:180px;
 }
 
 div.transparent-shadow {
   width: 100%;
-  height: 100%;
+  height: 99%;
   background-color: rgba(0, 0, 0, 0.2);
   position: absolute;
 }
@@ -98,6 +108,7 @@ div.fotorama__nav__shaft {
   line-height: 1;
   z-index: 1;
 }
+
 
 .cd-nav-trigger a {
   height: 30px;
@@ -202,7 +213,7 @@ main header {
 .central-block {
   text-align: center;
   height: 100%;
-  width: 50%;
+  width: 60%;
   display: inline-block;
   vertical-align: top;
 }
@@ -215,7 +226,7 @@ main header {
 }
 
 .right-block {
-  width: 25%;
+  width: 15%;
   display: inline-block;
   text-align: right;
   height: 100%;
@@ -242,7 +253,7 @@ main header {
 .options button.booking {
   background-color: #EBB40F;
   border-radius: 3px;
-  padding: 7px;
+  padding: 10px;
   font-size: .75em;
   cursor: pointer;
   padding-left: 15px;
@@ -264,7 +275,7 @@ main header {
   margin-left: 15px;
   font-size: .75em;
   cursor: pointer;
-  padding: 7px;
+  padding: 10px;
   border-radius: 3px;
   padding-left: 15px;
   padding-right: 15px;
@@ -341,7 +352,7 @@ main header {
 }
 
 .rooms-view {
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .frame-inside {
@@ -356,7 +367,7 @@ main header {
 .frame-inside .page-marker {
   position: absolute;
   left: 50%;
-  bottom: 0;
+  bottom: -18px;
   width: 172px;
   height: 68px;
   background-color: #F4F4F4;
@@ -421,12 +432,12 @@ main header {
 
 .frame-inside .page-marker a.previous {
   top: 25px;
-  left: 40px;
+  left:35px;
 }
 
 .frame-inside .page-marker a.next {
   top: 25px;
-  right: 40px;
+  right: 35px;
 }
 
 .frame-inside .page-marker a {
@@ -440,7 +451,7 @@ main header {
 .frame-inside .page-marker a.next:after {
   content: '';
   width: 14px;
-  height: 2px;
+  height: 1px;
   background-color: #000;
   display: inline-block;
   position: absolute;
@@ -499,20 +510,20 @@ main header {
 
 .reasons {
   text-align: center;
-  margin-top: 90px;
+  margin-top: 146px;
   display: inline-block;
   max-width: 1024px;
 }
 
 .reasons h2 {
-  margin-right: 90px;
+  margin-right: 88px;
 }
 
 h2 {
   font-family: "estilo-pro",sans-serif;
   font-weight: 300;
   display: inline-block;
-  width: 380px;
+  width: 33%;
   text-transform: lowercase;
   vertical-align: top;
   margin: 0;
@@ -524,7 +535,7 @@ h2 {
 h6 {
   margin: 0;
   display: inline-block;
-  width: 53%;
+  width: 58%;
   vertical-align: top;
   font-family: 'Open Sans', sans-serif;
   font-weight: normal;
@@ -551,7 +562,7 @@ h6 p {
 
 .show-rooms {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 150px;
 }
 
 .show-rooms h3 {
@@ -559,6 +570,7 @@ h6 p {
   font-weight: 400;
   font-size: 1.75em;
   text-transform: lowercase;
+  margin:0;
 }
 
 .show-rooms h3:after {
@@ -575,6 +587,8 @@ h6 p {
 .room {
   display: inline-block;
   margin: 10px;
+  margin-left:5px;
+  margin-right:5px;
   position: relative;
   background-color: #fff;
   color: #000;
@@ -593,9 +607,10 @@ h6 p {
 
 .room h5 {
   display: block;
-  font-size: 1.04em;
+  font-size: .95em;
   font-weight: normal;
   margin-bottom: 0;
+  margin-top:45px;
 }
 
 .room h5:after {
@@ -603,7 +618,7 @@ h6 p {
   display: block;
   width: 100%;
   height: 1px;
-  margin-top: 30px;
+  margin-top: 35px;
   background-color: #D6D6D6;
 }
 
@@ -614,8 +629,8 @@ h6 p {
 }
 
 .small-frame {
-  width: 230px;
-  height: 239px;
+  width: 252px;
+  height: 184px;
   overflow:hidden;
   position: relative;
 }
@@ -629,8 +644,10 @@ h6 p {
   -webkit-transform: translate(-50%, -50%);
   -webkit-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
-  -webkit-transition:-webkit-transform 0.2s 0.2s, width 0.2s 0.2s,height 0.2s 0.2s;
-  transition:-webkit-transform 0.2s 0.2s, width 0.2s 0.2s,height 0.2s 0.2s;
+  -webkit-transition:-webkit-transform 0.1s 0.1s, width 0.1s 0.1s,height 0.1s 0.1s;
+  transition:-webkit-transform 0.1s 0.1s, width 0.1s 0.1s,height 0.1s 0.1s;
+  -webkit-transition-timing-function: ease-in; /* Safari and Chrome */
+    transition-timing-function: ease-in;
 }
 .room:hover .small-frame img{
   width: 105%;
@@ -650,7 +667,209 @@ h6 p {
 .app-history {
   margin-top: 120px;
 }
+.app-history h6{
+  width:80%;
+}
+/* ----------  INSIDE ROOM ----------- */
+.inside-room  .featured-content p{
+  position: relative;
+  left: 0;
+  top: 0;
+  transform:none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: .94em;
+  line-height: 1.9;
+}
+.inside-room  .featured-content div.info-room-featured{
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+.inside-room  .featured-content h3{
+  color: #fff;
+  font-family: "estilo-pro",sans-serif;
+  font-weight: 400;
+  font-size:1.75em;
+}
+.app-history.inside-room h6{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);  
+}
 
+.info-room-featured a button{
+  color: #fff;
+  border: none;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #fff;
+  padding: 15px;
+  padding-left: 70px;
+  padding-right: 70px;
+  outline: none;
+  background: transparent;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  cursor:pointer;
+}
+.info-room-featured a{
+  display: block;
+}
+.inside-room nav{
+  max-width: 850px;
+}
+.inside-room ul.room{
+  display: inline-block;
+}
+
+.inside-room nav{
+  display: inline-block;
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  text-align: left;
+  overflow:hidden;
+  height:60px;
+}
+.inside-room nav ul{
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  background-color:rgba(51, 50, 50, 0.9);
+  height:60px;
+  text-align:center;
+}
+.inside-room nav ul li{
+  display: inline-block;
+  margin: 0;
+  width: 200px;  
+  position: relative;
+}
+.inside-room nav ul li:first-child a, .inside-room nav ul li.active a{
+  border-left-style:none;
+}
+.inside-room nav ul li a{
+  width:100%;
+  color:#888888;
+  vertical-align:middle;
+  font-weight:600px;
+  font-size:.75em;
+
+  height: 20px;
+  margin-top:20px;
+  margin-bottom:20px;
+
+  border-left-style:solid;
+  border-color:#D6D6D6;
+  border-left-width:1px;
+  display: inherit;
+}
+.inside-room nav ul li span{
+  position:absolute;
+  left:30px;
+  top:20px;
+  font-size:12px;
+  z-index: 2;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.inside-room nav ul li span:hover{
+  color: #F50000;
+}
+.inside-room nav ul li span {
+  margin-left: 5px;
+  margin-top: 7px;
+  width: 9px;
+  height: 4px;
+  vertical-align: middle;
+  display: inherit;
+  -webkit-transform: rotate(180deg); 
+  transform: rotate(180deg);
+  -webkit-transition: -webkit-transform 0.1s 0.1s;
+  transition: transform 0.1s 0.1s;
+}
+
+.inside-room nav ul li span:before,
+.inside-room nav ul li span:after {
+  background-color: #fff;
+}
+
+.inside-room nav ul li:focus span:before,
+.inside-room nav ul li:active span:before,
+.inside-room nav ul li:focus span:after,
+.inside-room nav ul li:active span:after {
+  background-color: #EBB30E;
+}
+
+.inside-room nav ul li span:before,
+.inside-room nav ul li span:after {
+  content: '';
+  width: 6px;
+  height: 1px;
+  background-color: #000;
+  display: inline-block;
+  position: absolute;
+  -webkit-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+  -webkit-transition: -webkit-transform 0.1s 0.1s,background-color 0.1s 0.1s;
+  transition: transform 0.1s 0.1s,background-color 0.1s 0.1s;
+}
+
+.inside-room nav ul li span:before {
+  -webkit-transform: translate(0px,4px) rotate(-135deg);
+  transform: translate(0px,4px) rotate(-135deg);
+}
+
+.inside-room nav ul li span:after {
+  -webkit-transform: translate(-4px,4px) rotate(-45deg);
+  transform: translate(-4px,4px) rotate(-45deg);
+}
+.inside-room nav ul li:hover span:before {
+  -webkit-transform: translate(-2px,4px) rotate(-135deg);
+  transform: translate(-2px,4px) rotate(-135deg);
+}
+.inside-room nav ul li:hover span:after {
+  -webkit-transform: translate(-2px,4px) rotate(-45deg);
+  transform: translate(-2px,4px) rotate(-45deg);
+}
+.inside-room nav ul li a:hover{
+  color: #F2BA19;
+}
+.inside-room nav ul li.active{
+  background-color:#F2BA19;
+}
+.inside-room nav ul li.active a{
+  color: #1F1F1F;
+}
+
+.inside-room  .fotorama div.fotorama__arr--prev,
+.inside-room  .fotorama div.fotorama__arr--next {
+  display: inherit;
+  opacity: inherit;
+}
+.inside-room nav ul.suite,.inside-room nav ul.room-choose{
+  transform: translate(0px,0px);
+  -webkit-transition: -webkit-transform 0.1s 0.1s,background-color 0.1s 0.1s;
+  transition: transform 0.1s 0.1s,background-color 0.1s 0.1s;
+}
+.inside-room nav ul.suite.choose-childs{
+  transform: translate(0px,-60px);
+}
+.inside-room nav ul.room-choose.show-childs{
+  transform: translate(0px,-60px);
+}
+  
+/* ---------- END INSIDE ROOM ----------- */
 .app-history .img-content {
   display: inline-block;
   width: 55%;
@@ -659,12 +878,12 @@ h6 p {
 
 .app-history .img-content img {
   width: 100%;
-  margin-top: 50px;
+  /* margin-top: 20px; */
   vertical-align: bottom;
 }
 
 .app-history .description {
-  padding: 6%;
+  padding: 7%;
   display: inline-block;
   width: 45%;
   background-color: #fff;
@@ -714,6 +933,8 @@ h6 p {
   text-decoration: none;
   color: #000;
   margin: 0;
+  font-weight:normal;
+  font-size:13px;
 }
 
 .app-history .description h3 {
@@ -729,6 +950,27 @@ h6 p {
   line-height: 1.9;
   font-weight: normal;
   font-size: 15px;
+}
+.app-history.inside-room{
+ margin-top:0; 
+ position:relative;
+ text-align:left;
+}
+.app-history.inside-room .description {
+  width: 53%;
+  margin-top:-50px;
+}
+.app-history.inside-room .img-content {
+  width: 47%;
+  height: 100%;
+  position: absolute;
+  text-align:center;
+}
+.app-history.inside-room .description p.small-text{
+  font-size: 2em;
+  font-family: 'estilo-pro';
+  font-weight: 300;
+  line-height: 1;
 }
 
 .overlay {
@@ -876,8 +1118,10 @@ li.review-box {
   border-radius: 6px;
   border-style: solid;
   border-width: 1px;
-  border-color: #fff;
+  border-color: #D6D6D6;
   padding: 15px;
+  padding-left:23px;
+  padding-right:23px;
   line-height: .3;
 }
 
@@ -909,6 +1153,8 @@ footer ul {
 footer ul li {
   display: inline-block;
   margin: 5px;
+  margin-left:25px;
+  margin-right:25px;
   height: 20px;
 }
 
