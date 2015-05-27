@@ -403,8 +403,7 @@ module.exports = function (grunt) {
                             mountFolder(connect, yeomanConfig.app),
                             rewriteModule.getMiddleware([
                                 // Internal rewrite
-                                {from: '^/suites', to: '/index.php'},
-                                {from: '^/suites/details/room', to: '/index.php'}
+                                {from: '^/(.*)$', to: '/index.php'}
                             ],{verbose: true})
                         ];
 
@@ -413,7 +412,7 @@ module.exports = function (grunt) {
                         }
 
                         var directory = options.directory || options.base[options.base.length - 1];
-                        options.base.forEach(function (base) {
+                        options.base.forEach(function () {
                             // Serve static files.
                             middlewares.push(gateway(__dirname + path.sep + yeomanConfig.app, {
                                 '.php': 'php-cgi'
@@ -505,7 +504,7 @@ module.exports = function (grunt) {
     grunt.registerTask('build', [
         'clean:dist',
         'bower',
-		    'test',
+		'test',
         'php2html',
         'copy:prepare',
         'processhtml',

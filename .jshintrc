@@ -18,6 +18,11 @@
     "strict": true,
     "trailing": true,
     "smarttabs": true,
+    "globals": {
+        "$":false,
+        "jquery":false,
+        "angular":false
+    },
 	"predef": [
 		"define",
 		"require"

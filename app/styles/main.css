@@ -131,7 +131,7 @@ div.fotorama__nav__shaft {
   background-color: #323232;
 }
 
-.cd-nav-trigger a#open-menu:hover title {
+.cd-nav-trigger a#open-menu:hover div {
   color: #757575;
 }
 
@@ -179,7 +179,7 @@ div.fotorama__nav__shaft {
   top: 6px;
 }
 
-#open-menu title {
+#open-menu div {
   display: inline-block;
   margin-left: 30px;
   text-decoration: none;
@@ -196,13 +196,13 @@ body {
   text-align: center;
 }
 
-main {
+div.main {
   margin-bottom: 0px;
   display: inline-block;
   width: 100% !important;
 }
 
-main header {
+div.main header {
   display: block;
   text-align: center;
   vertical-align: top;
@@ -380,8 +380,8 @@ main header {
   position: absolute;
   right: 0px;
   bottom: 60px;
-  height: 114px;
-  width: 333px;
+  height: 83px;
+  width: 218px;
   padding: 20px;
   background-color: #333232;
   color: #fff;
@@ -507,6 +507,12 @@ main header {
   margin: 0;
   padding: 0;
 }
+.frame-inside .legenda .title{
+  font-size:22px;
+}
+.frame-inside .legenda p{
+  font-size: 13px;
+}
 
 .reasons {
   text-align: center;
@@ -532,10 +538,10 @@ h2 {
   text-align: right;
 }
 
-h6 {
+article div.description {
   margin: 0;
   display: inline-block;
-  width: 58%;
+  width: 56%;
   vertical-align: top;
   font-family: 'Open Sans', sans-serif;
   font-weight: normal;
@@ -544,7 +550,7 @@ h6 {
   text-align: left;
 }
 
-h6:before {
+article  div.description:before {
   width: 119px;
   height: 1px;
   display: block;
@@ -554,7 +560,7 @@ h6:before {
   margin-top: 5px;
 }
 
-h6 p {
+article  div.description p {
   margin-top: 40px;
 }
 
@@ -945,7 +951,7 @@ h6 p {
 }
 
 .app-history .description p {
-  width: 93%;
+  width: 100%;
   display: inline-block;
   line-height: 1.9;
   font-weight: normal;
@@ -1119,9 +1125,6 @@ li.review-box {
   border-style: solid;
   border-width: 1px;
   border-color: #D6D6D6;
-  padding: 15px;
-  padding-left:23px;
-  padding-right:23px;
   line-height: .3;
 }
 
@@ -1155,7 +1158,7 @@ footer ul li {
   margin: 5px;
   margin-left:25px;
   margin-right:25px;
-  height: 20px;
+  min-height: 20px;
 }
 
 footer ul li img {
@@ -1179,6 +1182,12 @@ footer a {
   text-decoration: none;
   height: 20px;
   color: #fff;
+}
+footer a.addreview{
+  width: 100%;
+  padding: 15px;
+  padding-left: 23px;
+  padding-right: 23px;
 }
 
 footer a:hover {

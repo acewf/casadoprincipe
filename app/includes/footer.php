@@ -8,6 +8,6 @@
 </script>
 
         <!-- build:js scripts/main.js -->
-<script data-main="main" src="scripts/config.js"></script>
-<script data-main="main" src="bower_components/requirejs/require.js"></script>
+<script data-main="main" src="<?php echo "$basePath"; ?>/scripts/config.js"></script>
+<script data-main="main" src="<?php echo "$basePath"; ?>../bower_components/requirejs/require.js"></script>
         <!-- /build -->

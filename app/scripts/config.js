@@ -1,6 +1,7 @@
-/* jshint -W098,-W079 */
+/* jshint -W098,-W079 picturefill: 'picturefill/dist/picturefill'
+ */
 var require = {
-    baseUrl: '../bower_components',
+    baseUrl: '/bower_components',
     paths: {
         main: '../scripts/main',
         app: '../scripts/app',

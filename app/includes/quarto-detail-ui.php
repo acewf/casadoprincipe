@@ -1,13 +1,13 @@
 <div class="page-content">
     <section class="content inside-room">
         <nav>
-            <ul class="suite">
+            <ul class="suite choose-childs">
                 <li><a data-rooms="imperial" href="imperial">IMPERIAL SUITE</a></li>
                 <li><a data-rooms="royal" href="royal">ROYAL SUITES</a></li>
                 <li><a data-rooms="premium" href="premium">PREMIUM ROOMS</a></li>
                 <li><a data-rooms="historic" href="historic">HISTORIC ROOMS</a></li>
             </ul>
-            <ul class="room-choose">
+            <ul class="room-choose show-childs">
                 <li><a href="">QUEEN D. ESTEFÂNIA</a></li>
                 <li class="active"><span></span><a href="">PALACE</a></li>
             </ul>
@@ -20,12 +20,12 @@
                         <div class="info-room-featured">
                             <h3>Queen D. Estefânia</h3>
                             <p>Spacious bedroom with lounge area, balcony overlooking the Príncipe Real garden, with three large windows that fill the room with natural light, creating a bright but relaxing atmosphere.</p>
-                            <a href="<?php echo "$basePath"; ?>suites/details/royal" target="_self"><button>SEE DETAILS</button></a>
+                            <a href="<?php echo "$basePath"; ?>suites/details/" target="_self"><button>go previus</button></a>
                         </div>                    
-                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/destaque-room.png">
+                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/sintra-pena-palacio.jpg">
                     </div>
                     <div class="featured-content">
-                        <img alt="destaque 2" src="<?php echo "$basePath"; ?>images/dsc_0281.jpg">
+                        <img alt="destaque 2" src="<?php echo "$basePath"; ?>images/fotos-sintra-palacio-da-pena-050.jpg">
                     </div>
                     <div class="featured-content">
                         <img alt="destaque 3" src="<?php echo "$basePath"; ?>images/palacio-da-liberdade-interior1.jpg">
