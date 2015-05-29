@@ -7,7 +7,18 @@
     <head>
         <?php
             require_once dirname(__FILE__).'/includes/address-filter.php';
-            $basePath = 'http://127.0.0.1:9000/'; 
+            //$folder = '/preview/';
+            $folder = '/';
+            $basePath = 'http://'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].$folder; 
+            /*
+            $url = $_SERVER['REQUEST_URI']; //returns the current URL
+            $parts = explode('/',$url);
+            $mypath = $_SERVER['SERVER_NAME'];
+            for ($i = 0; $i < count($parts) - 1; $i++) {
+             $mypath .= $parts[$i] . "/";
+            }
+            echo $mypath;
+            */            
             $Adress = new AdressChecker();
         ?>
         <?php include(dirname(__FILE__).'/includes/head.php'); ?>
@@ -29,12 +40,12 @@
                 <nav class="choose-menu">
                     <h3>Book a Room</h3>
                     <ul>
-                        <li><a href="home">Casa do príncipe</a></li>
-                        <li><a href="suites">Suites and rooms</a></li>
-                        <li><a href="galllery">Gallery</a></li>
-                        <li><a href="location">Location</a></li>
-                        <li><a href="personalize">Personalize your stay</a></li>
-                        <li><a href="contacts">Contacts</a></li>
+                        <li><a href="<?php echo "$basePath"; ?>home">Casa do príncipe</a></li>
+                        <li><a href="<?php echo "$basePath"; ?>suites">Suites and rooms</a></li>
+                        <li><a href="<?php echo "$basePath"; ?>galllery">Gallery</a></li>
+                        <li><a href="<?php echo "$basePath"; ?>location">Location</a></li>
+                        <li><a href="<?php echo "$basePath"; ?>personalize">Personalize your stay</a></li>
+                        <li><a href="<?php echo "$basePath"; ?>contacts">Contacts</a></li>
                     </ul>
                 </nav>
             </div>
@@ -59,13 +70,14 @@
                 <?php 
                 $path = $Adress->getPhpToUrl()
                 ?>
+                <script type="text/javascript">
+                var contentmodule = 'apphome';
+                contentmodule = '<?php echo $path ?>';
+                </script>
                 <?php include(dirname(__FILE__).'/includes/'.$path.'.php'); ?>
             </div>
             <?php include(dirname(__FILE__).'/includes/footer-ui.php'); ?>
         </div>
-
-        
-
         <?php include(dirname(__FILE__).'/includes/footer.php'); ?>
     </body>
 </html>

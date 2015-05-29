@@ -10,7 +10,11 @@ body {
   font-family: 'Open Sans', sans-serif;
   color: #333;
 }
-
+body > div.container{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
 section.content {
   text-align: center;
 }
@@ -219,14 +223,15 @@ div.main header {
 }
 
 .left-block {
-  width: 25%;
+  float:left;
+  width: 20%;
   height: 100%;
   display: inline-block;
   text-align: left;
 }
 
 .right-block {
-  width: 15%;
+  width: 20%;
   display: inline-block;
   text-align: right;
   height: 100%;
@@ -538,7 +543,7 @@ h2 {
   text-align: right;
 }
 
-article div.description {
+article div.description{
   margin: 0;
   display: inline-block;
   width: 56%;
@@ -740,19 +745,25 @@ article  div.description p {
   left: 0;
   text-align: left;
   overflow:hidden;
-  height:60px;
+  line-height: 0;
+  height:65px;
 }
 .inside-room nav ul{
+  line-height:1;
   margin: 0;
+  -webkit-margin-before:0;
+  -webkit-margin-after:0;
+  -webkit-padding-start:0;
   padding: 0;
   display: inline-block;
   background-color:rgba(51, 50, 50, 0.9);
-  height:60px;
+  height:65px;
   text-align:center;
 }
 .inside-room nav ul li{
   display: inline-block;
   margin: 0;
+  height:100%;
   width: 200px;  
   position: relative;
 }
@@ -765,10 +776,11 @@ article  div.description p {
   vertical-align:middle;
   font-weight:600px;
   font-size:.75em;
-
-  height: 20px;
-  margin-top:20px;
-  margin-bottom:20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
 
   border-left-style:solid;
   border-color:#D6D6D6;
@@ -869,10 +881,10 @@ article  div.description p {
   transition: transform 0.1s 0.1s,background-color 0.1s 0.1s;
 }
 .inside-room nav ul.suite.choose-childs{
-  transform: translate(0px,-60px);
+  transform: translate(0px,-65px);
 }
 .inside-room nav ul.room-choose.show-childs{
-  transform: translate(0px,-60px);
+  transform: translate(0px,-65px);
 }
   
 /* ---------- END INSIDE ROOM ----------- */
@@ -966,11 +978,36 @@ article  div.description p {
   width: 53%;
   margin-top:-50px;
 }
-.app-history.inside-room .img-content {
+.app-history .text-content {
+  display: inline-block;
+  vertical-align: bottom;
+}
+.app-history.inside-room .img-content,.app-history.inside-room .text-content {
   width: 47%;
   height: 100%;
   position: absolute;
   text-align:center;
+}
+
+.app-history.inside-room .description-location {
+  display: inline-block;
+  text-align:left;
+  font-size:15px;
+  max-width:480px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+.app-history.inside-room   div.description-location:before {
+  width: 119px;
+  height: 1px;
+  display: block;
+  background-color: #F2BB1A;
+  content: " ";
+  margin-bottom: 20px;
+  margin-top: 5px;
 }
 .app-history.inside-room .description p.small-text{
   font-size: 2em;
@@ -978,7 +1015,42 @@ article  div.description p {
   font-weight: 300;
   line-height: 1;
 }
-
+.inside-room  .fotorama__arr{
+  background: transparent;
+  background-color: rgba(50, 50, 50, 0.32);
+  height: 139px;
+  width: 47px;
+  margin-top: -70px;
+}
+.inside-room .fotorama__arr--prev:after,.inside-room .fotorama__arr--prev:before,
+.inside-room .fotorama__arr--next:after,.inside-room .fotorama__arr--next:before{
+    content: '';
+  width: 8px;
+  height: 2px;
+  background-color: #fff;
+  display: inline-block;
+  position: absolute;
+  -webkit-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+  -webkit-transition: -webkit-transform 0.1s 0.1s,background-color 0.1s 0.1s;
+  transition: transform 0.1s 0.1s,background-color 0.1s 0.1s;
+}
+.inside-room .fotorama__arr--prev:before{
+  -webkit-transform: translate(0px,70px) rotate(45deg);
+  transform: translate(0px,70px) rotate(45deg);
+}
+.inside-room .fotorama__arr--prev:after{
+    -webkit-transform: translate(0px,70px) rotate(-45deg);
+  transform: translate(0px,70px) rotate(-45deg);
+}
+.inside-room .fotorama__arr--next:before{
+  -webkit-transform: translate(5px,70px) rotate(-225deg);
+  transform: translate(5px,70px) rotate(-225deg);
+}
+.inside-room .fotorama__arr--next:after{
+    -webkit-transform: translate(5px,70px) rotate(-135deg);
+  transform: translate(5px,70px) rotate(-135deg);
+}
 .overlay {
   display: none;
   position: fixed;
@@ -1003,7 +1075,125 @@ nav.choose-lang {
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
 }
+.room-detail .booker{
+    max-width: 890px;
+    height:74px;
+    display:inline-block;
+    position:relative;
+}
+.room-detail .booker .input-daterange{
+  width: 674px;
+  height: 100%;
+  display:inline-block;
+  background-color: #F2BB1A;
+}
+.box-date {
+  font-size: 14px;
+  vertical-align:top;
+  width: 50%;
+  height: 100%;
+  display:inline-block;
+  z-index:51;
+  position:relative;
+}
+.box-date .text-field-container{
+  width:100px;
+  display: inline-block;
+  height:100%;
+}
+.room-detail .booker .input-sm.form-control{
+  float: none;
+  height: 100%;
+  display: inline-block;
+  text-align:left;
+  background:transparent;
+  outline:none;
+  border:none;
+  border-image-width:0;
+  box-shadow:none;
+  font-size: 1.1em;
+}
+.room-detail .booker .bookregister{
+  width: 216px;
+  height: 100%;
+  display:inline-block;
+  vertical-align: top;
+  background-color: #323232;
+  position: relative;
+}
+.app-history.inside-room.room-detail{
 
+}
+/* ------ DATEPICKER ------- */
+.box-date:active{
+  color:#fff;
+}
+article.booking{
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.bookregister button{
+  border: none;
+  outline: 0;
+  background:transparent;
+  width:100%;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+.icon-calendar,.icon-caret-down-two{
+  display: inline-block;
+  vertical-align: middle;
+}
+.icon-calendar{
+  font-size: 2em;
+}
+.icon-caret-down-two{
+  font-size: 1.2em;
+}
+.icon-arrow-right{
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.datepicker.datepicker-dropdown.dropdown-menu.datepicker-orient-left.datepicker-orient-bottom,
+.datepicker.datepicker-dropdown.dropdown-menu.datepicker-orient-left.datepicker-orient-top{
+  width:300px;
+  height:335px;
+  border:none;
+  border-radius:0;
+  box-shadow: none;
+  background-color:#323232;
+  margin-left: -100px;
+}
+div.datepicker-dropdown.datepicker-orient-top:before,div.datepicker-dropdown.datepicker-orient-top:after,
+div.datepicker-dropdown.datepicker-orient-bottom:before,div.datepicker-dropdown.datepicker-orient-bottom:after{
+  display: none;
+}
+.datepicker-days,
+.datepicker-months,
+.datepicker-years{
+  text-align: center;
+}
+.datepicker table{
+  display: inline-block;
+  color:#F2BA19;
+}
+.datepicker .datepicker-days table th.next,
+.datepicker .datepicker-days table th.next{
+  font-size: 1.35em;
+}
+.datepicker-switch{
+
+}
+.icon-angle-right:before{
+
+}
+/* ------ END DATEPICKER ------- */
 button.close {
   border: none;
   outline: 0;

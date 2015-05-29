@@ -21,6 +21,7 @@
     "globals": {
         "$":false,
         "jquery":false,
+        "requirejs":false,
         "angular":false
     },
 	"predef": [

@@ -87,3 +87,9 @@
     	</div>
     </section>
 </div>
+<script>
+console.log('try to define app home');
+if (typeof requirejs == 'function') {
+    requirejs(['apphome']);
+}
+</script>
