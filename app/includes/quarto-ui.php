@@ -2,12 +2,11 @@
     <section class="content inside-room">
         <nav>
             <ul class="suite">
-                <li><a data-rooms="imperial" href="imperial">IMPERIAL SUITE</a></li>
-                <li><a data-rooms="royal" href="royal">ROYAL SUITES</a></li>
-                <li><a data-rooms="premium" href="premium">PREMIUM ROOMS</a></li>
-                <li><a data-rooms="historic" href="historic">HISTORIC ROOMS</a></li>
-            </ul>
-            <ul class="room-choose">
+                <li><a data-rooms="imperial" href="<?php echo "$basePath"; ?>suites/imperial">IMPERIAL SUITE</a></li>
+                <li><a data-rooms="royal" href="<?php echo "$basePath"; ?>suites/royal">ROYAL SUITES</a></li>
+                <li><a data-rooms="premium" href="<?php echo "$basePath"; ?>suites/premium">PREMIUM ROOMS</a></li>
+                <li><a data-rooms="historic" href="<?php echo "$basePath"; ?>suites/historic">HISTORIC ROOMS</a>
+                </li></ul><ul class="room-choose">
                 <li><a href="">QUEEN D. ESTEFÂNIA</a></li>
                 <li class="active"><span></span><a href="">PALACE</a></li>
             </ul>
@@ -20,7 +19,7 @@
                         <div class="info-room-featured">
                             <h3>Queen D. Estefânia</h3>
                             <p>Spacious bedroom with lounge area, balcony overlooking the Príncipe Real garden, with three large windows that fill the room with natural light, creating a bright but relaxing atmosphere.</p>
-                            <a href="<?php echo "$basePath"; ?>suites/details/royal" target="_self"><button>SEE DETAILS</button></a>
+                            <a href="<?php echo "$basePath"; ?>suites/royal" target="_self"><button>SEE DETAILS</button></a>
                         </div>                    
                         <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/destaque-room.png">
                     </div>
@@ -37,8 +36,14 @@
     <section class="app-history inside-room">
         <div class="description">
             <p class="small-text">Charming suites and rooms with the modern comfort of a hotel in an exceptional location in the historic center of Lisbon</p>
-        </div><div class="img-content">
-            <h6><p>Casa do Príncipe is located in one of its trendiest and most exciting areas of Lisbon, facing the Príncipe Real Garden. With spacious and sunny rooms, this intimate B&amp;B will make you feel at home with the comfort and quality of a hotel, benefiting from its spectacular location at walking distance from fashionable shops and city sights, signature restaurants and all that makes Lisbon Europe’s most well-kept secret.</p></h6>
+        </div><div class="text-content">
+            <div class="description-location"><p>Casa do Príncipe takes its name after the Royal Prince, King D. Pedro V, whose story sets the tone for your unforgettable stay in Lisbon. Each of its 9 palatial suites and rooms refer to a meaningful part of this King’s life.</p></div>
         </div>
     </section>
 </div>
+<script>
+console.log('try to define quarto room');
+if (typeof requirejs == 'function') {
+    requirejs(['approom']);
+}
+</script>

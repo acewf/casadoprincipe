@@ -1,4 +1,5 @@
-<?php /* FOOTER */ ?>
+<?php
+ /* FOOTER */ ?>
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
     var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
@@ -7,7 +8,7 @@
         s.parentNode.insertBefore(g,s)}(document,'script'));
 </script>
 
-        <!-- build:js scripts/main.js -->
-<script data-main="main" src="<?php echo "$basePath"; ?>/scripts/config.js"></script>
-<script data-main="main" src="<?php echo "$basePath"; ?>../bower_components/requirejs/require.js"></script>
-        <!-- /build -->
+<!-- build:js scripts/main.js -->
+<script data-main="main" src="<?php echo "$basePath"; ?>scripts/config.js"></script>
+<script data-main="main" src="<?php echo "$basePath"; ?>bower_components/requirejs/require.js"></script>
+<!-- /build -->
