@@ -1,8 +1,4 @@
-<!-- build:css styles/vendor/bootstrap.css -->
-<link rel="stylesheet" href="<?php echo "$basePath"; ?>../bower_components/bootstrap/dist/css/bootstrap.css">
-<link rel="stylesheet" href="<?php echo "$basePath"; ?>../bower_components/bootstrap/dist/css/bootstrap.css">
-<!-- endbuild -->
-<div class="page-content">
+<div class="page-content spec-room">
     <section class="content inside-room room-detail">
         <nav>
             <ul class="suite choose-childs">
@@ -11,13 +7,13 @@
                 <li><a data-rooms="premium" href="premium">PREMIUM ROOMS</a></li>
                 <li><a data-rooms="historic" href="historic">HISTORIC ROOMS</a></li>
             </ul>
-            <ul class="room-choose show-childs">
+            <ul class="room-choose">
                 <li><a href="">QUEEN D. ESTEFÂNIA</a></li>
-                <li class="active"><span></span><a href="">PALACE</a></li>
+                <li class="active"><span></span><a href="../">GO BACK</a></li>
             </ul>
         </nav>
         <article class="image-frame">
-            <div class="frame-inside"data-transition="crossfade">
+            <div class="frame-inside" data-transition="crossfade">
                 <div class="fotorama fotorama__wrap fotorama__wrap--css3 fotorama__wrap--slide fotorama__wrap--no-controls" data-nav="false" data-arrows="true" data-click="true" data-swipe="true" data-allowfullscreen="true" data-loop="true" data-stopautoplayontouch="false"  data-width="100%" data-ratio="1432/577">
                     <div class="featured-content">
                         <div class="transparent-shadow"></div>
@@ -40,13 +36,69 @@
         <article class="booking"><div class="booker"><div class="input-daterange input-group" id="datepicker"><div class="box-date chech-in"> <div data-icon="a" class="icon icon-calendar"></div> <div class="text-field-container"><input type="text" class="input-sm form-control" name="start" value="Check In"/></div><div data-icon="a" class="icon icon-caret-down-two"></div>
             </div><div class="box-date chech-out"><div data-icon="a" class="icon icon-calendar"></div><div class="text-field-container"><input type="text" class="input-sm form-control" name="end" value="Check Out"/></div><div data-icon="a" class="icon icon-caret-down-two"></div>
             </div></div><div class="bookregister"><button>BOOK NOW<div class="icon icon-arrow-right"></div></button></div></div></article>
-    </section>
-     <section class="app-history inside-room room-detail">
-        <div class="description">
-            <p class="small-text">Charming suites and rooms with the modern comfort of a hotel in an exceptional location in the historic center of Lisbon</p>
-        </div><div class="text-content">
-            <div class="description-location"><p>Casa do Príncipe takes its name after the Royal Prince, King D. Pedro V, whose story sets the tone for your unforgettable stay in Lisbon. Each of its 9 palatial suites and rooms refer to a meaningful part of this King’s life.</p></div>
-        </div>
+
+        <article class="show-room-info">
+            <div class="center-title">
+                <h3>queen d. estefânia suite</h3>
+                <div class="description"><p>Spacious bedroom with lounge area, balcony overlooking the Príncipe Real garden, with three large windows that fill the room with natural light, creating a bright but relaxing atmosphere.</p></div>
+            </div>
+        </article>
+
+        <article class="show-room-description">
+            <div class="left-block">
+                <p>Indulge in the glamour of this imperial suite that pays tribute to the Príncipe Real (Royal Prince) D. Pedro V, who inspired the name our B&B. This room´s decoration embodies the elegance and honour that characterized him. Let yourself be dazzled by the amazing stuccowork ceilings of this suite, taking you back in time to the elegant 19th century.</p>
+                <div class="image-frame show-frame">
+                    <div class="frame-inside show-frame" data-transition="crossfade">
+                        <img alt="destaque 3" src="<?php echo "$basePath"; ?>images/principe-moldura.png">
+                    </div>
+                </div>
+            </div><div class="right-block">
+                <ul>
+                    <li>Size: 45m² /484 sq.ft</li>
+                    <li>Extra large Queen bed or two twin beds</li>
+                    <li>Balcony overlooking the Príncipe Real garden</li>
+                    <li>Seating and relaxing area</li>
+                    <li>Sofa double bed in the lounge area</li>
+                    <li>Premium bathroom amenities</li>
+                    <li>Size: 45m² /484 sq.ft</li>
+                    <li>Extra large Queen bed or two twin beds</li>
+                    <li>Balcony overlooking the Príncipe Real garden</li>
+                    <li>Seating and relaxing area</li>
+                    <li>Sofa double bed in the lounge area</li>
+                    <li>Premium bathroom amenities</li>
+                </ul>
+                <a class="big-size" href="" target="_self"><h4>About King D. Pedro V</h4></a>
+            </div>
+        </article>
+        <article class="show-rooms">
+            <div class="center-title">
+                <h3>more rooms & suites</h3>
+            </div>
+            <div class="rooms-types">
+                <ul class="choose-rooms">
+                    <li class="actived"><a href="suites/royal">ROYAL SUITES</a></li>
+                    <li><a href="suites/royal">PREMIUM ROOMS</a></li>
+                    <li><a href="suites/royal">HISTORIC ROOMS</a></li>
+                </ul>
+            </div>
+            <section class="rooms-view">
+                <article class="room">
+                    <a href="">
+                        <div class="small-frame">
+                            <img alt="Quarto Imperial" src="http://127.0.0.1:9000/images/img-moldura.png">
+                        </div>
+                        <h5>Imperial Suite</h5>
+                    </a>
+                </article><article class="room">
+                    <a href="">
+                        <div class="small-frame">
+                            <img alt="Quarto Royal" src="http://127.0.0.1:9000/images/img-moldura.png">
+                        </div>
+                        <h5>Royal Suites</h5>
+                    </a>
+                </article>
+            </section>
+        </article>
     </section>
 </div>
 <script>

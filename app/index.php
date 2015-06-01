@@ -40,7 +40,7 @@
                 <nav class="choose-menu">
                     <h3>Book a Room</h3>
                     <ul>
-                        <li><a href="<?php echo "$basePath"; ?>home">Casa do príncipe</a></li>
+                        <li><a href="<?php echo "$basePath"; ?>casa-do-principe">Casa do príncipe</a></li>
                         <li><a href="<?php echo "$basePath"; ?>suites">Suites and rooms</a></li>
                         <li><a href="<?php echo "$basePath"; ?>galllery">Gallery</a></li>
                         <li><a href="<?php echo "$basePath"; ?>location">Location</a></li>

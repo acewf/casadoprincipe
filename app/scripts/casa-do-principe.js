@@ -3,10 +3,10 @@
 ////Date: 05/05/2015
 ////Company:euro-m.pt
 //////////////  AREAS DE JOGO  /////////////////////////
-define(['approom'], function(appmenu) {
+define(['casadoprincipe'], function(appmenu) {
 	'use strict';
     //Uses extras in here.
-    console.log('app-room start');
+    console.log('casadoprincipe start');
 });
 $(function() {
     'use strict';

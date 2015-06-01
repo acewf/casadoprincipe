@@ -24,9 +24,12 @@ class AdressChecker
     	$this->myPaths = array(); 	
     	$this->generatePath($basefolder.'','home-ui');
     	$this->generatePath($basefolder.'home/','home-ui');
+        $this->generatePath($basefolder.'casa-do-principe/','casa-do-principe-ui');
+        $this->generatePath($basefolder.'facilities-services/','facilities-services-ui');
+        $this->generatePath($basefolder.'history/','history-ui');
     	$this->generatePath($basefolder.'index.php','home-ui');
-    	$this->generatePath($basefolder.'suites/','quarto-ui');
-    	$this->generatePath($basefolder.'suites/royal/','quarto-detail-ui');
+    	$this->generatePath($basefolder.'suites-rooms/','quarto-ui');
+    	$this->generatePath($basefolder.'suites-rooms/royal/','quarto-detail-ui');
     	$this->generatePath($basefolder.'suites/premium/','quarto-detail-ui');
     	$localPath = $_SERVER['REQUEST_URI'];
         $path = substr($localPath, 1, strlen($localPath)-1);   

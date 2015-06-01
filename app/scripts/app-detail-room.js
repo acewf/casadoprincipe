@@ -11,6 +11,12 @@ define(['approomdetail'], function(appmenu) {
 $(function() {
     'use strict';
     console.log('app-room-detail');
+
+
+    $('.logo').addClass('small');
+    $('ul.room-choose').addClass('show-childs');
+
+
     var elementdatepicker = $('.booker .input-daterange');
     $(elementdatepicker).datepicker({
     	format: 'dd/mm/yyyy',
@@ -20,6 +26,14 @@ $(function() {
 	    maxzindex:50,
 	    topDiference:77,
 	    autoclose: true
-	});
+	}).on('show', function(e){
+		var target = e.target;
+		var base = $(target.parentNode.parentNode).addClass('selectedColor');
+    }).on('hide', function(e){
+		var target = e.target;
+		console.log(target);
+		var base = $(target.parentNode.parentNode).removeClass('selectedColor');
+    });
+
 
 });

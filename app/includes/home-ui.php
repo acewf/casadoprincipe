@@ -1,4 +1,4 @@
-<div class="page-content">
+<div class="page-content homepage">
     <section class="content">
         <article class="image-frame">
             <div class="frame-inside" data-transition="crossfade">

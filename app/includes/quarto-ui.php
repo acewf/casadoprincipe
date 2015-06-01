@@ -1,5 +1,5 @@
-<div class="page-content">
-    <section class="content inside-room">
+<div class="page-content generic-room">
+    <section class="content inside-room home-rooms">
         <nav>
             <ul class="suite">
                 <li><a data-rooms="imperial" href="<?php echo "$basePath"; ?>suites/imperial">IMPERIAL SUITE</a></li>
@@ -33,11 +33,11 @@
             </div>
         </article>
     </section>
-    <section class="app-history inside-room">
+    <section class="app-history inside-room home-rooms">
         <div class="description">
             <p class="small-text">Charming suites and rooms with the modern comfort of a hotel in an exceptional location in the historic center of Lisbon</p>
         </div><div class="text-content">
-            <div class="description-location"><p>Casa do Príncipe takes its name after the Royal Prince, King D. Pedro V, whose story sets the tone for your unforgettable stay in Lisbon. Each of its 9 palatial suites and rooms refer to a meaningful part of this King’s life.</p></div>
+            <div class="description-location positionsys"><p>Casa do Príncipe takes its name after the Royal Prince, King D. Pedro V, whose story sets the tone for your unforgettable stay in Lisbon. Each of its 9 palatial suites and rooms refer to a meaningful part of this King’s life.</p></div>
         </div>
     </section>
 </div>

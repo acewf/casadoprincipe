@@ -13,6 +13,9 @@ var require = {
         apphome: '../scripts/app-home',
         approom: '../scripts/app-room',
         approomdetail: '../scripts/app-detail-room',
+        casadoprincipe: '../scripts/casa-do-principe',
+        facilitiesservices: '../scripts/facilities-services',
+        history: '../scripts/history',
         component: '../scripts/component',
         library: '../scripts/library',
         jquery: 'jquery/jquery',
@@ -21,7 +24,8 @@ var require = {
         bootstrappickerpt: 'bootstrap-datepicker-master/js/locales/bootstrap-datepicker.pt',
         fotorama: 'fotorama/fotorama',
         loglevel: 'loglevel/dist/loglevel.min',
-        picturefill: 'picturefill/dist/picturefill'
+        picturefill: 'picturefill/dist/picturefill',
+        'bootstrap-datetimepicker': 'bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min'
     },
     shim: {
         apphome: {
@@ -36,6 +40,18 @@ var require = {
                 'fotorama'
             ],
             exports: 'approom'
+        },
+        casadoprincipe: {
+            deps: [
+                'fotorama'
+            ],
+            exports: 'approom'
+        },
+        facilitiesservices: {
+            deps: [
+                'fotorama'
+            ],
+            exports: 'facilitiesservices'
         },
         approomdetail: {
             deps: [
