@@ -762,14 +762,14 @@ article  div.description p {
   -webkit-transform: translate(-50%, -50%);  
 }
 
-.inside-room nav{
+nav.sub-menu{
   max-width: 850px;
 }
-.inside-room ul.room{
+.sub-menu ul.room{
   display: inline-block;
 }
 
-.inside-room nav{
+nav.sub-menu{
   display: inline-block;
   position: absolute;
   z-index: 5;
@@ -779,7 +779,7 @@ article  div.description p {
   line-height: 0;
   height:65px;
 }
-.inside-room nav ul{
+nav.sub-menu ul{
   line-height:1;
   margin: 0;
   -webkit-margin-before:0;
@@ -791,7 +791,7 @@ article  div.description p {
   height:65px;
   text-align:center;
 }
-.inside-room nav ul li{
+nav.sub-menu ul li{
   display: inline-block;
   margin: 0;
   height:100%;
@@ -801,10 +801,10 @@ article  div.description p {
   min-width:150px;
   position: relative;
 }
-.inside-room nav ul li:first-child a, .inside-room nav ul li.active a{
+nav.sub-menu ul li:first-child a, nav.sub-menu ul li.active a{
   border-left-style:none;
 }
-.inside-room nav ul li a{
+nav.sub-menu ul li a{
   padding-left:10px;
   padding-right:10px;
   width:100%;
@@ -823,7 +823,7 @@ article  div.description p {
   border-left-width:1px;
   display: inherit;
 }
-.inside-room nav ul li span{
+nav.sub-menu ul li span{
   position:absolute;
   left: 11px;
   top: 23px;
@@ -837,10 +837,10 @@ article  div.description p {
   -ms-user-select: none;
   user-select: none;
 }
-.inside-room nav ul li span:hover{
+nav.sub-menu ul li span:hover{
   color: #F50000;
 }
-.inside-room nav ul li span {
+nav.sub-menu ul li span {
   margin-left: 20px;
   margin-top: 6px;
   width: 12px;
@@ -853,20 +853,20 @@ article  div.description p {
   transition: transform 0.1s 0.1s;
 }
 
-.inside-room nav ul li span:before,
-.inside-room nav ul li span:after {
+.inside-room nav.sub-menu ul li span:before,
+.inside-room nav.sub-menu ul li span:after {
   background-color: #fff;
 }
 
-.inside-room nav ul li:focus span:before,
-.inside-room nav ul li:active span:before,
-.inside-room nav ul li:focus span:after,
-.inside-room nav ul li:active span:after {
+nav.sub-menu ul li:focus span:before,
+nav.sub-menu ul li:active span:before,
+nav.sub-menu ul li:focus span:after,
+nav.sub-menu ul li:active span:after {
   background-color: #EBB30E;
 }
 
-.inside-room nav ul li span:before,
-.inside-room nav ul li span:after {
+nav.sub-menu ul li span:before,
+nav.sub-menu ul li span:after {
   content: '';
   width: 10px;
   height: 1px;
@@ -879,30 +879,30 @@ article  div.description p {
   transition: transform 0.1s 0.1s,background-color 0.1s 0.1s;
 }
 
-.inside-room nav ul li span:before {
+nav.sub-menu ul li span:before {
   -webkit-transform: translate(0px,5px) rotate(-135deg);
   transform: translate(1px,8px) rotate(-135deg);
 }
 
-.inside-room nav ul li span:after {
+nav.sub-menu ul li span:after {
   -webkit-transform: translate(-6px,5px) rotate(-45deg);
   transform: translate(-6px,8px) rotate(-45deg);
 }
-.inside-room nav ul li:hover span:before {
+nav.sub-menu ul li:hover span:before {
   -webkit-transform: translate(-2px,4px) rotate(-135deg);
   transform: translate(-2px,8px) rotate(-135deg);
 }
-.inside-room nav ul li:hover span:after {
+nav.sub-menu ul li:hover span:after {
   -webkit-transform: translate(-2px,4px) rotate(-45deg);
   transform: translate(-2px,8px) rotate(-45deg);
 }
-.inside-room nav ul li a:hover{
+nav.sub-menu ul li a:hover{
   color: #F2BA19;
 }
-.inside-room nav ul li.active{
+nav.sub-menu li.active{
   background-color:#F2BA19;
 }
-.inside-room nav ul li.active a{
+nav.sub-menu ul li.active a{
   color: #1F1F1F;
 }
 
@@ -911,21 +911,22 @@ article  div.description p {
   display: inherit;
   opacity: inherit;
 }
-.inside-room nav ul.suite,.inside-room nav ul.room-choose{
+nav.sub-menu ul.suite,nav.sub-menu ul.room-choose{
+  vertical-align: top;
   transform: translate(0px,0px);
   -webkit-transition: -webkit-transform 0.1s 0.1s,background-color 0.1s 0.1s;
   transition: transform 0.1s 0.1s,background-color 0.1s 0.1s;
 }
-.inside-room nav ul.suite{
+nav.sub-menu ul.suite{
   transform: translate(0px,-65px);
 }
-.inside-room nav ul.suite.menupos{
-  transform: translate(0px,0px);
+nav.sub-menu ul.suite.menupos{
+ transform: translate(0px,0px);
 }
-.inside-room nav ul.suite.choose-childs{
+nav.sub-menu ul.suite.choose-childs{
   transform: translate(0px,-65px);
 }
-.inside-room nav ul.room-choose.show-childs{
+nav.sub-menu ul.room-choose.show-childs{
   transform: translate(0px,-65px);
 }
 

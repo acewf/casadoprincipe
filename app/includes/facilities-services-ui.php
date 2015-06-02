@@ -1,6 +1,12 @@
+<?php
+if (!isset($basePath)) {
+    $folder = '/';
+    $basePath = 'http://'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].$folder; 
+}
+?>
 <div class="page-content facilities">
     <section class="content inside-room hostel-info">
-        <nav>
+        <nav class="sub-menu">
             <ul class="suite">
                 <li><a data-rooms="imperial" href="<?php echo "$basePath"; ?>casa-do-principe">CASA DO PRINCIPE</a></li>
                 <li><a data-rooms="royal" href="<?php echo "$basePath"; ?>facilities-services">FACILITIES &amp; SERVICES</a></li>

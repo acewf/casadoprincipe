@@ -5,6 +5,7 @@ require(['app', 'jquery', 'picturefill'], function (app) {
     pagModulesRef['home-ui'] = {module:'apphome'};
     pagModulesRef['quarto-ui'] = {module:'approom'};
     pagModulesRef['quarto-detail-ui'] = {module:'approomdetail'};
+    pagModulesRef['quarto-detail-ui-royal'] = {module:'approomdetail'};
     pagModulesRef['casa-do-principe-ui'] = {module:'casadoprincipe'};
     pagModulesRef['facilities-services-ui'] = {module:'facilitiesservices'};
 

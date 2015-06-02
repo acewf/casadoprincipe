@@ -18,6 +18,7 @@ var require = {
         history: '../scripts/history',
         component: '../scripts/component',
         library: '../scripts/library',
+        textloader: '../scripts/textloader',
         jquery: 'jquery/jquery',
         bootstrap: 'bootstrap/dist/js/bootstrap',
         bootstrapdate: 'bootstrap-datepicker-master/js/bootstrap-datepicker',
@@ -31,25 +32,29 @@ var require = {
         apphome: {
             deps: [
                 'fotorama',
-                'jquery'
+                'jquery',
+                'textloader'
             ],
             exports: 'apphome'
         },
         approom: {
             deps: [
-                'fotorama'
+                'fotorama',
+                'textloader'
             ],
             exports: 'approom'
         },
         casadoprincipe: {
             deps: [
-                'fotorama'
+                'fotorama',
+                'textloader'
             ],
             exports: 'approom'
         },
         facilitiesservices: {
             deps: [
-                'fotorama'
+                'fotorama',
+                'textloader'
             ],
             exports: 'facilitiesservices'
         },
@@ -57,7 +62,8 @@ var require = {
             deps: [
                 'bootstrapdate',
                 'bootstrappickerpt',
-                'fotorama'
+                'fotorama',
+                'textloader'
             ],
             exports: 'approomdetail'
         },
