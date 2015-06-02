@@ -6,24 +6,96 @@
 define(['appmenu'], function(appmenu) {
     'use strict';
     //Uses extras in here.
+
     console.log('app-menu-top CAN start run');
-    /*
+
+    function loader(res){
+        var instance = this;
+        this.data = null;
+        Object.defineProperties(this, {
+            defaultType: {
+                value: "realtime",
+                writable: true
+            },
+            load: {
+                value: function(type) {
+                  console.log(type);
+                },
+                enumerable: true
+            }
+        });
+        this.loaded = function(data){
+            instance.handler(data);
+        }
+
+        this.client = new XMLHttpRequest();
+        this.client.onload = this.loaded;
+        this.client.open("GET",res);
+        this.client.send();
+    }
+    loader.prototype.processData = function(data){
+        var evt = new Event('complete');
+        this.data = data.target.responseText;
+        this.dispatchEvent(evt);
+    }
+    loader.prototype.handler = function(data){
+        this.processData(data);
+    }
+
+    loader.prototype.addEventListener = function(a,b){
+      this[a] = b;
+    }
+    loader.prototype.removeEventListener = function(a,b){
+      this[a] = null;
+      b = null;
+    }
+    loader.prototype.dispatchEvent = function(event){
+        var callFunctionOn = this[event.type];
+        if(callFunctionOn!=undefined){
+            if (!event.preventDefault) {
+                event.preventDefault = function() {
+                event.returnValue = false;
+            };
+        }
+        try{
+          callFunctionOn(event);
+        }
+        catch(err){
+          console.log("Error:",err);
+        }
+      } else {
+        console.log("the "+event.type+" listener doesn´t exist");
+      }      
+    }
+    
     $('.choose-menu a').click(function(){
         var href = $(this).attr('href');
         event.preventDefault();
-        console.log('Click Event Stoped,',href);
+        var n = href.indexOf(event.target.origin);
+        var res = href.substring(n+event.target.origin.length+1, href.length);
+        window.history.pushState("object or string", "Title", "/"+res);
+        
+        var mcontent 
+        function completeloadContent(ev){
+            var totalChild = $('.sub-menu .suite li');
+            console.log('totalChild>>',totalChild.length);
+            $('.page-content').html(mcontent.data);
+        } 
+        function loadContent(endereco){
+            mcontent = new loader('includes/'+endereco+'.php?');
+            mcontent.addEventListener('complete',completeloadContent);
+        }
 
-        //document.getElementById("content").innerHTML = response.html;
-        //document.title = response.pageTitle;
-        //window.history.pushState({"html":response.html,"pageTitle":response.pageTitle},"", urlPath);
-        window.history.pushState("object or string", "Title", "/"+href);
+        var m = new loader('includes/address-filter-output.php?url='+res);
+        function completeload(ev){
+            console.log('event completed',ev);
+            loadContent(m.data);
+            m.removeEventListener('complete',completeload);
+            m = null;
+        }        
+        m.addEventListener('complete',completeload);
 
-        $(".site-contents").load("includes/"+href+".php", function(responseTxt, statusTxt, xhr){
-            console.log(responseTxt);
-            
-        });
     });
-    */
 });
 
 

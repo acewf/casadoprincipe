@@ -16,13 +16,10 @@ if (!isset($basePath)) {
                             <p>Spacious bedroom with lounge area, balcony overlooking the Príncipe Real garden, with three large windows that fill the room with natural light, creating a bright but relaxing atmosphere.</p>
                             <a href="<?php echo "$basePath"; ?>suites/" target="_self"><button>go previus</button></a>
                         </div>                    
-                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/sintra-pena-palacio.jpg">
+                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/fotos-sintra-palacio-da-pena-050.jpg">
                     </div>
                     <div class="featured-content">
                         <img alt="destaque 2" src="<?php echo "$basePath"; ?>images/fotos-sintra-palacio-da-pena-050.jpg">
-                    </div>
-                    <div class="featured-content">
-                        <img alt="destaque 3" src="<?php echo "$basePath"; ?>images/palacio-da-liberdade-interior1.jpg">
                     </div>
                 </div>
             </div>
@@ -95,9 +92,9 @@ if (!isset($basePath)) {
         </article>
     </section>
     <script>
-    console.log('try to define quarto detail room');
+    console.log('try to define quarto royal detail room');
     if (typeof requirejs == 'function') {
-        requirejs(['approom']);
+        requirejs(['approomdetail']);
     }
     </script>
 </div>

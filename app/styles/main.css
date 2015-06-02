@@ -1,3 +1,9 @@
+/* ----------------------------------------*/
+/* ----------------------------------------*/
+/* ------------ GENERIC STYLES ----------- */
+/* ----------------------------------------*/
+/* ----------------------------------------*/
+
 * {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -19,22 +25,6 @@ section.content {
   text-align: center;
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 300px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-}
-
-.hero-unit h1 {
-  font-size: 60px;
-  line-height: 1;
-  letter-spacing: -1px;
-}
 
 .browsehappy {
   margin: 0.2em 0;
@@ -42,6 +32,12 @@ section.content {
   color: #000;
   padding: 0.2em 0;
 }
+
+/* ----------------------------------------*/
+/* ----------------------------------------*/
+/* ----- MENU AND SOME UI STYLES --------- */
+/* ----------------------------------------*/
+/* ----------------------------------------*/
 
 .open-menu {
   position: relative;
@@ -61,12 +57,16 @@ section.content {
 
 .logo {
   position: absolute;
-  z-index: 8;  
+  z-index: 8; 
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transition: height 0.3s 0.3s;
+  transition: height 0.3s 0.3s;
 }
 
-.logo.room{
+.logo.small{
   overflow:hidden;
-  height:80px;
+  height:80px;  
 }
 
 .logo.room img{
@@ -200,6 +200,19 @@ body {
   text-align: center;
 }
 
+h2 {
+  font-family: "estilo-pro",sans-serif;
+  font-weight: 300;
+  display: inline-block;
+  width: 33%;
+  text-transform: lowercase;
+  vertical-align: top;
+  margin: 0;
+  font-size: 2.625em;
+  line-height: 1;
+  text-align: right;
+}
+
 div.main {
   margin-bottom: 0px;
   display: inline-block;
@@ -214,7 +227,7 @@ div.main header {
   height: 80px;
 }
 
-.central-block {
+header .central-block {
   text-align: center;
   height: 100%;
   width: 60%;
@@ -222,7 +235,7 @@ div.main header {
   vertical-align: top;
 }
 
-.left-block {
+header .left-block {
   float:left;
   width: 20%;
   height: 100%;
@@ -230,7 +243,7 @@ div.main header {
   text-align: left;
 }
 
-.right-block {
+header .right-block {
   width: 20%;
   display: inline-block;
   text-align: right;
@@ -357,8 +370,17 @@ div.main header {
 }
 
 .rooms-view {
+  margin-top: 20px;
+}
+
+article  div.description p {
   margin-top: 40px;
 }
+/* ----------------------------------------*/
+/* ----------------------------------------*/
+/* ------ MOLDURA/FRAME  STYLES ----------- */
+/* ----------------------------------------*/
+/* ----------------------------------------*/
 
 .frame-inside {
   position: relative;
@@ -368,6 +390,8 @@ div.main header {
   width: 100%;
   height: auto;
 }
+
+/////////////////
 
 .frame-inside .page-marker {
   position: absolute;
@@ -519,6 +543,14 @@ div.main header {
   font-size: 13px;
 }
 
+/* ----------------------------------------*/
+/* ----------------------------------------*/
+/* ------ BLOCK TEXTO REASON  ----------- */
+/* ---- BLOCK COM LINHA AMARELA SUPERIOR ---- */
+/* ----------------------------------------*/
+/* ----------------------------------------*/
+
+
 .reasons {
   text-align: center;
   margin-top: 146px;
@@ -530,70 +562,12 @@ div.main header {
   margin-right: 88px;
 }
 
-h2 {
-  font-family: "estilo-pro",sans-serif;
-  font-weight: 300;
-  display: inline-block;
-  width: 33%;
-  text-transform: lowercase;
-  vertical-align: top;
-  margin: 0;
-  font-size: 2.625em;
-  line-height: 1;
-  text-align: right;
-}
 
-article div.description{
-  margin: 0;
-  display: inline-block;
-  width: 56%;
-  vertical-align: top;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: normal;
-  line-height: 1.9;
-  font-size: 0.94em;
-  text-align: left;
-}
-
-article  div.description:before {
-  width: 119px;
-  height: 1px;
-  display: block;
-  background-color: #F2BB1A;
-  content: " ";
-  margin-bottom: 20px;
-  margin-top: 5px;
-}
-
-article  div.description p {
-  margin-top: 40px;
-}
-
-/*------------------------------------*/
-
-.show-rooms {
-  text-align: center;
-  margin-top: 150px;
-}
-
-.show-rooms h3 {
-  font-family: "estilo-pro",sans-serif;
-  font-weight: 400;
-  font-size: 1.75em;
-  text-transform: lowercase;
-  margin:0;
-}
-
-.show-rooms h3:after {
-  text-align: center;
-  width: 85px;
-  height: 1px;
-  display: block;
-  background-color: #D6D6D6;
-  content: " ";
-  margin-top: 20px;
-  margin-left: 37%;
-}
+/* ----------------------------------------*/
+/* ----------------------------------------*/
+/* ------ ELEM ROOM GENERAL  ----------- */
+/* ----------------------------------------*/
+/* ----------------------------------------*/
 
 .room {
   display: inline-block;
@@ -639,6 +613,62 @@ article  div.description p {
   */
 }
 
+
+/* ----------------------------------------*/
+/* ----------------------------------------*/
+/* -------- ELEMENTOS NA HOME ------------ */
+/* ----------------------------------------*/
+/* ----------------------------------------*/
+
+
+.homepage .content article div.description{
+  margin: 0;
+  display: inline-block;
+  width: 56%;
+  vertical-align: top;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  line-height: 1.9;
+  font-size: 0.94em;
+  text-align: left;
+}
+.homepage .content article  div.description:before {
+  width: 119px;
+  height: 1px;
+  display: block;
+  background-color: #F2BB1A;
+  content: " ";
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
+/*------------------------------------*/
+
+.show-rooms {
+  text-align: center;
+  margin-top: 150px;
+}
+
+.show-rooms h3,.show-room-info h3 {
+  font-family: "estilo-pro",sans-serif;
+  font-weight: 400;
+  font-size: 1.75em;
+  text-transform: lowercase;
+  margin:0;
+}
+
+.show-rooms h3:after,.show-room-info h3:after {
+  text-align: center;
+  width: 85px;
+  height: 1px;
+  display: block;
+  background-color: #D6D6D6;
+  content: " ";
+  margin-top: 20px;
+  margin-left: 37%;
+}
+
+
 .small-frame {
   width: 252px;
   height: 184px;
@@ -681,6 +711,25 @@ article  div.description p {
 .app-history h6{
   width:80%;
 }
+/* ----------  INFO ROOM ----------- */
+.info-room-featured a button{
+  color: #fff;
+  border: none;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #fff;
+  padding: 15px;
+  padding-left: 70px;
+  padding-right: 70px;
+  outline: none;
+  background: transparent;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  cursor:pointer;
+}
+.info-room-featured a{
+  display: block;
+}
 /* ----------  INSIDE ROOM ----------- */
 .inside-room  .featured-content p{
   position: relative;
@@ -713,32 +762,14 @@ article  div.description p {
   -webkit-transform: translate(-50%, -50%);  
 }
 
-.info-room-featured a button{
-  color: #fff;
-  border: none;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #fff;
-  padding: 15px;
-  padding-left: 70px;
-  padding-right: 70px;
-  outline: none;
-  background: transparent;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 13px;
-  cursor:pointer;
-}
-.info-room-featured a{
-  display: block;
-}
-.inside-room nav{
+nav.sub-menu{
   max-width: 850px;
 }
-.inside-room ul.room{
+.sub-menu ul.room{
   display: inline-block;
 }
 
-.inside-room nav{
+nav.sub-menu{
   display: inline-block;
   position: absolute;
   z-index: 5;
@@ -748,7 +779,7 @@ article  div.description p {
   line-height: 0;
   height:65px;
 }
-.inside-room nav ul{
+nav.sub-menu ul{
   line-height:1;
   margin: 0;
   -webkit-margin-before:0;
@@ -760,23 +791,28 @@ article  div.description p {
   height:65px;
   text-align:center;
 }
-.inside-room nav ul li{
+nav.sub-menu ul li{
   display: inline-block;
   margin: 0;
   height:100%;
-  width: 200px;  
+  padding-left:5px;
+  padding-right:5px;
+  width: auto;  
+  min-width:150px;
   position: relative;
 }
-.inside-room nav ul li:first-child a, .inside-room nav ul li.active a{
+nav.sub-menu ul li:first-child a, nav.sub-menu ul li.active a{
   border-left-style:none;
 }
-.inside-room nav ul li a{
+nav.sub-menu ul li a{
+  padding-left:10px;
+  padding-right:10px;
   width:100%;
   color:#888888;
   vertical-align:middle;
   font-weight:600px;
   font-size:.75em;
-  position: absolute;
+  position: relative;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -787,10 +823,10 @@ article  div.description p {
   border-left-width:1px;
   display: inherit;
 }
-.inside-room nav ul li span{
+nav.sub-menu ul li span{
   position:absolute;
-  left:30px;
-  top:20px;
+  left: 11px;
+  top: 23px;
   font-size:12px;
   z-index: 2;
   cursor: pointer;
@@ -801,14 +837,14 @@ article  div.description p {
   -ms-user-select: none;
   user-select: none;
 }
-.inside-room nav ul li span:hover{
+nav.sub-menu ul li span:hover{
   color: #F50000;
 }
-.inside-room nav ul li span {
-  margin-left: 5px;
-  margin-top: 7px;
-  width: 9px;
-  height: 4px;
+nav.sub-menu ul li span {
+  margin-left: 20px;
+  margin-top: 6px;
+  width: 12px;
+  height: 12px;
   vertical-align: middle;
   display: inherit;
   -webkit-transform: rotate(180deg); 
@@ -817,22 +853,22 @@ article  div.description p {
   transition: transform 0.1s 0.1s;
 }
 
-.inside-room nav ul li span:before,
-.inside-room nav ul li span:after {
+.inside-room nav.sub-menu ul li span:before,
+.inside-room nav.sub-menu ul li span:after {
   background-color: #fff;
 }
 
-.inside-room nav ul li:focus span:before,
-.inside-room nav ul li:active span:before,
-.inside-room nav ul li:focus span:after,
-.inside-room nav ul li:active span:after {
+nav.sub-menu ul li:focus span:before,
+nav.sub-menu ul li:active span:before,
+nav.sub-menu ul li:focus span:after,
+nav.sub-menu ul li:active span:after {
   background-color: #EBB30E;
 }
 
-.inside-room nav ul li span:before,
-.inside-room nav ul li span:after {
+nav.sub-menu ul li span:before,
+nav.sub-menu ul li span:after {
   content: '';
-  width: 6px;
+  width: 10px;
   height: 1px;
   background-color: #000;
   display: inline-block;
@@ -843,30 +879,30 @@ article  div.description p {
   transition: transform 0.1s 0.1s,background-color 0.1s 0.1s;
 }
 
-.inside-room nav ul li span:before {
-  -webkit-transform: translate(0px,4px) rotate(-135deg);
-  transform: translate(0px,4px) rotate(-135deg);
+nav.sub-menu ul li span:before {
+  -webkit-transform: translate(0px,5px) rotate(-135deg);
+  transform: translate(1px,8px) rotate(-135deg);
 }
 
-.inside-room nav ul li span:after {
-  -webkit-transform: translate(-4px,4px) rotate(-45deg);
-  transform: translate(-4px,4px) rotate(-45deg);
+nav.sub-menu ul li span:after {
+  -webkit-transform: translate(-6px,5px) rotate(-45deg);
+  transform: translate(-6px,8px) rotate(-45deg);
 }
-.inside-room nav ul li:hover span:before {
+nav.sub-menu ul li:hover span:before {
   -webkit-transform: translate(-2px,4px) rotate(-135deg);
-  transform: translate(-2px,4px) rotate(-135deg);
+  transform: translate(-2px,8px) rotate(-135deg);
 }
-.inside-room nav ul li:hover span:after {
+nav.sub-menu ul li:hover span:after {
   -webkit-transform: translate(-2px,4px) rotate(-45deg);
-  transform: translate(-2px,4px) rotate(-45deg);
+  transform: translate(-2px,8px) rotate(-45deg);
 }
-.inside-room nav ul li a:hover{
+nav.sub-menu ul li a:hover{
   color: #F2BA19;
 }
-.inside-room nav ul li.active{
+nav.sub-menu li.active{
   background-color:#F2BA19;
 }
-.inside-room nav ul li.active a{
+nav.sub-menu ul li.active a{
   color: #1F1F1F;
 }
 
@@ -875,33 +911,53 @@ article  div.description p {
   display: inherit;
   opacity: inherit;
 }
-.inside-room nav ul.suite,.inside-room nav ul.room-choose{
+nav.sub-menu ul.suite,nav.sub-menu ul.room-choose{
+  vertical-align: top;
   transform: translate(0px,0px);
   -webkit-transition: -webkit-transform 0.1s 0.1s,background-color 0.1s 0.1s;
   transition: transform 0.1s 0.1s,background-color 0.1s 0.1s;
 }
-.inside-room nav ul.suite.choose-childs{
+nav.sub-menu ul.suite{
   transform: translate(0px,-65px);
 }
-.inside-room nav ul.room-choose.show-childs{
+nav.sub-menu ul.suite.menupos{
+ transform: translate(0px,0px);
+}
+nav.sub-menu ul.suite.choose-childs{
   transform: translate(0px,-65px);
 }
-  
+nav.sub-menu ul.room-choose.show-childs{
+  transform: translate(0px,-65px);
+}
+
+
+.content.inside-room.room-detail article.show-room-info div.description{
+  font-family: "estilo-pro", sans-serif;
+  display: inline-block;
+  font-weight: 300;
+  text-align:center;
+  font-size: 2em;
+  line-height:1;
+  max-width: 850px;
+}
+
 /* ---------- END INSIDE ROOM ----------- */
-.app-history .img-content {
+.homepage .img-content {
   display: inline-block;
   width: 55%;
   vertical-align: bottom;
 }
 
-.app-history .img-content img {
+.homepage .img-content img,
+.principe-house .img-content img,
+.facilities .img-content img {
   width: 100%;
   /* margin-top: 20px; */
   vertical-align: bottom;
 }
 
 .app-history .description {
-  padding: 7%;
+  padding: 9%;
   display: inline-block;
   width: 45%;
   background-color: #fff;
@@ -914,7 +970,7 @@ article  div.description p {
   text-align: center;
 }
 
-.app-history .description a {
+.app-history .description a,.show-room-description a{
   font-weight: normal;
   border-style: solid;
   border-width: 1px;
@@ -929,25 +985,39 @@ article  div.description p {
   cursor: pointer;
   text-decoration: none;
   margin-top: 20px;
+  position:relative;
 }
-
-.app-history .description a:hover {
+.show-room-description a {
+  padding-top: 30px;
+  margin-top:70px;
+}
+.app-history .description a:hover,.show-room-description a:hover {
   background-color: #F2BB1A;
   border-color: transparent;
+  text-decoration:none;
+}
+
+.show-room-description a.big-size{
+  height: 80px;
+  width:280px;
 }
 
 .app-history .description a:active,
-.app-history .description a:focus {
+.app-history .description a:focus,
+.show-room-description a:active,
+.show-room-description a:focus {
   background-color: #323232;
   border-color: transparent;
 }
 
 .app-history .description a:active,
-.app-history .description a:focus {
+.app-history .description a:focus,
+.show-room-description a:active,
+.show-room-description a:focus {
   background-color: #D6D6D6;
 }
 
-.app-history .description a h4 {
+.app-history .description a h4,.inside-room.room-detail .show-room-description a h4 {
   text-decoration: none;
   color: #000;
   margin: 0;
@@ -974,15 +1044,16 @@ article  div.description p {
  position:relative;
  text-align:left;
 }
-.app-history.inside-room .description {
+.generic-room .inside-room .description {
   width: 53%;
   margin-top:-50px;
 }
+
 .app-history .text-content {
   display: inline-block;
   vertical-align: bottom;
 }
-.app-history.inside-room .img-content,.app-history.inside-room .text-content {
+.app-history.inside-room .text-content {
   width: 47%;
   height: 100%;
   position: absolute;
@@ -993,14 +1064,17 @@ article  div.description p {
   display: inline-block;
   text-align:left;
   font-size:15px;
-  max-width:480px;
+  max-width:490px;  
+}
+/*.home-rooms */
+.positionsys{
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
 }
-.app-history.inside-room   div.description-location:before {
+.app-history.inside-room.home-rooms    div.description-location:before {
   width: 119px;
   height: 1px;
   display: block;
@@ -1010,7 +1084,7 @@ article  div.description p {
   margin-top: 5px;
 }
 .app-history.inside-room .description p.small-text{
-  font-size: 2em;
+  font-size: 1.8em;
   font-family: 'estilo-pro';
   font-weight: 300;
   line-height: 1;
@@ -1059,6 +1133,19 @@ article  div.description p {
   overflow: hidden;
   z-index: 101;
   background-color: rgba(0, 0, 0, 0.51);
+}
+
+.center-content{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+.center-content ul{
+  display: inline-block;
+  margin: 0;
+  padding: 0;
 }
 
 .yellow {
@@ -1112,6 +1199,7 @@ nav.choose-lang {
   border-image-width:0;
   box-shadow:none;
   font-size: 1.1em;
+  color:inherit;
 }
 .room-detail .booker .bookregister{
   width: 216px;
@@ -1121,18 +1209,197 @@ nav.choose-lang {
   background-color: #323232;
   position: relative;
 }
+
+/* ------- SUITES DETAILS --------  */
+
+.show-room-info{
+  margin-top: 60px;
+}
+
+.inside-room.room-detail .show-rooms{
+  margin-top: 70px;
+  margin-bottom:50px;
+}
+ul.choose-rooms{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  margin-top:40px;
+}
+ul.choose-rooms li{
+  display: inline-block;
+  margin: 10px;
+}
+ul.choose-rooms li {
+
+}
+ul.choose-rooms li.actived{
+
+}
+ul.choose-rooms li.actived:after {
+  width: 119px;
+  height: 1px;
+  display: block;
+  background-color: #F2BB1A;
+  content: " ";
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+ul.choose-rooms li a{
+  text-decoration: none;
+  color: #323232;
+}
+
+/* ------- CASA DO PRINCIPE --------  */
+
+.principe-house .group-text-img,
+.facilities .group-text-img{
+  display: inline-block;
+  width: 53%;
+  margin-top:-50px
+}
+.principe-house .group-text-img .description{
+  width: auto;
+}
+.group-text-img{
+  
+}
+.principe-house {
+
+}
+.principe-house .app-history.inside-room .text-content > div{
+  position:relative;
+  height:100%;
+  width:100%;
+}
+.principe-house .app-history.inside-room .text-content > div > div.description-location{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  width:70%;
+}
+.principe-house .description,
+.facilities .description{
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+.description-location{
+  
+}
+.description-location h3
+{
+  font-family:"estilo-pro",sans-serif;
+   font-size:1.7em;
+   font-weight:300;
+   line-height:1;
+}
+.center-content h3{
+  text-align: left;
+  font-family:"estilo-pro",sans-serif;
+   font-size:1.7em;
+   font-weight:300;
+   line-height:1;
+}
+.description-location p{
+  font-family:'Open Sans',sans-serif;
+  font-size:1em;
+  font-weight: 400;
+}
+
+
+/* ------- FACILITES SERVICES --------  */
+
+.app-history.inside-room.room-detail .description{
+  margin-top:50px;
+}
+
+.inside-room.room-detail  article div.description{
+
+}
+
+.inside-room.room-detail .show-room-info h3:after{
+    margin-left: 45%;
+}
 .app-history.inside-room.room-detail{
 
 }
+
+.facilities .app-history .description{
+  width: 100%;
+}
+
+.room-detail .show-room-description{
+  max-width: 1020px;
+  display: inline-block;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.room-detail .show-room-description .left-block,
+.room-detail .show-room-description .right-block,
+.facilities .left-block,
+.facilities .right-block{
+  width:50%; 
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+.show-room-description {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  color: #323232;
+}
+
+.show-room-description .image-frame{
+  margin-top: 80px;
+}
+.show-room-description .image-frame.show-frame {
+  padding: 15px;
+  box-shadow: -1px 0px 24px #888888;
+  display:inline-block;
+}
+.frame-inside.show-frame {
+  position: relative;
+  box-shadow: 0px 0px 15px rgba(136, 136, 136, 0.23) inset;
+  padding: 20px;
+}
+
+.show-room-description .left-block p{
+  text-align: right;  
+  line-height:1.9;
+}
+.show-room-description .right-block {
+
+}
+.facilities .text-content ul{
+  margin: 0;
+  padding: 0;
+}
+.right-block ul,
+.facilities .text-content ul{
+  text-align: left;
+  margin-left: 20px;
+}
+.right-block ul{
+  margin-left:70px;
+}
+.right-block ul li,
+.facilities .text-content ul li{
+    margin-bottom: 10px;
+
+}
+
 /* ------ DATEPICKER ------- */
 .box-date:active{
   color:#fff;
 }
 article.booking{
   margin-top: 20px;
-  margin-bottom: 50px;
 }
 .bookregister button{
+  font-size:.90em;
   border: none;
   outline: 0;
   background:transparent;
@@ -1143,6 +1410,28 @@ article.booking{
   top: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
+}
+.box-date.selectedColor {
+  color: #fff;
+}
+div.datepicker{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+}
+div.datepicker table tr td.range{
+  background: transparent;
+  color: #000;
+  border-radius: 0;
+}
+div.datepicker table tr td.active.active{
+    color: #000;
+  background-color: #323232;
+  border-color: #000;
+}
+div.datepicker table tr td.selected{
+  color: #000;
+  background-color: #323232;
+  border-color: #000;
 }
 .icon-calendar,.icon-caret-down-two{
   display: inline-block;
@@ -1194,6 +1483,14 @@ div.datepicker-dropdown.datepicker-orient-bottom:before,div.datepicker-dropdown.
 
 }
 /* ------ END DATEPICKER ------- */
+
+
+/* ----------------------------------------*/
+/* ----------------------------------------*/
+/* ----- NAV MENU UI STYLES --------- */
+/* ----------------------------------------*/
+/* ----------------------------------------*/
+
 button.close {
   border: none;
   outline: 0;
@@ -1305,6 +1602,13 @@ nav.choose-menu ul {
   width: 50px;
   height: 50px;
 }
+
+
+/* ----------------------------------------*/
+/* ----------------------------------------*/
+/* ----- FOOTER UI STYLES --------- */
+/* ----------------------------------------*/
+/* ----------------------------------------*/
 
 footer ul li {
   text-transform: uppercase;

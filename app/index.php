@@ -9,16 +9,7 @@
             require_once dirname(__FILE__).'/includes/address-filter.php';
             //$folder = '/preview/';
             $folder = '/';
-            $basePath = 'http://'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].$folder; 
-            /*
-            $url = $_SERVER['REQUEST_URI']; //returns the current URL
-            $parts = explode('/',$url);
-            $mypath = $_SERVER['SERVER_NAME'];
-            for ($i = 0; $i < count($parts) - 1; $i++) {
-             $mypath .= $parts[$i] . "/";
-            }
-            echo $mypath;
-            */            
+            $basePath = 'http://'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].$folder;           
             $Adress = new AdressChecker();
         ?>
         <?php include(dirname(__FILE__).'/includes/head.php'); ?>
@@ -40,8 +31,8 @@
                 <nav class="choose-menu">
                     <h3>Book a Room</h3>
                     <ul>
-                        <li><a href="<?php echo "$basePath"; ?>home">Casa do príncipe</a></li>
-                        <li><a href="<?php echo "$basePath"; ?>suites">Suites and rooms</a></li>
+                        <li><a href="<?php echo "$basePath"; ?>casa-do-principe">Casa do príncipe</a></li>
+                        <li><a href="<?php echo "$basePath"; ?>suites-rooms">Suites and rooms</a></li>
                         <li><a href="<?php echo "$basePath"; ?>galllery">Gallery</a></li>
                         <li><a href="<?php echo "$basePath"; ?>location">Location</a></li>
                         <li><a href="<?php echo "$basePath"; ?>personalize">Personalize your stay</a></li>
@@ -67,9 +58,12 @@
                         </div>
                     </div>
                 </header>
+
                 <?php 
-                $path = $Adress->getPhpToUrl()
+                $pathObj = $Adress->getPhpToUrl('');
+                $path = $pathObj->path;
                 ?>
+                <?php include(dirname(__FILE__).'/includes/submenu/sub-menu-wrapper.php'); ?>
                 <script type="text/javascript">
                 var contentmodule = 'apphome';
                 contentmodule = '<?php echo $path ?>';

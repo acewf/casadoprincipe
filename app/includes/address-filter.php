@@ -11,38 +11,58 @@ class AdressChecker
 {
     private $localPath;
     public $myPaths;
-    public function generatePath($compare,$file)
+    public function generatePath($compare,$file,$levelMenu)
     {
     	$addressObj = new PathCheck();
     	$addressObj->value = $compare;
     	$addressObj->file = $file;
+        $addressObj->level = $levelMenu;
     	array_push($this->myPaths, $addressObj);
     }
-    public function getPhpToUrl()
+    public function getPhpToUrl($nexturl)
     {
         $basefolder = '';
     	$this->myPaths = array(); 	
-    	$this->generatePath($basefolder.'','home-ui');
-    	$this->generatePath($basefolder.'home/','home-ui');
-    	$this->generatePath($basefolder.'index.php','home-ui');
-    	$this->generatePath($basefolder.'suites/','quarto-ui');
-    	$this->generatePath($basefolder.'suites/royal/','quarto-detail-ui');
-    	$this->generatePath($basefolder.'suites/premium/','quarto-detail-ui');
-    	$localPath = $_SERVER['REQUEST_URI'];
-        $path = substr($localPath, 1, strlen($localPath)-1);   
-        $pathWithbar = $path."/";
+    	$this->generatePath($basefolder.'','home-ui',null);
+    	$this->generatePath($basefolder.'home/','home-ui',null);
+        $this->generatePath($basefolder.'casa-do-principe/','casa-do-principe-ui',null);
+        $this->generatePath($basefolder.'facilities-services/','facilities-services-ui',null);
+        $this->generatePath($basefolder.'history/','history-ui',null);
+    	$this->generatePath($basefolder.'index.php','home-ui',null);
+    	$this->generatePath($basefolder.'suites-rooms/','quarto-ui','sub-menu-rooms');
+    	$this->generatePath($basefolder.'suites-rooms/imperial/','quarto-detail-ui-royal','sub-menu-imperial-suite');
+        $this->generatePath($basefolder.'suites-rooms/royal/','quarto-detail-ui-royal','sub-menu-royal');
+    	$this->generatePath($basefolder.'suites-rooms/premium/','quarto-detail-ui','sub-menu-premium');
+        $this->generatePath($basefolder.'suites-rooms/historic/','quarto-detail-ui','sub-menu-historic');
+        $obj = new stdClass();
+        if ($nexturl!='') {
+           $path = $nexturl;
+           $pathWithbar = $path."/";
+        } else {
+            $localPath = $_SERVER['REQUEST_URI'];
+            $path = substr($localPath, 1, strlen($localPath)-1);   
+            $pathWithbar = $path."/";
+        }
+
+        $level = null;
         for ($i=0; $i <count($this->myPaths) ; $i++) {	
         	$item = $this->myPaths[$i];
         	if(($path===$item->value) || ($pathWithbar===$item->value)){
-        		$path = $item->file;        		
-        		return $path;
-        	} else if (strlen ($path)==0) {
-                $path = 'home-ui';
-                return $path;
+        		$path = $item->file; 
+                $obj->path = $path;
+                $obj->level = $level;
+                return $obj;
+        	} else if (strlen ($path)===0) {
+                $path = 'home-ui';                
+                $obj->path = $path;
+                $obj->level = $level;
+                return $obj;
             }
         }
         $path = '404';
-        return $path;
+        $obj->path = $path;
+        $obj->level = $level;
+        return $obj;
     }
 }
 ?>
