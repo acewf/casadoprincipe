@@ -8,7 +8,7 @@ define(['appmenu'], function(appmenu) {
     //Uses extras in here.
 
     console.log('app-menu-top CAN start run');
-
+    /*
     function loader(res){
         var instance = this;
         this.data = null;
@@ -67,7 +67,7 @@ define(['appmenu'], function(appmenu) {
         console.log("the "+event.type+" listener doesn´t exist");
       }      
     }
-    
+    */
     $('.choose-menu a').click(function(){
         var href = $(this).attr('href');
         event.preventDefault();
@@ -96,6 +96,8 @@ define(['appmenu'], function(appmenu) {
         m.addEventListener('complete',completeload);
 
     });
+
+    return appmenu;
 });
 
 

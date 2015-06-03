@@ -49,13 +49,14 @@ class AdressChecker
         	$item = $this->myPaths[$i];
         	if(($path===$item->value) || ($pathWithbar===$item->value)){
         		$path = $item->file; 
+                $level = $item->level; 
                 $obj->path = $path;
-                $obj->level = $level;
+                $obj->level = $item->level;
                 return $obj;
         	} else if (strlen ($path)===0) {
                 $path = 'home-ui';                
                 $obj->path = $path;
-                $obj->level = $level;
+                $obj->level = $item->level;
                 return $obj;
             }
         }

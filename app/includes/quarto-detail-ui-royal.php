@@ -94,7 +94,12 @@ if (!isset($basePath)) {
     <script>
     console.log('try to define quarto royal detail room');
     if (typeof requirejs == 'function') {
-        requirejs(['approomdetail']);
+        var myApp = require(['approomdetail'],function(module){
+                module.init();
+            });
+        console.log('Call approomdetail');
+    } else {
+        console.log('DONT CALL approomdetail');
     }
     </script>
 </div>

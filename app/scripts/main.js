@@ -10,12 +10,18 @@ require(['app', 'jquery', 'picturefill'], function (app) {
     pagModulesRef['facilities-services-ui'] = {module:'facilitiesservices'};
 
     app.init();
-    console.log('default app');
+    console.log('default app',app);
     if (typeof requirejs === 'function') {
-	    requirejs(['appmenu']);
+	    requirejs(['appmenu'],function(appmenu){
+            console.log('+++++++END+++++++',appmenu);
+        });
 	    if (contentmodule) {
 	    	console.log('modulo a carregar:',contentmodule);
-	    	requirejs([pagModulesRef[contentmodule].module]);
+	    	requirejs([pagModulesRef[contentmodule].module],function(module){
+                console.log('-----',module);
+                if(module)
+                module.init();
+            });
 	    } else {
 	    	console.log('module missing');
 	    }    

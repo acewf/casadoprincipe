@@ -20,7 +20,6 @@ var require = {
         library: '../scripts/library',
         textloader: '../scripts/textloader',
         jquery: 'jquery/jquery',
-        bootstrap: 'bootstrap/dist/js/bootstrap',
         bootstrapdate: 'bootstrap-datepicker-master/js/bootstrap-datepicker',
         bootstrappickerpt: 'bootstrap-datepicker-master/js/locales/bootstrap-datepicker.pt',
         fotorama: 'fotorama/fotorama',
@@ -29,6 +28,14 @@ var require = {
         'bootstrap-datetimepicker': 'bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min'
     },
     shim: {
+    	appmenu: {
+            deps: [
+                'fotorama',
+                'jquery',
+                'textloader'
+            ],
+            exports: 'appmenu'
+        },
         apphome: {
             deps: [
                 'fotorama',

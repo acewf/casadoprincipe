@@ -39,7 +39,12 @@ if (!isset($basePath)) {
     <script>
     console.log('try to define quarto room');
     if (typeof requirejs == 'function') {
-        requirejs(['approom']);
+        var myApp = require(['approom'],function(module){
+                module.init();
+            });
+        console.log('Call approom',myApp);
+    } else {
+        console.log('DONT Call approom');
     }
     </script>
 </div>

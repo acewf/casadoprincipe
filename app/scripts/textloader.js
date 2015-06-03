@@ -16,7 +16,10 @@ function loader(res){
         }
     });
     this.loaded = function(data){
-        instance.handler(data);
+        if (instance) {
+            instance.handler(data);
+        };
+        
     }
 
     this.client = new XMLHttpRequest();

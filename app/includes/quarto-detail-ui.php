@@ -40,7 +40,7 @@ if (!isset($basePath)) {
 
         <article class="show-room-description">
             <div class="left-block">
-                <p>Indulge in the glamour of this imperial suite that pays tribute to the Príncipe Real (Royal Prince) D. Pedro V, who inspired the name our B&B. This room´s decoration embodies the elegance and honour that characterized him. Let yourself be dazzled by the amazing stuccowork ceilings of this suite, taking you back in time to the elegant 19th century.</p>
+                <p>Indulge in the glamour of this imperial suite that pays tribute to the Príncipe Real (Royal Prince) D. Pedro V, who inspired the name our B&amp;B. This room´s decoration embodies the elegance and honour that characterized him. Let yourself be dazzled by the amazing stuccowork ceilings of this suite, taking you back in time to the elegant 19th century.</p>
                 <div class="image-frame show-frame">
                     <div class="frame-inside show-frame" data-transition="crossfade">
                         <img alt="destaque 3" src="<?php echo "$basePath"; ?>images/principe-moldura.png">
@@ -66,7 +66,7 @@ if (!isset($basePath)) {
         </article>
         <article class="show-rooms">
             <div class="center-title">
-                <h3>more rooms & suites</h3>
+                <h3>more rooms &amp; suites</h3>
             </div>
             <div class="rooms-types">
                 <ul class="choose-rooms">
@@ -97,7 +97,12 @@ if (!isset($basePath)) {
     <script>
     console.log('try to define quarto detail room');
     if (typeof requirejs == 'function') {
-        requirejs(['approom']);
+        var myApp = require(['approomdetail'],function(module){
+                module.init();
+            });
+        console.log('Call approomdetail',retun);
+    } else {
+        console.log('DONT Call approomdetail');
     }
     </script>
 </div>
