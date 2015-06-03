@@ -9,8 +9,11 @@ define(['approomdetail'], function(appmenu) {
     console.log('app-room-detail start');
 
     function Approomdetail(){
+
     	this.init=function(){
     		$('.logo').addClass('small');
+    		$('#logo-big').removeClass('show');
+    		$('#logo-small').addClass('show');
 		    $('ul.room-choose').addClass('show-childs');
 		    $('ul.suite').removeClass('menupos');
 		    var mcontent;

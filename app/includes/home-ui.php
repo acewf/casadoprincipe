@@ -88,8 +88,13 @@
     </section>
 </div>
 <script>
-console.log('try to define app home');
 if (typeof requirejs == 'function') {
-    requirejs(['apphome']);
+    requirejs(['apphome'],function(module){
+        try{
+            module.init();
+        }catch(err) {
+            console.log(err.message);
+        }  
+    });
 }
 </script>

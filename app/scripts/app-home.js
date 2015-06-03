@@ -10,7 +10,8 @@ define(['apphome'], function(apphome) {
 
     function APPhome(){
     	this.init = function(){
-
+    		$('#logo-big').addClass('show');
+    		$('#logo-small').removeClass('show');
     	}
     }
 

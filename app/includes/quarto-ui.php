@@ -1,7 +1,11 @@
 <?php
 if (!isset($basePath)) {
     $folder = '/';
-    $basePath = 'http://'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].$folder; 
+    if($_SERVER['SERVER_NAME']==='127.0.0.1'){
+        $basePath = 'http://'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].$folder; 
+    } else {
+        $basePath = 'http://'.$_SERVER['SERVER_NAME'].$folder; 
+    }
 }
 ?>
 
@@ -37,14 +41,14 @@ if (!isset($basePath)) {
         </div>
     </section>
     <script>
-    console.log('try to define quarto room');
     if (typeof requirejs == 'function') {
         var myApp = require(['approom'],function(module){
+            try{
                 module.init();
-            });
-        console.log('Call approom',myApp);
-    } else {
-        console.log('DONT Call approom');
+            }catch(err) {
+                console.log(err.message);
+            }               
+        });
     }
     </script>
 </div>

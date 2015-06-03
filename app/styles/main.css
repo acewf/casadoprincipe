@@ -60,18 +60,32 @@ section.content {
   z-index: 8; 
   -webkit-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
-  -webkit-transition: height 0.3s 0.3s;
-  transition: height 0.3s 0.3s;
+  -webkit-transition: height 0.3s 0.3s,opacity 0.2s 0.2s;
+  transition: height 0.3s 0.3s,opacity 0.2s 0.2s;
 }
 
 .logo.small{
   overflow:hidden;
-  height:80px;  
+  height:76px;  
 }
 
 .logo.room img{
   margin-top:-50px;
   height:180px;
+}
+
+#logo-big{
+  display: none;
+  opacity: 0;
+}
+#logo-big.show,#logo-small.show{
+  display: block;
+  opacity: 1;
+}
+
+#logo-small{
+  display: none;
+  opacity: 0;
 }
 
 div.transparent-shadow {
@@ -224,7 +238,7 @@ div.main header {
   text-align: center;
   vertical-align: top;
   position: relative;
-  height: 80px;
+  height: 76px;
 }
 
 header .central-block {
@@ -763,7 +777,7 @@ article  div.description p {
 }
 
 nav.sub-menu{
-  max-width: 850px;
+  max-width: 1024px;
 }
 .sub-menu ul.room{
   display: inline-block;
@@ -798,7 +812,7 @@ nav.sub-menu ul li{
   padding-left:5px;
   padding-right:5px;
   width: auto;  
-  min-width:150px;
+  min-width:200px;
   position: relative;
 }
 nav.sub-menu ul li:first-child a, nav.sub-menu ul li.active a{

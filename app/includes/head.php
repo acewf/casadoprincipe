@@ -29,11 +29,11 @@
 <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
 <!-- build:js scripts/vendor/modernizr.js -->
-<script src="<?php echo "$basePath"; ?>../bower_components/modernizr/modernizr.js"></script>
+<script src="<?php echo "$basePath"; ?>bower_components/modernizr/modernizr.js"></script>
 <!-- endbuild -->
 
         <!-- build:css styles/vendor/bootstrap.css -->
-<link rel="stylesheet" href="<?php echo "$basePath"; ?>../bower_components/bootstrap-datepicker-master/dist/css/bootstrap-datepicker3.standalone.css">
+<link rel="stylesheet" href="<?php echo "$basePath"; ?>bower_components/bootstrap-datepicker-master/dist/css/bootstrap-datepicker3.standalone.css">
         <!-- endbuild -->
         <!-- build:css styles/main.css -->
 <link rel="stylesheet" href="<?php echo "$basePath"; ?>styles/main.css">

@@ -8,66 +8,7 @@ define(['appmenu'], function(appmenu) {
     //Uses extras in here.
 
     console.log('app-menu-top CAN start run');
-    /*
-    function loader(res){
-        var instance = this;
-        this.data = null;
-        Object.defineProperties(this, {
-            defaultType: {
-                value: "realtime",
-                writable: true
-            },
-            load: {
-                value: function(type) {
-                  console.log(type);
-                },
-                enumerable: true
-            }
-        });
-        this.loaded = function(data){
-            instance.handler(data);
-        }
-
-        this.client = new XMLHttpRequest();
-        this.client.onload = this.loaded;
-        this.client.open("GET",res);
-        this.client.send();
-    }
-    loader.prototype.processData = function(data){
-        var evt = new Event('complete');
-        this.data = data.target.responseText;
-        this.dispatchEvent(evt);
-    }
-    loader.prototype.handler = function(data){
-        this.processData(data);
-    }
-
-    loader.prototype.addEventListener = function(a,b){
-      this[a] = b;
-    }
-    loader.prototype.removeEventListener = function(a,b){
-      this[a] = null;
-      b = null;
-    }
-    loader.prototype.dispatchEvent = function(event){
-        var callFunctionOn = this[event.type];
-        if(callFunctionOn!=undefined){
-            if (!event.preventDefault) {
-                event.preventDefault = function() {
-                event.returnValue = false;
-            };
-        }
-        try{
-          callFunctionOn(event);
-        }
-        catch(err){
-          console.log("Error:",err);
-        }
-      } else {
-        console.log("the "+event.type+" listener doesn´t exist");
-      }      
-    }
-    */
+    
     $('.choose-menu a').click(function(){
         var href = $(this).attr('href');
         event.preventDefault();
@@ -97,15 +38,13 @@ define(['appmenu'], function(appmenu) {
 
     });
 
-    return appmenu;
-});
 
-
-$(function() {
-    'use strict';
     var app;
     var AppEngine = function(){
         //var instance = this;
+        this.init = function(){
+            console.log('AQUI ARRRANCA APP ENGINE MENU');
+        }
         this.btmenu =  document.getElementById('open-menu');
         this.btlang =  document.getElementById('open-lang');
         this.addEvents();
@@ -167,6 +106,7 @@ $(function() {
         var target = event.target;
         event.preventDefault();
         var isOpen = parseFloat(target.getAttribute('data-open'));
+        console.log('toggle Menu',this,isOpen);
         var el = $('#menu-options');
         if (isOpen) {
             target.setAttribute('data-open',0);
@@ -213,5 +153,6 @@ $(function() {
 
     };
     app = new AppEngine();
-    console.log('app-menu-top start run');
+
+    return app;
 });

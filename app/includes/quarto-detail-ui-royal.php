@@ -1,7 +1,11 @@
 <?php
 if (!isset($basePath)) {
     $folder = '/';
-    $basePath = 'http://'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].$folder; 
+    if($_SERVER['SERVER_NAME']==='127.0.0.1'){
+        $basePath = 'http://'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].$folder; 
+    } else {
+        $basePath = 'http://'.$_SERVER['SERVER_NAME'].$folder; 
+    }
 }
 ?>
 <div class="page-content spec-room">

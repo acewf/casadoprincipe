@@ -1,21 +1,15 @@
 <?php
 if (!isset($basePath)) {
     $folder = '/';
-    $basePath = 'http://'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].$folder; 
+    if($_SERVER['SERVER_NAME']==='127.0.0.1'){
+        $basePath = 'http://'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].$folder; 
+    } else {
+        $basePath = 'http://'.$_SERVER['SERVER_NAME'].$folder; 
+    }
 }
 ?>
 <div class="page-content facilities">
     <section class="content inside-room hostel-info">
-        <nav class="sub-menu">
-            <ul class="suite">
-                <li><a data-rooms="imperial" href="<?php echo "$basePath"; ?>casa-do-principe">CASA DO PRINCIPE</a></li>
-                <li><a data-rooms="royal" href="<?php echo "$basePath"; ?>facilities-services">FACILITIES &amp; SERVICES</a></li>
-                <li><a data-rooms="premium" href="<?php echo "$basePath"; ?>history">HISTORY - WHO WAS THE ROYAL PRINCE</a></li>
-                </li></ul><ul class="room-choose">
-                <li><a href="">QUEEN D. ESTEFÂNIA</a></li>
-                <li class="active"><span></span><a href="">PALACE</a></li>
-            </ul>
-        </nav>
         <article class="image-frame">
             <div class="frame-inside"data-transition="crossfade">
                 <div class="fotorama fotorama__wrap fotorama__wrap--css3 fotorama__wrap--slide fotorama__wrap--no-controls" data-nav="false" data-arrows="true" data-click="true" data-swipe="true" data-allowfullscreen="true" data-loop="true" data-stopautoplayontouch="false"  data-width="100%" data-ratio="1432/577">
@@ -60,6 +54,12 @@ if (!isset($basePath)) {
 </div>
 <script>
 if (typeof requirejs == 'function') {
-    requirejs(['facilitiesservices']);
+    require(['facilitiesservices'],function(module){
+        try{
+            module.init();
+        }catch(err) {
+            console.log(err.message);
+        }  
+    });
 }
 </script>

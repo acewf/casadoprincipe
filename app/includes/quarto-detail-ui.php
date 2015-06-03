@@ -1,7 +1,11 @@
 <?php
 if (!isset($basePath)) {
     $folder = '/';
-    $basePath = 'http://'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].$folder; 
+    if($_SERVER['SERVER_NAME']==='127.0.0.1'){
+        $basePath = 'http://'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].$folder; 
+    } else {
+        $basePath = 'http://'.$_SERVER['SERVER_NAME'].$folder; 
+    }
 }
 ?>
 <div class="page-content spec-room">
@@ -95,14 +99,14 @@ if (!isset($basePath)) {
         </article>
     </section>
     <script>
-    console.log('try to define quarto detail room');
     if (typeof requirejs == 'function') {
         var myApp = require(['approomdetail'],function(module){
-                module.init();
+                try{
+                    module.init();
+                }catch(err) {
+                    console.log(err.message);
+                }  
             });
-        console.log('Call approomdetail',retun);
-    } else {
-        console.log('DONT Call approomdetail');
     }
     </script>
 </div>

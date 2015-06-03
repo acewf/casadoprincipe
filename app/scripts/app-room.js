@@ -11,6 +11,8 @@ define(['approom'], function(appmenu) {
     function Approom(){
     	this.init=function(){
 		    $('ul.room-choose').removeClass('show-childs');
+		    $('#logo-big').removeClass('show');
+    		$('#logo-small').addClass('show');
 		    $('ul.suite').addClass('menupos');
 			var mcontent;
 		    function completeloadContent(ev){
@@ -28,8 +30,15 @@ define(['approom'], function(appmenu) {
 			            console.log('HTML LOADED:');
 			            var elem =  $('.page-content');
 			           	var msnode = elem[0].parentNode;
-			           	$('.page-content').remove();
-			            $(msnode).append(mcontent.data);
+			           	var pageC = $('.page-content');
+			           	if (pageC)
+			           	pageC.remove();
+			           	try{
+			           		$(msnode).append(mcontent.data);
+			           	}catch(err) {
+						    console.log(err.message);
+						}
+			            
 			        } 
 			        function loadContent(endereco){
 			        	mcontent = new loader('../includes/'+endereco+'.php?');

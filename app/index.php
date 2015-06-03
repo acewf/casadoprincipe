@@ -9,7 +9,12 @@
             require_once dirname(__FILE__).'/includes/address-filter.php';
             //$folder = '/preview/';
             $folder = '/';
-            $basePath = 'http://'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].$folder;           
+            if($_SERVER['SERVER_NAME']==='127.0.0.1'){
+                $basePath = 'http://'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].$folder; 
+            } else {
+                $basePath = 'http://'.$_SERVER['SERVER_NAME'].$folder; 
+            }
+                      
             $Adress = new AdressChecker();
         ?>
         <?php include(dirname(__FILE__).'/includes/head.php'); ?>
@@ -45,7 +50,8 @@
                     <div class="left-block">
                         <div class="logo">
                             <a href="<?php echo "$basePath"; ?>home">
-                                <img alt="logo site" src="<?php echo "$basePath"; ?>images/logo-size140.png">
+                                <img alt="logo site" id="logo-big" src="<?php echo "$basePath"; ?>images/logo-size140.png">
+                                <img alt="logo site" id="logo-small" src="<?php echo "$basePath"; ?>images/logo-sizesmall.png">
                             </a>
                         </div>
                     </div><div class="central-block">

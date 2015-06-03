@@ -21,6 +21,7 @@ class AdressChecker
     }
     public function getPhpToUrl($nexturl)
     {
+        //preview/
         $basefolder = '';
     	$this->myPaths = array(); 	
     	$this->generatePath($basefolder.'','home-ui',null);

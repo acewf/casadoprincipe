@@ -5,6 +5,7 @@
         bootstrappickerpt: 'bootstrap-datetimepicker/src/js/locales/bootstrap-datetimepicker.pt',
  */
 var require = {
+    ///preview;
     baseUrl: '/bower_components',
     paths: {
         main: '../scripts/main',
@@ -20,6 +21,7 @@ var require = {
         library: '../scripts/library',
         textloader: '../scripts/textloader',
         jquery: 'jquery/jquery',
+        bootstrap: 'bootstrap/dist/js/bootstrap',
         bootstrapdate: 'bootstrap-datepicker-master/js/bootstrap-datepicker',
         bootstrappickerpt: 'bootstrap-datepicker-master/js/locales/bootstrap-datepicker.pt',
         fotorama: 'fotorama/fotorama',
