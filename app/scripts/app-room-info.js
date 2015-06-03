@@ -3,27 +3,25 @@
 ////Date: 05/05/2015
 ////Company:euro-m.pt
 //////////////  AREAS DE JOGO  /////////////////////////
-define(['approom'], function(appmenu) {
+define(['approominfo'], function(appmenu) {
 	'use strict';
     //Uses extras in here.
-    console.log('app-room start');
+    console.log('app-room-detail start');
 
-    function Approom(){
+
+    function Approomdetail(){
+
     	this.init=function(){
-		    $('ul.room-choose').removeClass('show-childs');
-		    $('#logo-big').removeClass('show');
+    		$('.logo').addClass('small');
+    		$('#logo-big').removeClass('show');
     		$('#logo-small').addClass('show');
-		    $('ul.suite').addClass('menupos');
+		    $('ul.room-choose').addClass('show-childs');
+		    $('ul.suite').removeClass('menupos');
 		    $('.fotorama').fotorama();
-		    $('.fotorama').on('fotorama:show',function(){
-		    	console.log('--- Foto Changed ---');
-		    });
-			
-			var mcontent;
-			console.log('APP ROOM CALL LOAD CONTENT');
+		    var mcontent;
 		    function completeloadContent(ev){
-		    	$('.sub-menu .suite').html(mcontent.data);
-		    	$('.sub-menu .suite li a').click(function(){
+		    	$('ul.room-choose').html(mcontent.data);
+		    	$('ul.room-choose li a').click(function(){
 			        var href = $(this).attr('href');
 			        var datarooms = $(this).attr('data-rooms');
 			        event.preventDefault();
@@ -32,19 +30,8 @@ define(['approom'], function(appmenu) {
 			        window.history.pushState("object or string", "Title", "/"+res);
 			        var mcontent 
 			        function completeloadContent(ev){
-			            var totalChild = $('.sub-menu .suite li');
-			            console.log('HTML LOADED:');
-			            var elem =  $('.page-content');
-			           	var msnode = elem[0].parentNode;
-			           	var pageC = $('.page-content');
-			           	if (pageC)
-			           	pageC.remove();
-			           	try{
-			           		$(msnode).append(mcontent.data);
-			           	}catch(err) {
-						    console.log(err.message);
-						}
-			            
+			            $('.page-content').html(mcontent.data);
+			            console.log('data-loaded-->Call AppRoom');
 			        } 
 			        function loadContent(endereco){
 			        	mcontent = new loader(window.location.origin+'/includes/'+endereco+'.php?');
@@ -52,6 +39,7 @@ define(['approom'], function(appmenu) {
 			        }
 			        var m = new loader(window.location.origin+'/includes/address-filter-output.php?url='+res);
 			        function completeload(ev){
+			        	console.log(m.data);
 			        	var data = JSON.parse(m.data);
 			            loadContent(data.path);
 			            m.removeEventListener('complete',completeload);
@@ -60,13 +48,22 @@ define(['approom'], function(appmenu) {
 			        m.addEventListener('complete',completeload);
 			    });
 		    }
-		    mcontent = new loader(window.location.origin+'/includes/submenu/sub-menu-rooms.php');
-		    mcontent.addEventListener('complete',completeloadContent);
-		    $('.logo').addClass('small');
-		    $('ul.suite').addClass('menupos');
-	    }
+		    var href = window.location.href;
+		    var n = href.indexOf(window.location.origin);
+			var res = href.substring(n+window.location.origin.length+1, href.length);
+			console.log(res);
+			
+		   	var subm = new loader(window.location.origin+'/includes/address-filter-output.php?url='+res);
+	        function Subcompleteload(ev){
+	        	var data = JSON.parse(subm.data);
+	            mcontent = new loader(window.location.origin+'/includes/submenu/'+data.level+'.php?');
+		    	mcontent.addEventListener('complete',completeloadContent);
+	            subm.removeEventListener('complete',Subcompleteload);
+	            subm = null;
+	        }        
+	        subm.addEventListener('complete',Subcompleteload);
+    	}
     }
-    var approom = new Approom();
-
-    return approom;
+    var approomdetail = new Approomdetail();
+    return approomdetail;
 });

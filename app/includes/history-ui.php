@@ -12,7 +12,7 @@ if (!isset($basePath)) {
     <section class="content inside-room hostel-info">
         <article class="image-frame">
             <div class="frame-inside"data-transition="crossfade">
-                <div class="fotorama fotorama__wrap fotorama__wrap--css3 fotorama__wrap--slide fotorama__wrap--no-controls" data-nav="false" data-arrows="true" data-click="true" data-swipe="true" data-allowfullscreen="true" data-loop="true" data-stopautoplayontouch="false"  data-width="100%" data-ratio="1432/577">
+                <div class="fotorama fotorama__wrap fotorama__wrap--css3 fotorama__wrap--slide fotorama__wrap--no-controls" data-nav="false" data-autoplay="true" data-arrows="true" data-click="true" data-swipe="true" data-allowfullscreen="true" data-loop="true" data-stopautoplayontouch="false"  data-width="100%" data-ratio="1432/577">
                     <div class="featured-content">                  
                         <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/foto-varanda.jpg">
                     </div>

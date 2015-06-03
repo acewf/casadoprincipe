@@ -16,6 +16,7 @@ define(['approomdetail'], function(appmenu) {
     		$('#logo-small').addClass('show');
 		    $('ul.room-choose').addClass('show-childs');
 		    $('ul.suite').removeClass('menupos');
+		    $('.fotorama').fotorama();
 		    var mcontent;
 		    function completeloadContent(ev){
 		    	$('ul.room-choose').html(mcontent.data);
@@ -32,12 +33,13 @@ define(['approomdetail'], function(appmenu) {
 			            console.log('data-loaded-->Call AppRoom');
 			        } 
 			        function loadContent(endereco){
-			        	mcontent = new loader('../includes/'+endereco+'.php?');
+			        	mcontent = new loader(window.location.origin+'/includes/'+endereco+'.php?');
 			            mcontent.addEventListener('complete',completeloadContent);
 			        }
-			        var m = new loader('../includes/address-filter-output.php?url='+res);
+			        var m = new loader(window.location.origin+'/includes/address-filter-output.php?url='+res);
 			        function completeload(ev){
-			            loadContent(m.data);
+			        	var data = JSON.parse(m.data);
+			            loadContent(data.path);
 			            m.removeEventListener('complete',completeload);
 			            m = null;
 			        }        
@@ -49,18 +51,16 @@ define(['approomdetail'], function(appmenu) {
 			var res = href.substring(n+window.location.origin.length+1, href.length);
 			console.log(res);
 			
-		   	var subm = new loader('../includes/address-filter-submenu.php?url='+res);
+		   	var subm = new loader(window.location.origin+'/includes/address-filter-output.php?url='+res);
 	        function Subcompleteload(ev){
-	            mcontent = new loader('../../includes/submenu/'+subm.data+'.php?');
+	        	var data = JSON.parse(subm.data);
+	            mcontent = new loader('../../includes/submenu/'+data.level+'.php?');
 		    	mcontent.addEventListener('complete',completeloadContent);
 	            subm.removeEventListener('complete',Subcompleteload);
 	            subm = null;
 	        }        
 	        subm.addEventListener('complete',Subcompleteload);
 	        
-
-		    
-
 			
 		    var elementdatepicker = $('.booker .input-daterange');
 		    $(elementdatepicker).datepicker({

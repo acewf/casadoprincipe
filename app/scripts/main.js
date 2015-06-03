@@ -4,6 +4,7 @@ require(['app', 'jquery', 'picturefill'], function (app) {
     var pagModulesRef = [];
     pagModulesRef['home-ui'] = {module:'apphome'};
     pagModulesRef['quarto-ui'] = {module:'approom'};
+    pagModulesRef['quarto-ui-info'] = {module:'approominfo'};
     pagModulesRef['quarto-detail-ui'] = {module:'approomdetail'};
     pagModulesRef['quarto-detail-ui-royal'] = {module:'approomdetail'};
     pagModulesRef['casa-do-principe-ui'] = {module:'casadoprincipe'};
@@ -13,7 +14,7 @@ require(['app', 'jquery', 'picturefill'], function (app) {
     console.log('default app',app);
     if (typeof requirejs === 'function') {
 	    requirejs(['appmenu'],function(appmenu){
-            console.log('+++++++END+++++++',appmenu);
+
         });
 	    if (contentmodule) {
 	    	console.log('modulo a carregar:',contentmodule);

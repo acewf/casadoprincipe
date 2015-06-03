@@ -8,18 +8,65 @@ define(['appmenu'], function(appmenu) {
     //Uses extras in here.
 
     console.log('app-menu-top CAN start run');
-    
-    $('.choose-menu a').click(function(){
+
+    function loadContent(){
         var href = $(this).attr('href');
         event.preventDefault();
-        var n = href.indexOf(event.target.origin);
-        var res = href.substring(n+event.target.origin.length+1, href.length);
+        var n = href.indexOf(window.location.origin);
+        var res = href.substring(n+window.location.origin.length+1, href.length);
         window.history.pushState("object or string", "Title", "/"+res);
+
+        console.log('Evento>>>>',event);
+        app.toggleMenu(event);
         
         var mcontent 
         function completeloadContent(ev){
-            var totalChild = $('.sub-menu .suite li');
-            console.log('totalChild>>',totalChild.length);
+             var elem =  $('.page-content');
+            var msnode = elem[0].parentNode;
+            if (elem)
+            elem.remove();
+            try{
+                $(msnode).append(mcontent.data);
+            }catch(err) {
+                console.log(err.message);
+            }
+        } 
+        function loadContent(endereco){
+            console.log('URL>>',endereco);
+            mcontent = new loader('includes/'+endereco+'.php?');
+            mcontent.addEventListener('complete',completeloadContent);
+        }
+
+        var m = new loader('includes/address-filter-output.php?url='+res);
+        function completeload(ev){
+            console.log('event completed',ev);
+            var data = JSON.parse(m.data);
+            loadContent(data.path);
+            m.removeEventListener('complete',completeload);
+            m = null;
+        }        
+        m.addEventListener('complete',completeload);
+    }
+    function loadhomeContent(){
+        $('.logo').removeClass('small');
+        $('#logo-big').addClass('show');
+        $('#logo-small').removeClass('show');
+        $('ul.room-choose').removeClass('show-childs');
+
+        var el = $('#menu-options');
+
+        var href = $(this).attr('href');
+        event.preventDefault();
+        var n = href.indexOf(window.location.origin);
+        var res = href.substring(n+window.location.origin.length+1, href.length);
+        window.history.pushState("object or string", "Title", "/"+res);
+
+        $('.sub-menu .suite').html('');
+        $('.sub-menu .room-choose').html('');
+        
+        var mcontent 
+        function completeloadContent(ev){
+            $('.sub-menu .suite').html('');
             $('.page-content').html(mcontent.data);
         } 
         function loadContent(endereco){
@@ -29,14 +76,16 @@ define(['appmenu'], function(appmenu) {
 
         var m = new loader('includes/address-filter-output.php?url='+res);
         function completeload(ev){
-            console.log('event completed',ev);
-            loadContent(m.data);
+            var data = JSON.parse(m.data);
+            console.log('event completed',data.path);
+            loadContent(data.path);
             m.removeEventListener('complete',completeload);
             m = null;
         }        
         m.addEventListener('complete',completeload);
-
-    });
+    }    
+    $('.choose-menu a').click(loadContent);
+    $('.logo a').click(loadhomeContent);
 
 
     var app;
@@ -105,14 +154,14 @@ define(['appmenu'], function(appmenu) {
     AppEngine.prototype.toggleMenu = function(event){
         var target = event.target;
         event.preventDefault();
-        var isOpen = parseFloat(target.getAttribute('data-open'));
-        console.log('toggle Menu',this,isOpen);
         var el = $('#menu-options');
+        var isOpen = parseFloat(el[0].getAttribute('data-open'));
+        console.log('toggle Menu',this,isOpen);
         if (isOpen) {
-            target.setAttribute('data-open',0);
+            el[0].setAttribute('data-open',0);
             el.fadeOut();
         } else {
-            target.setAttribute('data-open',1);
+            el[0].setAttribute('data-open',1);
             el.fadeIn();
         }
     };
@@ -126,10 +175,10 @@ define(['appmenu'], function(appmenu) {
         var isOpen = parseFloat(target.getAttribute('data-open'));
         var el = $('#language-options');
         if (isOpen) {
-            target.setAttribute('data-open',0);
+            el[0].setAttribute('data-open',0);
             el.fadeOut();
         } else {
-            target.setAttribute('data-open',1);
+            el[0].setAttribute('data-open',1);
             el.fadeIn();
         }
     };

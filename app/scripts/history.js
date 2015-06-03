@@ -13,6 +13,11 @@ define(['history'], function(appmenu) {
             $('ul.suite').addClass('menupos');
             $('#logo-big').removeClass('show');
             $('#logo-small').addClass('show');
+            $('.fotorama').fotorama();
+            $('.sub-menu .suite').html('');
+            $('.room-choose').html('');
+
+            
 
             var mcontent;
             function completeloadContent(ev){

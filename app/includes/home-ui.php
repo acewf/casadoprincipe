@@ -1,3 +1,13 @@
+<?php
+if (!isset($basePath)) {
+    $folder = '/';
+    if($_SERVER['SERVER_NAME']==='127.0.0.1'){
+        $basePath = 'http://'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].$folder; 
+    } else {
+        $basePath = 'http://'.$_SERVER['SERVER_NAME'].$folder; 
+    }
+}
+?>
 <div class="page-content homepage">
     <section class="content">
         <article class="image-frame">

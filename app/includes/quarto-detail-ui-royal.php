@@ -12,7 +12,7 @@ if (!isset($basePath)) {
     <section class="content inside-room room-detail">
         <article class="image-frame">
             <div class="frame-inside" data-transition="crossfade">
-                <div class="fotorama fotorama__wrap fotorama__wrap--css3 fotorama__wrap--slide fotorama__wrap--no-controls" data-nav="false" data-arrows="true" data-click="true" data-swipe="true" data-allowfullscreen="true" data-loop="true" data-stopautoplayontouch="false"  data-width="100%" data-ratio="1432/577">
+                <div class="fotorama fotorama__wrap fotorama__wrap--css3 fotorama__wrap--slide fotorama__wrap--no-controls" data-nav="false" data-arrows="true" data-click="true" data-swipe="true" data-allowfullscreen="true" data-loop="true" data-autoplay="true" data-stopautoplayontouch="false"  data-width="100%" data-ratio="1432/577">
                     <div class="featured-content">
                         <div class="transparent-shadow"></div>
                         <div class="info-room-featured">
@@ -62,7 +62,7 @@ if (!isset($basePath)) {
                     <li>Sofa double bed in the lounge area</li>
                     <li>Premium bathroom amenities</li>
                 </ul>
-                <a class="big-size" href="" target="_self"><h4>About King D. Pedro V</h4></a>
+                <a class="big-size" href="" target="_self"><h4>About King D. Pedro V<div class="icon icon-arrow-right"></div></h4></a>
             </div>
         </article>
         <article class="show-rooms">
@@ -71,23 +71,23 @@ if (!isset($basePath)) {
             </div>
             <div class="rooms-types">
                 <ul class="choose-rooms">
-                    <li class="actived"><a href="suites/royal">ROYAL SUITES</a></li>
-                    <li><a href="suites/royal">PREMIUM ROOMS</a></li>
-                    <li><a href="suites/royal">HISTORIC ROOMS</a></li>
+                    <li class="actived"><a href="<?php echo "$basePath"; ?>suites-rooms//royal">ROYAL SUITES</a></li>
+                    <li><a href="<?php echo "$basePath"; ?>suites-rooms/premium">PREMIUM ROOMS</a></li>
+                    <li><a href="<?php echo "$basePath"; ?>suites-rooms/historic">HISTORIC ROOMS</a></li>
                 </ul>
             </div>
             <section class="rooms-view">
                 <article class="room">
                     <a href="">
                         <div class="small-frame">
-                            <img alt="Quarto Imperial" src="http://127.0.0.1:9000/images/img-moldura.png">
+                            <img alt="Quarto Imperial" src="<?php echo "$basePath"; ?>images/img-moldura.png">
                         </div>
                         <h5>Imperial Suite</h5>
                     </a>
                 </article><article class="room">
                     <a href="">
                         <div class="small-frame">
-                            <img alt="Quarto Royal" src="http://127.0.0.1:9000/images/img-moldura.png">
+                            <img alt="Quarto Royal" src="<?php echo "$basePath"; ?>images/img-moldura.png">
                         </div>
                         <h5>Royal Suites</h5>
                     </a>

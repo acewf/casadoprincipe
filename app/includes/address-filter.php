@@ -31,10 +31,26 @@ class AdressChecker
         $this->generatePath($basefolder.'history/','history-ui',null);
     	$this->generatePath($basefolder.'index.php','home-ui',null);
     	$this->generatePath($basefolder.'suites-rooms/','quarto-ui','sub-menu-rooms');
-    	$this->generatePath($basefolder.'suites-rooms/imperial/','quarto-detail-ui-royal','sub-menu-imperial-suite');
-        $this->generatePath($basefolder.'suites-rooms/royal/','quarto-detail-ui-royal','sub-menu-royal');
-    	$this->generatePath($basefolder.'suites-rooms/premium/','quarto-detail-ui','sub-menu-premium');
-        $this->generatePath($basefolder.'suites-rooms/historic/','quarto-detail-ui','sub-menu-historic');
+        $this->generatePath($basefolder.'suites-rooms/imperial/','quarto-ui-info','sub-menu-imperial-suite');
+        $this->generatePath($basefolder.'suites-rooms/royal/','quarto-ui-info','sub-menu-royal');
+        $this->generatePath($basefolder.'suites-rooms/premium/','quarto-ui-info','sub-menu-premium');
+        $this->generatePath($basefolder.'suites-rooms/historic/','quarto-ui-info','sub-menu-historic');
+
+
+        // ------------  ------------- //
+        $this->generatePath($basefolder.'suites-rooms/imperial/queen','quarto-detail-ui-royal','sub-menu-imperial-suite');
+        // ------------  ------------- //
+        $this->generatePath($basefolder.'suites-rooms/royal/queen','quarto-detail-ui-royal','sub-menu-royal');
+        $this->generatePath($basefolder.'suites-rooms/royal/palace','quarto-detail-ui-royal','sub-menu-royal');
+        // ------------  ------------- //
+        $this->generatePath($basefolder.'suites-rooms/premium/arts','quarto-detail-ui','sub-menu-premium');
+        $this->generatePath($basefolder.'suites-rooms/premium/lisbon','quarto-detail-ui','sub-menu-premium');
+        // ------------  ------------- //
+        $this->generatePath($basefolder.'suites-rooms/historic/queen','quarto-detail-ui','sub-menu-historic');
+        $this->generatePath($basefolder.'suites-rooms/historic/king','quarto-detail-ui','sub-menu-historic');
+        $this->generatePath($basefolder.'suites-rooms/historic/sintra','quarto-detail-ui','sub-menu-historic');
+        $this->generatePath($basefolder.'suites-rooms/historic/voyages','quarto-detail-ui','sub-menu-historic');
+
         $obj = new stdClass();
         if ($nexturl!='') {
            $path = $nexturl;

@@ -8,10 +8,14 @@ define(['casadoprincipe'], function(appmenu) {
     //Uses extras in here.
     function APPmodule(){
         this.init = function(){
+            $('.sub-menu .suite').html('');
+            $('.room-choose').html('');
             $('.logo').addClass('small');
             $('ul.suite').addClass('menupos');
             $('#logo-big').removeClass('show');
             $('#logo-small').addClass('show');
+            $('.fotorama').fotorama();
+
 
             var mcontent;
             function completeloadContent(ev){

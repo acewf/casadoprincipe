@@ -829,6 +829,7 @@ nav.sub-menu ul li a{
   position: relative;
   left: 50%;
   top: 50%;
+  text-transform:uppercase;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
 
@@ -1038,6 +1039,9 @@ nav.sub-menu ul.room-choose.show-childs{
   font-weight:normal;
   font-size:13px;
 }
+.app-history .description a h4,.inside-room.room-detail .show-room-description a h4 .icon{
+  font-size: 1.3em;
+}
 
 .app-history .description h3 {
   padding: 20px;
@@ -1201,6 +1205,8 @@ nav.choose-lang {
   width:100px;
   display: inline-block;
   height:100%;
+  margin-left:10px;
+  margin-right:10px;
 }
 .room-detail .booker .input-sm.form-control{
   float: none;
@@ -1414,6 +1420,7 @@ article.booking{
 }
 .bookregister button{
   font-size:.90em;
+  font-weight:600;
   border: none;
   outline: 0;
   background:transparent;

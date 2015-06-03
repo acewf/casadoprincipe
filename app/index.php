@@ -64,7 +64,6 @@
                         </div>
                     </div>
                 </header>
-
                 <?php 
                 $pathObj = $Adress->getPhpToUrl('');
                 $path = $pathObj->path;

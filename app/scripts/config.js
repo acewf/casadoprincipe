@@ -14,6 +14,7 @@ var require = {
         apphome: '../scripts/app-home',
         approom: '../scripts/app-room',
         approomdetail: '../scripts/app-detail-room',
+        approominfo: '../scripts/app-room-info',
         casadoprincipe: '../scripts/casa-do-principe',
         facilitiesservices: '../scripts/facilities-services',
         history: '../scripts/history',
