@@ -9,45 +9,29 @@ define(['apphome'], function(apphome) {
     console.log('APP HOME DEFINED**');
 
     function APPhome(){
-    	this.init = function(){
+        this.putStates=function(){
             $('.sub-menu .suite').html('');
-    		$('#logo-big').addClass('show');
-    		$('#logo-small').removeClass('show');
+            $('#logo-big').addClass('show');
+            $('#logo-small').removeClass('show');
             $('ul.room-choose').addClass('show-childs');
             $('ul.suite').removeClass('menupos');
-            /*
-            function loadContent(){
-                var href = $(this).attr('href');
-                event.preventDefault();
-                var n = href.indexOf(window.location.origin);
-                var res = href.substring(n+window.location.origin.length+1, href.length);
-                window.history.pushState("object or string", "Title", "/"+res);
-                
-                var mcontent 
-                function completeloadContent(ev){
-                    $('.sub-menu .suite').html('');
-                    $('.page-content').html(mcontent.data);
-                } 
-                function loadContent(endereco){
-                    console.log('URL>>',endereco);
-                    mcontent = new loader('includes/'+endereco+'.php?');
-                    mcontent.addEventListener('complete',completeloadContent);
+            $('.fotorama').fotorama();
+        }
+    	this.init = function(){
+            this.putStates();
+            var handler = new contentloader();
+            $('article a').click(function(){
+                var total = $('.sub-menu .suite li').length;
+                if(total===0){
+                     var mcontent;
+                    function completeloadContent(ev){
+                        $('.sub-menu .suite').html(mcontent.data);
+                    }
+                    mcontent = new loader(window.location.origin+'/includes/submenu/sub-menu-rooms.php');
+                    mcontent.addEventListener('complete',completeloadContent); 
                 }
-
-                var m = new loader('includes/address-filter-output.php?url='+res);
-                function completeload(ev){
-                    console.log('event completed',ev);
-
-                    loadContent(m.data);
-                    m.removeEventListener('complete',completeload);
-                    m = null;
-                }        
-                m.addEventListener('complete',completeload);
-            }
-            */
-
-
-            //$('.logo a').click(loadContent);    
+                handler.click(this);
+            });
     	}
     }
 

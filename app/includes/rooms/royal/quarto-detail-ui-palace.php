@@ -20,10 +20,10 @@ if (!isset($basePath)) {
                             <p>Spacious bedroom with lounge area, balcony overlooking the Príncipe Real garden, with three large windows that fill the room with natural light, creating a bright but relaxing atmosphere.</p>
                             <a href="<?php echo "$basePath"; ?>suites/" target="_self"><button>go previus</button></a>
                         </div>                    
-                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/fotos-sintra-palacio-da-pena-050.jpg">
+                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/royal/48077149.jpg">
                     </div>
                     <div class="featured-content">
-                        <img alt="destaque 2" src="<?php echo "$basePath"; ?>images/fotos-sintra-palacio-da-pena-050.jpg">
+                        <img alt="destaque 2" src="<?php echo "$basePath"; ?>images/royal/48077149.jpg">
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@ if (!isset($basePath)) {
             </div>
             <div class="rooms-types">
                 <ul class="choose-rooms">
-                    <li class="actived"><a href="<?php echo "$basePath"; ?>suites-rooms//royal">ROYAL SUITES</a></li>
+                    <li class="actived"><a href="<?php echo "$basePath"; ?>suites-rooms/royal">ROYAL SUITES</a></li>
                     <li><a href="<?php echo "$basePath"; ?>suites-rooms/premium">PREMIUM ROOMS</a></li>
                     <li><a href="<?php echo "$basePath"; ?>suites-rooms/historic">HISTORIC ROOMS</a></li>
                 </ul>
@@ -96,14 +96,10 @@ if (!isset($basePath)) {
         </article>
     </section>
     <script>
-    console.log('try to define quarto royal detail room');
     if (typeof requirejs == 'function') {
         var myApp = require(['approomdetail'],function(module){
                 module.init();
             });
-        console.log('Call approomdetail');
-    } else {
-        console.log('DONT CALL approomdetail');
-    }
+    } 
     </script>
 </div>

@@ -6,89 +6,30 @@
 define(['appmenu'], function(appmenu) {
     'use strict';
     //Uses extras in here.
+    var app;
 
-    console.log('app-menu-top CAN start run');
-
-    function loadContent(){
-        var href = $(this).attr('href');
-        event.preventDefault();
-        var n = href.indexOf(window.location.origin);
-        var res = href.substring(n+window.location.origin.length+1, href.length);
-        window.history.pushState("object or string", "Title", "/"+res);
-
-        console.log('Evento>>>>',event);
-        app.toggleMenu(event);
-        
-        var mcontent 
-        function completeloadContent(ev){
-             var elem =  $('.page-content');
-            var msnode = elem[0].parentNode;
-            if (elem)
-            elem.remove();
-            try{
-                $(msnode).append(mcontent.data);
-            }catch(err) {
-                console.log(err.message);
-            }
-        } 
-        function loadContent(endereco){
-            console.log('URL>>',endereco);
-            mcontent = new loader('includes/'+endereco+'.php?');
-            mcontent.addEventListener('complete',completeloadContent);
-        }
-
-        var m = new loader('includes/address-filter-output.php?url='+res);
-        function completeload(ev){
-            console.log('event completed',ev);
-            var data = JSON.parse(m.data);
-            loadContent(data.path);
-            m.removeEventListener('complete',completeload);
-            m = null;
-        }        
-        m.addEventListener('complete',completeload);
-    }
     function loadhomeContent(){
         $('.logo').removeClass('small');
         $('#logo-big').addClass('show');
         $('#logo-small').removeClass('show');
         $('ul.room-choose').removeClass('show-childs');
-
-        var el = $('#menu-options');
-
-        var href = $(this).attr('href');
-        event.preventDefault();
-        var n = href.indexOf(window.location.origin);
-        var res = href.substring(n+window.location.origin.length+1, href.length);
-        window.history.pushState("object or string", "Title", "/"+res);
-
         $('.sub-menu .suite').html('');
         $('.sub-menu .room-choose').html('');
-        
-        var mcontent 
-        function completeloadContent(ev){
-            $('.sub-menu .suite').html('');
-            $('.page-content').html(mcontent.data);
-        } 
-        function loadContent(endereco){
-            mcontent = new loader('includes/'+endereco+'.php?');
-            mcontent.addEventListener('complete',completeloadContent);
-        }
 
-        var m = new loader('includes/address-filter-output.php?url='+res);
-        function completeload(ev){
-            var data = JSON.parse(m.data);
-            console.log('event completed',data.path);
-            loadContent(data.path);
-            m.removeEventListener('complete',completeload);
-            m = null;
-        }        
-        m.addEventListener('complete',completeload);
-    }    
-    $('.choose-menu a').click(loadContent);
+
+        var loadhome = new contentloader();
+        loadhome.click(this);
+    }
+    var handler = new contentloader();
+    $('.choose-menu a').click(function(){
+        app.toggleMenu(event);
+        console.log(app);
+        handler.click(this);
+    });
     $('.logo a').click(loadhomeContent);
 
 
-    var app;
+    
     var AppEngine = function(){
         //var instance = this;
         this.init = function(){

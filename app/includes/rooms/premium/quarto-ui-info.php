@@ -21,20 +21,20 @@ if (!isset($basePath)) {
                             <p>Spacious bedroom with lounge area, balcony overlooking the Príncipe Real garden, with three large windows that fill the room with natural light, creating a bright but relaxing atmosphere.</p>
                             <a href="<?php echo "$basePath"; ?>suites-rooms/royal" target="_self"><button>SEE DETAILS</button></a>
                         </div>                    
-                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/destaque-room.png">
+                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/premium/48077919.jpg">
                     </div>
                     <div class="featured-content">
-                        <img alt="destaque 2" src="<?php echo "$basePath"; ?>images/dsc_0281.jpg">
+                        <img alt="destaque 2" src="<?php echo "$basePath"; ?>images/premium/48078011.jpg">
                     </div>
                     <div class="featured-content">
-                        <img alt="destaque 3" src="<?php echo "$basePath"; ?>images/palacio-da-liberdade-interior1.jpg">
+                        <img alt="destaque 3" src="<?php echo "$basePath"; ?>images/premium/48078148.jpg">
                     </div>
                 </div>
             </div>
         </article>
     </section>
     <section class="app-history inside-room home-rooms">
-        <div class="description">
+        <div class="description offset">
             <p class="small-text">Charming suites and rooms with the modern comfort of a hotel in an exceptional location in the historic center of Lisbon</p>
         </div><div class="text-content">
             <div class="description-location positionsys"><p>Casa do Príncipe takes its name after the Royal Prince, King D. Pedro V, whose story sets the tone for your unforgettable stay in Lisbon. Each of its 9 palatial suites and rooms refer to a meaningful part of this King’s life.</p></div>
@@ -49,6 +49,6 @@ if (!isset($basePath)) {
                 console.log(err.message);
             }               
         });
-    }
+    } 
     </script>
 </div>

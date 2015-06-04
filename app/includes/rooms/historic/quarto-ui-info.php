@@ -19,12 +19,18 @@ if (!isset($basePath)) {
                         <div class="info-room-featured">
                             <h3>Queen D. Estefânia</h3>
                             <p>Spacious bedroom with lounge area, balcony overlooking the Príncipe Real garden, with three large windows that fill the room with natural light, creating a bright but relaxing atmosphere.</p>
-                            <a href="<?php echo "$basePath"; ?>suites-rooms/royal" target="_self"><button>SEE DETAILS</button></a>
+                            <a href="<?php echo "$basePath"; ?>suites-rooms/historic/queen" target="_self"><button>SEE DETAILS</button></a>
                         </div>                    
-                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/palacio-da-liberdade-interior1.jpg">
+                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/historic/46380316.jpg">
                     </div>
                     <div class="featured-content">
-                        <img alt="destaque 2" src="<?php echo "$basePath"; ?>images/dsc_0281.jpg">
+                        <img alt="destaque 2" src="<?php echo "$basePath"; ?>images/historic/46380341.jpg">
+                    </div>
+                    <div class="featured-content">
+                        <img alt="destaque 3" src="<?php echo "$basePath"; ?>images/historic/48077238.jpg">
+                    </div>
+                    <div class="featured-content">
+                        <img alt="destaque 4" src="<?php echo "$basePath"; ?>images/historic/48077844.jpg">
                     </div>
                 </div>
             </div>
@@ -39,13 +45,13 @@ if (!isset($basePath)) {
     </section>
     <script>
     if (typeof requirejs == 'function') {
-        require(['approom'],function(module){
+        require(['approominfo'],function(module){
             try{
                 module.init();
             }catch(err) {
                 console.log(err.message);
             }               
         });
-    }
+    } 
     </script>
 </div>

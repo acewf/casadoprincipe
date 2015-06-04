@@ -1,11 +1,14 @@
 <nav class="sub-menu">
 	<ul class="suite menupos">
 		<?php 
-		if (($path=='quarto-ui') || ($path=='quarto-detail-ui-royal') || ($path=='quarto-detail-ui') || ($path=='quarto-ui-info') ) {
-			include(dirname(__FILE__).'/sub-menu-rooms.php');
-		} else if (($path=='casa-do-principe-ui') || ($path=='facilities-services-ui')) {
-			# code...
-		} 
+		require_once dirname(__FILE__).'/../../includes/address-filter.php';
+		$Adress = new AdressChecker();
+		$items = $Adress->getPaths();
+		for ($i=0; $i <count($items) ; $i++) {
+			if (($items[$i]->level!=null) && ($path==$items[$i]->path)) {
+				include(dirname(__FILE__).'/sub-menu-rooms.php');
+			}			
+		}
 		?>
 	</ul>
 	<ul class="room-choose">

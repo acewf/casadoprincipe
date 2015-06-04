@@ -17,10 +17,13 @@ if (!isset($basePath)) {
                         <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/foto-varanda.jpg">
                     </div>
                     <div class="featured-content">
-                        <img alt="destaque 2" src="<?php echo "$basePath"; ?>images/dsc_0281.jpg">
+                        <img alt="destaque 2" src="<?php echo "$basePath"; ?>images/casadoprincipe/48078145.jpg">
                     </div>
                     <div class="featured-content">
-                        <img alt="destaque 3" src="<?php echo "$basePath"; ?>images/palacio-da-liberdade-interior1.jpg">
+                        <img alt="destaque 3" src="<?php echo "$basePath"; ?>images/casadoprincipe/48078152.jpg">
+                    </div>
+                    <div class="featured-content">
+                        <img alt="destaque 4" src="<?php echo "$basePath"; ?>images/casadoprincipe/48090493.jpg">
                     </div>
                 </div>
             </div>

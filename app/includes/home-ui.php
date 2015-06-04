@@ -27,7 +27,7 @@ if (!isset($basePath)) {
                     <a class="previous"></a>
                     <a class="next"></a>
                 </div>
-                <div class="fotorama fotorama__wrap fotorama__wrap--css3 fotorama__wrap--slide fotorama__wrap--no-controls" data-nav="false" data-arrows="true" data-click="true" data-swipe="true" data-allowfullscreen="true" data-loop="true" data-stopautoplayontouch="false"  data-width="100%" data-ratio="1432/577">
+                <div class="fotorama fotorama__wrap fotorama__wrap--css3 fotorama__wrap--slide fotorama__wrap--no-controls" data-nav="false" data-autoplay="true"  data-arrows="true" data-click="true" data-swipe="true" data-allowfullscreen="true" data-loop="true" data-stopautoplayontouch="false"  data-width="100%" data-ratio="1432/577">
                     <div class="featured-content">
                         <p>a charming bed &amp; breakfast nestled in the heart of Lisbon</p>
                         <div class="transparent-shadow"></div>
@@ -52,28 +52,28 @@ if (!isset($basePath)) {
             </div>
             <section class="rooms-view">
                 <article class="room">
-                    <a href="">
+                    <a href="<?php echo "$basePath"; ?>suites-rooms/imperial">
                         <div class="small-frame">
                             <img alt="Quarto Imperial" src="<?php echo "$basePath"; ?>images/img-moldura.png">
                         </div>
                         <h5>Imperial Suite</h5>
                     </a>
                 </article><article class="room">
-                    <a href="">
+                    <a href="<?php echo "$basePath"; ?>suites-rooms/royal">
                         <div class="small-frame">
                             <img alt="Quarto Royal" src="<?php echo "$basePath"; ?>images/img-moldura.png">
                         </div>
                         <h5>Royal Suites</h5>
                     </a>
                 </article><article class="room">
-                    <a href="">
+                    <a href="<?php echo "$basePath"; ?>suites-rooms/premium">
                         <div class="small-frame">
                             <img alt="Quarto Premium" src="<?php echo "$basePath"; ?>images/img-moldura.png">
                         </div>
                         <h5>Premium Rooms</h5>
                     </a>
                 </article><article class="room">
-                    <a href="">
+                    <a href="<?php echo "$basePath"; ?>suites-rooms/historic">
                         <div class="small-frame">
                             <img alt="Quarto Historic" src="<?php echo "$basePath"; ?>images/img-moldura.png">
                         </div>

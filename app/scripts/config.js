@@ -5,7 +5,6 @@
         bootstrappickerpt: 'bootstrap-datetimepicker/src/js/locales/bootstrap-datetimepicker.pt',
  */
 var require = {
-    ///preview;
     baseUrl: '/bower_components',
     paths: {
         main: '../scripts/main',
@@ -21,6 +20,7 @@ var require = {
         component: '../scripts/component',
         library: '../scripts/library',
         textloader: '../scripts/textloader',
+        contentloader: '../scripts/contentloader',
         jquery: 'jquery/jquery',
         bootstrap: 'bootstrap/dist/js/bootstrap',
         bootstrapdate: 'bootstrap-datepicker-master/js/bootstrap-datepicker',
@@ -31,7 +31,7 @@ var require = {
         'bootstrap-datetimepicker': 'bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min'
     },
     shim: {
-    	appmenu: {
+        appmenu: {
             deps: [
                 'fotorama',
                 'jquery',
@@ -43,6 +43,7 @@ var require = {
             deps: [
                 'fotorama',
                 'jquery',
+                'contentloader',
                 'textloader'
             ],
             exports: 'apphome'
@@ -50,6 +51,7 @@ var require = {
         approom: {
             deps: [
                 'fotorama',
+                'contentloader',
                 'textloader'
             ],
             exports: 'approom'
@@ -57,6 +59,7 @@ var require = {
         casadoprincipe: {
             deps: [
                 'fotorama',
+                'contentloader',
                 'textloader'
             ],
             exports: 'approom'
@@ -64,6 +67,7 @@ var require = {
         facilitiesservices: {
             deps: [
                 'fotorama',
+                'contentloader',
                 'textloader'
             ],
             exports: 'facilitiesservices'
@@ -73,6 +77,7 @@ var require = {
                 'bootstrapdate',
                 'bootstrappickerpt',
                 'fotorama',
+                'contentloader',
                 'textloader'
             ],
             exports: 'approomdetail'
