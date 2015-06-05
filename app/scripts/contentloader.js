@@ -42,13 +42,49 @@ function contentloader(res){
             }            
         } 
         function loadContent(endereco){
-            mcontent = new loader(window.location.origin+'/includes/'+endereco+'.php?');
+            var maddress = window.location.origin+'/includes/'+endereco+'.php?';
+            mcontent = new loader(maddress);
             mcontent.addEventListener('complete',completeloadContent);
+        }
+        function loadAllContent(endereco){
+            $.LoadingOverlaySetup({
+                 color           : "rgba(0, 0, 0, 0.4)",
+                 image           : window.location.origin+"/images/loading.gif",
+                 maxSize         : "100px",
+                 minSize         : "20px",
+                 resizeInterval  : 0,
+                 size            : "50%"
+            });
+            var maddress = window.location.origin+'/includes/'+endereco+'.php?';
+            $(".main").LoadingOverlay("show");
+            $.ajax({
+                cache: false,
+                url: maddress,
+                success: function(data) {
+                    console.log('Page HTML Loaded...');
+                    var newDiv = $("<div>");
+                    $(newDiv).html(data).imagesLoaded().then(function(){
+                        console.log('Page Complete Loaded...');
+                        var pageC = $('.page-content');
+                        var msnode = pageC[0].parentNode;                        
+                        if (pageC)
+                        pageC.remove();
+                        try{
+                            $(msnode).append(newDiv[0].innerHTML);
+                            $(".main").LoadingOverlay("hide", true);
+                        }catch(err) {
+                            console.log(err.message);
+                        }            
+                        $('.fotorama').fotorama();
+                    });
+                }
+            });
         }
         var m = new loader(window.location.origin+'/includes/address-filter-output.php?url='+res);
         function completeload(ev){
             var data = JSON.parse(m.data);
-            loadContent(data.path);
+            //loadContent(data.path);
+            loadAllContent(data.path);
             m.removeEventListener('complete',completeload);
             m = null;
         }        

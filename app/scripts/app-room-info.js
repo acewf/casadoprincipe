@@ -44,9 +44,41 @@ define(['approominfo'], function(appmenu) {
 						}
 			        } 
 			        function loadContent(endereco){
+			        	$.LoadingOverlaySetup({
+				             color           : "rgba(0, 0, 0, 0.4)",
+				             image           : window.location.origin+"/images/loading.gif",
+				             maxSize         : "100px",
+				             minSize         : "20px",
+				             resizeInterval  : 0,
+				             size            : "50%"
+				        });
 			        	console.log('app-room-info@LOAD Page:'+window.location.origin+'/includes/'+endereco+'.php?')
-			        	mcontent = new loader(window.location.origin+'/includes/'+endereco+'.php?');
-			            mcontent.addEventListener('complete',completeloadContent);
+			        	//mcontent = new loader(window.location.origin+'/includes/'+endereco+'.php?');
+			            //mcontent.addEventListener('complete',completeloadContent);
+			            $(".main").LoadingOverlay("show");
+			            var maddress = window.location.origin+'/includes/'+endereco+'.php?';
+				        $.ajax({
+			                cache: false,
+			                url: maddress,
+			                success: function(data) {
+			                    console.log('Page HTML Loaded...');
+			                    var newDiv = $("<div>");
+			                    $(newDiv).html(data).imagesLoaded().then(function(){
+			                        console.log('Page Complete Loaded...');
+			                        var pageC = $('.page-content');
+			                        var msnode = pageC[0].parentNode;                        
+			                        if (pageC)
+			                        pageC.remove();
+			                        try{
+			                            $(msnode).append(newDiv[0].innerHTML);
+			                            $(".main").LoadingOverlay("hide", true);
+			                        }catch(err) {
+			                            console.log(err.message);
+			                        }            
+			                        $('.fotorama').fotorama();
+			                    });
+			                }
+			            });
 			        }
 			        var m = new loader(window.location.origin+'/includes/address-filter-output.php?url='+res);
 			        function completeload(ev){

@@ -21,6 +21,7 @@ var require = {
         library: '../scripts/library',
         textloader: '../scripts/textloader',
         contentloader: '../scripts/contentloader',
+        loadingoverlay: '../scripts/loadingoverlay.min',
         jquery: 'jquery/jquery',
         bootstrap: 'bootstrap/dist/js/bootstrap',
         bootstrapdate: 'bootstrap-datepicker-master/js/bootstrap-datepicker',
@@ -35,6 +36,8 @@ var require = {
             deps: [
                 'fotorama',
                 'jquery',
+                'contentloader',
+                'loadingoverlay',
                 'textloader'
             ],
             exports: 'appmenu'
@@ -44,6 +47,7 @@ var require = {
                 'fotorama',
                 'jquery',
                 'contentloader',
+                'loadingoverlay',
                 'textloader'
             ],
             exports: 'apphome'
@@ -52,6 +56,7 @@ var require = {
             deps: [
                 'fotorama',
                 'contentloader',
+                'loadingoverlay',
                 'textloader'
             ],
             exports: 'approom'
@@ -60,6 +65,7 @@ var require = {
             deps: [
                 'fotorama',
                 'contentloader',
+                'loadingoverlay',
                 'textloader'
             ],
             exports: 'approom'
@@ -68,6 +74,7 @@ var require = {
             deps: [
                 'fotorama',
                 'contentloader',
+                'loadingoverlay',
                 'textloader'
             ],
             exports: 'facilitiesservices'
@@ -78,6 +85,7 @@ var require = {
                 'bootstrappickerpt',
                 'fotorama',
                 'contentloader',
+                'loadingoverlay',
                 'textloader'
             ],
             exports: 'approomdetail'
@@ -93,6 +101,12 @@ var require = {
                 'bootstrapdate'
             ],
             exports: 'bootstrappickerpt'
+        },
+        loadingoverlay: {
+            deps: [
+                'jquery'
+            ],
+            exports: 'loadingoverlay'
         },
         fotorama: {
             deps: [

@@ -35,10 +35,10 @@ class AdressChecker
         $this->generatePath($basefolder.'suites-rooms/premium/arts','quarto-detail-ui-arts','rooms/premium/','sub-menu-premium-childs');
         $this->generatePath($basefolder.'suites-rooms/premium/lisbon','quarto-detail-ui-lisbon','rooms/premium/','sub-menu-premium-childs');
         // ------------ Historic  ------------- //
-        $this->generatePath($basefolder.'suites-rooms/historic/queen','quarto-detail-ui','rooms/historic/','sub-menu-historic-childs');
-        $this->generatePath($basefolder.'suites-rooms/historic/king','quarto-detail-ui','rooms/historic/','sub-menu-historic-childs');
-        $this->generatePath($basefolder.'suites-rooms/historic/sintra','quarto-detail-ui','rooms/historic/','sub-menu-historic-childs');
-        $this->generatePath($basefolder.'suites-rooms/historic/voyages','quarto-detail-ui','rooms/historic/','sub-menu-historic-childs');
+        $this->generatePath($basefolder.'suites-rooms/historic/queen','quarto-detail-ui-queen','rooms/historic/','sub-menu-historic-childs');
+        $this->generatePath($basefolder.'suites-rooms/historic/king','quarto-detail-ui-king','rooms/historic/','sub-menu-historic-childs');
+        $this->generatePath($basefolder.'suites-rooms/historic/sintra','quarto-detail-ui-sintra','rooms/historic/','sub-menu-historic-childs');
+        $this->generatePath($basefolder.'suites-rooms/historic/voyages','quarto-detail-ui-voyages','rooms/historic/','sub-menu-historic-childs');
         // ------------  ------------- //
     }
     public function generatePath($compare,$file,$localPath,$levelMenu)

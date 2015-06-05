@@ -21,7 +21,7 @@ define(['facilitiesservices'], function(appmenu) {
             function completeloadContent(ev){
                 $('.sub-menu .suite').html(mcontent.data);
                 var handler = new contentloader();
-                $('ul.room-choose li a').click(function(){
+                $('ul.suite li a').click(function(){
                     handler.click(this);
                 });
             }

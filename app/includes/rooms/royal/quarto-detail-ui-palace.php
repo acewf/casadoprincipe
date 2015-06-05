@@ -14,9 +14,8 @@ if (!isset($basePath)) {
             <div class="frame-inside" data-transition="crossfade">
                 <div class="fotorama fotorama__wrap fotorama__wrap--css3 fotorama__wrap--slide fotorama__wrap--no-controls" data-nav="false" data-arrows="true" data-click="true" data-swipe="true" data-allowfullscreen="true" data-loop="true" data-autoplay="true" data-stopautoplayontouch="false"  data-width="100%" data-ratio="1432/577">
                     <div class="featured-content">
-                        <div class="transparent-shadow"></div>
                         <div class="info-room-featured">
-                            <h3>Queen D. Estefânia</h3>
+                            <h3>Palace Room</h3>
                             <p>Spacious bedroom with lounge area, balcony overlooking the Príncipe Real garden, with three large windows that fill the room with natural light, creating a bright but relaxing atmosphere.</p>
                             <a href="<?php echo "$basePath"; ?>suites/" target="_self"><button>go previus</button></a>
                         </div>                    
@@ -28,20 +27,26 @@ if (!isset($basePath)) {
                 </div>
             </div>
         </article>
-        <article class="booking"><div class="booker"><div class="input-daterange input-group" id="datepicker"><div class="box-date chech-in"> <div data-icon="a" class="icon icon-calendar"></div> <div class="text-field-container"><input type="text" class="input-sm form-control" name="start" value="Check In"/></div><div data-icon="a" class="icon icon-caret-down-two"></div>
-            </div><div class="box-date chech-out"><div data-icon="a" class="icon icon-calendar"></div><div class="text-field-container"><input type="text" class="input-sm form-control" name="end" value="Check Out"/></div><div data-icon="a" class="icon icon-caret-down-two"></div>
-            </div></div><div class="bookregister"><button>BOOK NOW<div class="icon icon-arrow-right"></div></button></div></div></article>
-
+        <article class="booking"><div class="booker">
+            <form id="AVP" method="post" action="http://www.secure-hotel-booking.com/Casa-do-Principe/2E3B/search?hotelId=16384" target="_blank">
+                <div class="input-daterange input-group" id="datepicker">
+                <div class="group-dates-boxes">
+                <div class="box-date chech-in"> <div data-icon="a" class="icon icon-calendar">
+                </div><div class="text-field-container"><input type="text" class="input-sm form-control" id="AVP_arrivalDate" name="arrivalDate" value="Check In"/></div><div data-icon="a" class="icon icon-caret-down-two"></div>
+                </div><div class="box-date chech-out"><div data-icon="a" class="icon icon-calendar">
+                </div><div class="text-field-container"><input type="text" class="input-sm form-control" id="AVP_exitDate" name="end" value="Check Out"/></div><div data-icon="a" class="icon icon-caret-down-two"></div>
+                </div></div></div><div class="bookregister"><button id="bookit">BOOK NOW<div class="icon icon-arrow-right"></div></button></div></div></form>
+        </article>
         <article class="show-room-info">
             <div class="center-title">
-                <h3>queen d. estefânia suite</h3>
+                <h3>Palace Room</h3>
                 <div class="description"><p>Spacious bedroom with lounge area, balcony overlooking the Príncipe Real garden, with three large windows that fill the room with natural light, creating a bright but relaxing atmosphere.</p></div>
             </div>
         </article>
 
         <article class="show-room-description">
             <div class="left-block">
-                <p>Indulge in the glamour of this imperial suite that pays tribute to the Príncipe Real (Royal Prince) D. Pedro V, who inspired the name our B&B. This room´s decoration embodies the elegance and honour that characterized him. Let yourself be dazzled by the amazing stuccowork ceilings of this suite, taking you back in time to the elegant 19th century.</p>
+                <p>Indulge in the glamour of this imperial suite that pays tribute to the Príncipe Real (Royal Prince) D. Pedro V, who inspired the name our B&amp;B. This room´s decoration embodies the elegance and honour that characterized him. Let yourself be dazzled by the amazing stuccowork ceilings of this suite, taking you back in time to the elegant 19th century.</p>
                 <div class="image-frame show-frame">
                     <div class="frame-inside show-frame" data-transition="crossfade">
                         <img alt="destaque 3" src="<?php echo "$basePath"; ?>images/principe-moldura.png">

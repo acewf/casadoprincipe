@@ -39,12 +39,12 @@ if (!isset($basePath)) {
             </div>
         </div><div class="text-content">
             <div>
-            <div class="description-location">
-                <h3>The ultimate destination for your lisbon experience</h3>
-                <p>With spacious and sunny rooms, this intimate B&amp;B will make you feel at home with the comfort and quality of a hotel, benefiting from its spectacular location at walking distance from fashionable shops and city sights, signature restaurants and all that makes Lisbon Europe’s most well-kept secret.<br><br>
-Casa do Príncipe takes its name after the Royal Prince, King D. Pedro V, whose story sets the tone for your unforgettable stay in Lisbon. Each of its 9 palatial suites and rooms refer to a meaningful part of this King’s life.<br><br>
-It is located on the first floor of a 19th century building, with unique traits that make this luscious B&amp;B the ultimate destination for your Lisbon experience: its 4 meter (13 ft) indoor height, intricately stuccowork ceilings, real hardwood floors and authentic frescos. The beautiful restoration work on this house  incorporated genuine 19th century decoration with a touch of contemporary details all combined to create an exclusive atmosphere of sophistication and grace, discretion and elegance.</p></div>
-        </div>
+                <div class="description-location">
+                    <h3>The ultimate destination for your lisbon experience</h3>
+                    <p>With spacious and sunny rooms, this intimate B&amp;B will make you feel at home with the comfort and quality of a hotel, benefiting from its spectacular location at walking distance from fashionable shops and city sights, signature restaurants and all that makes Lisbon Europe’s most well-kept secret.<br><br>
+    Casa do Príncipe takes its name after the Royal Prince, King D. Pedro V, whose story sets the tone for your unforgettable stay in Lisbon. Each of its 9 palatial suites and rooms refer to a meaningful part of this King’s life.<br><br>
+    It is located on the first floor of a 19th century building, with unique traits that make this luscious B&amp;B the ultimate destination for your Lisbon experience: its 4 meter (13 ft) indoor height, intricately stuccowork ceilings, real hardwood floors and authentic frescos. The beautiful restoration work on this house  incorporated genuine 19th century decoration with a touch of contemporary details all combined to create an exclusive atmosphere of sophistication and grace, discretion and elegance.</p></div>
+            </div>
         </div>
     </section>
 </div>

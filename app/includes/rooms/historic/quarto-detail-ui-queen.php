@@ -14,16 +14,15 @@ if (!isset($basePath)) {
             <div class="frame-inside" data-transition="crossfade">
                 <div class="fotorama fotorama__wrap fotorama__wrap--css3 fotorama__wrap--slide fotorama__wrap--no-controls" data-nav="false" data-arrows="true" data-click="true" data-swipe="true" data-allowfullscreen="true" data-loop="true" data-autoplay="true" data-stopautoplayontouch="false"  data-width="100%" data-ratio="1432/577">
                     <div class="featured-content">
-                        <div class="transparent-shadow"></div>
                         <div class="info-room-featured">
                             <h3>Queen D. Estefânia</h3>
                             <p>Spacious bedroom with lounge area, balcony overlooking the Príncipe Real garden, with three large windows that fill the room with natural light, creating a bright but relaxing atmosphere.</p>
                             <a href="<?php echo "$basePath"; ?>suites/" target="_self"><button>go previus</button></a>
                         </div>                    
-                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/sintra-pena-palacio.jpg">
+                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/fotos-sintra-palacio-da-pena-050.jpg">
                     </div>
                     <div class="featured-content">
-                        <img alt="destaque 2" src="<?php echo "$basePath"; ?>images/fotos-sintra-palacio-da-pena-050.jpg">
+                        <img alt="destaque 2" src="<?php echo "$basePath"; ?>images/sintra-pena-palacio.jpg">
                     </div>
                     <div class="featured-content">
                         <img alt="destaque 3" src="<?php echo "$basePath"; ?>images/palacio-da-liberdade-interior1.jpg">
@@ -31,9 +30,16 @@ if (!isset($basePath)) {
                 </div>
             </div>
         </article>
-        <article class="booking"><div class="booker"><div class="input-daterange input-group" id="datepicker"><div class="box-date chech-in"> <div data-icon="a" class="icon icon-calendar"></div> <div class="text-field-container"><input type="text" class="input-sm form-control" name="start" value="Check In"/></div><div data-icon="a" class="icon icon-caret-down-two"></div>
-            </div><div class="box-date chech-out"><div data-icon="a" class="icon icon-calendar"></div><div class="text-field-container"><input type="text" class="input-sm form-control" name="end" value="Check Out"/></div><div data-icon="a" class="icon icon-caret-down-two"></div>
-            </div></div><div class="bookregister"><button>BOOK NOW<div class="icon icon-arrow-right"></div></button></div></div></article>
+        <article class="booking"><div class="booker">
+            <form id="AVP" method="post" action="http://www.secure-hotel-booking.com/Casa-do-Principe/2E3B/search?hotelId=16384" target="_blank">
+                <div class="input-daterange input-group" id="datepicker">
+                <div class="group-dates-boxes">
+                <div class="box-date chech-in"> <div data-icon="a" class="icon icon-calendar">
+                </div><div class="text-field-container"><input type="text" class="input-sm form-control" id="AVP_arrivalDate" name="arrivalDate" value="Check In"/></div><div data-icon="a" class="icon icon-caret-down-two"></div>
+                </div><div class="box-date chech-out"><div data-icon="a" class="icon icon-calendar">
+                </div><div class="text-field-container"><input type="text" class="input-sm form-control" id="AVP_exitDate" name="end" value="Check Out"/></div><div data-icon="a" class="icon icon-caret-down-two"></div>
+                </div></div></div><div class="bookregister"><button id="bookit">BOOK NOW<div class="icon icon-arrow-right"></div></button></div></div></form>
+        </article>
 
         <article class="show-room-info">
             <div class="center-title">
@@ -65,7 +71,7 @@ if (!isset($basePath)) {
                     <li>Sofa double bed in the lounge area</li>
                     <li>Premium bathroom amenities</li>
                 </ul>
-                <a class="big-size" href="" target="_self"><h4>About King D. Pedro V</h4></a>
+                <a class="big-size" href="" target="_self"><h4>About King D. Pedro V<div class="icon icon-arrow-right"></div></h4></a>
             </div>
         </article>
         <article class="show-rooms">

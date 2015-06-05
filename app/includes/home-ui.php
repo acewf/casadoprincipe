@@ -93,7 +93,7 @@ if (!isset($basePath)) {
     	</div><div class="description">
     	    <h3>Royal Prince, King D. Pedro V</h3>
     	    <p class="small-text">Casa do Príncipe takes its name after the Royal Prince, King D. Pedro V, whose story sets the tone for your unforgettable stay in Lisbon. Each of its 9 palatial suites and rooms refer to a meaningful part of this King’s</p>
-    	    <a href="" target="_self"><h4>MEET THE KING</h4></a>
+    	    <a href="<?php echo "$basePath"; ?>casa-do-principe" target="_self"><h4>MEET THE KING</h4></a>
     	</div>
     </section>
 </div>

@@ -12,4 +12,4 @@ if (!isset($basePath)) {
 <li><a href="<?php echo "$basePath"; ?>suites-rooms/historic/king">King D. Fernando II Room</a></li>
 <li><a href="<?php echo "$basePath"; ?>suites-rooms/historic/sintra">Sintra Mountains Room</a></li>
 <li><a href="<?php echo "$basePath"; ?>suites-rooms/historic/voyages">Voyages Room</a></li>
-<li class="active"><span></span><a href="<?php echo "$basePath"; ?>suites-rooms">Historic</a></li>
+<li class="active"><span></span><a href="<?php echo "$basePath"; ?>suites-rooms">Historic Rooms</a></li>

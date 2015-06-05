@@ -27,8 +27,40 @@ define(['appmenu'], function(appmenu) {
         handler.click(this);
     });
     $('.logo a').click(loadhomeContent);
-
-
+    console.log("Added click",$('#menu-options'))
+    $('#menu-options').click(function(){
+        app.forcecloseMenuRooms();
+    });
+    window.addEventListener('popstate', function(event) {
+        //window.location.href;   
+        var mcontent;
+        function completeloadContent(ev){
+             console.log('loadSubMenu>>>',href);
+            $('ul.room-choose').html(mcontent.data);
+            var handler = new contentloader();
+            $('ul.room-choose li a').click(function(){
+                handler.click(this);
+            });
+        }
+        var href = window.location.href;
+        console.log('back>>>',href);
+        var n = href.indexOf(window.location.origin);
+        var res = href.substring(n+window.location.origin.length+1, href.length);
+        var subm = new loader(window.location.origin+'/includes/address-filter-output.php?url='+res);
+        function Subcompleteload(ev){
+            var data = JSON.parse(subm.data);
+            if (data.level!=null) {
+                mcontent = new loader(window.location.origin+'/includes/submenu/'+data.level+'.php?');
+                mcontent.addEventListener('complete',completeloadContent);
+                subm.removeEventListener('complete',Subcompleteload);
+                subm = null;
+            } else {
+                
+            }
+           
+        }        
+        subm.addEventListener('complete',Subcompleteload);
+    })
     
     var AppEngine = function(){
         //var instance = this;
@@ -123,13 +155,17 @@ define(['appmenu'], function(appmenu) {
             el.fadeIn();
         }
     };
+    AppEngine.prototype.forcecloseMenuRooms = function(event){
+        document.getElementById('menu-options').setAttribute('data-open',0);
+            $("#menu-options").fadeOut(); 
+    }
     AppEngine.prototype.closeMenu = function(event){
         var target = event.target;
         var parent =  target.parentNode;
         if(parent.id==='menu-options'){
             //app.btmenu.setAttribute("attrib-open",1);
             //app.btmenu.dispatchEvent(eventD);
-            document.getElementById('open-menu').setAttribute('data-open',0);
+            document.getElementById('menu-options').setAttribute('data-open',0);
             $(parent).fadeOut();            
         } else {
             //app.btlang.setAttribute("attrib-open",1);

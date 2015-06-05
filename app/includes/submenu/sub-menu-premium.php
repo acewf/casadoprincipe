@@ -10,4 +10,4 @@ if (!isset($basePath)) {
 ?>
 <li><a href="<?php echo "$basePath"; ?>suites-rooms/premium/arts">Arts Room</a></li>
 <li><a href="<?php echo "$basePath"; ?>suites-rooms/premium/lisbon">Lisbon City Room</a></li>
-<li class="active"><span></span><a href="<?php echo "$basePath"; ?>suites-rooms">Premium</a></li>
+<li class="active"><span></span><a href="<?php echo "$basePath"; ?>suites-rooms">Premium Rooms</a></li>

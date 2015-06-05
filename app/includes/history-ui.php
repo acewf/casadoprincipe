@@ -9,46 +9,24 @@ if (!isset($basePath)) {
 }
 ?>
 <div class="page-content history">
-    <section class="content inside-room hostel-info">
-        <article class="image-frame">
-            <div class="frame-inside"data-transition="crossfade">
-                <div class="fotorama fotorama__wrap fotorama__wrap--css3 fotorama__wrap--slide fotorama__wrap--no-controls" data-nav="false" data-autoplay="true" data-arrows="true" data-click="true" data-swipe="true" data-allowfullscreen="true" data-loop="true" data-stopautoplayontouch="false"  data-width="100%" data-ratio="1432/577">
-                    <div class="featured-content">                  
-                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/casadoprincipe/48090493.jpg">
-                    </div>
-                    <div class="featured-content">
-                        <img alt="destaque 2" src="<?php echo "$basePath"; ?>images/dsc_0281.jpg">
-                    </div>
-                    <div class="featured-content">
-                        <img alt="destaque 3" src="<?php echo "$basePath"; ?>images/palacio-da-liberdade-interior1.jpg">
-                    </div>
-                </div>
-            </div>
-        </article>
-    </section>
     <section class="app-history inside-room">
         <div class="group-text-img">
-            <div class="description">
-                <p class="small-text">Our friendly and highly professional staff caters to all needs during your visit, hoping to make this a memorable stay whether travelling for business, leisure or with your family.</p>
-            </div>
             <div class="img-content">
-                <img alt="image D. Pedro" src="<?php echo "$basePath"; ?>images/streetview.jpg">
+                <div>
+                    <img alt="image D. Pedro" src="<?php echo "$basePath"; ?>images/principe-big.png">
+                </div>
             </div>
         </div><div class="text-content">
-            <div class="center-content">
-            <h3>casa do príncipe offers the following facilities &amp; services:</h3>
-              <ul>
-                    <li>1 Imperial Suite, 2 Royal Suites, 2 Premium Rooms and 3 Historic Rooms all with private bathrooms</li>
-                    <li>An exceptional location in the heart of the historic center of Lisbon</li>
-                    <li>Free WiFi in all accommodation and public areas</li>
-                    <li>Welcome drink on arrival</li>
-                    <li>LCD TV</li>
-                    <li>Air conditioning</li>
-                    <li>Free WiFi in all accommodation and public areas</li>
-                    <li>Welcome drink on arrival</li>
-                    <li>LCD TV</li>
-                    <li>Air conditioning</li>
-                </ul>
+            <div >
+            <div class="description-location">
+                <h2>WHO WAS THE ROYAL PRINCE?</h2>
+                <h3>the answer to this question is as enigmatic as the prince himself.</h3>
+                <p>Born in Lisbon in 1837, the Prince soon displayed great curiosity about everything that surrounded him, becoming eager to learn more and more about the world he lived in. Every bit of knowledge he gathered started weighing upon him, as he grew into a very private and isolated young man with a loud mind, racing with intricate thoughts and plans for the country he would soon reign. It is often said that quiet people have the loudest mind, and that was precisely the case.<br> 
+He found true comfort and understanding in the loving arms of his wife, Queen D. Estefânia (Queen Stephanie). It was one of those rare cases of love at first sight, for they only met on their wedding day, which was very common at the time. Queen D. Estefânia understood and eased his troubles as no one could, their naïveté and innocence moving all those around them. It was truly the love story of the century and moulded every inch of the Royal Prince’s character.<br>
+He devoted his life to his country, seeking to further develop it and to bring comfort to the people, through many investments, some of them personal. He founded schools and hospitals, visited and comforted the sick and he was the stable figure that Portugal desperately needed.<br><br>
+The Praça do Príncipe Real (Royal Prince Square) was named after him by his loving mother, Queen D. Maria II, and has kept his name ever since, marking its place in the front row of Lisbon’s history.<br><br>
+His tragic death, at 24 years old of age, was mourned throughout Europe, leaving the weight of the crown to his brother D. Luís. However, the role he played in History still fills books and fables with the adventures and reflections of a mind very much ahead of its time. The sharp mind of the Royal Prince.
+</p></div>
         </div>
     </section>
 </div>

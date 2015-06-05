@@ -7,6 +7,7 @@ define(['approomdetail'], function(appmenu) {
 	'use strict';
     //Uses extras in here.
     function Approomdetail(){
+    	this.instance = this;
     	this.putStates=function(){
     		$('.logo').addClass('small');
     		$('#logo-big').removeClass('show');
@@ -14,6 +15,37 @@ define(['approomdetail'], function(appmenu) {
 		    $('ul.room-choose').addClass('show-childs');
 		    $('ul.suite').removeClass('menupos');
 		    $('.fotorama').fotorama();
+		    
+		    $( "#bookit" ).click(function(){
+		    	event.preventDefault();
+		    	var urlWithDate = 'http://www.secure-hotel-booking.com/Casa-do-Principe/2E3B/search?hotelId=16384';//$("#AVP").attr("action");
+			    var dataChegada = $('#AVP_arrivalDate').val();
+				var dataSaida =  $('#AVP_exitDate').val();
+				/*
+				dataChegada = dataChegada.replace("/", "-");
+				dataSaida = dataSaida.replace("/", "-");
+				dataChegada = dataChegada.replace("/", "-");
+				dataSaida = dataSaida.replace("/", "-");
+				*/
+				function reverseDate(datech){
+					var date = datech;
+					var items = date.split("/");
+					date = items[2]+'-'+items[1]+'-'+items[0];
+					return date;
+				}
+
+				dataChegada = reverseDate(dataChegada);
+				dataSaida = reverseDate(dataSaida);
+
+				urlWithDate += "&arrivalDate="+dataChegada+"&departureDate="+dataSaida;
+				$("#AVP").attr("action",urlWithDate);
+             	$("#AVP").submit(function( event ) {   
+				  //event.preventDefault();
+				  console.log('Form Sended');
+				});
+				$("#AVP").submit();
+            });
+             
     	}
 
     	this.loadPageAndMenu = function(){

@@ -413,13 +413,15 @@ article  div.description p {
   width: 100%;
   height: auto;
 }
-
+.frame-inside .fotorama .fotorama__stage{
+  min-height: 500px;
+}
 .frame-inside .fotorama img{
-  position:absolute;
-  top:50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  -webkit-transform: translate(-50%,-50%);
+  /* position:absolute; */
+  /* top:50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%,-50%); */
+  /* -webkit-transform: translate(-50%,-50%); */
   width:100%;
   height:auto;
 }
@@ -585,7 +587,7 @@ article  div.description p {
 
 .reasons {
   text-align: center;
-  margin-top: 146px;
+  margin-top: 130px;
   display: inline-block;
   max-width: 1024px;
 }
@@ -797,7 +799,7 @@ article  div.description p {
 }
 
 nav.sub-menu{
-  max-width: 1024px;
+  max-width: 1224px;
 }
 .sub-menu ul.room{
   display: inline-block;
@@ -839,8 +841,8 @@ nav.sub-menu ul li:first-child a, nav.sub-menu ul li.active a{
   border-left-style:none;
 }
 nav.sub-menu ul li a{
-  padding-left:10px;
-  padding-right:10px;
+  padding-left:50px;
+  padding-right:50px;
   width:100%;
   color:#888888;
   vertical-align:middle;
@@ -985,35 +987,65 @@ nav.sub-menu ul.room-choose.show-childs{
 
 .homepage .img-content img,
 .principe-house .img-content img,
-.facilities .img-content img {
+.facilities .img-content img,
+.page-content.history .img-content img {
   width: 100%;
   /* margin-top: 20px; */
   vertical-align: bottom;
 }
-
+.page-content.history .app-history.inside-room .img-content{
+  /*
+  position:absolute;
+  left: 25%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  */
+}
+#AVP{
+  width: 100%;
+  height: 100%;
+}
+.page-content.history .app-history.inside-room .img-content img{
+  height:100%;
+  width:auto;
+}
+@media screen and (orientation:landscape) {
+  .page-content.history .app-history.inside-room .img-content img{
+    height:auto;
+    width:100%;
+  }
+}
 .app-history .description {
-  padding: 9%;
+  padding:100px;
+  padding-top:140px;
+  padding-bottom:150px;
   display: inline-block;
   width: 45%;
   background-color: #fff;
   text-align: center;
   vertical-align: top;
 }
-
+.homepage .app-history .description{
+    height: 100%;
+    padding:100px;
+  
+}
 .app-history .description h6 {
   width: 100%;
   text-align: center;
 }
 
-.app-history .description a,.show-room-description a{
+.app-history .description a,
+.show-room-description a{
   font-weight: normal;
   border-style: solid;
   border-width: 1px;
   border-color: #000;
   display: inline-block;
   padding: 15px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
   font-size: .85em;
   -webkit-transition: background-color 0.1s 0.1s,border-color 0.1s 0.1s;
   transition: background-color 0.1s 0.1s,border-color 0.1s 0.1s;
@@ -1022,16 +1054,26 @@ nav.sub-menu ul.room-choose.show-childs{
   margin-top: 20px;
   position:relative;
 }
+.homepage .app-history .description a{
+  width:217px;
+}
 .show-room-description a {
   padding-top: 30px;
   margin-top:70px;
 }
-.app-history .description a:hover,.show-room-description a:hover {
+/*
+.show-room-description a:hover
+*/
+.info-room-featured a button:hover,
+.app-history .description a:hover,
+.show-room-description a:hover {
   background-color: #F2BB1A;
   border-color: transparent;
   text-decoration:none;
 }
-
+.info-room-featured a button:hover{
+  color:#000;
+}
 .show-room-description a.big-size{
   height: 80px;
   width:280px;
@@ -1052,17 +1094,22 @@ nav.sub-menu ul.room-choose.show-childs{
   background-color: #D6D6D6;
 }
 
-.app-history .description a h4,.inside-room.room-detail .show-room-description a h4 {
+.app-history .description a h4,
+.inside-room.room-detail .show-room-description a h4 {
   text-decoration: none;
   color: #000;
   margin: 0;
   font-weight:normal;
   font-size:13px;
+  text-transform:uppercase;
 }
-.app-history .description a h4,.inside-room.room-detail .show-room-description a h4 .icon{
+.app-history .description a h4,
+.inside-room.room-detail .show-room-description a h4 .icon{
   font-size: 1.3em;
 }
-
+.homepage .app-history .description a h4{
+  font-size:1em;
+}
 .app-history .description h3 {
   padding: 20px;
   font-weight: 400;
@@ -1102,6 +1149,7 @@ nav.sub-menu ul.room-choose.show-childs{
   text-align:center;
 }
 
+.app-history.inside-room .description-location ,
 .app-history.inside-room .description-location {
   display: inline-block;
   text-align:left;
@@ -1123,8 +1171,8 @@ nav.sub-menu ul.room-choose.show-childs{
   display: block;
   background-color: #F2BB1A;
   content: " ";
-  margin-bottom: 20px;
-  margin-top: 5px;
+  margin-bottom: 26px;
+  margin-top: 6px;
 }
 .app-history.inside-room .description p.small-text{
   font-size: 2em;
@@ -1205,11 +1253,25 @@ nav.choose-lang {
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
 }
+button#bookit{
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  font-size:.85em;
+  font-weight:600;
+}
 .room-detail .booker{
-    max-width: 890px;
+    width: 100%;
+    /* max-width: 890px; */
     height:74px;
     display:inline-block;
     position:relative;
+}
+.booker .group-dates-boxes{
+  padding-left:100px;
+  padding-right:100px;
+  display:inline-block;
+  width:100%;
+  height:100%;
 }
 .room-detail .booker .input-daterange{
   width: 674px;
@@ -1299,10 +1361,18 @@ ul.choose-rooms li a{
 /* ------- CASA DO PRINCIPE --------  */
 
 .principe-house .group-text-img,
-.facilities .group-text-img{
+.facilities .group-text-img,
+.page-content.history .group-text-img{
   display: inline-block;
   width: 53%;
+  overflow:hidden;
   margin-top:-50px
+}
+.page-content.history .group-text-img{
+  overflow:hidden;
+  margin-top: 0;
+  vertical-align: top;
+  position:relative;
 }
 .principe-house .group-text-img .description{
   width: auto;
@@ -1313,10 +1383,33 @@ ul.choose-rooms li a{
 .principe-house {
 
 }
-.principe-house .app-history.inside-room .text-content > div{
+.principe-house .app-history.inside-room .text-content > div,
+.page-content.history .app-history.inside-room .text-content > div{
   position:relative;
   height:100%;
   width:100%;
+}
+.page-content.history .app-history.inside-room .text-content > div{
+  left: 0;
+  top: 0;
+  transform:none;
+  -webkit-transform:none;
+  background-color:#fff;
+}
+.page-content.history .app-history.inside-room .text-content{
+  position: relative;
+  vertical-align:top;
+}
+.page-content.history h2{
+  font-family: "estilo-pro", sans-serif;
+  width:100%;
+  text-align:left;
+  font-size: 2.2em;
+}
+.page-content.history h3{
+  width: 360px;
+  font-weight:400;
+  font-size: 1.9em;
 }
 .principe-house .app-history.inside-room .text-content > div > div.description-location{
   position: absolute;
@@ -1325,6 +1418,12 @@ ul.choose-rooms li a{
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   width:70%;
+}
+.page-content.history .app-history.inside-room .text-content > div > div.description-location{
+  position: relative;
+  width:80%;
+  margin-top:70px;
+  max-width:520px;
 }
 .principe-house .description,
 .facilities .description{
@@ -1372,10 +1471,13 @@ ul.choose-rooms li a{
 
 }
 
-.facilities .app-history .description{
+.facilities .app-history .description,
+.page-content.history .app-history .description{
   width: 100%;
 }
-
+.facilities .app-history .description{
+  
+}
 .room-detail .show-room-description{
   max-width: 1020px;
   display: inline-block;
@@ -1426,6 +1528,15 @@ ul.choose-rooms li a{
 .facilities .text-content ul{
   text-align: left;
   margin-left: 20px;
+}
+.facilities .center-content{
+  width: 80%;
+  max-width: 485px;
+  height: 80%;
+}
+.facilities .text-content ul{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
 }
 .right-block ul{
   margin-left:70px;
@@ -1504,8 +1615,8 @@ div.datepicker table tr td.selected{
 
 .datepicker.datepicker-dropdown.dropdown-menu.datepicker-orient-left.datepicker-orient-bottom,
 .datepicker.datepicker-dropdown.dropdown-menu.datepicker-orient-left.datepicker-orient-top{
-  width:300px;
-  height:335px;
+  width:280px;
+  height:345px;
   border:none;
   border-radius:0;
   box-shadow: none;

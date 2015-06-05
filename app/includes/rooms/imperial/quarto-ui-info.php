@@ -15,7 +15,6 @@ if (!isset($basePath)) {
             <div class="frame-inside"data-transition="crossfade">
                 <div class="fotorama fotorama__wrap fotorama__wrap--css3 fotorama__wrap--slide fotorama__wrap--no-controls" data-nav="false" data-autoplay="true" data-arrows="true" data-click="true" data-swipe="true" data-allowfullscreen="true" data-loop="true" data-stopautoplayontouch="true"  data-width="100%" data-ratio="1432/577">
                     <div class="featured-content">
-                        <div class="transparent-shadow"></div>
                         <div class="info-room-featured">
                             <h3>Queen D. Estefânia</h3>
                             <p>Spacious bedroom with lounge area, balcony overlooking the Príncipe Real garden, with three large windows that fill the room with natural light, creating a bright but relaxing atmosphere.</p>
