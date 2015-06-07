@@ -47,16 +47,15 @@ if (!isset($basePath)) {
             </div>
         </div>
     </section>
+    <script>
+    if (typeof requirejs == 'function') {
+        require(['casadoprincipe'],function(module){
+            try{
+                module.init();
+            }catch(err) {
+                console.log(err.message);
+            }  
+        });
+    }
+    </script>
 </div>
-<script>
-console.log('try to define quarto room');
-if (typeof requirejs == 'function') {
-    require(['casadoprincipe'],function(module){
-        try{
-            module.init();
-        }catch(err) {
-            console.log(err.message);
-        }  
-    });
-}
-</script>

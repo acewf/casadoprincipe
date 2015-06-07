@@ -76,28 +76,71 @@ if (!isset($basePath)) {
             </div>
             <div class="rooms-types">
                 <ul class="choose-rooms">
-                    <li class="actived"><a href="<?php echo "$basePath"; ?>suites-rooms/royal">ROYAL SUITES</a></li>
-                    <li><a href="<?php echo "$basePath"; ?>suites-rooms/premium">PREMIUM ROOMS</a></li>
-                    <li><a href="<?php echo "$basePath"; ?>suites-rooms/historic">HISTORIC ROOMS</a></li>
+                    <li class="actived"><a data-pageid="page1" href="<?php echo "$basePath"; ?>suites-rooms/royal">ROYAL SUITES</a></li>
+                    <li><a data-pageid="page2" href="<?php echo "$basePath"; ?>suites-rooms/premium">PREMIUM ROOMS</a></li>
+                    <li><a data-pageid="page3" href="<?php echo "$basePath"; ?>suites-rooms/historic">HISTORIC ROOMS</a></li>
                 </ul>
             </div>
-            <section class="rooms-view">
-                <article class="room">
-                    <a href="">
-                        <div class="small-frame">
-                            <img alt="Quarto Imperial" src="<?php echo "$basePath"; ?>images/img-moldura.png">
-                        </div>
-                        <h5>Imperial Suite</h5>
-                    </a>
-                </article><article class="room">
-                    <a href="">
-                        <div class="small-frame">
-                            <img alt="Quarto Royal" src="<?php echo "$basePath"; ?>images/img-moldura.png">
-                        </div>
-                        <h5>Royal Suites</h5>
-                    </a>
-                </article>
-            </section>
+            <div class="rooms-group">
+                <section class="rooms-view" id="page1">
+                    <article class="room" >
+                        <a href="">
+                            <div class="small-frame">
+                                <img alt="Quarto Imperial" src="<?php echo "$basePath"; ?>images/img-moldura.png">
+                            </div>
+                            <h5>Imperial Suite</h5>
+                        </a>
+                    </article><article class="room">
+                        <a href="">
+                            <div class="small-frame">
+                                <img alt="Quarto Royal" src="<?php echo "$basePath"; ?>images/img-moldura.png">
+                            </div>
+                            <h5>Royal Suites</h5>
+                        </a>
+                    </article>
+                </section>
+                <section class="rooms-view" id="page2">
+                    <article class="room" >
+                        <a href="">
+                            <div class="small-frame">
+                                <img alt="Quarto Imperial" src="<?php echo "$basePath"; ?>images/img-moldura.png">
+                            </div>
+                            <h5>Imperial Suite</h5>
+                        </a>
+                    </article><article class="room">
+                        <a href="">
+                            <div class="small-frame">
+                                <img alt="Quarto Royal" src="<?php echo "$basePath"; ?>images/img-moldura.png">
+                            </div>
+                            <h5>Royal Suites</h5>
+                        </a>
+                    </article><article class="room">
+                        <a href="">
+                            <div class="small-frame">
+                                <img alt="Quarto Royal" src="<?php echo "$basePath"; ?>images/img-moldura.png">
+                            </div>
+                            <h5>Royal Suites</h5>
+                        </a>
+                    </article>                    
+                </section>
+                <section class="rooms-view" id="page3">
+                    <article class="room" >
+                        <a href="">
+                            <div class="small-frame">
+                                <img alt="Quarto Imperial" src="<?php echo "$basePath"; ?>images/img-moldura.png">
+                            </div>
+                            <h5>Imperial Suite</h5>
+                        </a>
+                    </article><article class="room">
+                        <a href="">
+                            <div class="small-frame">
+                                <img alt="Quarto Royal" src="<?php echo "$basePath"; ?>images/img-moldura.png">
+                            </div>
+                            <h5>Royal Suites</h5>
+                        </a>
+                    </article>
+                </section>
+            </div>
         </article>
     </section>
     <script>

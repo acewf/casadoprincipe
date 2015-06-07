@@ -7,10 +7,15 @@
 var require = {
     baseUrl: '/bower_components',
     paths: {
+        
         main: '../scripts/main',
         app: '../scripts/app',
         appmenu: '../scripts/app-menu-top',
         apphome: '../scripts/app-home',
+        gallery: '../scripts/app-gallery',
+        location: '../scripts/app-location',
+        contacts: '../scripts/app-contacts',
+        personalize: '../scripts/app-personalize',
         approom: '../scripts/app-room',
         approomdetail: '../scripts/app-detail-room',
         approominfo: '../scripts/app-room-info',
@@ -22,8 +27,9 @@ var require = {
         textloader: '../scripts/textloader',
         contentloader: '../scripts/contentloader',
         loadingoverlay: '../scripts/loadingoverlay.min',
-        jquery: 'jquery/jquery',
+        jquery: 'jquery/dist/jquery',
         bootstrap: 'bootstrap/dist/js/bootstrap',
+        'google-maps': 'google-maps/lib/google.min',
         bootstrapdate: 'bootstrap-datepicker-master/js/bootstrap-datepicker',
         bootstrappickerpt: 'bootstrap-datepicker-master/js/locales/bootstrap-datepicker.pt',
         fotorama: 'fotorama/fotorama',
@@ -51,6 +57,46 @@ var require = {
                 'textloader'
             ],
             exports: 'apphome'
+        },
+        gallery: {
+            deps: [
+                'fotorama',
+                'jquery',
+                'contentloader',
+                'loadingoverlay',
+                'loadingoverlay',
+                'textloader'
+            ],
+            exports: 'gallery'
+        },
+        contacts: {
+            deps: [
+                'jquery',
+                'contentloader',
+                'loadingoverlay',
+                'textloader'
+            ],
+            exports: 'contacts'
+        },
+        location: {
+            deps: [
+                'jquery',
+                'google-maps',
+                'contentloader',
+                'loadingoverlay',
+                'textloader'
+            ],
+            exports: 'location'
+        },
+        personalize: {
+            deps: [
+                'jquery',
+                'google-maps',
+                'contentloader',
+                'loadingoverlay',
+                'textloader'
+            ],
+            exports: 'personalize'
         },
         approom: {
             deps: [

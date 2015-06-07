@@ -29,15 +29,15 @@ His tragic death, at 24 years old of age, was mourned throughout Europe, leaving
 </p></div>
         </div>
     </section>
+    <script>
+    if (typeof requirejs == 'function') {
+        require(['history'],function(module){
+            try{
+                module.init();
+            }catch(err) {
+                console.log(err.message);
+            }  
+        });
+    }
+    </script>
 </div>
-<script>
-if (typeof requirejs == 'function') {
-    require(['history'],function(module){
-        try{
-            module.init();
-        }catch(err) {
-            console.log(err.message);
-        }  
-    });
-}
-</script>

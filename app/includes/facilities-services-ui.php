@@ -51,15 +51,15 @@ if (!isset($basePath)) {
                 </ul>
         </div>
     </section>
+    <script>
+    if (typeof requirejs == 'function') {
+        require(['facilitiesservices'],function(module){
+            try{
+                module.init();
+            }catch(err) {
+                console.log(err.message);
+            }  
+        });
+    }
+    </script>
 </div>
-<script>
-if (typeof requirejs == 'function') {
-    require(['facilitiesservices'],function(module){
-        try{
-            module.init();
-        }catch(err) {
-            console.log(err.message);
-        }  
-    });
-}
-</script>

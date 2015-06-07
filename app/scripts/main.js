@@ -1,6 +1,8 @@
 require(['app', 'jquery', 'picturefill'], function (app) {
     'use strict';
     // use app here
+
+
     var pagModulesRef = [];
     pagModulesRef['home-ui'] = {module:'apphome'};
     pagModulesRef['quarto-ui'] = {module:'approom'};
@@ -10,6 +12,10 @@ require(['app', 'jquery', 'picturefill'], function (app) {
     pagModulesRef['casa-do-principe-ui'] = {module:'casadoprincipe'};
     pagModulesRef['facilities-services-ui'] = {module:'facilitiesservices'};
     pagModulesRef['history-ui'] = {module:'history'};
+    pagModulesRef['gallery-ui'] = {module:'gallery'};
+    pagModulesRef['location-ui'] = {module:'location'};
+    pagModulesRef['personalize-ui'] = {module:'personalize'};
+    pagModulesRef['contact-ui'] = {module:'contacts'};
 
     /* ----------------- ------------------ */
     pagModulesRef['rooms/royal/quarto-detail-ui-queen'] = {module:'approomdetail'};
@@ -33,8 +39,13 @@ require(['app', 'jquery', 'picturefill'], function (app) {
         console.log("ADD jquery PLugin");
         $.fn.imagesLoaded = function () {
             var imgs = this.find('img[src!=""]');
+            console.log(imgs);
+
             // if there's no images, just return an already resolved promise
-            if (!imgs.length) {return $.Deferred.resolve().promise();}
+            if (!imgs.length) {
+                console.log($.Deferred().resolve);
+                return $.Deferred().resolve().promise();
+            }
             // for each image, add a deferred object to the array which resolves when the image is loaded
             var dfds = [];  
             imgs.each(function(){

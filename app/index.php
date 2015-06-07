@@ -38,9 +38,9 @@
                     <ul>
                         <li><a href="<?php echo "$basePath"; ?>casa-do-principe">Casa do príncipe</a></li>
                         <li><a href="<?php echo "$basePath"; ?>suites-rooms">Suites and rooms</a></li>
-                        <li><a href="<?php echo "$basePath"; ?>galllery">Gallery</a></li>
+                        <li><a href="<?php echo "$basePath"; ?>gallery">Gallery</a></li>
                         <li><a href="<?php echo "$basePath"; ?>location">Location</a></li>
-                        <li><a href="<?php echo "$basePath"; ?>personalize">Personalize your stay</a></li>
+                        <li><a href="<?php echo "$basePath"; ?>personalize-your-stay">Personalize your stay</a></li>
                         <li><a href="<?php echo "$basePath"; ?>contacts">Contacts</a></li>
                     </ul>
                 </nav>

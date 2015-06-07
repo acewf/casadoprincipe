@@ -3,12 +3,12 @@
 ////Date: 05/05/2015
 ////Company:euro-m.pt
 //////////////  AREAS DE JOGO  /////////////////////////
-define(['apphome'], function(apphome) {
+define(['gallery'], function(gallery) {
     'use strict';
     //Uses extras in here.
     console.log('APP HOME DEFINED**');
 
-    function APPhome(){
+    function APPgallery(){
         this.putStates=function(){
             $('.sub-menu .suite').html('');
             $('#logo-big').addClass('show');
@@ -17,6 +17,10 @@ define(['apphome'], function(apphome) {
             $('ul.suite').removeClass('menupos');
             $('.logo').removeClass('small');
             $('.fotorama').fotorama();
+            $('.fotorama').load([
+              {img: 'images/destaque-room.png', thumb: 'images/thumbs/destaque-room.png'},
+              {img: 'images/dsc_0281.png', thumb: 'images/thumbs/destaque-room.png'}
+            ]);
         }
     	this.init = function(){
             this.putStates();
@@ -36,6 +40,6 @@ define(['apphome'], function(apphome) {
     	}
     }
 
-    var apphome = new APPhome();
-    return apphome;
+    var gallery = new APPgallery();
+    return gallery;
 });

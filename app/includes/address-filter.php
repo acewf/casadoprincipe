@@ -15,11 +15,15 @@ class AdressChecker
         $basefolder = '';
         $this->myPaths = array();   
         $this->generatePath($basefolder.'','home-ui','',null);
-        $this->generatePath($basefolder.'home/','home-ui','',null);
-        $this->generatePath($basefolder.'casa-do-principe/','casa-do-principe-ui','',null);
-        $this->generatePath($basefolder.'facilities-services/','facilities-services-ui','',null);
-        $this->generatePath($basefolder.'history/','history-ui','',null);
+        $this->generatePath($basefolder.'home','home-ui','',null);
+        $this->generatePath($basefolder.'casa-do-principe','casa-do-principe-ui','',null);
+        $this->generatePath($basefolder.'facilities-services','facilities-services-ui','',null);
+        $this->generatePath($basefolder.'history','history-ui','',null);
         $this->generatePath($basefolder.'index.php','home-ui','',null);
+        $this->generatePath($basefolder.'gallery','gallery-ui','',null);
+        $this->generatePath($basefolder.'location','location-ui','',null);
+        $this->generatePath($basefolder.'personalize-your-stay','personalize-ui','',null);
+        $this->generatePath($basefolder.'contacts','contact-ui','',null);
         // ------------ Suite Rooms ------------- //
         $this->generatePath($basefolder.'suites-rooms/','quarto-ui','','sub-menu-rooms');
         $this->generatePath($basefolder.'suites-rooms/imperial','quarto-ui-info','rooms/imperial/','sub-menu-imperial-suite');

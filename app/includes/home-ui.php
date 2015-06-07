@@ -96,15 +96,15 @@ if (!isset($basePath)) {
     	    <a href="<?php echo "$basePath"; ?>casa-do-principe" target="_self"><h4>MEET THE KING</h4></a>
     	</div>
     </section>
+    <script>
+    if (typeof requirejs == 'function') {
+        requirejs(['apphome'],function(module){
+            try{
+                module.init();
+            }catch(err) {
+                console.log(err.message);
+            }  
+        });
+    }
+    </script>
 </div>
-<script>
-if (typeof requirejs == 'function') {
-    requirejs(['apphome'],function(module){
-        try{
-            module.init();
-        }catch(err) {
-            console.log(err.message);
-        }  
-    });
-}
-</script>

@@ -21,12 +21,7 @@ define(['approomdetail'], function(appmenu) {
 		    	var urlWithDate = 'http://www.secure-hotel-booking.com/Casa-do-Principe/2E3B/search?hotelId=16384';//$("#AVP").attr("action");
 			    var dataChegada = $('#AVP_arrivalDate').val();
 				var dataSaida =  $('#AVP_exitDate').val();
-				/*
-				dataChegada = dataChegada.replace("/", "-");
-				dataSaida = dataSaida.replace("/", "-");
-				dataChegada = dataChegada.replace("/", "-");
-				dataSaida = dataSaida.replace("/", "-");
-				*/
+				
 				function reverseDate(datech){
 					var date = datech;
 					var items = date.split("/");
@@ -51,11 +46,14 @@ define(['approomdetail'], function(appmenu) {
     	this.loadPageAndMenu = function(){
     		var mcontent;
 		    function completeloadContent(ev){
+
 		    	$('ul.room-choose').html(mcontent.data);
 		    	var handler = new contentloader();
 		    	$('ul.room-choose li a').click(function(){
                 	handler.click(this);
             	});
+            	$('nav.sub-menu ul li a').removeClass('active');
+            	$('a[href^="'+window.location.href+'"]').addClass('active');
 		    }
 		    var href = window.location.href;
 		    var n = href.indexOf(window.location.origin);
@@ -71,9 +69,26 @@ define(['approomdetail'], function(appmenu) {
 	        subm.addEventListener('complete',Subcompleteload);
     	}
 
+    	this.pageChangeListener = function(){
+    		$('.rooms-group section.rooms-view').hide();
+            $('.rooms-group #page1').fadeIn();
+    		$('.choose-rooms li a').click(function(){
+    			var target = event.target;
+    			$('.choose-rooms li').removeClass('actived');
+    			$(target.parentNode).addClass('actived');
+                event.preventDefault();
+                var id = this.getAttribute('data-pageid');
+
+                $('.rooms-group section.rooms-view').fadeOut();
+                $('.rooms-group #'+id).delay(200).fadeIn();
+                console.log(id,$('.rooms-group #'+id));
+            });
+    	}
+
     	this.init=function(){
     		this.putStates();
     		this.loadPageAndMenu();
+    		this.pageChangeListener();
 
     		var elementdatepicker = $('.booker .input-daterange');
 		    $(elementdatepicker).datepicker({

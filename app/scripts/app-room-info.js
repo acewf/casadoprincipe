@@ -44,17 +44,6 @@ define(['approominfo'], function(appmenu) {
 						}
 			        } 
 			        function loadContent(endereco){
-			        	$.LoadingOverlaySetup({
-				             color           : "rgba(0, 0, 0, 0.4)",
-				             image           : window.location.origin+"/images/loading.gif",
-				             maxSize         : "100px",
-				             minSize         : "20px",
-				             resizeInterval  : 0,
-				             size            : "50%"
-				        });
-			        	console.log('app-room-info@LOAD Page:'+window.location.origin+'/includes/'+endereco+'.php?')
-			        	//mcontent = new loader(window.location.origin+'/includes/'+endereco+'.php?');
-			            //mcontent.addEventListener('complete',completeloadContent);
 			            $(".main").LoadingOverlay("show");
 			            var maddress = window.location.origin+'/includes/'+endereco+'.php?';
 				        $.ajax({

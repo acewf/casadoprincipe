@@ -23,7 +23,6 @@ define(['appmenu'], function(appmenu) {
     var handler = new contentloader();
     $('.choose-menu a').click(function(){
         app.toggleMenu(event);
-        console.log(app);
         handler.click(this);
     });
     $('.logo a').click(loadhomeContent);
@@ -33,33 +32,50 @@ define(['appmenu'], function(appmenu) {
     });
     window.addEventListener('popstate', function(event) {
         //window.location.href;   
-        var mcontent;
-        function completeloadContent(ev){
+        var submenu;
+        var menucontent;
+        var pagecontent;
+        function completeloadSubMenu(ev){
              console.log('loadSubMenu>>>',href);
-            $('ul.room-choose').html(mcontent.data);
+            $('ul.room-choose').html(submenu.data);
             var handler = new contentloader();
             $('ul.room-choose li a').click(function(){
                 handler.click(this);
             });
         }
+        function completeloadMenu(ev){
+             console.log('load-Menu>>>',href);
+            $('ul.suite').html(submenu.data);
+            var handler = new contentloader();
+            $('ul.suite li a').click(function(){
+                handler.click(this);
+            });
+        }
+        function completeloadContent(ev){
+            $('.sub-menu .suite').html(menucontent.data);
+        }
         var href = window.location.href;
-        console.log('back>>>',href);
         var n = href.indexOf(window.location.origin);
         var res = href.substring(n+window.location.origin.length+1, href.length);
-        var subm = new loader(window.location.origin+'/includes/address-filter-output.php?url='+res);
+        var filestourl = new loader(window.location.origin+'/includes/address-filter-output.php?url='+res);
         function Subcompleteload(ev){
-            var data = JSON.parse(subm.data);
+            var data = JSON.parse(filestourl.data);
             if (data.level!=null) {
-                mcontent = new loader(window.location.origin+'/includes/submenu/'+data.level+'.php?');
-                mcontent.addEventListener('complete',completeloadContent);
-                subm.removeEventListener('complete',Subcompleteload);
-                subm = null;
-            } else {
-                
+                submenu = new loader(window.location.origin+'/includes/submenu/'+data.level+'.php?');
+                submenu.addEventListener('complete',completeloadSubMenu);
+                filestourl.removeEventListener('complete',Subcompleteload);
+                filestourl = null;
             }
+            console.log(data);
+            menucontent = new loader(window.location.origin+'/includes/submenu/sub-menu-rooms.php');
+            menucontent.addEventListener('complete',completeloadContent);
+                        
+            pagecontent = new contentloader();
+            pagecontent.loadAllContent(data.path);
+            pagecontent.addEventListener('complete',completeloadContent);
            
         }        
-        subm.addEventListener('complete',Subcompleteload);
+        filestourl.addEventListener('complete',Subcompleteload);
     })
     
     var AppEngine = function(){
