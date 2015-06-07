@@ -53,13 +53,13 @@ define(['personalize'], function(gallery) {
     	this.init = function(){
             this.putStates();
             var handler = new contentloader();
+            var completeloadContent = function(ev){
+                $('.sub-menu .suite').html(mcontent.data);
+            }
             $('article a').click(function(){
                 var total = $('.sub-menu .suite li').length;
                 if(total===0){
                      var mcontent;
-                    function completeloadContent(ev){
-                        $('.sub-menu .suite').html(mcontent.data);
-                    }
                     mcontent = new loader(window.location.origin+'/includes/submenu/sub-menu-rooms.php');
                     mcontent.addEventListener('complete',completeloadContent); 
                 }

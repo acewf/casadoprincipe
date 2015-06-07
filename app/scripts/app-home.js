@@ -7,7 +7,6 @@ define(['apphome','appmenu'], function(apphome,appmenu) {
     'use strict';
     //Uses extras in here.
     console.log('APP HOME DEFINED**',appmenu);
-     $('section.content article').css('opacity',0);
     function APPhome(){
         this.putStates=function(){
             $('.sub-menu .suite').html('');
@@ -18,6 +17,8 @@ define(['apphome','appmenu'], function(apphome,appmenu) {
             $('.logo').removeClass('small');
             $('.fotorama').fotorama();
             appmenu.addFotoramEvents();
+
+            console.log('home put states');
 
             var delayer=0;
             $('section.content article').delay(200).each(function(){
@@ -33,13 +34,13 @@ define(['apphome','appmenu'], function(apphome,appmenu) {
     	this.init = function(){
             this.putStates();
             var handler = new contentloader();
+            var completeloadContent = function(ev){
+                $('.sub-menu .suite').html(mcontent.data);
+            }
             $('article.show-rooms a').click(function(){
                 var total = $('.sub-menu .suite li').length;
                 if(total===0){
                      var mcontent;
-                    function completeloadContent(ev){
-                        $('.sub-menu .suite').html(mcontent.data);
-                    }
                     mcontent = new loader(window.location.origin+'/includes/submenu/sub-menu-rooms.php');
                     mcontent.addEventListener('complete',completeloadContent); 
                 }

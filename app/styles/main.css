@@ -1069,20 +1069,25 @@ nav.sub-menu ul li.active:hover span:after{
 nav.sub-menu ul.suite,nav.sub-menu ul.room-choose{
   vertical-align: top;
   transform: translate(0px,0px);
+  -webkit-transform: translate(0px,0px);
   -webkit-transition: -webkit-transform 0.1s 0.1s,background-color 0.1s 0.1s;
   transition: transform 0.1s 0.1s,background-color 0.1s 0.1s;
 }
 nav.sub-menu ul.suite{
   transform: translate(0px,-65px);
+   -webkit-transform: translate(0px,-65px);
 }
 nav.sub-menu ul.suite.menupos{
  transform: translate(0px,0px);
+ -webkit-transform: translate(0px,0px);
 }
 nav.sub-menu ul.suite.choose-childs{
   transform: translate(0px,-65px);
+  -webkit-transform: translate(0px,-65px);
 }
 nav.sub-menu ul.room-choose.show-childs{
   transform: translate(0px,-65px);
+  -webkit-transform: translate(0px,-65px);
 }
 
 
