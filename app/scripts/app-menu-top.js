@@ -118,7 +118,8 @@ define(['appmenu'], function(appmenu) {
         }
         this.btmenu.addEventListener('click', this.toggleMenu, false);
         this.btlang.addEventListener('click',this.toggleLanguage, false);
-
+    };
+    AppEngine.prototype.addFotoramEvents = function(){
         var previous = document.getElementsByClassName('previous')[0];
         var next = document.getElementsByClassName('next')[0];
         if (previous!==undefined) {
@@ -128,6 +129,7 @@ define(['appmenu'], function(appmenu) {
             next.addEventListener('click', this.photogoNext, false);
         }
     };
+
     AppEngine.prototype.photogoNext = function(){
         var d = document.getElementsByClassName('fotorama__arr--next')[0];
         if (d!==undefined) {

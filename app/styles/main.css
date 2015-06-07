@@ -95,6 +95,23 @@ section.content {
   opacity: 0;
 }
 
+section.content .origenbox{
+  height: 30px;
+  width: 200px;
+  position: absolute;
+  right: 5px;
+  margin-top: 30px;
+  z-index: 10;
+  text-align:right;
+}
+section.content .origenbox input{
+  height:100%;
+  width:160px;
+}
+section.content .origenbox button{
+  height:100%;
+  width:30px;
+}
 div.transparent-shadow {
   width: 100%;
   height: 100%;
@@ -678,6 +695,7 @@ article  div.description p {
   background-color: #fff;
   color: #000;
   min-width:200px;
+  opacity:0;
 }
 .wide{
   max-width:890px;
@@ -697,6 +715,13 @@ article  div.description p {
   display: inline-block;
   color: inherit;
   width:100%;
+}
+.select-text{
+  user-select:text;
+  -moz-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
+  cursor:default;
 }
 
 .contact-item h5 {
@@ -1072,6 +1097,15 @@ nav.sub-menu ul.room-choose.show-childs{
 }
 
 /* ---------- END INSIDE ROOM ----------- */
+.facilities section.content article,
+.principe-house section.content article,
+section.app-history,
+.generic-room section.content article,
+.spec-room section.content article,
+.homepage section.content article{
+  opacity:0;
+  filter: alpha(opacity=0); 
+}
 .homepage .img-content {
   display: inline-block;
   width: 55%;
@@ -1492,6 +1526,10 @@ ul.choose-rooms li a{
 .page-content.history .app-history.inside-room .text-content{
   position: absolute;
   vertical-align:top;
+}
+.page-content.history .text-content{
+  opacity:0;
+  filter: alpha(opacity=0);
 }
 .page-content.history h2{
   font-family: "estilo-pro", sans-serif;

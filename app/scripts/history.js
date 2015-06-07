@@ -15,6 +15,16 @@ define(['history'], function(appmenu) {
             $('#logo-small').addClass('show');
             $('.sub-menu .suite').html('');
             $('.room-choose').html('');
+
+            var delayer=0;
+            $('section.app-history').delay(200).each(function(){
+                $(this).delay(delayer).fadeTo(200, 1);
+                delayer+=200;
+            });
+            $('.page-content.history .text-content').delay(500).each(function(){
+                $(this).delay(delayer).fadeTo(200, 1);
+                delayer+=200;
+            });
             
             var mcontent;
             function completeloadContent(ev){

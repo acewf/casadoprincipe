@@ -17,14 +17,14 @@ if (!isset($basePath)) {
             </div>
             <section class="rooms-view">
                 <article class="contact-item">
-                    <a href="">
+                    <a>
                         <h5>Telefone</h5>
                         <ul>  
                             <li class="telefone">+351 218 264 183</li>
                         </ul>
                     </a>
                 </article><article class="contact-item">
-                    <a href="">
+                    <a>
                         <h5>Mobile</h5>
                         <ul>  
                             <li class="fax">+351 935 743 078</li>
@@ -38,7 +38,7 @@ if (!isset($basePath)) {
                         </ul>
                     </a>
                 </article><article class="contact-item">
-                    <a href="www.facebook.com/casadoprincipe">
+                    <a href="http://www.facebook.com/casadoprincipe" target="_blank">
                         <h5>Facebook</h5>
                         <ul>  
                             <li class="morada">www.facebook.com/casadoprincipe</li>
@@ -46,7 +46,7 @@ if (!isset($basePath)) {
                     </a>
                 </article>
                 </article><article class="contact-item wide">
-                    <a href="http://127.0.0.1:9000/location">
+                    <a class="select-text">
                         <h5>Morada</h5>
                         <ul>  
                             <li class="morada">Praça do Príncipe Real, n. 23 – 1º</li>
@@ -59,7 +59,7 @@ if (!isset($basePath)) {
     </section>        
     <script>
     if (typeof requirejs == 'function') {
-        requirejs(['contact'],function(module){
+        requirejs(['contacts'],function(module){
             try{
                 module.init();
             }catch(err) {

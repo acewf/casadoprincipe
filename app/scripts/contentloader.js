@@ -56,7 +56,7 @@ function contentloader(res){
     }
     this.click = function(scope){
         var href = $(scope).attr('href');
-        console.log(this,'HREF:',href);
+        console.log(this,'HREF:',scope);
         var datarooms = $(this).attr('data-rooms');
         event.preventDefault();
         var n = href.indexOf(window.location.origin);

@@ -18,11 +18,21 @@ define(['contacts'], function(gallery) {
             $('ul.suite').removeClass('menupos');
             $('.logo').removeClass('small');
             
+            var delayer=0;
+            $('.contact-item').delay(200).each(function(){
+                $(this).delay(delayer).fadeTo(200, 1);
+                delayer+=80;
+            });
+            //$('.contact-item').delay(1000).show();
+            
             
         }
     	this.init = function(){
             this.putStates();
             var handler = new contentloader();
+            /*
+            var result = $('article a[href^="'+window.location.origin+'"]');
+            console.log(result);
             $('article a').click(function(){
                 var total = $('.sub-menu .suite li').length;
                 if(total===0){
@@ -35,6 +45,7 @@ define(['contacts'], function(gallery) {
                 }
                 handler.click(this);
             });
+            */
     	}
     }
 

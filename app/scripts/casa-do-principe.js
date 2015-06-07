@@ -16,6 +16,17 @@ define(['casadoprincipe'], function(appmenu) {
             $('#logo-small').addClass('show');
             $('.fotorama').fotorama();
 
+            var delayer=0;
+            $('section.content article').delay(200).each(function(){
+                $(this).delay(delayer).fadeTo(200, 1);
+                delayer+=200;
+            });
+            delayer=0;
+            $('section.app-history').delay(500).each(function(){
+                $(this).delay(delayer).fadeTo(200, 1);
+                delayer+=200;
+            });
+
             var mcontent;
             function completeloadContent(ev){
                 $('.sub-menu .suite').html(mcontent.data);

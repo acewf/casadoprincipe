@@ -6,9 +6,12 @@
 define(['location'], function(gallery) {
     'use strict';
     //Uses extras in here.
-    console.log('APP HOME DEFINED**');
+    console.log('APP Location DEFINED**');
 
     function APP(){
+        this.directionsService = null;
+        this.directionsDisplay = null;
+        var instance =this;
         this.putStates=function(){
             $('.sub-menu .suite').html('');
             $('#logo-big').addClass('show');
@@ -16,6 +19,13 @@ define(['location'], function(gallery) {
             $('ul.room-choose').addClass('show-childs');
             $('ul.suite').removeClass('menupos');
             $('.logo').removeClass('small');
+            $('#originfield').click(function(){
+                if ($(this).val()=='Local Origem') {
+                    $(this).val('');
+                };
+            });
+
+            $('#searchlocation').click(this.changeOrigenLocation);
             
             var GoogleMapsLoader = require('google-maps');      // only for common js environments
  
@@ -37,18 +47,23 @@ define(['location'], function(gallery) {
                     map: map
                 });
                 directionsDisplay.setMap(map);
-                var request = {
-                    origin:'R. Dr. António Martins, Lisboa',
-                    destination:'Jardim do Príncipe Real, Praça do Príncipe Real, Lisboa',
-                    travelMode: google.maps.TravelMode.DRIVING
-                  };
-                  directionsService.route(request, function(result, status) {
-                    if (status == google.maps.DirectionsStatus.OK) {
-                      directionsDisplay.setDirections(result);
-                    }
-                });
+                instance.directionsService = directionsService;
+                instance.directionsDisplay = directionsDisplay;
+            });            
+        }
+        this.changeOrigenLocation = function(){
+            var directionsService = instance.directionsService;
+            var directionsDisplay = instance.directionsDisplay;
+            var request = {
+                origin:$('#originfield').val(),
+                destination:'Jardim do Príncipe Real, Praça do Príncipe Real, Lisboa',
+                travelMode: google.maps.TravelMode.DRIVING
+            };
+            directionsService.route(request, function(result, status) {
+                if (status == google.maps.DirectionsStatus.OK) {
+                  directionsDisplay.setDirections(result);
+                }
             });
-            
         }
     	this.init = function(){
             this.putStates();

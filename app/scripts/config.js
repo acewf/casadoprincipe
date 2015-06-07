@@ -29,7 +29,7 @@ var require = {
         loadingoverlay: '../scripts/loadingoverlay.min',
         jquery: 'jquery/dist/jquery',
         bootstrap: 'bootstrap/dist/js/bootstrap',
-        'google-maps': 'google-maps/lib/google.min',
+        'google-maps': 'google-maps/lib/Google.min',
         bootstrapdate: 'bootstrap-datepicker-master/js/bootstrap-datepicker',
         bootstrappickerpt: 'bootstrap-datepicker-master/js/locales/bootstrap-datepicker.pt',
         fotorama: 'fotorama/fotorama',

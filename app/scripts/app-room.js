@@ -18,6 +18,17 @@ define(['approom'], function(appmenu) {
 		    $('.fotorama').on('fotorama:show',function(){
 		    	console.log('--- Foto Changed ---');
 		    });
+
+		    var delayer=0;
+            $('section.content article').delay(200).each(function(){
+                $(this).delay(delayer).fadeTo(200, 1);
+                delayer+=200;
+            });
+            delayer=0;
+            $('section.app-history').delay(500).each(function(){
+                $(this).delay(delayer).fadeTo(200, 1);
+                delayer+=200;
+            });
 			
 			var mcontent;
 			console.log('APP ROOM CALL LOAD CONTENT');

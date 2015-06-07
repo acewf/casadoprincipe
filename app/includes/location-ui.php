@@ -16,6 +16,10 @@ if (!isset($basePath)) {
 </style>
 <div class="page-content location">
     <section class="content">
+        <article class="origenbox">
+            <input id="originfield" type="text" value="Local Origem">
+            <button id="searchlocation">IR</button>
+        </article>
         <div id="map-canvas"></div>
     </section>
     <script>

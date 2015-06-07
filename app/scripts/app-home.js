@@ -3,11 +3,11 @@
 ////Date: 05/05/2015
 ////Company:euro-m.pt
 //////////////  AREAS DE JOGO  /////////////////////////
-define(['apphome'], function(apphome) {
+define(['apphome','appmenu'], function(apphome,appmenu) {
     'use strict';
     //Uses extras in here.
-    console.log('APP HOME DEFINED**');
-
+    console.log('APP HOME DEFINED**',appmenu);
+     $('section.content article').css('opacity',0);
     function APPhome(){
         this.putStates=function(){
             $('.sub-menu .suite').html('');
@@ -17,11 +17,23 @@ define(['apphome'], function(apphome) {
             $('ul.suite').removeClass('menupos');
             $('.logo').removeClass('small');
             $('.fotorama').fotorama();
+            appmenu.addFotoramEvents();
+
+            var delayer=0;
+            $('section.content article').delay(200).each(function(){
+                $(this).delay(delayer).fadeTo(200, 1);
+                delayer+=200;
+            });
+            delayer=0;
+            $('section.app-history').delay(500).each(function(){
+                $(this).delay(delayer).fadeTo(200, 1);
+                delayer+=200;
+            });
         }
     	this.init = function(){
             this.putStates();
             var handler = new contentloader();
-            $('article a').click(function(){
+            $('article.show-rooms a').click(function(){
                 var total = $('.sub-menu .suite li').length;
                 if(total===0){
                      var mcontent;
