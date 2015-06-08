@@ -1,3 +1,30 @@
+var htmlEvents = {// list of real events
+    //<body> and <frameset> Events
+    onload:1,
+    onunload:1,
+    //Form Events
+    onblur:1,
+    onchange:1,
+    onfocus:1,
+    onreset:1,
+    onselect:1,
+    onsubmit:1,
+    //Image Events
+    onabort:1,
+    //Keyboard Events
+    onkeydown:1,
+    onkeypress:1,
+    onkeyup:1,
+    //Mouse Events
+    onclick:1,
+    ondblclick:1,
+    onmousedown:1,
+    onmousemove:1,
+    onmouseout:1,
+    onmouseover:1,
+    onmouseup:1
+}
+
 function loader(res){
     'use strict';
     //Uses extras in here.
@@ -33,7 +60,18 @@ function loader(res){
 };
 loader.prototype.processData = function(data){
     'use strict';
-    var evt = new Event('complete');
+    var evt; //= new Event('complete');
+    var eventName = 'complete';
+
+
+    if(document.createEvent){
+        evt = document.createEvent(htmlEvents);
+        evt.initEvent(eventName,true,true);
+    }else if(document.createEventObject){// IE < 9
+        event = document.createEventObject();
+        event.eventType = eventName;
+    }
+    event.eventName = eventName;
     this.data = data.target.responseText;
     this.dispatchEvent(evt);
 };

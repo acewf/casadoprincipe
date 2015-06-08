@@ -3,6 +3,32 @@
 ////Date: 05/05/2015
 ////Company:euro-m.pt
 //////////////  AREAS DE JOGO  /////////////////////////
+var htmlEvents = {// list of real events
+    //<body> and <frameset> Events
+    onload:1,
+    onunload:1,
+    //Form Events
+    onblur:1,
+    onchange:1,
+    onfocus:1,
+    onreset:1,
+    onselect:1,
+    onsubmit:1,
+    //Image Events
+    onabort:1,
+    //Keyboard Events
+    onkeydown:1,
+    onkeypress:1,
+    onkeyup:1,
+    //Mouse Events
+    onclick:1,
+    ondblclick:1,
+    onmousedown:1,
+    onmousemove:1,
+    onmouseout:1,
+    onmouseover:1,
+    onmouseup:1
+}
 define(['appmenu'], function(appmenu) {
     'use strict';
     //Uses extras in here.
@@ -147,15 +173,48 @@ define(['appmenu'], function(appmenu) {
 
     AppEngine.prototype.photogoNext = function(){
         var d = document.getElementsByClassName('fotorama__arr--next')[0];
+        console.log('@photogoNext-photogoNext');
         if (d!==undefined) {
             var eventD = new Event('mousedown');
             d.dispatchEvent(eventD);
+            return;
+            /*
+             var evt;
+             console.log('@photogoNext-#-#');
+            var eventName = 'mousedown';
+            var ms = $(d);
+            console.log(ms)
+            ms.trigger(eventName);
+            ms.trigger('mouseup');            
+            //var eventD = new Event('mousedown');
+            //d.dispatchEvent(evt);
+            //$('.fotorama').show('>');
+            */
         }
     };
     AppEngine.prototype.photogPrev = function(){
+        console.log('@photogPrev-photogPrev');
         var d = document.getElementsByClassName('fotorama__arr--prev')[0];
-        var eventD = new Event('mousedown');
-        d.dispatchEvent(eventD);
+        if (d!==undefined) {
+            var eventD = new Event('mousedown');
+            d.dispatchEvent(eventD);
+            return;
+        }
+        /*
+        var evt; 
+        var eventName = 'mousedown';
+
+        if(document.createEvent){
+            evt = document.createEvent('HTMLEvents');
+            evt.initEvent(eventName,true,true);
+        }else if(document.createEventObject){// IE < 9
+            event = document.createEventObject();
+            event.eventType = eventName;
+        }
+        event.eventName = eventName;
+        //var eventD = new Event('mousedown');
+        //d.dispatchEvent(evt);
+        */
     };
     AppEngine.prototype.toggleMenu = function(event){
         var target = event.target;

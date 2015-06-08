@@ -30,14 +30,55 @@ if (!isset($basePath)) {
                 <div class="fotorama fotorama__wrap fotorama__wrap--css3 fotorama__wrap--slide fotorama__wrap--no-controls" data-nav="false" data-autoplay="true"  data-arrows="true" data-click="true" data-swipe="true" data-allowfullscreen="true" data-loop="true" data-stopautoplayontouch="false"  data-width="100%" data-ratio="1432/577">
                     <div class="featured-content">
                         <p>a charming bed &amp; breakfast nestled in the heart of Lisbon</p>
-                        <div class="transparent-shadow"></div>
-                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/destaque-room.png">
+                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/slider-home/01.jpg">
                     </div>
                     <div class="featured-content">
-                        <img alt="destaque 2" src="<?php echo "$basePath"; ?>images/dsc_0281.jpg">
+                        <img alt="destaque 2" src="<?php echo "$basePath"; ?>images/slider-home/02.jpg">
                     </div>
                     <div class="featured-content">
-                        <img alt="destaque 3" src="<?php echo "$basePath"; ?>images/palacio-da-liberdade-interior1.jpg">
+                        <img alt="destaque 3" src="<?php echo "$basePath"; ?>images/slider-home/03.jpg">
+                    </div>
+                    <div class="featured-content">
+                        <img alt="destaque 4" src="<?php echo "$basePath"; ?>images/slider-home/04.jpg">
+                    </div>
+                    <div class="featured-content">
+                        <img alt="destaque 5" src="<?php echo "$basePath"; ?>images/slider-home/05.jpg">
+                    </div>
+                    <div class="featured-content">
+                        <img alt="destaque 6" src="<?php echo "$basePath"; ?>images/slider-home/06.jpg">
+                    </div>
+                    <div class="featured-content">
+                        <img alt="destaque 7" src="<?php echo "$basePath"; ?>images/slider-home/07.jpg">
+                    </div>
+                    <div class="featured-content">
+                        <img alt="destaque 8" src="<?php echo "$basePath"; ?>images/slider-home/08.jpg">
+                    </div>
+                    <div class="featured-content">
+                        <img alt="destaque 9" src="<?php echo "$basePath"; ?>images/slider-home/09.jpg">
+                    </div>
+                    <div class="featured-content">
+                        <img alt="destaque 10" src="<?php echo "$basePath"; ?>images/slider-home/10.jpg">
+                    </div>
+                    <div class="featured-content">
+                        <img alt="destaque 11" src="<?php echo "$basePath"; ?>images/slider-home/11.jpg">
+                    </div>
+                    <div class="featured-content">
+                        <img alt="destaque 12" src="<?php echo "$basePath"; ?>images/slider-home/12.jpg">
+                    </div>
+                    <div class="featured-content">
+                        <img alt="destaque 13" src="<?php echo "$basePath"; ?>images/slider-home/14.jpg">
+                    </div>
+                    <div class="featured-content">
+                        <img alt="destaque 14" src="<?php echo "$basePath"; ?>images/slider-home/14.jpg">
+                    </div>
+                    <div class="featured-content">
+                        <img alt="destaque 15" src="<?php echo "$basePath"; ?>images/slider-home/15.jpg">
+                    </div>
+                    <div class="featured-content">
+                        <img alt="destaque 16" src="<?php echo "$basePath"; ?>images/slider-home/16.jpg">
+                    </div>
+                    <div class="featured-content">
+                        <img alt="destaque 17" src="<?php echo "$basePath"; ?>images/slider-home/17.jpg">
                     </div>
                 </div>
             </div>
