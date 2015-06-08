@@ -6,7 +6,6 @@
 define(['facilitiesservices'], function(appmenu) {
 	'use strict';
     //Uses extras in here.
-    console.log('casadoprincipe start');
     function APPmodule(){
     	this.init = function(){
             $('.sub-menu .suite').html('');

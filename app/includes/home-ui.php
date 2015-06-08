@@ -12,7 +12,7 @@ if (!isset($basePath)) {
     <section class="content">
         <article class="image-frame">
             <div class="frame-inside" data-transition="crossfade">
-                <a class="link-legenda" href="">
+                <a class="link-legenda" href="https://www.secure-hotel-booking.com/smart/Casa-do-Principe/2E3B/en/">
                     <div class="legenda">                              
                         <h1 class="title">BOOK NOW</h1>
                         <p class="description">best available rate</p>

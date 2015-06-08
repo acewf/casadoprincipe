@@ -1149,7 +1149,7 @@ section.app-history,
   }
 }
 .app-history .description {
-  padding:100px;
+  /* padding:130px; */
   padding-top:140px;
   padding-bottom:150px;
   display: inline-block;
@@ -1563,8 +1563,8 @@ ul.choose-rooms li a{
 }
 .principe-house .description,
 .facilities .description{
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding-top: 130px;
+  padding-bottom: 130px;
 }
 .description-location{
   width:80%;
@@ -1935,7 +1935,13 @@ li.review-box {
   border-color: #D6D6D6;
   line-height: .3;
 }
-
+li.review-box:hover{
+  background-color:#D6D6D6;
+  border-color: #000;
+}
+li.review-box:hover a{
+  color:#000;
+}
 footer {
   padding: 0;
   margin: 0;

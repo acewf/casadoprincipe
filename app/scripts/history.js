@@ -6,8 +6,7 @@
 define(['history'], function(appmenu) {
 	'use strict';
     //Uses extras in here.
-    console.log('history start');
-        function APPmodule(){
+    function APPmodule(){
         this.init = function(){
             $('.logo').addClass('small');
             $('ul.suite').addClass('menupos');

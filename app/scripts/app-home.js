@@ -6,7 +6,6 @@
 define(['apphome','appmenu'], function(apphome,appmenu) {
     'use strict';
     //Uses extras in here.
-    console.log('APP HOME DEFINED**',appmenu);
     function APPhome(){
         this.putStates=function(){
             $('.sub-menu .suite').html('');
@@ -17,9 +16,6 @@ define(['apphome','appmenu'], function(apphome,appmenu) {
             $('.logo').removeClass('small');
             $('.fotorama').fotorama();
             appmenu.addFotoramEvents();
-
-            console.log('home put states');
-
             var delayer=0;
             $('section.content article').delay(200).each(function(){
                 $(this).delay(delayer).fadeTo(200, 1);

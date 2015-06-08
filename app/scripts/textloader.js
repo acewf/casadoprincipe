@@ -13,9 +13,15 @@ function loader(res){
               console.log(type);
             },
             enumerable: true
+        },
+        instance:{
+            value:this,
+            writable:false
         }
     });
+
     this.loaded = function(data){
+        //console.log('LOADED:>:',instance,this);
         if (instance) {
             instance.handler(data);
         };

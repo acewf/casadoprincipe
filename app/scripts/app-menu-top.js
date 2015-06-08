@@ -26,7 +26,6 @@ define(['appmenu'], function(appmenu) {
         handler.click(this);
     });
     $('.logo a').click(loadhomeContent);
-    console.log("Added click",$('#menu-options'))
     $('#menu-options').click(function(){
         app.forcecloseMenuRooms();
     });
@@ -36,7 +35,6 @@ define(['appmenu'], function(appmenu) {
         var menucontent;
         var pagecontent;
         function completeloadSubMenu(ev){
-             console.log('loadSubMenu>>>',href);
             $('ul.room-choose').html(submenu.data);
             var handler = new contentloader();
             $('ul.room-choose li a').click(function(){
@@ -44,7 +42,6 @@ define(['appmenu'], function(appmenu) {
             });
         }
         function completeloadMenu(ev){
-             console.log('load-Menu>>>',href);
             $('ul.suite').html(submenu.data);
             var handler = new contentloader();
             $('ul.suite li a').click(function(){

@@ -36,14 +36,10 @@ require(['app', 'jquery', 'picturefill'], function (app) {
     pagModulesRef['rooms/historic/quarto-ui-info'] = {module:'approominfo'};
 
     $(function () {
-        console.log("ADD jquery PLugin");
         $.fn.imagesLoaded = function () {
             var imgs = this.find('img[src!=""]');
-            console.log(imgs);
-
             // if there's no images, just return an already resolved promise
             if (!imgs.length) {
-                console.log($.Deferred().resolve);
                 return $.Deferred().resolve().promise();
             }
             // for each image, add a deferred object to the array which resolves when the image is loaded
@@ -53,7 +49,6 @@ require(['app', 'jquery', 'picturefill'], function (app) {
                 dfds.push(dfd);
                 var img = new Image();
                 img.onload = function(){
-                    console.log('Img Loaded');
                     dfd.resolve();
                 }
                 img.src = this.src;
@@ -66,7 +61,6 @@ require(['app', 'jquery', 'picturefill'], function (app) {
     });
 
     app.init();
-    console.log('default app',app);
     if (typeof requirejs === 'function') {
 	    requirejs(['appmenu'],function(appmenu){
 
@@ -74,7 +68,6 @@ require(['app', 'jquery', 'picturefill'], function (app) {
 	    if (contentmodule) {
 	    	console.log('modulo a carregar:',contentmodule);
 	    	requirejs([pagModulesRef[contentmodule].module],function(module){
-                console.log('-----',module);
                 if(module)
                 module.init();
             });

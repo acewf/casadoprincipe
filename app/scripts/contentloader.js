@@ -34,10 +34,8 @@ function contentloader(res){
             cache: false,
             url: maddress,
             success: function(data) {
-                console.log('Page HTML Loaded...');
                 var newDiv = $("<div>");
                 $(newDiv).html(data).imagesLoaded().then(function(){
-                    console.log('Page Complete Loaded...');
                     var pageC = $('.page-content');
                     var msnode = pageC[0].parentNode;                        
                     if (pageC)
@@ -56,13 +54,11 @@ function contentloader(res){
     }
     this.click = function(scope){
         var href = $(scope).attr('href');
-        console.log(this,'HREF:',scope);
         var datarooms = $(this).attr('data-rooms');
         event.preventDefault();
         var n = href.indexOf(window.location.origin);
         var res = href.substring(n+window.location.origin.length+1, href.length);
-        console.log(res);
-        window.history.pushState("object or string", "Title", "/"+res);
+        window.history.pushState("object or string", "Page Title", "/"+res);
         var mcontent 
         var m = new loader(window.location.origin+'/includes/address-filter-output.php?url='+res);
         function completeload(ev){

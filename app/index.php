@@ -61,7 +61,8 @@
                         </nav>
                     </div><div class="right-block">
                         <div class="options">
-                            <button id="bookroom" data-open="0" class="booking">BOOK A ROOM</button><div id="open-lang" data-open="0" class="lang">English<span></span></div>
+                            <a href="https://www.secure-hotel-booking.com/smart/Casa-do-Principe/2E3B/en/" target="_blank">
+                            <button id="bookroom" data-open="0" class="booking">BOOK A ROOM</button></a><div id="open-lang" data-open="0" class="lang">English<span></span></div>
                         </div>
                     </div>
                 </header>
