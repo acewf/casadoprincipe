@@ -87,7 +87,7 @@ define(['approomdetail'], function(appmenu) {
 
                 $('.rooms-group section.rooms-view').fadeOut();
                 $('.rooms-group #'+id).delay(200).fadeIn();
-                console.log(id,$('.rooms-group #'+id));
+
             });
     	}
 

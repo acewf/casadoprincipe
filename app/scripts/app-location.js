@@ -14,8 +14,8 @@ define(['location'], function(gallery) {
         var instance =this;
         this.putStates=function(){
             $('.sub-menu .suite').html('');
-            $('#logo-big').addClass('show');
-            $('#logo-small').removeClass('show');
+            $('#logo-big').removeClass('show');
+            $('#logo-small').addClass('show');
             $('ul.room-choose').addClass('show-childs');
             $('ul.suite').removeClass('menupos');
             $('.logo').removeClass('small');
@@ -35,14 +35,14 @@ define(['location'], function(gallery) {
                 var directionsService = new google.maps.DirectionsService();
                 directionsDisplay = new google.maps.DirectionsRenderer();
                 var mapOptions = {
-                  center: new google.maps.LatLng(38.7165766,-9.1491336),
+                  center: new google.maps.LatLng(38.7166513,-9.1493584),
                   zoom: 19,
                   mapTypeId: google.maps.MapTypeId.ROADMAP
                 }
                 var el = document.getElementById('map-canvas');
                 var map = new google.maps.Map(el, mapOptions);
                 var marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(38.7165766,-9.1491336),
+                    position: new google.maps.LatLng(38.7166513,-9.1493584),
                     icon: 'https://maps.google.com/mapfiles/kml/shapes/info-i_maps.png',
                     map: map
                 });

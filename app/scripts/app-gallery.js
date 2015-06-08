@@ -11,8 +11,8 @@ define(['gallery'], function(gallery) {
     function APPgallery(){
         this.putStates=function(){
             $('.sub-menu .suite').html('');
-            $('#logo-big').addClass('show');
-            $('#logo-small').removeClass('show');
+            $('#logo-big').removeClass('show');
+            $('#logo-small').addClass('show');
             $('ul.room-choose').addClass('show-childs');
             $('ul.suite').removeClass('menupos');
             $('.logo').removeClass('small');

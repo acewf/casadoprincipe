@@ -25,9 +25,7 @@ function loader(res){
         if (instance) {
             instance.handler(data);
         };
-        
     }
-
     this.client = new XMLHttpRequest();
     this.client.onload = this.loaded;
     this.client.open("GET",res);

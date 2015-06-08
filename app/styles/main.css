@@ -835,8 +835,7 @@ article  div.description p {
     transition-timing-function: ease-out;
 }
 .room:hover .small-frame img{
-  width: 104%;
-  height:auto;
+  transform:translate(-50%, -50%) scale(1.05, 1.05);
 }
 
 .small-frame:before {
@@ -1951,7 +1950,20 @@ footer {
   height: 297px;
   position: relative;
 }
-
+footer .share-elements{
+  position:absolute;
+  margin-left: -10px;
+  margin-top:-155px;
+  background-color:#fff;
+  padding:10px;
+  width: 120px;
+}
+div#stOCWrapper{
+  margin-left:-600px;
+}
+footer .share-elements.hide{
+  display:none;
+}
 footer ul {
   color: #fff;
   padding: 20px;
@@ -1983,6 +1995,7 @@ footer .share-logo {
   padding-left: 20px;
   background-image: url(../images/share-img.png);
   background-repeat: no-repeat;
+  cursor:pointer;
 }
 
 footer .fb-logo {

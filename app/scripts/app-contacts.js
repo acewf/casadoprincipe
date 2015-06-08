@@ -12,8 +12,8 @@ define(['contacts'], function(gallery) {
         this.putStates=function(){
             $('.sub-menu .suite').html('');
             $('.sub-menu .room-choose').html('');
-            $('#logo-big').addClass('show');
-            $('#logo-small').removeClass('show');
+            $('#logo-big').removeClass('show');
+            $('#logo-small').addClass('show');
             $('ul.room-choose').addClass('show-childs');
             $('ul.suite').removeClass('menupos');
             $('.logo').removeClass('small');

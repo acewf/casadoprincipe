@@ -8,6 +8,24 @@ define(['appmenu'], function(appmenu) {
     //Uses extras in here.
     var app;
 
+    $(".share-logo").click(function(){
+        if ($('.share-elements').hasClass('hide')) {
+            $('.share-elements').removeClass('hide');
+        } else {
+            $('.share-elements').addClass('hide');
+        }
+    });
+
+    $('footer').click(function(){
+        var m = $(".share-logo");
+        var l = $(event.target);
+        if ( (m[0]!==l[0]) && (!$('.share-elements').hasClass('hide'))) {
+            if(l[0].className!='share-elements'){
+                $('.share-elements').addClass('hide');
+            }
+        }
+    });
+
     function loadhomeContent(){
         $('.logo').removeClass('small');
         $('#logo-big').addClass('show');
