@@ -14,7 +14,8 @@ define(['apphome','appmenu'], function(apphome,appmenu) {
             $('ul.room-choose').addClass('show-childs');
             $('ul.suite').removeClass('menupos');
             $('.logo').removeClass('small');
-            $('.fotorama').fotorama();
+             $('footer').show();
+            $('.fotorama').fotorama({width: 700,maxwidth: '100%',ratio: 2.51, allowfullscreen: true});
             appmenu.addFotoramEvents();
             var delayer=0;
             $('section.content article').delay(200).each(function(){

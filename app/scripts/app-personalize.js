@@ -16,39 +16,18 @@ define(['personalize'], function(gallery) {
             $('ul.room-choose').addClass('show-childs');
             $('ul.suite').removeClass('menupos');
             $('.logo').removeClass('small');
-            
-            var GoogleMapsLoader = require('google-maps');      // only for common js environments
- 
-            GoogleMapsLoader.load(function(google) {
-                console.log('maps api loaded');
-                var directionsDisplay;
-                var directionsService = new google.maps.DirectionsService();
-                directionsDisplay = new google.maps.DirectionsRenderer();
-                var mapOptions = {
-                  center: new google.maps.LatLng(38.7165766,-9.1491336),
-                  zoom: 19,
-                  mapTypeId: google.maps.MapTypeId.ROADMAP
-                }
-                var el = document.getElementById('map-canvas');
-                var map = new google.maps.Map(el, mapOptions);
-                var marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(38.7165766,-9.1491336),
-                    icon: 'https://maps.google.com/mapfiles/kml/shapes/info-i_maps.png',
-                    map: map
-                });
-                directionsDisplay.setMap(map);
-                var request = {
-                    origin:'R. Dr. António Martins, Lisboa',
-                    destination:'Jardim do Príncipe Real, Praça do Príncipe Real, Lisboa',
-                    travelMode: google.maps.TravelMode.DRIVING
-                  };
-                  directionsService.route(request, function(result, status) {
-                    if (status == google.maps.DirectionsStatus.OK) {
-                      directionsDisplay.setDirections(result);
-                    }
-                });
+            $('footer').show();
+
+            var delayer=0;
+            $('section.content article').delay(200).each(function(){
+                $(this).delay(delayer).fadeTo(200, 1);
+                delayer+=200;
             });
-            
+            delayer=0;
+            $('section.app-history').delay(500).each(function(){
+                $(this).delay(delayer).fadeTo(200, 1);
+                delayer+=200;
+            });
         }
     	this.init = function(){
             this.putStates();

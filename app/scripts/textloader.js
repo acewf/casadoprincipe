@@ -60,10 +60,10 @@ function loader(res){
 };
 loader.prototype.processData = function(data){
     'use strict';
-    var evt; //= new Event('complete');
+    var evt = new Event('complete');
     var eventName = 'complete';
 
-
+    /*
     if(document.createEvent){
         evt = document.createEvent(htmlEvents);
         evt.initEvent(eventName,true,true);
@@ -72,6 +72,7 @@ loader.prototype.processData = function(data){
         event.eventType = eventName;
     }
     event.eventName = eventName;
+    */
     this.data = data.target.responseText;
     this.dispatchEvent(evt);
 };

@@ -17,6 +17,7 @@ define(['approominfo'], function(appmenu) {
 		    $('ul.room-choose').addClass('show-childs');
 		    $('ul.suite').removeClass('menupos');
 		    $('.fotorama').fotorama();
+		    $('footer').show();
 
 		    var delayer=0;
             $('section.content article').delay(200).each(function(){

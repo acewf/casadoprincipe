@@ -15,6 +15,7 @@ define(['facilitiesservices'], function(appmenu) {
             $('#logo-big').removeClass('show');
             $('#logo-small').addClass('show');
             $('.fotorama').fotorama();
+            $('footer').show();
 
             var delayer=0;
             $('section.content article').delay(200).each(function(){

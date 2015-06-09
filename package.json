@@ -5,7 +5,8 @@
     "grunt-php2html": "^0.2.0",
     "grunt-processhtml": "^0.3.7",
     "grunt-uncss": "^0.4.2",
-    "http-rewrite-middleware": "^0.1.6"
+    "http-rewrite-middleware": "^0.1.6",
+    "parsleyjs": "^2.0.7"
   },
   "devDependencies": {
     "connect-livereload": "~0.4.0",

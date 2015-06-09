@@ -28,6 +28,7 @@ var require = {
         contentloader: '../scripts/contentloader',
         loadingoverlay: '../scripts/loadingoverlay.min',
         jquery: 'jquery/dist/jquery',
+        parsley: 'parsleyjs/dist/parsley.min',
         bootstrap: 'bootstrap/dist/js/bootstrap',
         'google-maps': 'google-maps/lib/Google.min',
         bootstrapdate: 'bootstrap-datepicker-master/js/bootstrap-datepicker',
@@ -73,6 +74,8 @@ var require = {
             deps: [
                 'jquery',
                 'contentloader',
+                'google-maps',
+                'parsley',
                 'loadingoverlay',
                 'textloader'
             ],
@@ -91,7 +94,6 @@ var require = {
         personalize: {
             deps: [
                 'jquery',
-                'google-maps',
                 'contentloader',
                 'loadingoverlay',
                 'textloader'

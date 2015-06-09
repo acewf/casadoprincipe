@@ -14,6 +14,7 @@ define(['history'], function(appmenu) {
             $('#logo-small').addClass('show');
             $('.sub-menu .suite').html('');
             $('.room-choose').html('');
+            $('footer').show();
 
             var delayer=0;
             $('section.app-history').delay(200).each(function(){
