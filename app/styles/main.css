@@ -25,6 +25,8 @@ body > div.container{
 }
 section.content {
   text-align: center;
+  -webkit-transition: -webkit-transform 0.3s 0.3s;
+  transition: transform 0.3s 0.3s;
 }
 .location section.content{
   overflow:hidden;
@@ -120,7 +122,7 @@ section.content .origenbox button{
 }
 div.transparent-shadow {
   width: 100%;
-  height: 99%;
+  height: 100%;
   background-color: rgba(0, 0, 0, .2);
   position: absolute;
   z-index:8;
@@ -1149,6 +1151,7 @@ section.app-history,
   width:auto;
 }
 @media screen and (orientation:landscape) {
+  .page-content.spec-room .img-content img,
   .page-content.history .app-history.inside-room .img-content img{
     height:auto;
     width:100%;
@@ -1533,6 +1536,28 @@ button#bookit{
 }
 
 /* ------- SUITES DETAILS --------  */
+.back-detail-room{
+  position: absolute;
+  right:20px;
+  z-index:50;
+  font-size:.8em;
+}
+.app-history.inside-room.inside-detail{
+  position: absolute;
+  width: 100%;
+  top:76px;
+  transform:translate(100%);
+  -webkit-transition: -webkit-transform 0.3s 0.3s;
+  transition: transform 0.3s 0.3s;
+  opacity:1;
+}
+.app-history.inside-room.inside-detail.slide-from-right{
+  transform:translate(0%);
+}
+
+.slide-to-left{
+  transform:translate(-100%);
+}
 
 .show-room-info{
   margin-top: 60px;
@@ -1579,12 +1604,14 @@ ul.choose-rooms li a{
 .principe-house .group-text-img,
 .location .group-text-img,
 .facilities .group-text-img,
+.page-content.spec-room .group-text-img,
 .page-content.history .group-text-img{
   display: inline-block;
   width: 53%;
   /* overflow:hidden; */
   margin-top:-50px
 }
+.page-content.spec-room .group-text-img,
 .page-content.history .group-text-img{
   overflow:hidden;
   margin-top: 0;
@@ -1709,6 +1736,7 @@ ul.choose-rooms li a{
   -webkit-transform:none;
   background-color:#fff;
 }
+.page-content.spec-room .text-content,
 .page-content.history .app-history.inside-room .text-content{
   position: absolute;
   vertical-align:top;
@@ -1717,11 +1745,15 @@ ul.choose-rooms li a{
   opacity:0;
   filter: alpha(opacity=0);
 }
+.page-content .app-history.inside-detail  h2,
 .page-content.history h2{
   font-family: "estilo-pro", sans-serif;
   width:100%;
   text-align:left;
   font-size: 2.2em;
+}
+.page-content .app-history.inside-detail  h2{
+  margin-top:50px;
 }
 .page-content.history h3{
   width: 360px;

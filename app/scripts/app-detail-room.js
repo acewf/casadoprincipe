@@ -47,6 +47,15 @@ define(['approomdetail'], function(appmenu) {
 				});
 				$("#AVP").submit();
             });
+
+            $('.big-size').click(function(){
+            	$('.content.room-detail').addClass('slide-to-left');
+            	$('.inside-detail').addClass('slide-from-right');
+            });
+            $('.back-detail-room').click(function(){
+            	$('.content.room-detail').removeClass('slide-to-left');
+            	$('.inside-detail').removeClass('slide-from-right');
+            });
              
     	}
 
