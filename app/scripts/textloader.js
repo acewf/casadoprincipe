@@ -25,7 +25,7 @@ var htmlEvents = {// list of real events
     onmouseup:1
 };
 
-function loader(res){
+function Loader(res){
     'use strict';
     //Uses extras in here.
     Object.defineProperties(this, {
@@ -62,7 +62,7 @@ function loader(res){
     this.client.open('GET',res);
     this.client.send();
 }
-loader.prototype.processData = function(data){
+Loader.prototype.processData = function(data){
     'use strict';
     var evt = new Event('complete');
     /*
@@ -79,21 +79,21 @@ loader.prototype.processData = function(data){
     this.data = data.target.responseText;
     this.dispatchEvent(evt);
 };
-loader.prototype.handler = function(data){
+Loader.prototype.handler = function(data){
     'use strict';
     this.processData(data);
 };
 
-loader.prototype.addEventListener = function(a,b){
+Loader.prototype.addEventListener = function(a,b){
   'use strict';
   this[a] = b;
 };
-loader.prototype.removeEventListener = function(a,b){
+Loader.prototype.removeEventListener = function(a,b){
     'use strict';
   this[a] = null;
   b = null;
 };
-loader.prototype.dispatchEvent = function(event){
+Loader.prototype.dispatchEvent = function(event){
     'use strict';
     var callFunctionOn = this[event.type];
     if(callFunctionOn!==undefined){

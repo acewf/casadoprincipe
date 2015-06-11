@@ -973,7 +973,7 @@ nav.sub-menu ul{
 nav.sub-menu ul li{
   display: inline-block;
   margin: 0;
-  height:100%;
+  height:65px;
   padding-left:5px;
   padding-right:5px;
   width: auto;  
@@ -1326,7 +1326,7 @@ section.app-history,
   height: 600px;
 }
 .location .app-history.inside-room .text-content{
-
+  position:relative;
 }
 .app-history.contact .text-content,
 .app-history.inside-room .text-content {
@@ -1395,7 +1395,7 @@ section.app-history,
   color:#fff;
   cursor:pointer;
 }
-
+.location .text-content p,
 .app-history.inside-room .description-location ,
 .app-history.inside-room .description-location {
   display: inline-block;
@@ -1477,7 +1477,12 @@ section.app-history,
 .location .center-content{
   min-width:400px;
   width:80%;
-  max-width:420px;
+  max-width:480px;
+  transform:none;
+  left:0;
+  top:0;
+  position:relative;
+  display:inline-block;
 }
 .center-content{
   position: absolute;
@@ -1727,7 +1732,7 @@ ul.choose-rooms li a{
   margin-top: 0;
 }
 .contact .center-content{
-  min-width: 420px;
+  min-width: 450px;
   min-height:700px
 }
 .contact .center-content h3{
@@ -2217,11 +2222,11 @@ footer {
 }
 footer .share-elements{
   position:absolute;
-  margin-left: -10px;
-  margin-top:-155px;
+  margin-left: -20px;
+  margin-top:-65px;
   background-color:#fff;
   padding:10px;
-  width: 120px;
+  width: 145px;
 }
 div#stOCWrapper{
   margin-left:-600px;

@@ -31,14 +31,14 @@ define(['facilitiesservices'], function(appmenu) {
             var mcontent;
             function completeloadContent(ev){
                 $('.sub-menu .suite').html(mcontent.data);
-                var handler = new contentloader();
+                var handler = new ContentLoader();
                 $('ul.suite li a').click(function(){
                     handler.click(this);
                 });
                 $('nav.sub-menu ul li a').removeClass('active');
                 $('.sub-menu a[href^="'+window.location.href+'"]').addClass('active');
             }
-            mcontent = new loader(window.location.origin+'/includes/menu/menu-facilities-services.php');
+            mcontent = new Loader(window.location.origin+'/includes/menu/menu-facilities-services.php');
             mcontent.addEventListener('complete',completeloadContent);            
     	}
     }

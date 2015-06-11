@@ -16,8 +16,29 @@
             }
                       
             $Adress = new AdressChecker();
+            $pathObj = $Adress->getPhpToUrl('');
         ?>
-        <?php include(dirname(__FILE__).'/includes/head.php'); ?>
+        <?php include(dirname(__FILE__).'/includes/head/'.$pathObj->headfile.'.php'); ?>
+
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet" type="text/css">
+        <script type="text/javascript">var switchTo5x=true;</script>
+        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+        <script type="text/javascript">stLight.options({publisher: "fe80fa7d-2045-4199-ba3e-39141283a185", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+        <script src="//use.typekit.net/tma2rmc.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- build:js scripts/vendor/modernizr.js -->
+        <script src="<?php echo "$basePath"; ?>bower_components/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
+        <!-- build:css styles/vendor/bootstrap.css -->
+        <link rel="stylesheet" href="<?php echo "$basePath"; ?>bower_components/bootstrap-datepicker-master/dist/css/bootstrap-datepicker3.standalone.css">
+        <!-- endbuild -->
+        <!-- build:css styles/main.css -->
+        <link rel="stylesheet" href="<?php echo "$basePath"; ?>styles/main.css">
+        <link rel="stylesheet" href="<?php echo "$basePath"; ?>styles/fotorama.css">
+        <link rel="stylesheet" href="<?php echo "$basePath"; ?>styles/fonticon.css">
+        <!-- endbuild -->
     </head>
     <body>
          <div class="container">
@@ -34,7 +55,9 @@
             <div id="menu-options" class="overlay yellow">
                 <button class="close"></button>
                 <nav class="choose-menu">
-                    <h3>Book a Room</h3>
+                    <a href="https://www.secure-hotel-booking.com/smart/Casa-do-Principe/2E3B/en/" target="_blank">
+                        <h3>Book a Room</h3>
+                    </a>
                     <ul>
                         <li><a href="<?php echo "$basePath"; ?>home">Home</a></li>
                         <li><a href="<?php echo "$basePath"; ?>casa-do-principe">Casa do príncipe</a></li>
