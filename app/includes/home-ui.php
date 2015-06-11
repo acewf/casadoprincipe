@@ -27,7 +27,7 @@ if (!isset($basePath)) {
                     <a class="previous"></a>
                     <a class="next"></a>
                 </div>
-                <div class="fotorama fotorama__wrap fotorama__wrap--css3 fotorama__wrap--slide fotorama__wrap--no-controls" data-nav="false" data-autoplay="true"  data-arrows="true" data-click="true" data-swipe="true" data-allowfullscreen="true" data-loop="true" data-stopautoplayontouch="true"  data-width="100%" data-ratio="1432/577">
+                <div class="fotorama fotorama__wrap fotorama__wrap--css3 fotorama__wrap--slide fotorama__wrap--no-controls" data-allowfullscreen="native" data-allowfullscreen="true" data-nav="false" data-autoplay="true"  data-arrows="true" data-click="true" data-swipe="true"  data-loop="true" data-stopautoplayontouch="true"  data-width="100%" data-ratio="1432/577">
                     <div class="featured-content">
                         <p>a charming bed &amp; breakfast nestled in the heart of Lisbon</p>
                         <div class="transparent-shadow"></div>

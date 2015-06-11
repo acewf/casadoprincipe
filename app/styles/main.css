@@ -22,17 +22,30 @@ body > div.container{
     margin: 0;
     -ms-overflow-x:hidden;
     overflow-x:hidden;
+    font-size:0;
+}
+.page-content{
+  max-height:100%;
+  overflow:hidden;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 section.content {
   text-align: center;
   -webkit-transition: -webkit-transform 0.3s 0.3s;
   transition: transform 0.3s 0.3s;
+  padding-bottom:1px;
 }
 .location section.content{
-  overflow:hidden;
+  overflow:visible;
   position:relative;
 }
-
+.location section.content.show-address{
+  transform:translate(-330px);
+}
 
 .browsehappy {
   margin: 0.2em 0;
@@ -104,20 +117,23 @@ section.content {
 }
 
 section.content .origenbox{
-  height: 30px;
-  width: 250px;
+   height:100%;
+  width: 330px;
   position: absolute;
-  right: 5px;
-  margin-top: 30px;
+  right: 0;
   z-index: 10;
-  text-align:right;
+  text-align: right;
+  transform: translate(330px);
+  overflow:hidden;
 }
 section.content .origenbox input{
-  height:100%;
   width:180px;
 }
+section.content .origenbox button.close{
+  left:0;
+  top:0;
+}
 section.content .origenbox button{
-  height:100%;
   width:50px;
 }
 div.transparent-shadow {
@@ -146,6 +162,9 @@ div.fotorama__nav__shaft {
 
 .featured-content {
   position: initial;
+  height:100%;
+}
+.featured-content img{
   height:100%;
 }
 
@@ -250,6 +269,7 @@ div.fotorama__nav__shaft {
 body {
   background-color: #F4F4F4;
   text-align: center;
+    overflow-x: hidden;
 }
 
 h2 {
@@ -269,6 +289,7 @@ div.main {
   margin-bottom: 0px;
   display: inline-block;
   width: 100% !important;
+  font-size:initial;
 }
 
 div.main header {
@@ -422,6 +443,12 @@ header .right-block {
   -ms-user-select: none;
   user-select: none;
 }
+.fotorama__nav-wrap{
+  position:fixed;
+  width:100%;
+  bottom:0;
+}
+
 .rooms-group{
   position: relative;
   min-height:305px;
@@ -914,7 +941,8 @@ article  div.description p {
 }
 
 nav.sub-menu{
-  max-width: 1224px;
+  /* max-width: 1224px; */
+  width:auto;
 }
 .sub-menu ul.room{
   display: inline-block;
@@ -1072,7 +1100,9 @@ nav.sub-menu ul li.active:hover span:after{
   display: inherit;
   opacity: inherit;
 }
-nav.sub-menu ul.suite,nav.sub-menu ul.room-choose{
+nav.sub-menu ul.suite,
+nav.sub-menu ul.room-choose{
+  display: table;
   vertical-align: top;
   transform: translate(0px,0px);
   -webkit-transform: translate(0px,0px);
@@ -1305,6 +1335,14 @@ section.app-history,
   position: absolute;
   text-align:center;
 }
+#directionsPanel{
+  direction: rtl !important;
+  overflow-y: scroll;
+  height: 580px;
+}
+#directionsPanel .adp{
+  direction: ltr;
+}
 .location .text-content p{
   font-family: 'Open Sans', sans-serif;
   font-size:.9em;
@@ -1431,6 +1469,7 @@ section.app-history,
   position: fixed;
   width: 100%;
   height: 100%;
+  font-size:initial;
   overflow: hidden;
   z-index: 101;
   background-color: rgba(0, 0, 0, 0.51);
@@ -1541,6 +1580,7 @@ button#bookit{
   right:20px;
   z-index:50;
   font-size:.8em;
+  cursor:pointer;
 }
 .app-history.inside-room.inside-detail{
   position: absolute;
@@ -1609,7 +1649,7 @@ ul.choose-rooms li a{
   display: inline-block;
   width: 53%;
   /* overflow:hidden; */
-  margin-top:-50px
+   margin-top:-50px
 }
 .page-content.spec-room .group-text-img,
 .page-content.history .group-text-img{
@@ -1696,6 +1736,7 @@ ul.choose-rooms li a{
 .app-history.contact a{
   width: 220px;
   text-align: center;
+  color: #000;
 }
 .app-history.contact ul li a:hover{
   background-color:transparent;
@@ -1738,8 +1779,11 @@ ul.choose-rooms li a{
 }
 .page-content.spec-room .text-content,
 .page-content.history .app-history.inside-room .text-content{
-  position: absolute;
+  position: relative;
   vertical-align:top;
+}
+.page-content.history .app-history.inside-room .text-content {
+  position:absolute;
 }
 .page-content.history .text-content{
   opacity:0;
@@ -2169,6 +2213,7 @@ footer {
   background-size: cover;
   height: 297px;
   position: relative;
+  font-size:initial;
 }
 footer .share-elements{
   position:absolute;

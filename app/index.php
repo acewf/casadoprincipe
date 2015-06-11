@@ -76,8 +76,7 @@
                 contentmodule = '<?php echo $path ?>';
                 </script>
                 <?php include(dirname(__FILE__).'/includes/'.$path.'.php'); ?>
-            </div>
-            <?php include(dirname(__FILE__).'/includes/footer-ui.php'); ?>
+            </div><?php include(dirname(__FILE__).'/includes/footer-ui.php'); ?>
         </div>
         <?php include(dirname(__FILE__).'/includes/footer.php'); ?>
     </body>

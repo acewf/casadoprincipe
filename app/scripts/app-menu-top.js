@@ -153,7 +153,11 @@ define(['appmenu'], function(appmenu) {
       }     
     };
     AppEngine.prototype.addEvents = function(){
-        var d = document.getElementsByClassName('close');
+        var d = $('#menu-options .close');//document.getElementsByClassName('close');
+        for (var i = 0; i < d.length; i++) {
+            d[i].addEventListener('click', this.closeMenu, false);
+        }
+         var d = $('#language-options .close');//document.getElementsByClassName('close');
         for (var i = 0; i < d.length; i++) {
             d[i].addEventListener('click', this.closeMenu, false);
         }

@@ -63,13 +63,14 @@ require(['app', 'jquery', 'picturefill'], function (app) {
     app.init();
     if (typeof requirejs === 'function') {
 	    requirejs(['appmenu'],function(appmenu){
-
+            appmenu.init();
         });
 	    if (contentmodule) {
 	    	console.log('modulo a carregar:',contentmodule);
 	    	requirejs([pagModulesRef[contentmodule].module],function(module){
-                if(module)
-                module.init();
+                if(module){
+                    module.init();
+                } 
             });
 	    } else {
 	    	console.log('module missing');

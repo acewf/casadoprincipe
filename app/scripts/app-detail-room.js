@@ -35,14 +35,11 @@ define(['approomdetail'], function(appmenu) {
 					date = items[2]+'-'+items[1]+'-'+items[0];
 					return date;
 				}
-
 				dataChegada = reverseDate(dataChegada);
 				dataSaida = reverseDate(dataSaida);
-
 				urlWithDate += "&arrivalDate="+dataChegada+"&departureDate="+dataSaida;
 				$("#AVP").attr("action",urlWithDate);
-             	$("#AVP").submit(function( event ) {   
-				  //event.preventDefault();
+             	$("#AVP").submit(function( event ) {
 				  console.log('Form Sended');
 				});
 				$("#AVP").submit();
@@ -51,10 +48,12 @@ define(['approomdetail'], function(appmenu) {
             $('.big-size').click(function(){
             	$('.content.room-detail').addClass('slide-to-left');
             	$('.inside-detail').addClass('slide-from-right');
+            	$('.page-content').animate({ "height": $('.inside-detail').outerHeight(true) + 'px' });
             });
             $('.back-detail-room').click(function(){
             	$('.content.room-detail').removeClass('slide-to-left');
             	$('.inside-detail').removeClass('slide-from-right');
+            	$('.page-content').animate({ "height":$('.content.room-detail').outerHeight(true) + 'px'});
             });
              
     	}
@@ -62,7 +61,6 @@ define(['approomdetail'], function(appmenu) {
     	this.loadPageAndMenu = function(){
     		var mcontent;
 		    function completeloadContent(ev){
-
 		    	$('ul.room-choose').html(mcontent.data);
 		    	var handler = new contentloader();
 		    	$('ul.room-choose li a').click(function(){

@@ -12,8 +12,10 @@ if (!isset($basePath)) {
 <div class="page-content location">
     <section class="content">
         <article class="origenbox">
+            <button class="close"></button>
             <input id="originfield" type="text" value="Local Origem">
             <button id="searchlocation">IR</button>
+            <div id="directionsPanel"></div>
         </article>
         <article class="box-calculate-route">
             <div class="actual-address">Casa Do Principe<br> Praça do Príncipe Real, n. 23 – 1º</div>

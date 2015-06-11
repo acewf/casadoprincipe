@@ -35,6 +35,13 @@ define(['location'], function(gallery) {
             });
 
             $('#searchlocation').click(this.changeOrigenLocation);
+
+            $('.box-calculate-route button').click(function(){
+                $('.location section.content').addClass('show-address');
+            });
+            $('.origenbox button.close').click(function(){
+                $('.location section.content').removeClass('show-address');
+            });
             
             var GoogleMapsLoader = require('google-maps');      // only for common js environments
             var searchBox;
@@ -48,7 +55,10 @@ define(['location'], function(gallery) {
                 directionsDisplay = new google.maps.DirectionsRenderer();
                 var mapOptions = {
                   center: new google.maps.LatLng(38.7166513,-9.1493584),
-                  zoom: 19,
+                  zoom: 18,
+                  scaleControl: false,
+                  mapTypeControl: false,
+                  scrollwheel: false,
                   mapTypeId: google.maps.MapTypeId.ROADMAP
                 }
                 var el = document.getElementById('map-canvas');
@@ -59,11 +69,10 @@ define(['location'], function(gallery) {
                     map: map
                 });
                 directionsDisplay.setMap(map);
+                 directionsDisplay.setPanel(document.getElementById('directionsPanel'));
                 instance.directionsService = directionsService;
                 instance.directionsDisplay = directionsDisplay;
                 searchBox = new google.maps.places.SearchBox(input);
-
-
                 
                 google.maps.event.addListener(searchBox, 'places_changed',places_changed);
                 google.maps.event.addListener(map, 'center_changed',function(){
@@ -92,13 +101,10 @@ define(['location'], function(gallery) {
                         if (boxElem[0].style) {
                             boxElem[0].style.marginTop = yOff+'px';
                             boxElem[0].style.marginLeft = xOff+'px';
-                        };
-                        
+                        };                        
                     }
                 });
-                google.maps.event.addListener(map, 'drag', function() {
-                    
-                } );
+                //google.maps.event.addListener(map, 'drag', function() {} );
             }); 
             var places_changed = function() {
                 var places = searchBox.getPlaces();

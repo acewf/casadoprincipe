@@ -35,6 +35,8 @@ define(['facilitiesservices'], function(appmenu) {
                 $('ul.suite li a').click(function(){
                     handler.click(this);
                 });
+                $('nav.sub-menu ul li a').removeClass('active');
+                $('.sub-menu a[href^="'+window.location.href+'"]').addClass('active');
             }
             mcontent = new loader(window.location.origin+'/includes/menu/menu-facilities-services.php');
             mcontent.addEventListener('complete',completeloadContent);            

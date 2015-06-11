@@ -19,6 +19,7 @@ define(['contacts'], function(gallery) {
             $('.logo').removeClass('small');
             $('#formcontact').parsley();
             $('footer').show();
+
             
             var delayer=0;
             $('section').delay(200).each(function(){
@@ -37,6 +38,9 @@ define(['contacts'], function(gallery) {
                 var mapOptions = {
                   center: new google.maps.LatLng(38.7166513,-9.1493584),
                   zoom: 19,
+                  scaleControl: false,
+                  mapTypeControl: false,
+                  scrollwheel: false,
                   mapTypeId: google.maps.MapTypeId.ROADMAP
                 }
                 var el = document.getElementById('map-canvas');

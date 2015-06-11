@@ -16,7 +16,6 @@ define(['casadoprincipe'], function(appmenu) {
             $('#logo-small').addClass('show');
             $('.fotorama').fotorama();
             $('footer').show();
-
             var delayer=0;
             $('section.content article').delay(200).each(function(){
                 $(this).delay(delayer).fadeTo(200, 1);
@@ -35,6 +34,8 @@ define(['casadoprincipe'], function(appmenu) {
                 $('ul.suite li a').click(function(){
                     handler.click(this);
                 });
+                $('nav.sub-menu ul li a').removeClass('active');
+                $('.sub-menu a[href^="'+window.location.href+'"]').addClass('active');
             }
             mcontent = new loader(window.location.origin+'/includes/menu/menu-facilities-services.php');
             mcontent.addEventListener('complete',completeloadContent);            

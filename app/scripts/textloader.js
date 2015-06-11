@@ -23,16 +23,14 @@ var htmlEvents = {// list of real events
     onmouseout:1,
     onmouseover:1,
     onmouseup:1
-}
+};
 
 function loader(res){
     'use strict';
     //Uses extras in here.
-    var instance = this;
-    this.data = null;
     Object.defineProperties(this, {
         defaultType: {
-            value: "realtime",
+            value: 'realtime',
             writable: true
         },
         load: {
@@ -41,29 +39,34 @@ function loader(res){
             },
             enumerable: true
         },
+        data: {
+            value:null,
+            writable: true,
+            enumerable: true
+        },
         instance:{
             value:this,
             writable:false
         }
     });
-
+    this.data =null;
+    var instance = this.instance;
     this.loaded = function(data){
         //console.log('LOADED:>:',instance,this);
         if (instance) {
             instance.handler(data);
-        };
-    }
+        }
+    };
     this.client = new XMLHttpRequest();
     this.client.onload = this.loaded;
-    this.client.open("GET",res);
+    this.client.open('GET',res);
     this.client.send();
-};
+}
 loader.prototype.processData = function(data){
     'use strict';
     var evt = new Event('complete');
-    var eventName = 'complete';
-
     /*
+    var eventName = 'complete';
     if(document.createEvent){
         evt = document.createEvent(htmlEvents);
         evt.initEvent(eventName,true,true);
@@ -93,7 +96,7 @@ loader.prototype.removeEventListener = function(a,b){
 loader.prototype.dispatchEvent = function(event){
     'use strict';
     var callFunctionOn = this[event.type];
-    if(callFunctionOn!=undefined){
+    if(callFunctionOn!==undefined){
         if (!event.preventDefault) {
             event.preventDefault = function() {
             event.returnValue = false;
@@ -103,9 +106,9 @@ loader.prototype.dispatchEvent = function(event){
       callFunctionOn(event);
     }
     catch(err){
-      console.log("Error:",err);
+      console.log('Error:',err);
     }
   } else {
-    console.log("the "+event.type+" listener doesn´t exist");
+    console.log('the '+event.type+' listener doesn´t exist');
   }       
 };
