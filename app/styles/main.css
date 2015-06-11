@@ -1395,7 +1395,7 @@ section.app-history,
   color:#fff;
   cursor:pointer;
 }
-
+.location .text-content p,
 .app-history.inside-room .description-location ,
 .app-history.inside-room .description-location {
   display: inline-block;
@@ -1477,7 +1477,7 @@ section.app-history,
 .location .center-content{
   min-width:400px;
   width:80%;
-  max-width:420px;
+  max-width:480px;
 }
 .center-content{
   position: absolute;

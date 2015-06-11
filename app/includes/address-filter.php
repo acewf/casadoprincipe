@@ -64,6 +64,7 @@ class AdressChecker
             $obj->path = $item->localPath.$item->file ;
             $obj->level = $item->level;
             $obj->file = $item->file;
+            $obj->headfile = $item->headfile;
             array_push($yPaths, $obj);
         }
         return $yPaths;

@@ -52,6 +52,19 @@ function ContentLoader(res){
             }
         });
     }
+    this.loadAHeader= function(endereco){
+        var maddress = window.location.origin+'/includes/head/'+endereco+'.php?';
+        $.ajax({
+            cache: false,
+            url: maddress,
+            success: function(data) {
+                console.log(data);
+                $('head title').remove();
+                $('head meta').remove();
+                $('head').append(data);
+            }
+        });
+    }
     this.click = function(scope){
         var href = $(scope).attr('href');
         var datarooms = $(this).attr('data-rooms');
@@ -65,6 +78,7 @@ function ContentLoader(res){
             var data = JSON.parse(m.data);
             //loadContent(data.path);
             instance.loadAllContent(data.path);
+            instance.loadAHeader(data.headfile);
             m.removeEventListener('complete',completeload);
             m = null;
         }        

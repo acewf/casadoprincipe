@@ -20,25 +20,3 @@
 <meta property="og:image" content="http://www.casadoprincipe.pt/img/app/home.png" />
 <meta property="og:site_name" content="Casa do Principe - Premium suites &amp; exquisite rooms in the heart of Lisbon" />
 <meta property="og:description" content="Casa do Principe is located on the first floor of a 18th century building, with unique traits that make this luscious B&amp;B the ultimate destination for your Lisbon experience: its 13 ft indoor height, intricately ornamented ceilings, wooden floors and authentic frescos." />
-
-
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet" type="text/css">
-<script type="text/javascript">var switchTo5x=true;</script>
-<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-<script type="text/javascript">stLight.options({publisher: "fe80fa7d-2045-4199-ba3e-39141283a185", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
-<script src="//use.typekit.net/tma2rmc.js"></script>
-<script>try{Typekit.load();}catch(e){}</script>
-<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
-<!-- build:js scripts/vendor/modernizr.js -->
-<script src="<?php echo "$basePath"; ?>bower_components/modernizr/modernizr.js"></script>
-<!-- endbuild -->
-
-        <!-- build:css styles/vendor/bootstrap.css -->
-<link rel="stylesheet" href="<?php echo "$basePath"; ?>bower_components/bootstrap-datepicker-master/dist/css/bootstrap-datepicker3.standalone.css">
-        <!-- endbuild -->
-        <!-- build:css styles/main.css -->
-<link rel="stylesheet" href="<?php echo "$basePath"; ?>styles/main.css">
-<link rel="stylesheet" href="<?php echo "$basePath"; ?>styles/fotorama.css">
-<link rel="stylesheet" href="<?php echo "$basePath"; ?>styles/fonticon.css">
-        <!-- endbuild -->

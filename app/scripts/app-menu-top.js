@@ -65,7 +65,7 @@ define(['appmenu'], function(appmenu) {
         loadhome.click(this);
     }
     var handler = new ContentLoader();
-    $('.choose-menu a').click(function(){
+    $('.choose-menu ul a').click(function(){
         app.toggleMenu(event);
         handler.click(this);
     });
@@ -82,13 +82,6 @@ define(['appmenu'], function(appmenu) {
             $('ul.room-choose').html(submenu.data);
             var handler = new ContentLoader();
             $('ul.room-choose li a').click(function(){
-                handler.click(this);
-            });
-        }
-        function completeloadMenu(ev){
-            $('ul.suite').html(submenu.data);
-            var handler = new ContentLoader();
-            $('ul.suite li a').click(function(){
                 handler.click(this);
             });
         }
@@ -113,6 +106,7 @@ define(['appmenu'], function(appmenu) {
                         
             pagecontent = new ContentLoader();
             pagecontent.loadAllContent(data.path);
+            pagecontent.loadAHeader(data.headfile);
             pagecontent.addEventListener('complete',completeloadContent);
            
         }        
