@@ -14,17 +14,119 @@ if (!isset($basePath)) {
         <article class="image-frame">
             <div class="frame-inside"data-transition="crossfade">
                 <div class="fotorama fotorama__wrap fotorama__wrap--css3 fotorama__wrap--slide fotorama__wrap--no-controls" data-nav="false" data-autoplay="true" data-arrows="true" data-click="true" data-swipe="true" data-allowfullscreen="true" data-loop="true" data-stopautoplayontouch="true"  data-width="100%" data-ratio="1432/577">
-                    <div class="featured-content">
+
+                  <div class="featured-content">
+
                         <div class="info-room-featured">
+                            <!--<h3>Queen D. Estefânia</h3>
+                            <p>Spacious bedroom with lounge area, balcony overlooking the Príncipe Real garden, with three large windows that fill the room with natural light, creating a bright but relaxing atmosphere.</p>
+                            <a href="<?php echo "$basePath"; ?>suites-rooms/royal" target="_self"><button>SEE DETAILS</button></a>-->
+                        </div>
+
+                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/suites-and-rooms/slider-geral/imperial-01.jpg">
+
+                  </div>
+
+                  <div class="featured-content">
+
+                        <div class="info-room-featured">
+                            <!--<h3>Queen D. Estefânia</h3>
+                            <p>Spacious bedroom with lounge area, balcony overlooking the Príncipe Real garden, with three large windows that fill the room with natural light, creating a bright but relaxing atmosphere.</p>
+                            <a href="<?php echo "$basePath"; ?>suites-rooms/royal" target="_self"><button>SEE DETAILS</button></a>-->
+                        </div>
+
+                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/suites-and-rooms/slider-geral/royal-estefania-01.jpg">
+
+                  </div>
+
+                  <div class="featured-content">
+
+                        <div class="info-room-featured">
+                            <!--<h3>Queen D. Estefânia</h3>
+                            <p>Spacious bedroom with lounge area, balcony overlooking the Príncipe Real garden, with three large windows that fill the room with natural light, creating a bright but relaxing atmosphere.</p>
+                            <a href="<?php echo "$basePath"; ?>suites-rooms/royal" target="_self"><button>SEE DETAILS</button></a>-->
+                        </div>
+
+                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/suites-and-rooms/slider-geral/royal-palace-01.jpg">
+
+                  </div>
+
+                  <div class="featured-content">
+
+                        <div class="info-room-featured">
+                            <!--<h3>Queen D. Estefânia</h3>
+                            <p>Spacious bedroom with lounge area, balcony overlooking the Príncipe Real garden, with three large windows that fill the room with natural light, creating a bright but relaxing atmosphere.</p>
+                            <a href="<?php echo "$basePath"; ?>suites-rooms/royal" target="_self"><button>SEE DETAILS</button></a>-->
+                        </div>
+
+                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/suites-and-rooms/slider-geral/premium-arts-01.jpg">
+
+                  </div>
+
+                  <div class="featured-content">
+
+                        <div class="info-room-featured">
+                            <!--<h3>Queen D. Estefânia</h3>
+                            <p>Spacious bedroom with lounge area, balcony overlooking the Príncipe Real garden, with three large windows that fill the room with natural light, creating a bright but relaxing atmosphere.</p>
+                            <a href="<?php echo "$basePath"; ?>suites-rooms/royal" target="_self"><button>SEE DETAILS</button></a>-->
+                        </div>
+
+                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/suites-and-rooms/slider-geral/premium-lisbon-01.jpg">
+
+                  </div>
+
+                  <div class="featured-content">
+
+                        <div class="info-room-featured">
+                            <!--<h3>Queen D. Estefânia</h3>
+                            <p>Spacious bedroom with lounge area, balcony overlooking the Príncipe Real garden, with three large windows that fill the room with natural light, creating a bright but relaxing atmosphere.</p>
+                            <a href="<?php echo "$basePath"; ?>suites-rooms/royal" target="_self"><button>SEE DETAILS</button></a>-->
+                        </div>
+
+                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/suites-and-rooms/slider-geral/historic-queen-maria-01.jpg">
+
+                  </div>
+
+                  <div class="featured-content">
+
+                        <div class="info-room-featured">
+                            <!--<h3>Queen D. Estefânia</h3>
+                            <p>Spacious bedroom with lounge area, balcony overlooking the Príncipe Real garden, with three large windows that fill the room with natural light, creating a bright but relaxing atmosphere.</p>
+                            <a href="<?php echo "$basePath"; ?>suites-rooms/royal" target="_self"><button>SEE DETAILS</button></a>-->
+                        </div>
+
+                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/suites-and-rooms/slider-geral/historic-king-fernando-01.jpg">
+
+                  </div>
+
+                  <div class="featured-content">
+
+                        <!--<div class="info-room-featured">
                             <h3>Queen D. Estefânia</h3>
                             <p>Spacious bedroom with lounge area, balcony overlooking the Príncipe Real garden, with three large windows that fill the room with natural light, creating a bright but relaxing atmosphere.</p>
                             <a href="<?php echo "$basePath"; ?>suites-rooms/royal" target="_self"><button>SEE DETAILS</button></a>
-                        </div>                    
-                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/palacio-da-liberdade-interior1.jpg">
-                    </div>
-                    <div class="featured-content">
-                        <img alt="destaque 2" src="<?php echo "$basePath"; ?>images/dsc_0281.jpg">
-                    </div>
+                        </div>-->
+
+                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/suites-and-rooms/slider-geral/historic-sintra-01.jpg">
+
+                  </div>
+
+                  <div class="featured-content">
+
+                        <!--<div class="info-room-featured">
+                            <h3>Queen D. Estefânia</h3>
+                            <p>Spacious bedroom with lounge area, balcony overlooking the Príncipe Real garden, with three large windows that fill the room with natural light, creating a bright but relaxing atmosphere.</p>
+                            <a href="<?php echo "$basePath"; ?>suites-rooms/royal" target="_self"><button>SEE DETAILS</button></a>
+                        </div>-->
+
+                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/suites-and-rooms/slider-geral/historic-voyages-01.jpg">
+
+                  </div>
+
+                        <!--<div class="featured-content">
+                            <img alt="destaque 2" src="<?php echo "$basePath"; ?>images/dsc_0281.jpg">
+                        </div>-->
+
                 </div>
             </div>
         </article>

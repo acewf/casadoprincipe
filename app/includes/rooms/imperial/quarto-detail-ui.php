@@ -14,15 +14,18 @@ if (!isset($basePath)) {
             <div class="frame-inside" data-transition="crossfade">
                 <div class="fotorama fotorama__wrap fotorama__wrap--css3 fotorama__wrap--slide fotorama__wrap--no-controls" data-nav="false" data-arrows="true" data-click="true" data-swipe="true" data-allowfullscreen="true" data-loop="true" data-autoplay="true" data-stopautoplayontouch="false"  data-width="100%" data-ratio="1432/577">
                     <div class="featured-content">
-                        <div class="info-room-featured">
+                        <!--<div class="info-room-featured">
                             <h3>Imperial Suite</h3>
                             <p>Spacious bedroom with lounge area, balcony overlooking the Príncipe Real garden, with three large windows that fill the room with natural light, creating a bright but relaxing atmosphere.</p>
                             <a href="<?php echo "$basePath"; ?>suites/" target="_self"><button>go previus</button></a>
-                        </div>                    
-                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/fotos-sintra-palacio-da-pena-050.jpg">
+                        </div>-->
+                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/suites-and-rooms/imperial suite/imperial-01.jpg">
                     </div>
                     <div class="featured-content">
-                        <img alt="destaque 2" src="<?php echo "$basePath"; ?>images/fotos-sintra-palacio-da-pena-050.jpg">
+                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/suites-and-rooms/imperial suite/imperial-02.jpg">
+                    </div>
+                    <div class="featured-content">
+                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/suites-and-rooms/imperial suite/imperial-03.jpg">
                     </div>
                 </div>
             </div>
@@ -55,8 +58,27 @@ if (!isset($basePath)) {
                 </div>
             </div><div class="right-block">
                 <ul>
+                    <!--Size: 45m² /484 sq.ft-->
                     <li>Size: 45m² /484 sq.ft</li>
-                    <li>Extra large Queen bed or two twin beds</li>
+                    <li>Free WiFi high speed internet access</li>
+                    <li>Extra large Queen bed (180cmx200cm/ 705⁄5´´ x 79½´´) or two twin beds - at your choice</li>
+                    <li>Balcony overlooking the Príncipe Real garden</li>
+                    <li>Seating and relaxing area</li>
+                    <li>Sofa double bed in the lounge area</li>
+                    <li>Occupancy: 2 adults</li>
+
+                        <li>Up to 2 children under 16 years old may use the sofa bed. * Extra charge</li>
+                        <li>Up to 1 baby under 3 years old may use a crib – subject to availability. * Extra charge</li>
+
+                    <li>Breakfast buffet or room service breakfast on request</li>
+                    <li>Premium bathroom amenities</li>
+                    <li>LCD TV</li>
+                    <li>Air conditioning</li>
+                    <li>In-room safe</li>
+                    <li>Hairdryer</li>
+                    <li>Daily maid service</li>
+
+                    <!--<li>Extra large Queen bed or two twin beds</li>
                     <li>Balcony overlooking the Príncipe Real garden</li>
                     <li>Seating and relaxing area</li>
                     <li>Sofa double bed in the lounge area</li>
@@ -66,7 +88,7 @@ if (!isset($basePath)) {
                     <li>Balcony overlooking the Príncipe Real garden</li>
                     <li>Seating and relaxing area</li>
                     <li>Sofa double bed in the lounge area</li>
-                    <li>Premium bathroom amenities</li>
+                    <li>Premium bathroom amenities</li>-->
                 </ul>
                 <a class="big-size"><h4>About King D. Pedro V<div class="icon icon-arrow-right"></div></h4></a>
             </div>
@@ -152,17 +174,19 @@ if (!isset($basePath)) {
                     <img alt="image D. Pedro" src="<?php echo "$basePath"; ?>images/principe-big.png">
                 </div>
             </div>
-        </div><div class="text-content">
-            <div >
+        </div>
+        <div class="text-content">
+            <div>
             <div class="description-location">
                 <h2>WHO WAS THE ROYAL PRINCE?</h2>
                 <h3>the answer to this question is as enigmatic as the prince himself.</h3>
                 <p>Born in Lisbon in 1837, the Prince soon displayed great curiosity about everything that surrounded him, becoming eager to learn more and more about the world he lived in. Every bit of knowledge he gathered started weighing upon him, as he grew into a very private and isolated young man with a loud mind, racing with intricate thoughts and plans for the country he would soon reign. It is often said that quiet people have the loudest mind, and that was precisely the case.<br> 
-He found true comfort and understanding in the loving arms of his wife, Queen D. Estefânia (Queen Stephanie). It was one of those rare cases of love at first sight, for they only met on their wedding day, which was very common at the time. Queen D. Estefânia understood and eased his troubles as no one could, their naïveté and innocence moving all those around them. It was truly the love story of the century and moulded every inch of the Royal Prince’s character.<br>
-He devoted his life to his country, seeking to further develop it and to bring comfort to the people, through many investments, some of them personal. He founded schools and hospitals, visited and comforted the sick and he was the stable figure that Portugal desperately needed.<br><br>
-The Praça do Príncipe Real (Royal Prince Square) was named after him by his loving mother, Queen D. Maria II, and has kept his name ever since, marking its place in the front row of Lisbon’s history.<br><br>
-His tragic death, at 24 years old of age, was mourned throughout Europe, leaving the weight of the crown to his brother D. Luís. However, the role he played in History still fills books and fables with the adventures and reflections of a mind very much ahead of its time. The sharp mind of the Royal Prince.
-</p></div>
+                He found true comfort and understanding in the loving arms of his wife, Queen D. Estefânia (Queen Stephanie). It was one of those rare cases of love at first sight, for they only met on their wedding day, which was very common at the time. Queen D. Estefânia understood and eased his troubles as no one could, their naïveté and innocence moving all those around them. It was truly the love story of the century and moulded every inch of the Royal Prince’s character.<br>
+                He devoted his life to his country, seeking to further develop it and to bring comfort to the people, through many investments, some of them personal. He founded schools and hospitals, visited and comforted the sick and he was the stable figure that Portugal desperately needed.<br><br>
+                The Praça do Príncipe Real (Royal Prince Square) was named after him by his loving mother, Queen D. Maria II, and has kept his name ever since, marking its place in the front row of Lisbon’s history.<br><br>
+                His tragic death, at 24 years old of age, was mourned throughout Europe, leaving the weight of the crown to his brother D. Luís. However, the role he played in History still fills books and fables with the adventures and reflections of a mind very much ahead of its time. The sharp mind of the Royal Prince.
+                </p>
+            </div>
         </div>
     </section>
     <script>

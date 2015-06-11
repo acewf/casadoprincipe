@@ -41,13 +41,22 @@ if (!isset($basePath)) {
                     <li>1 Imperial Suite, 2 Royal Suites, 2 Premium Rooms and 3 Historic Rooms all with private bathrooms</li>
                     <li>An exceptional location in the heart of the historic center of Lisbon</li>
                     <li>Free WiFi in all accommodation and public areas</li>
-                    <li>Welcome drink on arrival</li>
+                    <li>Welcome drink on arrival </li>
+                    <li>LCD TV</li>
+                    <li>Air conditioning</li>
+                    <li>Breakfast buffet</li>
+                    <li>Premium bathroom amenities</li>
+                    <li>Daily maid service</li>
+                    <li>In-room safe</li>
+                    <li>Hairdryer</li>
+
+                    <!--<li>Welcome drink on arrival</li>
                     <li>LCD TV</li>
                     <li>Air conditioning</li>
                     <li>Free WiFi in all accommodation and public areas</li>
                     <li>Welcome drink on arrival</li>
                     <li>LCD TV</li>
-                    <li>Air conditioning</li>
+                    <li>ir conditioning</li>-->
                 </ul>
         </div>
     </section>
