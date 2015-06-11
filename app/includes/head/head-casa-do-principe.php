@@ -6,7 +6,7 @@
 <link rel="alternate" href="http://es.example.com/en-us/" hreflang="en-US" />
 <title>Casa do Principe - Premium suites &amp; exquisite rooms in the heart of Lisbon</title>
 <meta property="og:image" content="redes_sociais.jpg" />
-<meta name="author" content="pedro.martins@euro-m.pt" />
+<meta name="author" content="www.euro-m.pt" />
 <meta name="copyright" content="trademark" />
 <meta name="application-name" content="Casa do Principe" />
 <meta name="keywords" content="Bed &amp; Breakfast in Lisbon, Casa do Principe, rooms, suites, center Lisbon, Principe Real" />

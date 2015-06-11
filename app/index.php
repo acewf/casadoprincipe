@@ -16,8 +16,9 @@
             }
                       
             $Adress = new AdressChecker();
+            $pathObj = $Adress->getPhpToUrl('');
         ?>
-        <?php include(dirname(__FILE__).'/includes/head.php'); ?>
+        <?php include(dirname(__FILE__).'/includes/head/'.$pathObj->headfile.'.php'); ?>
     </head>
     <body>
          <div class="container">

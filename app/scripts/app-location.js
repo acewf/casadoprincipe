@@ -146,7 +146,7 @@ define(['location'], function(gallery) {
         }
     	this.init = function(){
             this.putStates();
-            var handler = new contentloader();
+            var handler = new ContentLoader();
             var completeloadContent = function(ev){
                 $('.sub-menu .suite').html(mcontent.data);
             }
@@ -155,7 +155,7 @@ define(['location'], function(gallery) {
                 if(total===0){
                      var mcontent;
                     
-                    mcontent = new loader(window.location.origin+'/includes/submenu/sub-menu-rooms.php');
+                    mcontent = new Loader(window.location.origin+'/includes/submenu/sub-menu-rooms.php');
                     mcontent.addEventListener('complete',completeloadContent); 
                 }
                 handler.click(this);

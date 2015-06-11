@@ -81,7 +81,7 @@ define(['approominfo'], function(appmenu) {
 			                }
 			            });
 			        }
-			        var m = new loader(window.location.origin+'/includes/address-filter-output.php?url='+res);
+			        var m = new Loader(window.location.origin+'/includes/address-filter-output.php?url='+res);
 			        function completeload(ev){
 			        	var data = JSON.parse(m.data);
 			            loadContent(data.path);
@@ -94,11 +94,11 @@ define(['approominfo'], function(appmenu) {
 		    var href = window.location.href;
 		    var n = href.indexOf(window.location.origin);
 			var res = href.substring(n+window.location.origin.length+1, href.length);			
-		   	var subm = new loader(window.location.origin+'/includes/address-filter-output.php?url='+res);
+		   	var subm = new Loader(window.location.origin+'/includes/address-filter-output.php?url='+res);
 	        function Subcompleteload(ev){
 	        	var data = JSON.parse(subm.data);
 
-	            mcontent = new loader(window.location.origin+'/includes/submenu/'+data.level+'.php?');
+	            mcontent = new Loader(window.location.origin+'/includes/submenu/'+data.level+'.php?');
 		    	mcontent.addEventListener('complete',completeloadContent);
 	            subm.removeEventListener('complete',Subcompleteload);
 	            subm = null;

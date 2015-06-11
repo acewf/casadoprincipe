@@ -43,10 +43,10 @@ define(['approom'], function(appmenu) {
 			        var res = href.substring(n+event.target.origin.length+1, href.length);
 			        window.history.pushState("object or string", "Title", "/"+res);
 			        var mcontent;
-			        var m = new loader(window.location.origin+'/includes/address-filter-output.php?url='+res);
+			        var m = new Loader(window.location.origin+'/includes/address-filter-output.php?url='+res);
 			        function completeload(ev){
 			        	var data = JSON.parse(m.data);
-			        	var handler = new contentloader();
+			        	var handler = new ContentLoader();
 			        	handler.loadAllContent(data.path);
 
 			            //loadContent(data.path);
@@ -56,7 +56,7 @@ define(['approom'], function(appmenu) {
 			        m.addEventListener('complete',completeload);
 			    });
 		    }
-		    mcontent = new loader(window.location.origin+'/includes/submenu/sub-menu-rooms.php');
+		    mcontent = new Loader(window.location.origin+'/includes/submenu/sub-menu-rooms.php');
 		    mcontent.addEventListener('complete',completeloadContent);
 		    $('.logo').addClass('small');
 		    $('ul.suite').addClass('menupos');

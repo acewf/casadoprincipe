@@ -3,12 +3,16 @@
 ////Date: 05/05/2015
 ////Company:euro-m.pt
 //////////////  AREAS DE JOGO  /////////////////////////
-define(['gallery'], function(gallery) {
+define(['gallery','contentloader'], function(gallery,contentloader) {
     'use strict';
     //Uses extras in here.
-    console.log('APP HOME DEFINED**');
-
+    //var ContentLoader;
+    
+    var mcontent;
+    console.log(contentloader)
     function APPgallery(){
+        // ContentLoader = (ContentLoader)?ContentLoader=ContentLoader:null;
+        
         this.putStates=function(){
             $('.sub-menu .suite').html('');
             $('#logo-big').removeClass('show');
@@ -23,25 +27,33 @@ define(['gallery'], function(gallery) {
             ]);
 
             $('footer').hide();
+        };
+
+        this.completeloadContent = function(ev){
+            console.log('complete....');
+            $('.sub-menu .suite').html(mcontent.data);
         }
+
     	this.init = function(){
             this.putStates();
-            var handler = new contentloader();
+            var handler = new ContentLoader();
+
             $('article a').click(function(){
                 var total = $('.sub-menu .suite li').length;
-                if(total===0){
-                     var mcontent;
+                if(total===0){   
+                    /*                  
                     function completeloadContent(ev){
                         $('.sub-menu .suite').html(mcontent.data);
                     }
-                    mcontent = new loader(window.location.origin+'/includes/submenu/sub-menu-rooms.php');
-                    mcontent.addEventListener('complete',completeloadContent); 
+                    */
+                    mcontent = new Loader(window.location.origin+'/includes/submenu/sub-menu-rooms.php');
+                    mcontent.addEventListener('complete',this.completeloadContent); 
                 }
                 handler.click(this);
             });
-    	}
+    	};
     }
 
-    var gallery = new APPgallery();
-    return gallery;
+    var appgallery = new APPgallery();
+    return appgallery;
 });

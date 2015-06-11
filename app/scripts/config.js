@@ -7,7 +7,6 @@
 var require = {
     baseUrl: '/bower_components',
     paths: {
-        
         main: '../scripts/main',
         app: '../scripts/app',
         appmenu: '../scripts/app-menu-top',
@@ -30,13 +29,14 @@ var require = {
         jquery: 'jquery/dist/jquery',
         parsley: 'parsleyjs/dist/parsley.min',
         bootstrap: 'bootstrap/dist/js/bootstrap',
-        'google-maps': 'google-maps/lib/Google.min',
+        'google-maps': 'google-maps/lib/Google',
         bootstrapdate: 'bootstrap-datepicker-master/js/bootstrap-datepicker',
         bootstrappickerpt: 'bootstrap-datepicker-master/js/locales/bootstrap-datepicker.pt',
         fotorama: 'fotorama/fotorama',
         loglevel: 'loglevel/dist/loglevel.min',
         picturefill: 'picturefill/dist/picturefill',
-        'bootstrap-datetimepicker': 'bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min'
+        'bootstrap-datetimepicker': 'bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min',
+        parsleyjs: 'parsleyjs/dist/parsley'
     },
     shim: {
         appmenu: {

@@ -1,4 +1,4 @@
-function contentloader(res){
+function ContentLoader(res){
     'use strict';
     //Uses extras in here.
     var instance = this;
@@ -60,7 +60,7 @@ function contentloader(res){
         var res = href.substring(n+window.location.origin.length+1, href.length);
         window.history.pushState("object or string", "Page Title", "/"+res);
         var mcontent 
-        var m = new loader(window.location.origin+'/includes/address-filter-output.php?url='+res);
+        var m = new Loader(window.location.origin+'/includes/address-filter-output.php?url='+res);
         function completeload(ev){
             var data = JSON.parse(m.data);
             //loadContent(data.path);
@@ -72,16 +72,16 @@ function contentloader(res){
     }
 };
 
-contentloader.prototype.addEventListener = function(a,b){
+ContentLoader.prototype.addEventListener = function(a,b){
   'use strict';
   this[a] = b;
 };
-contentloader.prototype.removeEventListener = function(a,b){
+ContentLoader.prototype.removeEventListener = function(a,b){
     'use strict';
   this[a] = null;
   b = null;
 };
-contentloader.prototype.dispatchEvent = function(event){
+ContentLoader.prototype.dispatchEvent = function(event){
     'use strict';
     var callFunctionOn = this[event.type];
     if(callFunctionOn!=undefined){
