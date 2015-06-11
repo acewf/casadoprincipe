@@ -15,6 +15,7 @@ define(['gallery','contentloader'], function(gallery,contentloader) {
         
         this.putStates=function(){
             $('.sub-menu .suite').html('');
+            $('.sub-menu .room-choose').html('');
             $('#logo-big').removeClass('show');
             $('#logo-small').addClass('show');
             $('ul.room-choose').addClass('show-childs');

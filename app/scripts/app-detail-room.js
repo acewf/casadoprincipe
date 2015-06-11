@@ -52,6 +52,7 @@ define(['approomdetail'], function() {
             	$('.content.room-detail').addClass('slide-to-left');
             	$('.inside-detail').addClass('slide-from-right');
             	$('.page-content').animate({ 'height': $('.inside-detail').outerHeight(true) + 'px' });
+            	$('html,body').animate({scrollTop:60},400);
             });
             $('.back-detail-room').click(function(){
             	$('.content.room-detail').removeClass('slide-to-left');

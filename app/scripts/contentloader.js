@@ -74,6 +74,7 @@ function ContentLoader(res){
         var mcontent 
         var m = new Loader(window.location.origin+'/includes/address-filter-output.php?url='+res);
         function completeload(ev){
+            console.log(m);
             var data = JSON.parse(m.data);
             //loadContent(data.path);
             instance.loadAllContent(data.path);
@@ -85,31 +86,52 @@ function ContentLoader(res){
     }
 };
 
-ContentLoader.prototype.addEventListener = function(a,b){
+ContentLoader.prototype.addEventListener =function(a,b){
   'use strict';
-  this[a] = b;
+    if(this.addEventListener){
+        this[a] = b;
+        //this.addEventListener(type,handler,false);
+    }else if(this.attachEvent && htmlEvents['on'+a]){// IE < 9
+        this.attachEvent('on'+a,b);
+    }else{
+        this['on'+a]=b;
+    }
+    //this[a] = b;
 };
 ContentLoader.prototype.removeEventListener = function(a,b){
     'use strict';
   this[a] = null;
   b = null;
 };
-ContentLoader.prototype.dispatchEvent = function(event){
+ContentLoader.prototype.dispatchEvent = function(eventName){
     'use strict';
-    var callFunctionOn = this[event.type];
-    if(callFunctionOn!=undefined){
-        if (!event.preventDefault) {
-            event.preventDefault = function() {
-            event.returnValue = false;
-        };
+    var event;
+    if(document.createEvent){
+        event = document.createEvent('HTMLEvents');
+        event.initEvent(eventName,true,true);
+        console.log('A');
+    }else if(document.createEventObject){// IE < 9
+        event = document.createEventObject();
+        event.eventType = eventName;
+         console.log('b');
+    } else {
+        console.log('c');
     }
-    try{
-      callFunctionOn(event);
-    }
-    catch(err){
-      console.log("Error:",err);
-    }
-  } else {
-    console.log("the "+event.type+" listener doesn´t exist");
-  }       
+    event.eventName = eventName;
+    if(this.dispatchEvent){
+        var callFunctionOn = this[event.eventName];
+        try{
+          callFunctionOn(event);
+        }
+        catch(err){
+          console.log('Error:',err);
+        }
+        //this.dispatchEvent(event);
+    }else if(this.fireEvent && htmlEvents['on'+eventName]){// IE < 9
+        this.fireEvent('on'+event.eventType,event);// can trigger only real event (e.g. 'click')
+    }else if(this[eventName]){
+        this[eventName]();
+    }else if(el['on'+eventName]){
+        this['on'+eventName]();
+    }    
 };

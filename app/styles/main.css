@@ -289,7 +289,7 @@ div.main {
   margin-bottom: 0px;
   display: inline-block;
   width: 100% !important;
-  font-size:initial;
+  font-size:medium;
 }
 
 div.main header {
@@ -1469,7 +1469,7 @@ section.app-history,
   position: fixed;
   width: 100%;
   height: 100%;
-  font-size:initial;
+  font-size: medium;
   overflow: hidden;
   z-index: 101;
   background-color: rgba(0, 0, 0, 0.51);
@@ -1733,7 +1733,7 @@ ul.choose-rooms li a{
 }
 .contact .center-content{
   min-width: 450px;
-  min-height:700px
+  min-height:800px
 }
 .contact .center-content h3{
 
@@ -2218,7 +2218,7 @@ footer {
   background-size: cover;
   height: 297px;
   position: relative;
-  font-size:initial;
+  font-size:medium;
 }
 footer .share-elements{
   position:absolute;

@@ -9,6 +9,7 @@ define(['apphome','appmenu'], function(apphome,appmenu) {
     function APPhome(){
         this.putStates=function(){
             $('.sub-menu .suite').html('');
+            $('.sub-menu .room-choose').html('');
             $('#logo-big').addClass('show');
             $('#logo-small').removeClass('show');
             $('ul.room-choose').addClass('show-childs');

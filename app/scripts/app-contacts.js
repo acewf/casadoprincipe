@@ -9,7 +9,7 @@ define(['contacts'], function() {
     console.log('APP HOME DEFINED**');
 
     function APP(){
-        this.putStates=function(){
+        this.putStates=function(){  
             $('.sub-menu .suite').html('');
             $('.sub-menu .room-choose').html('');
             $('#logo-big').removeClass('show');
