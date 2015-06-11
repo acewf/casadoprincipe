@@ -58,7 +58,6 @@ function ContentLoader(res){
             cache: false,
             url: maddress,
             success: function(data) {
-                console.log(data);
                 $('head title').remove();
                 $('head meta').remove();
                 $('head').append(data);
