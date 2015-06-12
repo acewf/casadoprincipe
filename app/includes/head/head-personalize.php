@@ -4,13 +4,13 @@
 <meta charset="utf-8">        
 <link rel="alternate" href="http://www.casadoprincipe.pt/pt-pt/" hreflang="pt-PT"  />
 <link rel="alternate" href="http://es.example.com/en-us/" hreflang="en-US" />
-<title>Casa do Principe - Premium suites &amp; exquisite rooms in the heart of Lisbon</title>
+<title>Casa do Príncipe – Concierge services – Personalize your stay</title>
 <meta property="og:image" content="redes_sociais.jpg" />
 <meta name="author" content="www.euro-m.pt" />
 <meta name="copyright" content="trademark" />
 <meta name="application-name" content="Casa do Principe" />
-<meta name="keywords" content="Bed &amp; Breakfast in Lisbon, Casa do Principe, rooms, suites, center Lisbon, Principe Real" />
-<meta name="description" content="Casa do Principe is located on the first floor of a 18th century building, with unique traits that make this luscious B&amp;B the ultimate destination for your Lisbon experience: its 13 ft indoor height, intricately ornamented ceilings, wooden floors and authentic frescos." />
+<meta name="keywords" content="Praça do Príncipe Real, Royal Prince Square, Hotel, Lisboa, Lisbon, Lisbonne, Lissabon, accommodation, historic travel, culture, arts, history, of, heritage, tradition, concierge, reservations, tours, packages, special offers, Bairro Alto, Chiado, Rossio, Avenida da Liberdade, Cais do Sodré, Mercado da Ribeira, bed and breakfast reviews in Lisbon, best b&b in Lisbon, tram, cab, taxi, close by airport,  elevador da glória, bars, nightlife, shops, restaurants, concerts, museums, exhibitions, trendy, hip, chic, top-notch, Portugal, Hotel, honeymoons, romance, family, business, travel, cosmopolitan" />
+<meta name="description" content="Our guesthouse team is available for a tailor-made service before, during and after your stay." />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
 <!--FACEBOOK META -->
@@ -19,4 +19,4 @@
 <meta property="og:url" content="http://www.casadoprincipe.pt/" />
 <meta property="og:image" content="http://www.casadoprincipe.pt/img/app/home.png" />
 <meta property="og:site_name" content="Casa do Principe - Premium suites &amp; exquisite rooms in the heart of Lisbon" />
-<meta property="og:description" content="Casa do Principe is located on the first floor of a 18th century building, with unique traits that make this luscious B&amp;B the ultimate destination for your Lisbon experience: its 13 ft indoor height, intricately ornamented ceilings, wooden floors and authentic frescos." />
+<meta property="og:description" content="Our guesthouse team is available for a tailor-made service before, during and after your stay." />

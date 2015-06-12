@@ -6,6 +6,11 @@ if (!isset($basePath)) {
     } else {
         $basePath = 'http://'.$_SERVER['SERVER_NAME'].$folder; 
     }
+    $findme = '/';
+    $mystring = $_SERVER['HTTP_REFERER'];
+    $mystring = substr($mystring, strlen($basePath));
+    $pos = strpos($mystring, $findme);
+    $lang = substr($mystring, 0,$pos+1);
 }
 ?>
 <div class="page-content homepage">
@@ -34,7 +39,7 @@ if (!isset($basePath)) {
                         <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/slider-home/01.jpg">
                     </div>
                     <div class="featured-content">
-                        <div class="transparent-shadow" style="background-color: rgba(0, 0, 0, .8)"></div>
+                        <!--<div class="transparent-shadow" <?php //style="background-color: rgba(0, 0, 0, .8)"?>></div>-->
                         <img alt="destaque 2" src="<?php echo "$basePath"; ?>images/slider-home/02.jpg">
                     </div>
                     <div class="featured-content">
@@ -44,18 +49,27 @@ if (!isset($basePath)) {
                         <img alt="destaque 4" src="<?php echo "$basePath"; ?>images/slider-home/04.jpg">
                     </div>
                     <div class="featured-content">
-                        <img alt="destaque 5" src="<?php echo "$basePath"; ?>images/slider-home/05.jpg">
+                        <img alt="destaque 5" src="<?php echo "$basePath"; ?>images/slider-home/06.jpg">
                     </div>
                     <div class="featured-content">
-                        <img alt="destaque 6" src="<?php echo "$basePath"; ?>images/slider-home/06.jpg">
+                        <img alt="destaque 6" src="<?php echo "$basePath"; ?>images/slider-home/07.jpg">
                     </div>
                     <div class="featured-content">
-                        <img alt="destaque 7" src="<?php echo "$basePath"; ?>images/slider-home/07.jpg">
+                        <img alt="destaque 7" src="<?php echo "$basePath"; ?>images/slider-home/09.jpg">
                     </div>
                     <div class="featured-content">
-                        <img alt="destaque 8" src="<?php echo "$basePath"; ?>images/slider-home/08.jpg">
+                        <img alt="destaque 8" src="<?php echo "$basePath"; ?>images/slider-home/11.jpg">
                     </div>
                     <div class="featured-content">
+                        <img alt="destaque 8" src="<?php echo "$basePath"; ?>images/slider-home/12.jpg">
+                    </div>
+                    <div class="featured-content">
+                        <img alt="destaque 8" src="<?php echo "$basePath"; ?>images/slider-home/14.jpg">
+                    </div>
+                    <div class="featured-content">
+                        <img alt="destaque 8" src="<?php echo "$basePath"; ?>images/slider-home/17.jpg">
+                    </div>
+                    <!--<div class="featured-content">
                         <img alt="destaque 9" src="<?php echo "$basePath"; ?>images/slider-home/09.jpg">
                     </div>
                     <div class="featured-content">
@@ -81,7 +95,7 @@ if (!isset($basePath)) {
                     </div>
                     <div class="featured-content">
                         <img alt="destaque 17" src="<?php echo "$basePath"; ?>images/slider-home/17.jpg">
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </article>
@@ -95,30 +109,30 @@ if (!isset($basePath)) {
             </div>
             <section class="rooms-view">
                 <article class="room">
-                    <a href="<?php echo "$basePath"; ?>suites-rooms/imperial">
+                    <a href="<?php echo $basePath.$lang; ?>suites-rooms/imperial">
                         <div class="small-frame">
-                            <img alt="Quarto Imperial" src="<?php echo "$basePath"; ?>images/img-moldura.png">
+                            <img alt="Quarto Imperial" src="<?php echo "$basePath"; ?>images/thumbs-suites-and-rooms/thumb-imperial.jpg">
                         </div>
                         <h5>Imperial Suite</h5>
                     </a>
                 </article><article class="room">
-                    <a href="<?php echo "$basePath"; ?>suites-rooms/royal">
+                    <a href="<?php echo $basePath.$lang; ?>suites-rooms/royal">
                         <div class="small-frame">
-                            <img alt="Quarto Royal" src="<?php echo "$basePath"; ?>images/img-moldura.png">
+                            <img alt="Quarto Royal" src="<?php echo "$basePath"; ?>images/thumbs-suites-and-rooms/thumb-royal-estefania.jpg">
                         </div>
                         <h5>Royal Suites</h5>
                     </a>
                 </article><article class="room">
-                    <a href="<?php echo "$basePath"; ?>suites-rooms/premium">
+                    <a href="<?php echo $basePath.$lang; ?>suites-rooms/premium">
                         <div class="small-frame">
-                            <img alt="Quarto Premium" src="<?php echo "$basePath"; ?>images/img-moldura.png">
+                            <img alt="Quarto Premium" src="<?php echo "$basePath"; ?>images/thumbs-suites-and-rooms/thumb-premium-arts.jpg">
                         </div>
                         <h5>Premium Rooms</h5>
                     </a>
                 </article><article class="room">
-                    <a href="<?php echo "$basePath"; ?>suites-rooms/historic">
+                    <a href="<?php echo $basePath.$lang; ?>suites-rooms/historic">
                         <div class="small-frame">
-                            <img alt="Quarto Historic" src="<?php echo "$basePath"; ?>images/img-moldura.png">
+                            <img alt="Quarto Historic" src="<?php echo "$basePath"; ?>images/thumbs-suites-and-rooms/thumb-historic-maria.jpg">
                         </div>
                         <h5>Historic Rooms</h5>
                     </a>
@@ -129,14 +143,14 @@ if (!isset($basePath)) {
             <h2>the ultimate destination for your Lisbon experience</h2>
             <div class="description"><p>Casa do Principe is located on the first floor of a 19th century building. The beautiful restoration work on this house  incorporated genuine 19th century decoration with a touch of contemporary details all combined to create an exclusive atmosphere of sophistication and grace, discretion and elegance.</p></div>
         </article>
-    </section>         
+    </section>
     <section class="app-history">
     	<div class="img-content">
     	    <img alt="image D. Pedro" src="<?php echo "$basePath"; ?>images/dompedro.png">
     	</div><div class="description">
     	    <h3>Royal Prince, King D. Pedro V</h3>
-    	    <p class="small-text">Casa do Príncipe takes its name after the Royal Prince, King D. Pedro V, whose story sets the tone for your unforgettable stay in Lisbon. Each of its 9 palatial suites and rooms refer to a meaningful part of this King’s</p>
-    	    <a href="<?php echo "$basePath"; ?>casa-do-principe" target="_self"><h4>MEET THE KING</h4></a>
+    	    <p class="small-text">Casa do Príncipe takes its name after the Royal Prince, King D. Pedro V, whose story sets the tone for your unforgettable stay in Lisbon. Each of its 9 palatial suites and rooms refer to a meaningful part of this King’s life.</p>
+    	    <a href="<?php echo $basePath.$lang; ?>history" target="_self"><h4>MEET THE KING</h4></a>
     	</div>
     </section>
     <script>

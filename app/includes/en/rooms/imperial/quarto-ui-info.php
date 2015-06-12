@@ -6,6 +6,11 @@ if (!isset($basePath)) {
     } else {
         $basePath = 'http://'.$_SERVER['SERVER_NAME'].$folder; 
     }
+    $findme = '/';
+    $mystring = $_SERVER['HTTP_REFERER'];
+    $mystring = substr($mystring, strlen($basePath));
+    $pos = strpos($mystring, $findme);
+    $lang = substr($mystring, 0,$pos+1);
 }
 ?>
 
@@ -16,18 +21,19 @@ if (!isset($basePath)) {
                 <div class="fotorama fotorama__wrap fotorama__wrap--css3 fotorama__wrap--slide fotorama__wrap--no-controls" data-nav="false" data-autoplay="true" data-arrows="true" data-click="true" data-swipe="true" data-allowfullscreen="true" data-loop="true" data-stopautoplayontouch="true"  data-width="100%" data-ratio="1432/577">
                     <div class="featured-content">
                         <div class="info-room-featured">
-                            <h3>Queen D. Estefânia</h3>
+                            <h3>King D. Pedro V Suite</h3>
                             <p>Spacious bedroom with lounge area, balcony overlooking the Príncipe Real garden, with three large windows that fill the room with natural light, creating a bright but relaxing atmosphere.</p>
-                            <a href="<?php echo "$basePath"; ?>suites-rooms/royal" target="_self"><button>SEE DETAILS</button></a>
-                        </div>                    
-                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/imperial/46380317.jpg">
+                            <a href="<?php echo $basePath.$lang; ?>suites-rooms/imperial/queen" target="_self"><button>SEE DETAILS</button></a>
+                        </div>
+                        <div class="transparent-shadow" style="background-color: rgba(0, 0, 0, .5)"></div>
+                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/suites-and-rooms/imperial-suite/imperial-01.jpg">
+                    </div>
+                    <!--<div class="featured-content">
+                        <img alt="destaque 2" src="<?php //echo "$basePath"; ?>images/imperial/48077336.jpg">
                     </div>
                     <div class="featured-content">
-                        <img alt="destaque 2" src="<?php echo "$basePath"; ?>images/imperial/48077336.jpg">
-                    </div>
-                    <div class="featured-content">
-                        <img alt="destaque 3" src="<?php echo "$basePath"; ?>images/imperial/48077343.jpg">
-                    </div>
+                        <img alt="destaque 3" src="<?php //echo "$basePath"; ?>images/imperial/48077343.jpg">
+                    </div>-->
                 </div>
             </div>
         </article>

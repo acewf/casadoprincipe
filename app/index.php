@@ -21,6 +21,10 @@
             $pos = strpos($mystring, $findme);
             $lang = substr($mystring, 0,$pos+1);
             $Adress = new AdressChecker();
+            if ($lang!=='en' && $lang!=='pt') {
+                $lang='en/';
+            }
+            
             $pathObj = $Adress->getPhpToUrl('');
         ?>
         <?php include(dirname(__FILE__).'/includes/head/'.$pathObj->headfile.'.php'); ?>

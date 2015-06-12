@@ -35,7 +35,8 @@ define(['approominfo'], function(appmenu) {
     		var mcontent;
     		function completeloadContent(ev){
 		    	$('ul.room-choose').html(mcontent.data);
-		    	$('ul.room-choose li a').click(function(){
+		    	function goRoom(){
+		    		console.log('ta a bloquear');
 			        var href = $(this).attr('href');
 			        var datarooms = $(this).attr('data-rooms');
 			        event.preventDefault();
@@ -89,7 +90,9 @@ define(['approominfo'], function(appmenu) {
 			            m = null;
 			        }        
 			        m.addEventListener('complete',completeload);
-			    });
+			    }
+				$('ul.room-choose li a').click(goRoom);
+				//$('info-room-featured a').click(goRoom);
 		    }
 		    var href = window.location.href;
 		    var n = href.indexOf(window.location.origin);

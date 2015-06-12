@@ -15,7 +15,7 @@ class AdressChecker
         $basefolder = '';
         $this->myPaths = array();   
         $this->generatePath($basefolder.'','home-ui','',null,'head-index');
-        $this->generatePath($basefolder.'en','home-ui','',null,'head-index');
+        $this->generatePath($basefolder.'en/','home-ui','',null,'head-index');
         $this->generatePath($basefolder.'en/home','home-ui','',null,'head-index');
         $this->generatePath($basefolder.'en/casa-do-principe','casa-do-principe-ui','en/',null,'head-casa-do-principe');
         $this->generatePath($basefolder.'en/facilities-services','facilities-services-ui','en/',null,'head-casa-do-principe');
@@ -32,7 +32,7 @@ class AdressChecker
         $this->generatePath($basefolder.'en/suites-rooms/premium','quarto-ui-info','en/rooms/premium/','sub-menu-premium','head-index');
         $this->generatePath($basefolder.'en/suites-rooms/historic','quarto-ui-info','en/rooms/historic/','sub-menu-historic','head-index');
         // ------------ Imperial ------------- //
-        $this->generatePath($basefolder.'en/suites-rooms/imperial/queen','quarto-detail-ui','en/rooms/imperial/','sub-menu-imperial-suite-childs','head-index');
+        $this->generatePath($basefolder.'en/suites-rooms/imperial/king','quarto-detail-ui','en/rooms/imperial/','sub-menu-imperial-suite-childs','head-index');
         // ------------ Royal ------------- //
         $this->generatePath($basefolder.'en/suites-rooms/royal/queen','quarto-detail-ui-queen','en/rooms/royal/','sub-menu-royal-childs','head-index');
         $this->generatePath($basefolder.'en/suites-rooms/royal/palace','quarto-detail-ui-palace','en/rooms/royal/','sub-menu-royal-childs','head-index');

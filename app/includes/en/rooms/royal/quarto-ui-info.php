@@ -6,6 +6,11 @@ if (!isset($basePath)) {
     } else {
         $basePath = 'http://'.$_SERVER['SERVER_NAME'].$folder; 
     }
+     $findme = '/';
+    $mystring = $_SERVER['HTTP_REFERER'];
+    $mystring = substr($mystring, strlen($basePath));
+    $pos = strpos($mystring, $findme);
+    $lang = substr($mystring, 0,$pos+1);
 }
 ?>
 
@@ -17,13 +22,20 @@ if (!isset($basePath)) {
                     <div class="featured-content">
                         <div class="info-room-featured">
                             <h3>Queen D. Estefânia</h3>
-                            <p>Spacious bedroom with lounge area, balcony overlooking the Príncipe Real garden, with three large windows that fill the room with natural light, creating a bright but relaxing atmosphere.</p>
-                            <a href="<?php echo "$basePath"; ?>suites-rooms/royal" target="_self"><button>SEE DETAILS</button></a>
-                        </div>                    
-                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/royal/48077145.jpg">
+                            <p>Spacious bedroom with seating and relaxing area, three large windows with balcony overlooking the Botanical Garden trees, create a fresh and relaxing ambience – you can listen to the birds even though in the center of Lisbon.</p>
+                            <a href="<?php echo $basePath.$lang; ?>suites-rooms/royal/queen" target="_self"><button>SEE DETAILS</button></a>
+                        </div>
+                        <div class="transparent-shadow"></div>
+                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/suites-and-rooms/royal-suits/queen-d-estefania/royal-estefania-01.jpg">
                     </div>
                     <div class="featured-content">
-                        <img alt="destaque 2" src="<?php echo "$basePath"; ?>images/royal/48077149.jpg">
+                        <div class="info-room-featured">
+                            <h3>Palace Room</h3>
+                            <p>Spacious bedroom with lounge area, two large windows facing the Príncipe Real garden, creating a fresh and relaxing palatial ambience.</p>
+                            <a href="<?php echo $basePath.$lang; ?>suites-rooms/royal/palace" target="_self"><button>SEE DETAILS</button></a>
+                        </div>
+                        <div class="transparent-shadow"></div>
+                        <img alt="destaque 2" src="<?php echo "$basePath"; ?>images/suites-and-rooms/royal-suits/palace-suite/royal-palace-01.jpg">
                     </div>
                 </div>
             </div>

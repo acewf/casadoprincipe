@@ -13,5 +13,5 @@ if (!isset($basePath)) {
     $lang = substr($mystring, 0,$pos+1);
 }
 ?>
-<li><a href="<?php echo $basePath.$lang; ?>suites-rooms/imperial/queen">QUEEN D. ESTEFÂNIA</a></li>
+<li><a href="<?php echo $basePath.$lang; ?>suites-rooms/imperial/king">King D. Pedro V Suite</a></li>
 <li class="active"><span></span><a href="<?php echo $basePath.$lang; ?>suites-rooms">Imperial Suite</a></li>  

@@ -21,12 +21,13 @@ define(['gallery'], function(gallery) {
             $('ul.room-choose').addClass('show-childs');
             $('ul.suite').removeClass('menupos');
             $('.logo').removeClass('small');
-            $('.fotorama').fotorama();
+            //$('.fotorama').fotorama();
+            /*
             $('.fotorama').load([
               {img: 'images/destaque-room.png', thumb: 'images/thumbs/destaque-room.png'},
               {img: 'images/dsc_0281.png', thumb: 'images/thumbs/destaque-room.png'}
             ]);
-
+            */
             $('footer').hide();
         };
 
