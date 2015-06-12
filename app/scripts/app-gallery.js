@@ -3,13 +3,13 @@
 ////Date: 05/05/2015
 ////Company:euro-m.pt
 //////////////  AREAS DE JOGO  /////////////////////////
-define(['gallery','contentloader'], function(gallery,contentloader) {
+define(['gallery'], function(gallery) {
     'use strict';
     //Uses extras in here.
     //var ContentLoader;
     
     var mcontent;
-    console.log(contentloader)
+    //console.log(contentloader)
     function APPgallery(){
         // ContentLoader = (ContentLoader)?ContentLoader=ContentLoader:null;
         

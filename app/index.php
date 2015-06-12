@@ -9,12 +9,17 @@
             require_once dirname(__FILE__).'/includes/address-filter.php';
             //$folder = '/preview/';
             $folder = '/';
+            $lang = '';
             if($_SERVER['SERVER_NAME']==='127.0.0.1'){
                 $basePath = 'http://'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].$folder; 
             } else {
-                $basePath = 'http://'.$_SERVER['SERVER_NAME'].$folder; 
+                $basePath = 'http://'.$_SERVER['SERVER_NAME'].$folder;
             }
-                      
+            $findme = '/';
+            $mystring = $_SERVER['REQUEST_URI'];
+            $mystring = substr($mystring, 1);
+            $pos = strpos($mystring, $findme);
+            $lang = substr($mystring, 0,$pos+1);
             $Adress = new AdressChecker();
             $pathObj = $Adress->getPhpToUrl('');
         ?>
@@ -47,8 +52,8 @@
                     <button class="close"></button>
                     <h3>Select Language</h3>
                     <ul>
-                        <li><a href="en">English</a></li>
-                        <li><a href="pt">Português</a></li>
+                        <li><a href="<?php echo "$basePath"; ?>en">English</a></li>
+                        <li><a href="<?php echo "$basePath"; ?>pt">Português</a></li>
                     </ul>
                 </nav>
             </div>
@@ -60,7 +65,7 @@
                 <header>
                     <div class="left-block">
                         <div class="logo">
-                            <a href="<?php echo "$basePath"; ?>home">
+                            <a href="<?php echo $basePath.$lang; ?>home">
                                 <img alt="logo site" id="logo-big" src="<?php echo "$basePath"; ?>images/logo-size140.png">
                                 <img alt="logo site" id="logo-small" src="<?php echo "$basePath"; ?>images/logo-sizesmall.png">
                             </a>

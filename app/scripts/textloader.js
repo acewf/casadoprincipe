@@ -67,7 +67,6 @@ Loader.prototype.processData = function(data){
     this.data = data.target.response;
     var event;
     var eventName = 'complete';
-    console.log("--- IE --");
     this.dispatchEvent(eventName);
 };
 Loader.prototype.handler = function(data){
@@ -98,11 +97,9 @@ Loader.prototype.dispatchEvent = function(eventName){
     if(document.createEvent){
         event = document.createEvent('HTMLEvents');
         event.initEvent(eventName,true,true);
-        console.log('A');
     }else if(document.createEventObject){// IE < 9
         event = document.createEventObject();
         event.eventType = eventName;
-         console.log('b');
     } else {
         console.log('c');
     }

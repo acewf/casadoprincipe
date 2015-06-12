@@ -13,10 +13,10 @@ if (!isset($basePath)) {
         <article class="image-frame">
             <div class="frame-inside" data-transition="crossfade">
                 <div class="fotorama" data-allowfullscreen="native" data-allowfullscreen="true" data-width="100%" data-fit="contain" data-ratio="42/23" data-nav="thumbs" data-fit="contain" data-thumbheight="96">
-                    <a href="images/destaque-room.png"><img src="images/thumbs/destaque-room.png" width="144" height="96"></a>
-                    <a href="images/foto-varanda.jpg"><img src="images/thumbs/foto-varanda.jpg" width="144" height="96"></a>
-                    <a href="images/streetview.jpg"><img src="images/thumbs/streetview.jpg" width="144" height="96"></a>
-                    <a href="images/destaque-room.png"><img src="images/thumbs/destaque-room.png" width="144" height="96"></a>
+                    <a href="<?php echo "$basePath"; ?>images/destaque-room.png"><img src="<?php echo "$basePath"; ?>images/thumbs/destaque-room.png" width="144" height="96"></a>
+                    <a href="<?php echo "$basePath"; ?>images/foto-varanda.jpg"><img src="<?php echo "$basePath"; ?>images/thumbs/foto-varanda.jpg" width="144" height="96"></a>
+                    <a href="<?php echo "$basePath"; ?>images/streetview.jpg"><img src="<?php echo "$basePath"; ?>images/thumbs/streetview.jpg" width="144" height="96"></a>
+                    <a href="<?php echo "$basePath"; ?>images/destaque-room.png"><img src="<?php echo "$basePath"; ?>images/thumbs/destaque-room.png" width="144" height="96"></a>
                 </div>
             </div>
         </article>

@@ -60,7 +60,6 @@ define(['appmenu'], function(appmenu) {
         $('.sub-menu .suite').html('');
         $('.sub-menu .room-choose').html('');
 
-
         var loadhome = new ContentLoader();
         loadhome.click(this);
     }
@@ -105,9 +104,10 @@ define(['appmenu'], function(appmenu) {
             menucontent.addEventListener('complete',completeloadContent);
                         
             pagecontent = new ContentLoader();
+            pagecontent.addEventListener('complete',completeloadContent);
             pagecontent.loadAllContent(data.path);
             pagecontent.loadAHeader(data.headfile);
-            pagecontent.addEventListener('complete',completeloadContent);
+            
            
         }        
         filestourl.addEventListener('complete',Subcompleteload);

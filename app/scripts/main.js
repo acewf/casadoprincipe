@@ -9,9 +9,9 @@ require(['app', 'jquery', 'picturefill'], function (app) {
     pagModulesRef['quarto-ui-info'] = {module:'approominfo'};
     pagModulesRef['quarto-detail-ui'] = {module:'approomdetail'};
     pagModulesRef['quarto-detail-ui-royal'] = {module:'approomdetail'};
-    pagModulesRef['casa-do-principe-ui'] = {module:'casadoprincipe'};
-    pagModulesRef['facilities-services-ui'] = {module:'facilitiesservices'};
-    pagModulesRef['history-ui'] = {module:'history'};
+    pagModulesRef['en/casa-do-principe-ui'] = {module:'casadoprincipe'};
+    pagModulesRef['en/facilities-services-ui'] = {module:'facilitiesservices'};
+    pagModulesRef['en/history-ui'] = {module:'history'};
     pagModulesRef['gallery-ui'] = {module:'gallery'};
     pagModulesRef['location-ui'] = {module:'location'};
     pagModulesRef['personalize-ui'] = {module:'personalize'};
