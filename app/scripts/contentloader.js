@@ -103,25 +103,15 @@ function ContentLoader(res){
 
         console.log('HREF:::',href);
         console.log('NEW res::',res);
-        /*
-        if (Modernizr.history) {
-             // pushState is supported!
-             //console.log('PUSH STATE... SUPPORTED...',history);
-             //history.pushState('', 'Title', '/'+res);
-             //history.pushState('', 'New URL: '+res, res);
-        } else {
-            console.log('PUSH STATE... NOT SUPPORTED...');
-        }
-        */
         
-        if(window.history.pushState){
+        if(window.history && window.history.pushState){
             console.log('USE PUSH STATE');
+            console.log('Enderecos',res);
             window.history.pushState('', 'Title', '/'+res);
         } else {
-            console.log('USE LOCATION');
-            window.location.href = res;
+            console.log('USE LOCATION...',href);
+            window.location.href = href;
         }
-        
         
         var mcontent;
         var m = new Loader(window.location.origin+'/includes/address-filter-output.php?url='+res);

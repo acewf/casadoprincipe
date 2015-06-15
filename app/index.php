@@ -45,6 +45,7 @@
         <link rel="stylesheet" href="<?php echo "$basePath"; ?>bower_components/bootstrap-datepicker-master/dist/css/bootstrap-datepicker3.standalone.css">
         <!-- endbuild -->
         <!-- build:css styles/main.css -->
+        <link rel="stylesheet" href="<?php echo "$basePath"; ?>styles/responsive.css">
         <link rel="stylesheet" href="<?php echo "$basePath"; ?>styles/main.css">
         <link rel="stylesheet" href="<?php echo "$basePath"; ?>styles/fotorama.css">
         <link rel="stylesheet" href="<?php echo "$basePath"; ?>styles/fonticon.css">

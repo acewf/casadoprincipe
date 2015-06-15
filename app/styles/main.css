@@ -1468,6 +1468,9 @@ div.img-content img{
   max-width:490px;
   margin-top:50px;
 }
+.generic-room .app-history.inside-room .description-location{
+  margin-top: 0;
+}
 
 .app-history.inside-room .services{
   max-width:400px;
@@ -1756,6 +1759,7 @@ ul.choose-rooms li a{
 }
 .inside-detail .group-text-img .img-content{
   overflow:inherit;
+  min-height: 1000px;
 }
 .contact ul{
   list-style: none;
