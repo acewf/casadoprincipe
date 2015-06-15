@@ -21,6 +21,7 @@ define(['location'], function(gallery) {
             $('ul.suite').removeClass('menupos');
             $('.logo').removeClass('small');
             $('footer').show();
+            $('.box-show-calculate-route').hide();
             $('#originfield').click(function(){
                 if ($(this).val()=='Local Origem') {
                     $(this).val('');
@@ -40,9 +41,13 @@ define(['location'], function(gallery) {
             $('.box-calculate-route button').click(function(){
                 $('.location section.content').addClass('show-address');
             });
+            $('.box-show-calculate-route').click(function(){
+                $('.location section.content').addClass('show-address');
+            });
             $('.origenbox button.close').click(function(){
-                var boxElem = $('.box-calculate-route');
-                boxElem.show();
+                //var boxElem = $('.box-calculate-route');
+                //boxElem.show();
+                $('.box-show-calculate-route').show();
                 $('.location section.content').removeClass('show-address');
             });
             
@@ -52,7 +57,6 @@ define(['location'], function(gallery) {
             var elemt = null;
             var mapDiv;
             GoogleMapsLoader.load(function(google) {
-                console.log('maps api loaded');
                 var directionsDisplay;
                 var directionsService = new google.maps.DirectionsService();
                 directionsDisplay = new google.maps.DirectionsRenderer();

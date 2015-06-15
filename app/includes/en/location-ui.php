@@ -21,6 +21,9 @@ if (!isset($basePath)) {
             <div class="actual-address">Casa Do Principe<br> Praça do Príncipe Real, n. 23 – 1º</div>
             <button>Calculate Route</button>
         </article>
+        <article class="box-show-calculate-route">
+            <div class="icon icon-inline icon-angle-left"></div>
+        </article>
         <div id="map-canvas"></div>
     </section>
     <section class="app-history inside-room">

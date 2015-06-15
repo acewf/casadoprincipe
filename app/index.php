@@ -21,9 +21,12 @@
             $pos = strpos($mystring, $findme);
             $lang = substr($mystring, 0,$pos+1);
             $Adress = new AdressChecker();
+            $booktext = 'BOOK A ROOM';
 
             if ($lang!=='en' && $lang!=='en/' && $lang!=='pt' && $lang!=='pt/') {
                 $lang='en/';
+            } else {
+                $booktext = 'RESERVAS';
             }
             
             $pathObj = $Adress->getPhpToUrl('');
@@ -83,7 +86,7 @@
                     </div><div class="right-block">
                         <div class="options">
                             <a href="https://www.secure-hotel-booking.com/smart/Casa-do-Principe/2E3B/en/" target="_blank">
-                            <button id="bookroom" data-open="0" class="booking">BOOK A ROOM</button></a><div id="open-lang" data-open="0" class="lang"><?php 
+                            <button id="bookroom" data-open="0" class="booking"><?php echo $booktext; ?></button></a><div id="open-lang" data-open="0" class="lang"><?php 
                                 if($lang=='en' || $lang=='en/'){
                                     echo "English";
                                 } else {

@@ -1427,6 +1427,22 @@ div.img-content img{
    transform: translate(-50%,50%);
   -webkit-transform: translate(-50%,50%);
 }
+.location .box-show-calculate-route{
+  position: absolute;
+  right: 20px;
+  margin-top:20px;
+  z-index: 20;
+  padding: 10px;
+  display: inline-block;
+  background-color: #333232;
+  color: #fff;
+  border-radius: 2px;
+  height: 50px;
+  cursor:pointer;
+}
+.location .box-show-calculate-route .icon-inline{
+  margin-left: 0;
+}
 .location .box-calculate-route div.actual-address{
   width: 215px;
   font-family: 'Open Sans', sans-serif;
