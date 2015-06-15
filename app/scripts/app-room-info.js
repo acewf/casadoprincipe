@@ -18,7 +18,7 @@ define(['approominfo'], function(appmenu) {
 		    $('ul.suite').removeClass('menupos');
 		    $('.fotorama').fotorama();
 		    $('footer').show();
-		    $('html,body').animate({scrollTop:60},400);
+		    $('html,body').animate({scrollTop:0},400);
 
 		    var delayer=0;
             $('section.content article').delay(200).each(function(){

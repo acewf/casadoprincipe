@@ -57,7 +57,7 @@ define(['location'], function(gallery) {
                 var directionsService = new google.maps.DirectionsService();
                 directionsDisplay = new google.maps.DirectionsRenderer();
                 var mapOptions = {
-                  center: new google.maps.LatLng(38.7167952,-9.148363),
+                  center: new google.maps.LatLng(38.7170702,-9.1489789),
                   zoom: 18,
                   scaleControl: false,
                   mapTypeControl: false,
@@ -67,7 +67,7 @@ define(['location'], function(gallery) {
                 var el = document.getElementById('map-canvas');
                 var map = new google.maps.Map(el, mapOptions);
                 var marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(38.7167952,-9.148363),
+                    position: new google.maps.LatLng(38.7170702,-9.1489789),
                     icon: 'http://www.casadoprincipe.pt/images/position-marker.png',
                     map: map
                 });
@@ -90,8 +90,6 @@ define(['location'], function(gallery) {
                     };
                     if(elemt!=null){
                         var matrix = mapDiv.style.transform.match(/-?[\d\.]+/g);
-                        console.log(mapDiv.style.transform.match(/-?[\d\.]+/g));
-                        console.log(matrix.match,'-----A_S______SSS___');
                         var values = matrix.match(/-?[\d\.]+/g);
                         var xOff = parseFloat(values[4]);
                         var yOff = parseFloat(values[5]);
@@ -140,7 +138,7 @@ define(['location'], function(gallery) {
             boxElem.hide();
             var request = {
                 origin:$('#originfield').val(),
-                destination:'PRAÇA DO PRÍNCIPE REAL, 23 LISBOA',
+                destination:'Praça Príncipe Real 23, Lisboa',
                 travelMode: google.maps.TravelMode.DRIVING
             };
             directionsService.route(request, function(result, status) {

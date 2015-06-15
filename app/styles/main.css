@@ -1112,11 +1112,11 @@ nav.sub-menu ul li.active a p:last-child{
   -webkit-transform:translate(0px,16px);
   transform:translate(0px,16px);
 }
-nav.sub-menu ul li.active a:hover p:first-child{
+nav.sub-menu ul li.active:hover a p:first-child{
   -webkit-transform:translate(0px,-16px);
   transform:translate(0px,-16px);
 }
-nav.sub-menu ul li.active a:hover p:last-child{
+nav.sub-menu ul li.active:hover a p:last-child{
   -webkit-transform:translate(0px,0px);
   transform:translate(0px,0px);
 }
@@ -1200,6 +1200,7 @@ section.app-history,
 }
 .page-content.history .app-history.inside-room .img-content{
   max-height: 1087px;
+  min-height: 1000px;
   overflow:initial;
 }
 #AVP{
@@ -1668,8 +1669,8 @@ button#bookit{
 /* ------- SUITES DETAILS --------  */
 .back-detail-room{
   position: absolute;
-  right:20px;
-  z-index:50;
+  right: 20px;
+  z-index: 999;
   font-size:.8em;
   cursor:pointer;
   top: 40px;
@@ -1932,14 +1933,16 @@ section.content .origenbox input,
 {
   font-family:"estilo-pro",sans-serif;
    font-size:1.87em;
-   font-weight:300;
+   font-weight:400;
+   text-transform:lowercase;
    line-height:1;
 }
 .center-content h3{
   text-align: left;
   font-family:"estilo-pro",sans-serif;
    font-size:1.75em;
-   font-weight:300;
+   font-weight:400;
+   text-transform:lowercase;
    line-height:1;
 }
 .description-location p{

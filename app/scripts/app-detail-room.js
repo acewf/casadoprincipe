@@ -19,7 +19,7 @@ define(['approomdetail'], function() {
 		    $('ul.suite').removeClass('menupos');
 		    $('.fotorama').fotorama();
 		    $('footer').show();
-            $('html,body').animate({scrollTop:60},400);
+            $('html,body').animate({scrollTop:0},400);
 
 		    var delayer=0;
             $('section.content article').delay(200).each(function(){
@@ -53,7 +53,7 @@ define(['approomdetail'], function() {
             	$('.content.room-detail').addClass('slide-to-left');
             	$('.inside-detail').addClass('slide-from-right');
             	$('.page-content').animate({ 'height': $('.inside-detail').outerHeight(true) + 'px' });
-            	$('html,body').animate({scrollTop:60},400);
+            	$('html,body').animate({scrollTop:0},400);
             	$('.room-choose').fadeOut();
             });
             $('.back-detail-room').click(function(){
@@ -95,16 +95,16 @@ define(['approomdetail'], function() {
     	this.pageChangeListener = function(){
     		$('.rooms-group section.rooms-view').hide();
             $('.rooms-group #page1').fadeIn();
-    		$('.choose-rooms li a').click(function(){
+    		$('.choose-rooms li a').click(function(event){
     			var target = event.target;
+                event.preventDefault();
+                event.stopPropagation();
     			$('.choose-rooms li').removeClass('actived');
     			$(target.parentNode).addClass('actived');
-                event.preventDefault();
                 var id = this.getAttribute('data-pageid');
-
                 $('.rooms-group section.rooms-view').fadeOut();
                 $('.rooms-group #'+id).delay(200).fadeIn();
-
+                return false;
             });
     	};
     	this.destroy = function(){

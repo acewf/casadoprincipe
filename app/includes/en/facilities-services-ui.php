@@ -14,17 +14,12 @@ if (!isset($basePath)) {
             <div class="frame-inside"data-transition="crossfade">
                 <div class="fotorama fotorama__wrap fotorama__wrap--css3 fotorama__wrap--slide fotorama__wrap--no-controls" data-autoplay="true" data-nav="false" data-arrows="true" data-click="true" data-swipe="true" data-allowfullscreen="true" data-loop="true" data-stopautoplayontouch="false"  data-width="100%" data-ratio="1432/577">
 
-                    <div class="featured-content">
-                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/slider-casa-do-principe/01.jpg">
-                    </div>
+                    
                     <div class="featured-content">
                         <img alt="destaque 2" src="<?php echo "$basePath"; ?>images/slider-casa-do-principe/02.jpg">
                     </div>
                     <div class="featured-content">
                         <img alt="destaque 3" src="<?php echo "$basePath"; ?>images/slider-casa-do-principe/03.jpg">
-                    </div>
-                    <div class="featured-content">
-                        <img alt="destaque 4" src="<?php echo "$basePath"; ?>images/slider-casa-do-principe/04.jpg">
                     </div>
                     <div class="featured-content">
                         <img alt="destaque 5" src="<?php echo "$basePath"; ?>images/slider-casa-do-principe/05.jpg">
@@ -37,6 +32,12 @@ if (!isset($basePath)) {
                     </div>
                     <div class="featured-content">
                         <img alt="destaque 8" src="<?php echo "$basePath"; ?>images/slider-casa-do-principe/08.jpg">
+                    </div>
+                    <div class="featured-content">
+                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/slider-casa-do-principe/01.jpg">
+                    </div>
+                    <div class="featured-content">
+                        <img alt="destaque 4" src="<?php echo "$basePath"; ?>images/slider-casa-do-principe/04.jpg">
                     </div>
                 </div>
             </div>

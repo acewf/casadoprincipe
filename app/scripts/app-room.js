@@ -16,7 +16,7 @@ define(['approom'], function(appmenu) {
 		    $('ul.suite').addClass('menupos');
 		    $('.fotorama').fotorama();
 		    $('footer').show();
-		    $('html,body').animate({scrollTop:60},400);
+		    $('html,body').animate({scrollTop:0},400);
 		    $('.fotorama').on('fotorama:show',function(){
 		    	console.log('--- Foto Changed ---');
 		    });

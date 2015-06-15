@@ -73,7 +73,7 @@ if (!isset($basePath)) {
             </div>
         </article>
         <article class="reasons">
-            <h2>numa das zonas mais vibrantes e históricas da cidade</h2>
+            <h2>Localizado numa das zonas mais vibrantes e históricas da cidade</h2>
             <div class="description"><p>A Casa do Príncipe é um B&amp;B de charme no centro de Lisboa, numa das zonas mais vibrantes e históricas da cidade, mesmo em frente ao Jardim do Príncipe Real.
 Este íntimo e acolhedor Bed &amp; Breakfast, com os seus quartos espaçosos e cheios de sol, vai fazer com que se sinta em casa, mas com o conforto e a qualidade de um hotel. A sua localização privilegiada deixa-o a uma curta distância das lojas mais arrojadas e modernas, atracções turísticas, restaurantes de referência e de tudo aquilo que faz com que Lisboa seja o segredo melhor guardado da Europa.
 </p></div>
@@ -116,7 +116,7 @@ Este íntimo e acolhedor Bed &amp; Breakfast, com os seus quartos espaçosos e c
         </article>
         <article class="reasons">
             <!--the ultimate destination for your Lisbon experience-->
-            <h2>O melhor destino para desfrutar da melhor experiência da cidade de Lisboa</h2>
+            <h2>O melhor destino para desfrutar da sua experiência na cidade de Lisboa</h2>
             <div class="description"><p>A Casa do Príncipe fica no primeiro andar de um elegante e icónico prédio do século XIX, com traços delicados e pormenores que concorrem para fazer deste espaço o sítio por excelência .</p></div>
         </article>
     </section>

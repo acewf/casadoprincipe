@@ -28,8 +28,7 @@ if (!isset($basePath)) {
                   </p>
                 -->
             <div class="description-location">
-                <h2>QUEM FOI ESTE PRÍNCIPE REAL?</h2>
-                <h3>Quem foi este Príncipe Real, cujos rastos se encontram espalhados por Lisboa, e que desvendam a lenda de uma das personagens mais icónicas da História de Portugal?</h3>
+                <h2>Quem foi este Príncipe Real, cujos rastos se encontram espalhados por Lisboa, e que desvendam a lenda de uma das personagens mais icónicas da História de Portugal?</h2>
 
                 <p>
                     O Príncipe Real nasceu no ano de 1837, no século da mudança, onde o progresso e a tradição se combatiam numa batalha que mudou a sociedade. A sua mãe era a Rainha de Portugal, D. Maria II e o seu pai D. Fernando II. Os valores e elevados padrões morais em que nasceu nunca o deixariam e mantê-lo-iam ancorado ao longo da sua vida, tornando-o na bússula moral do país.<br><br>
