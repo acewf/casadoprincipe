@@ -19,6 +19,7 @@ define(['apphome','appmenu'], function(apphome,appmenu) {
             $('.fotorama').fotorama({width: 700,maxwidth: '100%',ratio: 2.51, allowfullscreen: true});
             appmenu.addFotoramEvents();
             var delayer=0;
+            console.log('run put states at home---------');
             $('section.content article').delay(200).each(function(){
                 $(this).delay(delayer).fadeTo(200, 1);
                 delayer+=200;

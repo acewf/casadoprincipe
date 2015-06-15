@@ -140,6 +140,20 @@ Este íntimo e acolhedor Bed &amp; Breakfast, com os seus quartos espaçosos e c
                 console.log(err.message);
             }  
         });
+    } else {
+        var imgs = document.getElementsByClassName('image-frame');
+        imgs[0].style.opacity = '1';
+        var reasons = document.getElementsByClassName('reasons');
+        reasons[0].style.opacity = '1';
+        reasons[1].style.opacity = '1';
+        var showrooms = document.getElementsByClassName('show-rooms');
+        showrooms[0].style.opacity = '1';
+        var room = document.getElementsByClassName('room');
+        for (var i = 0; i < room.length; i++) {
+            room[i].style.opacity = '1';
+        };
+        var history = document.getElementsByClassName('app-history');
+        history[0].style.opacity = '1';  
     }
     </script>
 </div>
