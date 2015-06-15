@@ -66,7 +66,7 @@ define(['approominfo'], function(appmenu) {
 	        function Subcompleteload(ev){
 	        	var data = JSON.parse(subm.data);
 
-	            mcontent = new Loader(window.location.origin+'/includes/submenu/'+data.level+'.php?');
+	            mcontent = new Loader(window.location.origin+'/includes/'+language+'submenu/'+data.level+'.php?');
 		    	mcontent.addEventListener('complete',completeloadContent);
 	            subm.removeEventListener('complete',Subcompleteload);
 	            subm = null;

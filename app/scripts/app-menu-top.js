@@ -99,13 +99,13 @@ define(['appmenu'], function(appmenu) {
         function Subcompleteload(ev){
             var data = JSON.parse(filestourl.data);
             if (data.level!=null) {
-                submenu = new Loader(window.location.origin+'/includes/submenu/'+data.level+'.php?');
+                submenu = new Loader(window.location.origin+'/includes/'+language+'submenu/'+data.level+'.php?');
                 submenu.addEventListener('complete',completeloadSubMenu);
                 filestourl.removeEventListener('complete',Subcompleteload);
                 filestourl = null;
             }
             console.log(data);
-            menucontent = new Loader(window.location.origin+'/includes/submenu/sub-menu-rooms.php');
+            menucontent = new Loader(window.location.origin+'/includes/'+language+'submenu/sub-menu-rooms.php');
             menucontent.addEventListener('complete',completeloadContent);
                         
             pagecontent = new ContentLoader();

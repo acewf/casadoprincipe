@@ -65,7 +65,7 @@
             </div>
             <div id="menu-options" class="overlay yellow">
                 <button class="close"></button>
-                <?php include(dirname(__FILE__).'/includes/top-menu.php'); ?>
+                <?php include(dirname(__FILE__).'/includes/'.$lang.'top-menu.php'); ?>
             </div>
             <div class="main">
                 <header>
@@ -98,10 +98,11 @@
                 $pathObj = $Adress->getPhpToUrl('');
                 $path = $pathObj->path;
                 ?>
-                <?php include(dirname(__FILE__).'/includes/submenu/sub-menu-wrapper.php'); ?>
+                <?php include(dirname(__FILE__).'/includes/'.$lang.'submenu/sub-menu-wrapper.php'); ?>
                 <script type="text/javascript">
                 var contentmodule = 'apphome';
                 contentmodule = '<?php echo $path ?>';
+                var language = '<?php echo $lang; ?>';
                 </script>
                 <?php include(dirname(__FILE__).'/includes/'.$path.'.php'); ?>
             </div><?php include(dirname(__FILE__).'/includes/footer-ui.php'); ?>

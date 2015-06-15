@@ -69,7 +69,7 @@ define(['approom'], function(appmenu) {
 			        loadcont(res);
 			    });
 		    }
-		    mcontent = new Loader(window.location.origin+'/includes/submenu/sub-menu-rooms.php');
+		    mcontent = new Loader(window.location.origin+'/includes/'+language+'submenu/sub-menu-rooms.php');
 		    mcontent.addEventListener('complete',completeloadContent);
 		    $('.logo').addClass('small');
 		    $('ul.suite').addClass('menupos');

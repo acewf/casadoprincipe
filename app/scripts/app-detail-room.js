@@ -84,7 +84,8 @@ define(['approomdetail'], function() {
 		   	var subm = new Loader(window.location.origin+'/includes/address-filter-output.php?url='+res);
 	        function Subcompleteload(){
 	        	var data = JSON.parse(subm.data);
-	            mcontent = new Loader(window.location.origin+'/includes/submenu/'+data.level+'.php?');
+                console.log('language:',language);
+	            mcontent = new Loader(window.location.origin+'/includes/'+language+'submenu/'+data.level+'.php?');
 		    	mcontent.addEventListener('complete',completeloadContent);
 	            subm.removeEventListener('complete',Subcompleteload);
 	            subm = null;

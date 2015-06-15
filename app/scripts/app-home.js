@@ -43,7 +43,7 @@ define(['apphome','appmenu'], function(apphome,appmenu) {
             $('article.show-rooms a').click(function(){
                 var total = $('.sub-menu .suite li').length;
                 if(total===0){
-                    mcontent = new Loader(window.location.origin+'/includes/submenu/sub-menu-rooms.php');
+                    mcontent = new Loader(window.location.origin+'/includes/'+language+'submenu/sub-menu-rooms.php');
                     mcontent.addEventListener('complete',completeloadContent); 
                 }
                 handler.click(this);
