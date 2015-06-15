@@ -99,7 +99,30 @@ function ContentLoader(res){
         event.preventDefault();
         var n = href.indexOf(window.location.origin);
         var res = href.substring(n+window.location.origin.length+1, href.length);
-        window.history.pushState("object or string", "Page Title", "/"+res);
+
+
+        console.log('HREF:::',href);
+        console.log('NEW res::',res);
+        /*
+        if (Modernizr.history) {
+             // pushState is supported!
+             //console.log('PUSH STATE... SUPPORTED...',history);
+             //history.pushState('', 'Title', '/'+res);
+             //history.pushState('', 'New URL: '+res, res);
+        } else {
+            console.log('PUSH STATE... NOT SUPPORTED...');
+        }
+        */
+        
+        if(window.history.pushState){
+            console.log('USE PUSH STATE');
+            window.history.pushState('', 'Title', '/'+res);
+        } else {
+            console.log('USE LOCATION');
+            window.location.href = res;
+        }
+        
+        
         var mcontent;
         var m = new Loader(window.location.origin+'/includes/address-filter-output.php?url='+res);
         function completeload(ev){

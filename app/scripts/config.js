@@ -33,7 +33,6 @@ var require = {
         bootstrapdate: 'bootstrap-datepicker-master/js/bootstrap-datepicker',
         bootstrappickerpt: 'bootstrap-datepicker-master/js/locales/bootstrap-datepicker.pt',
         fotorama: 'fotorama/fotorama',
-        loglevel: 'loglevel/dist/loglevel.min',
         picturefill: 'picturefill/dist/picturefill',
         'bootstrap-datetimepicker': 'bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min',
         parsleyjs: 'parsleyjs/dist/parsley'

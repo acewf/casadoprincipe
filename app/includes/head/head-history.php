@@ -2,10 +2,10 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta charset="utf-8">        
-<link rel="alternate" href="http://www.casadoprincipe.pt/pt/" hreflang="pt-PT"  />
-<link rel="alternate" href="http://www.casadoprincipe.pt/en/" hreflang="en-US" />
+<link rel="alternate" href="http://www.casadoprincipe.pt/pt-pt/" hreflang="pt-PT"  />
+<link rel="alternate" href="http://es.example.com/en-us/" hreflang="en-US" />
 <title>Casa do Príncipe – Guesthouse History – King D. Pedro V</title>
-<meta property="og:image" content="http://www.casadoprincipe.pt/imagens-share/share-home-compressor.png" />
+
 <meta name="author" content="www.euro-m.pt" />
 <meta name="copyright" content="trademark" />
 <meta name="application-name" content="Casa do Principe" />
@@ -17,6 +17,6 @@
 <meta property="og:title" content="Casa&nbsp;do&nbsp;Principe&nbsp;-&nbsp;Premium suites&nbsp;&amp;&nbsp;exquisite&nbsp;rooms&nbsp;in&nbsp;the&nbsp;heart&nbsp;of&nbsp;Lisbon" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://www.casadoprincipe.pt/" />
-<meta property="og:image" content="http://www.casadoprincipe.pt/imagens-share/share-home-compressor.png" />
-<meta property="og:site_name" content="Casa do Principe - Premium suites &amp; exquisite rooms in the heart of Lisbon" />
+<meta property="og:image" content="<?php echo $basePath; ?>images/imagens-share/share-home-compressor.png" />
+<meta property="og:site_name" content="Casa do Príncipe – Guesthouse History – King D. Pedro V" />
 <meta property="og:description" content="Who was this Royal Prince (D. Pedro V) one of the most iconic characters of the Portuguese history, whose traces can be found all over Lisbon city center, namely at the Príncipe Real Garden (Jardim do Príncipe Real)? The story of the Royal Prince (D. Pedro V), who inspired the name our guesthouse, B&B." />

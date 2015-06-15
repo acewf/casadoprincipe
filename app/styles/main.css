@@ -51,6 +51,7 @@ section.content {
   position:relative;
 }
 .location section.content.show-address{
+  -webkit-transform:translate(-330px);
   transform:translate(-330px);
 }
 
@@ -130,6 +131,7 @@ section.content .origenbox{
   right: 0;
   z-index: 10;
   text-align: center;
+  -webkit-transform: translate(330px);
   transform: translate(330px);
   overflow:hidden;
 }
@@ -875,6 +877,7 @@ article  div.description p {
   -webkit-transition: all 400ms ease-out;
 }
 .room:hover .small-frame img{
+  -webkit-transform: translate(-50%, -50%) scale(1.2);
    transform: translate(-50%, -50%) scale(1.2);
 }
 
@@ -918,6 +921,7 @@ article  div.description p {
   position: relative;
   left: 0;
   top: 0;
+  -webkit-transform:none;
   transform:none;
   font-family: 'Open Sans', sans-serif;
   font-size: .94em;
@@ -1105,12 +1109,15 @@ nav.sub-menu ul li.active a p{
   transition: transform 0.1s 0.1s,background-color 0.1s 0.1s;
 }
 nav.sub-menu ul li.active a p:last-child{
+  -webkit-transform:translate(0px,16px);
   transform:translate(0px,16px);
 }
 nav.sub-menu ul li.active a:hover p:first-child{
+  -webkit-transform:translate(0px,-16px);
   transform:translate(0px,-16px);
 }
 nav.sub-menu ul li.active a:hover p:last-child{
+  -webkit-transform:translate(0px,0px);
   transform:translate(0px,0px);
 }
 nav.sub-menu ul li.active:hover a{
@@ -1552,6 +1559,7 @@ div.img-content img{
   width:80%;
   max-width:480px;
   transform:none;
+  -webkit-transform:none;
   left:0;
   top:0;
   position:relative;
@@ -1677,6 +1685,7 @@ button#bookit{
 }
 
 .slide-to-left{
+  -webkit-transform:translate(-100%);
   transform:translate(-100%);
 }
 
@@ -1770,6 +1779,7 @@ ul.choose-rooms li a{
 .contact form a{
     position: relative;
   left: 50%;
+  -webkit-transform: translate(-50%);
   transform: translate(-50%);
 }
 .contact form ul li,

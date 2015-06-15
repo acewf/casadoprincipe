@@ -89,7 +89,9 @@ define(['location'], function(gallery) {
 
                     };
                     if(elemt!=null){
-                        var matrix = mapDiv.style.transform;
+                        var matrix = mapDiv.style.transform.match(/-?[\d\.]+/g);
+                        console.log(mapDiv.style.transform.match(/-?[\d\.]+/g));
+                        console.log(matrix.match,'-----A_S______SSS___');
                         var values = matrix.match(/-?[\d\.]+/g);
                         var xOff = parseFloat(values[4]);
                         var yOff = parseFloat(values[5]);

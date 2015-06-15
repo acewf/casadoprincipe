@@ -2,9 +2,10 @@
 define(function (require) {
     'use strict';
 
+
+    //log = require('loglevel'),
     // load dependencies
     var $ = require('jquery'),
-        log = require('loglevel'),
         components = {},
         self = {};
 
@@ -18,18 +19,19 @@ define(function (require) {
         * App initialization
 	     */
         init: function init() {
-            log.setLevel(0);
-            log.debug('Running jQuery %s', $().jquery);
+            //log.setLevel(0);
+            //log.debug('Running jQuery %s', $().jquery);
 
-            log.debug('');
-            log.debug('Initializing components ...');
+            //log.debug('');
+            //log.debug('Initializing components ...');
 
             for (var key in components) {
                 try {
                     components[key].init();
                 } catch (err) {
-                    log.debug('initialization failed for component \'' + key + '\'');
-                    log.error(err);
+                    console.log(err);
+                    //log.debug('initialization failed for component \'' + key + '\'');
+                    //log.error(err);
                 }
             }
         }
