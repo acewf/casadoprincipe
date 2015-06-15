@@ -77,6 +77,11 @@ define(['appmenu'], function(appmenu) {
         var submenu;
         var menucontent;
         var pagecontent;
+        console.log('popstate Occur:',event);
+        if (event.state==null) {
+            return;
+        };
+
         function completeloadSubMenu(ev){
             $('ul.room-choose').html(submenu.data);
             var handler = new ContentLoader();
