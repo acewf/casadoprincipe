@@ -2,8 +2,8 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta charset="utf-8">        
-<link rel="alternate" href="http://www.casadoprincipe.pt/pt-pt/" hreflang="pt-PT"  />
-<link rel="alternate" href="http://es.example.com/en-us/" hreflang="en-US" />
+<link rel="alternate" href="http://www.casadoprincipe.pt/pt/" hreflang="pt-PT"  />
+<link rel="alternate" href="http://www.casadoprincipe.pt/en/" hreflang="en-US" />
 <title>Casa do Príncipe – Voyages Historic Room, located  at the Lisbon city center, Príncipe Real Garden</title>
 <meta property="og:image" content="http://www.casadoprincipe.pt/imagens-share/share-contacts-compressor.png" />
 <meta name="author" content="www.euro-m.pt" />

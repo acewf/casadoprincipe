@@ -47,12 +47,13 @@ With a privileged location, it faces the well-known Príncipe Real garden and th
     </section>
     <script>
     if (typeof requirejs == 'function') {
-        requirejs(['location'],function(module){
+        requirejs(['location','appmenu'],function(module,appmenu){
             try{
+                appmenu.addModule(module);
                 module.init();
             }catch(err) {
                 console.log(err.message);
-            }  
+            }    
         });
     }
     </script>     

@@ -30,6 +30,9 @@ define(['personalize'], function(gallery) {
                 delayer+=200;
             });
         }
+        this.destroy = function(){
+
+        };
     	this.init = function(){
             this.putStates();
             var handler = new ContentLoader();

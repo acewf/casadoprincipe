@@ -61,12 +61,13 @@ if (!isset($basePath)) {
     </section>
     <script>
     if (typeof requirejs == 'function') {
-        require(['casadoprincipe'],function(module){
+        require(['casadoprincipe','appmenu'],function(module,appmenu){
             try{
+                appmenu.addModule(module);
                 module.init();
             }catch(err) {
                 console.log(err.message);
-            }  
+            }   
         });
     }
     </script>

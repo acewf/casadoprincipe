@@ -38,16 +38,6 @@ if (!isset($basePath)) {
                     <div class="featured-content">
                         <img alt="destaque 8" src="<?php echo "$basePath"; ?>images/slider-casa-do-principe/08.jpg">
                     </div>
-
-                    <!--<div class="featured-content">
-                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/casadoprincipe/48078152.jpg">
-                    </div>
-                    <div class="featured-content">
-                        <img alt="destaque 2" src="<?php echo "$basePath"; ?>images/dsc_0281.jpg">
-                    </div>
-                    <div class="featured-content">
-                        <img alt="destaque 3" src="<?php echo "$basePath"; ?>images/palacio-da-liberdade-interior1.jpg">
-                    </div>-->
                 </div>
             </div>
         </article>
@@ -75,25 +65,18 @@ if (!isset($basePath)) {
                     <li>Daily maid service</li>
                     <li>In-room safe</li>
                     <li>Hairdryer</li>
-
-                    <!--<li>Welcome drink on arrival</li>
-                    <li>LCD TV</li>
-                    <li>Air conditioning</li>
-                    <li>Free WiFi in all accommodation and public areas</li>
-                    <li>Welcome drink on arrival</li>
-                    <li>LCD TV</li>
-                    <li>ir conditioning</li>-->
                 </ul>
         </div>
     </section>
     <script>
     if (typeof requirejs == 'function') {
-        require(['facilitiesservices'],function(module){
+        require(['facilitiesservices','appmenu'],function(module,appmenu){
             try{
+                appmenu.addModule(module);
                 module.init();
             }catch(err) {
                 console.log(err.message);
-            }  
+            }    
         });
     }
     </script>

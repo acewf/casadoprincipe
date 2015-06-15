@@ -21,7 +21,8 @@
             $pos = strpos($mystring, $findme);
             $lang = substr($mystring, 0,$pos+1);
             $Adress = new AdressChecker();
-            if ($lang!=='en' && $lang!=='pt') {
+
+            if ($lang!=='en' && $lang!=='en/' && $lang!=='pt' && $lang!=='pt/') {
                 $lang='en/';
             }
             
@@ -56,8 +57,8 @@
                     <button class="close"></button>
                     <h3>Select Language</h3>
                     <ul>
-                        <li><a href="<?php echo "$basePath"; ?>en">English</a></li>
-                        <li><a href="<?php echo "$basePath"; ?>pt">Português</a></li>
+                        <li><a href="<?php echo "$basePath"; ?>en/">English</a></li>
+                        <li><a href="<?php echo "$basePath"; ?>pt/">Português</a></li>
                     </ul>
                 </nav>
             </div>
@@ -81,7 +82,14 @@
                     </div><div class="right-block">
                         <div class="options">
                             <a href="https://www.secure-hotel-booking.com/smart/Casa-do-Principe/2E3B/en/" target="_blank">
-                            <button id="bookroom" data-open="0" class="booking">BOOK A ROOM</button></a><div id="open-lang" data-open="0" class="lang">English<span></span></div>
+                            <button id="bookroom" data-open="0" class="booking">BOOK A ROOM</button></a><div id="open-lang" data-open="0" class="lang"><?php 
+                                if($lang=='en' || $lang=='en/'){
+                                    echo "English";
+                                } else {
+                                    echo "Português";
+                                }
+
+                            ?><span></span></div>
                         </div>
                     </div>
                 </header>

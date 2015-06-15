@@ -115,36 +115,80 @@ define(['appmenu'], function(appmenu) {
     
     var AppEngine = function(){
         //var instance = this;
+        var activeModule = null;
         this.init = function(){
             console.log('AQUI ARRRANCA APP ENGINE MENU');
         }
+        this.destroy = function(scope){
+
+        }
+        this.removeModule = function(){
+            if (activeModule!=null) {
+                try {
+                    activeModule.destroy();
+                }
+                catch(e){
+                    console.log('error destroy module',e);
+                }                
+            };
+            activeModule = null;
+        }
+        this.addModule = function(module){
+            this.removeModule();
+            activeModule = module;
+        }
+        
         this.btmenu =  document.getElementById('open-menu');
         this.btlang =  document.getElementById('open-lang');
         this.addEvents();
     };
     AppEngine.prototype.addEventListener = function(a,b){
-      this[a] = b;
+        'use strict';
+        if(this.addEventListener){
+            this[a] = b;
+            //this.addEventListener(a,b,false);
+        }else if(this.attachEvent && htmlEvents['on'+a]){// IE < 9
+            this.attachEvent('on'+a,b);
+        }else{
+            this['on'+a]=b;
+        }
     };
     AppEngine.prototype.removeEventListener = function(a){
+      'use strict';
       this[a] = null;
+      b = null;
     };
     AppEngine.prototype.dispatchEvent = function(event){
-     var callFunctionOn = this[event.type];
-      if(callFunctionOn!==undefined){
-        if (!event.preventDefault) {
-          event.preventDefault = function() {
-          event.returnValue = false;
-          };
+        'use strict';
+        var event;
+        if(document.createEvent){
+            event = document.createEvent('HTMLEvents');
+            event.initEvent(eventName,true,true);
+        }else if(document.createEventObject){// IE < 9
+            event = document.createEventObject();
+            event.eventType = eventName;
+        } else {
         }
-        try{
-          callFunctionOn(event);
-        }
-        catch(err){
-          console.log('Error:',err);
-        }
-      } else {
-        console.log('the '+event.type+' listener doesn´t exist');
-      }     
+        event.eventName = eventName;
+        if(this.dispatchEvent){
+            var callFunctionOn = this[event.eventName];
+            if (!(typeof description === 'function')) {
+                return;
+            };
+            try{
+              callFunctionOn(event);
+            }
+            catch(err){
+              console.log('Error:',err);
+            }
+            //this.dispatchEvent(event);
+        }else if(this.fireEvent && htmlEvents['on'+eventName]){// IE < 9
+            this.fireEvent('on'+event.eventType,event);// can trigger only real event (e.g. 'click')
+        }else if(this[eventName]){
+            this[eventName]();
+        }else if(el['on'+eventName]){
+            this['on'+eventName]();
+        }    
     };
     AppEngine.prototype.addEvents = function(){
         var d = $('#menu-options .close');//document.getElementsByClassName('close');
@@ -176,18 +220,6 @@ define(['appmenu'], function(appmenu) {
             var eventD = new Event('mousedown');
             d.dispatchEvent(eventD);
             return;
-            /*
-             var evt;
-             console.log('@photogoNext-#-#');
-            var eventName = 'mousedown';
-            var ms = $(d);
-            console.log(ms)
-            ms.trigger(eventName);
-            ms.trigger('mouseup');            
-            //var eventD = new Event('mousedown');
-            //d.dispatchEvent(evt);
-            //$('.fotorama').show('>');
-            */
         }
     };
     AppEngine.prototype.photogPrev = function(){
@@ -198,21 +230,6 @@ define(['appmenu'], function(appmenu) {
             d.dispatchEvent(eventD);
             return;
         }
-        /*
-        var evt; 
-        var eventName = 'mousedown';
-
-        if(document.createEvent){
-            evt = document.createEvent('HTMLEvents');
-            evt.initEvent(eventName,true,true);
-        }else if(document.createEventObject){// IE < 9
-            event = document.createEventObject();
-            event.eventType = eventName;
-        }
-        event.eventName = eventName;
-        //var eventD = new Event('mousedown');
-        //d.dispatchEvent(evt);
-        */
     };
     AppEngine.prototype.toggleMenu = function(event){
         var target = event.target;

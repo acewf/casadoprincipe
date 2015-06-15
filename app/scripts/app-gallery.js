@@ -34,8 +34,10 @@ define(['gallery'], function(gallery) {
         this.completeloadContent = function(ev){
             console.log('complete....');
             $('.sub-menu .suite').html(mcontent.data);
-        }
+        };
+        this.destroy = function(){
 
+        };
     	this.init = function(){
             this.putStates();
             var handler = new ContentLoader();

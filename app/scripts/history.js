@@ -39,6 +39,9 @@ define(['history'], function(appmenu) {
             mcontent = new Loader(window.location.origin+'/includes/menu/menu-facilities-services.php');
             mcontent.addEventListener('complete',completeloadContent);            
         }
+        this.destroy = function(){
+
+        };
     }
     var appmodule= new APPmodule();
     return appmodule;

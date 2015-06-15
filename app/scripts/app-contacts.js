@@ -35,8 +35,8 @@ define(['contacts'], function() {
                 var directionsDisplay;
                 directionsDisplay = new google.maps.DirectionsRenderer();
                 var mapOptions = {
-                  center: new google.maps.LatLng(38.7166513,-9.1493584),
-                  zoom: 19,
+                  center: new google.maps.LatLng(38.7168245,-9.1484702),
+                  zoom: 18,
                   scaleControl: false,
                   mapTypeControl: false,
                   scrollwheel: false,
@@ -46,7 +46,7 @@ define(['contacts'], function() {
                 var el = document.getElementById('map-canvas');
                 var map = new google.maps.Map(el, mapOptions);
                 var marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(38.7166513,-9.1493584),
+                    position: new google.maps.LatLng(38.7167952,-9.148363),
                     icon: 'http://www.casadoprincipe.pt/images/position-marker.png',
                     map: map
                 });
@@ -111,6 +111,9 @@ define(['contacts'], function() {
                     //console.log('form is ready');
                 }
             });            
+        };
+        this.destroy = function(){
+
         };
     	this.init = function(){
             this.putStates();

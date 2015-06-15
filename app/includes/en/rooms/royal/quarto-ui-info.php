@@ -50,12 +50,13 @@ if (!isset($basePath)) {
     </section>
     <script>
     if (typeof requirejs == 'function') {
-        require(['approominfo'],function(module){
-            try{
-                module.init();
-            }catch(err) {
-                console.log(err.message);
-            }               
+        require(['approominfo','appmenu'],function(module,appmenu){
+                try{
+                    appmenu.addModule(module);
+                    module.init();
+                }catch(err) {
+                    console.log(err.message);
+                }               
         });
     } 
     </script>

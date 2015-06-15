@@ -29,16 +29,19 @@ define(['apphome','appmenu'], function(apphome,appmenu) {
                 delayer+=200;
             });
         }
+        this.destroy = function(){
+
+        };
     	this.init = function(){
             this.putStates();
             var handler = new ContentLoader();
+            var mcontent;
             var completeloadContent = function(ev){
                 $('.sub-menu .suite').html(mcontent.data);
             }
             $('article.show-rooms a').click(function(){
                 var total = $('.sub-menu .suite li').length;
                 if(total===0){
-                     var mcontent;
                     mcontent = new Loader(window.location.origin+'/includes/submenu/sub-menu-rooms.php');
                     mcontent.addEventListener('complete',completeloadContent); 
                 }

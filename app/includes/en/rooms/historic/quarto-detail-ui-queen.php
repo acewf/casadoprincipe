@@ -75,18 +75,6 @@ if (!isset($basePath)) {
                     <li>In-room safe</li>
                     <li>Hairdryer</li>
                     <li>Daily maid service</li>
-
-                    <!--<li>Extra large Queen bed or two twin beds</li>
-                    <li>Balcony overlooking the Príncipe Real garden</li>
-                    <li>Seating and relaxing area</li>
-                    <li>Sofa double bed in the lounge area</li>
-                    <li>Premium bathroom amenities</li>
-                    <li>Size: 45m² /484 sq.ft</li>
-                    <li>Extra large Queen bed or two twin beds</li>
-                    <li>Balcony overlooking the Príncipe Real garden</li>
-                    <li>Seating and relaxing area</li>
-                    <li>Sofa double bed in the lounge area</li>
-                    <li>Premium bathroom amenities</li>-->
                 </ul>
                 <a class="big-size"><h4>About Queen D. Maria II</h4> <div class="icon icon-inline icon-angle-right"></div></a>
             </div>
@@ -177,8 +165,9 @@ if (!isset($basePath)) {
     </section>
     <script>
     if (typeof requirejs == 'function') {
-        var myApp = require(['approomdetail'],function(module){
+        var myApp = require(['approomdetail','appmenu'],function(module,appmenu){
                 try{
+                    appmenu.addModule(module);
                     module.init();
                 }catch(err) {
                     console.log(err.message);

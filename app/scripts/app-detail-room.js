@@ -19,6 +19,7 @@ define(['approomdetail'], function() {
 		    $('ul.suite').removeClass('menupos');
 		    $('.fotorama').fotorama();
 		    $('footer').show();
+            $('html,body').animate({scrollTop:60},400);
 
 		    var delayer=0;
             $('section.content article').delay(200).each(function(){
@@ -53,11 +54,13 @@ define(['approomdetail'], function() {
             	$('.inside-detail').addClass('slide-from-right');
             	$('.page-content').animate({ 'height': $('.inside-detail').outerHeight(true) + 'px' });
             	$('html,body').animate({scrollTop:60},400);
+            	$('.room-choose').fadeOut();
             });
             $('.back-detail-room').click(function(){
             	$('.content.room-detail').removeClass('slide-to-left');
             	$('.inside-detail').removeClass('slide-from-right');
             	$('.page-content').animate({ 'height':$('.content.room-detail').outerHeight(true) + 'px'});
+            	$('.room-choose').fadeIn();
             });   
     	};
     	this.loadPageAndMenu = function(){
@@ -68,6 +71,10 @@ define(['approomdetail'], function() {
 		    	$('ul.room-choose li a').click(function(){
                 	handler.click(this);
             	});
+                $('article.room a').click(function(){
+                    handler.click(this);
+                });
+                
             	$('nav.sub-menu ul li a').removeClass('active');
             	$('a[href^="'+window.location.href+'"]').addClass('active');
 		    }
@@ -99,6 +106,11 @@ define(['approomdetail'], function() {
 
             });
     	};
+    	this.destroy = function(){
+    		/* PUT DEFAULTS VALUES */
+    		console.log('--romm choose--')
+    		$('.room-choose').fadeIn();
+    	}
     	this.init=function(){
     		this.putStates();
     		this.loadPageAndMenu();

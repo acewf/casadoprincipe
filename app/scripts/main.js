@@ -4,18 +4,15 @@ require(['app', 'jquery', 'picturefill'], function (app) {
 
 
     var pagModulesRef = [];
-    pagModulesRef['home-ui'] = {module:'apphome'};
-    pagModulesRef['quarto-ui'] = {module:'approom'};
-    pagModulesRef['quarto-ui-info'] = {module:'approominfo'};
-    pagModulesRef['quarto-detail-ui'] = {module:'approomdetail'};
-    pagModulesRef['quarto-detail-ui-royal'] = {module:'approomdetail'};
+    pagModulesRef['en/home-ui'] = {module:'apphome'};
+    pagModulesRef['en/quarto-ui'] = {module:'approom'};
     pagModulesRef['en/casa-do-principe-ui'] = {module:'casadoprincipe'};
     pagModulesRef['en/facilities-services-ui'] = {module:'facilitiesservices'};
     pagModulesRef['en/history-ui'] = {module:'history'};
     pagModulesRef['gallery-ui'] = {module:'gallery'};
-    pagModulesRef['location-ui'] = {module:'location'};
-    pagModulesRef['personalize-ui'] = {module:'personalize'};
-    pagModulesRef['contact-ui'] = {module:'contacts'};
+    pagModulesRef['en/location-ui'] = {module:'location'};
+    pagModulesRef['en/personalize-ui'] = {module:'personalize'};
+    pagModulesRef['en/contact-ui'] = {module:'contacts'};
 
     /* ----------------- ------------------ */
     pagModulesRef['en/rooms/royal/quarto-detail-ui-queen'] = {module:'approomdetail'};
@@ -34,6 +31,36 @@ require(['app', 'jquery', 'picturefill'], function (app) {
     pagModulesRef['en/rooms/historic/quarto-detail-ui-sintra'] = {module:'approomdetail'};
     pagModulesRef['en/rooms/historic/quarto-detail-ui-voyages'] = {module:'approomdetail'};
     pagModulesRef['en/rooms/historic/quarto-ui-info'] = {module:'approominfo'};
+
+
+
+    /* ----------------- PT ------------------ */
+    pagModulesRef['pt/home-ui'] = {module:'apphome'};
+    pagModulesRef['pt/quarto-ui'] = {module:'approom'};
+    pagModulesRef['pt/casa-do-principe-ui'] = {module:'casadoprincipe'};
+    pagModulesRef['pt/facilities-services-ui'] = {module:'facilitiesservices'};
+    pagModulesRef['pt/history-ui'] = {module:'history'};
+    pagModulesRef['pt/location-ui'] = {module:'location'};
+    pagModulesRef['pt/personalize-ui'] = {module:'personalize'};
+    pagModulesRef['pt/contact-ui'] = {module:'contacts'};
+
+    /* ----------------- ------------------ */
+    pagModulesRef['pt/rooms/royal/quarto-detail-ui-queen'] = {module:'approomdetail'};
+    pagModulesRef['pt/rooms/royal/quarto-detail-ui-palace'] = {module:'approomdetail'};
+    pagModulesRef['pt/rooms/royal/quarto-ui-info'] = {module:'approominfo'};
+    /* ----------------- ------------------ */
+    pagModulesRef['pt/rooms/imperial/quarto-detail-ui'] = {module:'approomdetail'};
+    pagModulesRef['pt/rooms/imperial/quarto-ui-info'] = {module:'approominfo'};
+    /* ----------------- ------------------ */
+    pagModulesRef['pt/rooms/premium/quarto-detail-ui-arts'] = {module:'approomdetail'};
+    pagModulesRef['pt/rooms/premium/quarto-detail-ui-lisbon'] = {module:'approomdetail'};
+    pagModulesRef['pt/rooms/premium/quarto-ui-info'] = {module:'approominfo'};
+    /* ----------------- ------------------ */
+    pagModulesRef['pt/rooms/historic/quarto-detail-ui-king'] = {module:'approomdetail'};
+    pagModulesRef['pt/rooms/historic/quarto-detail-ui-queen'] = {module:'approomdetail'};
+    pagModulesRef['pt/rooms/historic/quarto-detail-ui-sintra'] = {module:'approomdetail'};
+    pagModulesRef['pt/rooms/historic/quarto-detail-ui-voyages'] = {module:'approomdetail'};
+    pagModulesRef['pt/rooms/historic/quarto-ui-info'] = {module:'approominfo'};
 
     $(function () {
         $.fn.imagesLoaded = function () {
@@ -67,7 +94,7 @@ require(['app', 'jquery', 'picturefill'], function (app) {
         });
 	    if (contentmodule) {
 	    	console.log('modulo a carregar:',contentmodule);
-	    	requirejs([pagModulesRef[contentmodule].module],function(module){
+	    	requirejs([pagModulesRef[contentmodule].module,'appmenu'],function(module,appmenu){
                 if(module){
                     module.init();
                 } 

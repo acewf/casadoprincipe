@@ -129,12 +129,14 @@ section.content .origenbox{
   position: absolute;
   right: 0;
   z-index: 10;
-  text-align: right;
+  text-align: center;
   transform: translate(330px);
   overflow:hidden;
 }
+#searchlocation,
 section.content .origenbox input{
-  width:180px;
+  width:70%;
+  font-family: 'Open Sans', sans-serif;
 }
 section.content .origenbox button.close{
   left:0;
@@ -1090,7 +1092,26 @@ nav.sub-menu li.active{
   background-color:#F2BA19;
 }
 nav.sub-menu ul li.active a{
+  overflow:hidden;
   color: #1F1F1F;
+  width:100%;
+  height:14px;
+}
+nav.sub-menu ul li.active a p{
+  margin:0;
+  padding:1px;
+  position:absolute;
+   -webkit-transition: -webkit-transform 0.1s 0.1s,background-color 0.1s 0.1s;
+  transition: transform 0.1s 0.1s,background-color 0.1s 0.1s;
+}
+nav.sub-menu ul li.active a p:last-child{
+  transform:translate(0px,16px);
+}
+nav.sub-menu ul li.active a:hover p:first-child{
+  transform:translate(0px,-16px);
+}
+nav.sub-menu ul li.active a:hover p:last-child{
+  transform:translate(0px,0px);
 }
 nav.sub-menu ul li.active:hover a{
   color:#67665E;
@@ -1099,6 +1120,8 @@ nav.sub-menu ul li.active:hover span:before,
 nav.sub-menu ul li.active:hover span:after{
   background-color:#67665E;
 }
+.gallery .fotorama div.fotorama__arr--prev,
+.gallery .fotorama div.fotorama__arr--next,
 .inside-room  .fotorama div.fotorama__arr--prev,
 .inside-room  .fotorama div.fotorama__arr--next {
   display: inherit;
@@ -1206,6 +1229,8 @@ section.app-history,
   width: 100%;
   text-align: center;
 }
+
+#searchlocation,
 .contact form a,  
 .app-history .description a,
 .show-room-description a{
@@ -1215,8 +1240,6 @@ section.app-history,
   border-color: #000;
   display: inline-block;
   padding: 15px 30px;
-  padding-left: 30px;
-  padding-right: 30px;
   font-size: .85em;
   -webkit-transition: background-color 0.1s 0.1s,border-color 0.1s 0.1s;
   transition: background-color 0.1s 0.1s,border-color 0.1s 0.1s;
@@ -1224,6 +1247,15 @@ section.app-history,
   text-decoration: none;
   margin-top: 20px;
   position:relative;
+}
+#searchlocation{
+  padding-top:5px;
+  padding-bottom:5px;
+  margin: 0;
+  margin-top: 2px;
+  margin-bottom:5px;
+  background-color:transparent;
+  text-transform:uppercase;
 }
 .homepage .app-history .description a{
   width:217px;
@@ -1235,6 +1267,7 @@ section.app-history,
 /*
 .show-room-description a:hover
 */
+#searchlocation:hover,
 .app-history.contact form a:hover,
 .info-room-featured a button:hover,
 .app-history .description a:hover,
@@ -1308,7 +1341,6 @@ section.app-history,
  margin-top:0; 
  position:relative;
  text-align:left;
- overflow:hidden;
 }
 .img-content{
   position:relative;
@@ -1316,7 +1348,7 @@ section.app-history,
   overflow:hidden;
 }
 .location .img-content{
-  min-height:650px;
+  min-height:750px;
 }
 div.img-content img{
   width:auto;
@@ -1354,10 +1386,16 @@ div.img-content img{
   position: absolute;
   text-align:center;
 }
+.principe-house .app-history.inside-room .text-content{
+  position:relative;
+}
+.app-history.contact .text-content{
+  position:absolute;
+}
 #directionsPanel{
   direction: rtl !important;
   overflow-y: scroll;
-  height: 580px;
+  height: 510px; 
 }
 #directionsPanel .adp{
   direction: ltr;
@@ -1453,6 +1491,7 @@ div.img-content img{
   line-height: 1;
   text-transform:lowercase;
 }
+.gallery  .fotorama__arr,
 .inside-room  .fotorama__arr{
   background: transparent;
   background-color: rgba(50, 50, 50, 0.32);
@@ -1460,6 +1499,10 @@ div.img-content img{
   width: 47px;
   margin-top: -70px;
 }
+.gallery .fotorama__arr--prev:after,
+.gallery .fotorama__arr--prev:before,
+.gallery .fotorama__arr--next:after,
+.gallery .fotorama__arr--next:before,
 .inside-room .fotorama__arr--prev:after,.inside-room .fotorama__arr--prev:before,
 .inside-room .fotorama__arr--next:after,.inside-room .fotorama__arr--next:before{
     content: '';
@@ -1473,19 +1516,23 @@ div.img-content img{
   -webkit-transition: -webkit-transform 0.1s 0.1s,background-color 0.1s 0.1s;
   transition: transform 0.1s 0.1s,background-color 0.1s 0.1s;
 }
+.gallery .fotorama__arr--prev:before,
 .inside-room .fotorama__arr--prev:before{
   -webkit-transform: translate(0px,70px) rotate(45deg);
   transform: translate(0px,70px) rotate(45deg);
 }
+.gallery .fotorama__arr--prev:after,
 .inside-room .fotorama__arr--prev:after{
     -webkit-transform: translate(0px,70px) rotate(-45deg);
   transform: translate(0px,70px) rotate(-45deg);
 }
+.gallery .fotorama__arr--next:before,
 .inside-room .fotorama__arr--next:before{
   -webkit-transform: translate(5px,70px) rotate(-225deg);
   transform: translate(5px,70px) rotate(-225deg);
 }
-.inside-room .fotorama__arr--next:after{
+.inside-room .fotorama__arr--next:after,
+.gallery .fotorama__arr--next:after{
     -webkit-transform: translate(5px,70px) rotate(-135deg);
   transform: translate(5px,70px) rotate(-135deg);
 }
@@ -1715,7 +1762,7 @@ ul.choose-rooms li a{
 }
 .contact form a,
 .contact form span{
-  display: block;
+  display: inline-block;
   font-family:'Open Sans';
   font-size: 13px;
   margin-left: 5px;
@@ -1738,6 +1785,7 @@ ul.choose-rooms li a{
   border-width: 1px;
   border-color: #000;
 }
+section.content .origenbox input,
 .contact form ul li input{
   padding: 5px;
   min-height: 50px;

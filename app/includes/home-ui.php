@@ -109,11 +109,11 @@ if (!isset($basePath)) {
             </div>
             <section class="rooms-view">
                 <article class="room">
-                    <a href="<?php echo $basePath.$lang; ?>suites-rooms/imperial">
+                    <a href="<?php echo $basePath.$lang; ?>suites-rooms/imperial/king">
                         <div class="small-frame">
                             <img alt="Quarto Imperial" src="<?php echo "$basePath"; ?>images/thumbs-suites-and-rooms/thumb-imperial.jpg">
                         </div>
-                        <h5>Imperial Suite</h5>
+                        <h5>King D. Pedro V Suite</h5>
                     </a>
                 </article><article class="room">
                     <a href="<?php echo $basePath.$lang; ?>suites-rooms/royal">
@@ -155,8 +155,9 @@ if (!isset($basePath)) {
     </section>
     <script>
     if (typeof requirejs == 'function') {
-        requirejs(['apphome'],function(module){
+        requirejs(['apphome','appmenu'],function(module,appmenu){
             try{
+                appmenu.addModule(module);
                 module.init();
             }catch(err) {
                 console.log(err.message);

@@ -46,14 +46,14 @@ if (!isset($basePath)) {
     </section>
     <script>
     if (typeof requirejs == 'function') {
-        requirejs(['gallery'],function(module){
+        requirejs(['gallery','appmenu'],function(module,appmenu){
             try{
+                appmenu.addModule(module);
                 module.init();
             }catch(err) {
                 console.log(err.message);
-            }  
+            }
         });
-        /* 1288/500 */
     }
     </script>
 </div>

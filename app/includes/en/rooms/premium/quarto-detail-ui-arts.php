@@ -79,18 +79,6 @@ if (!isset($basePath)) {
                     <li>In-room safe</li>
                     <li>Hairdryer</li>
                     <li>Daily maid service</li>
-
-                    <!--<li>Extra large Queen bed or two twin beds</li>
-                    <li>Balcony overlooking the Príncipe Real garden</li>
-                    <li>Seating and relaxing area</li>
-                    <li>Sofa double bed in the lounge area</li>
-                    <li>Premium bathroom amenities</li>
-                    <li>Size: 45m² /484 sq.ft</li>
-                    <li>Extra large Queen bed or two twin beds</li>
-                    <li>Balcony overlooking the Príncipe Real garden</li>
-                    <li>Seating and relaxing area</li>
-                    <li>Sofa double bed in the lounge area</li>
-                    <li>Premium bathroom amenities</li>-->
                 </ul>
                 <a class="big-size"><h4>The Royal Prince and the Arts</h4> <div class="icon icon-inline icon-angle-right"></div></a>
             </div>
@@ -101,7 +89,7 @@ if (!isset($basePath)) {
             </div>
             <div class="rooms-types">
                 <ul class="choose-rooms">
-                    <li class="actived"><a data-pageid="page1" href="<?php echo "$basePath"; ?>suites-rooms/imperial/king">IMPERIAL SUITE</a></li>
+                    <li class="actived"><a data-pageid="page1" href="<?php echo $basePath.$lang; ?>suites-rooms/imperial/king">IMPERIAL SUITE</a></li>
                     <li><a data-pageid="page2" href="<?php echo "$basePath"; ?>suites-rooms/royal">ROYAL ROOMS</a></li>
                     <li><a data-pageid="page3" href="<?php echo "$basePath"; ?>suites-rooms/historic">HISTORIC ROOMS</a></li>
                 </ul>
@@ -199,13 +187,14 @@ if (!isset($basePath)) {
     </section>
     <script>
     if (typeof requirejs == 'function') {
-        var myApp = require(['approomdetail'],function(module){
-                try{
-                    module.init();
-                }catch(err) {
-                    console.log(err.message);
-                }  
-            });
+        var myApp = require(['approomdetail','appmenu'],function(module,appmenu){
+            try{
+                appmenu.addModule(module);
+                module.init();
+            }catch(err) {
+                console.log(err.message);
+            }
+        });
     }
     </script>
 </div>

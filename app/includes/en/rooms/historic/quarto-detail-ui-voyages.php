@@ -164,12 +164,13 @@ if (!isset($basePath)) {
     </section>
     <script>
     if (typeof requirejs == 'function') {
-        var myApp = require(['approomdetail'],function(module){
+        var myApp = require(['approomdetail','appmenu'],function(module,appmenu){
                 try{
+                    appmenu.addModule(module);
                     module.init();
                 }catch(err) {
                     console.log(err.message);
-                }  
+                }   
             });
     }
     </script>

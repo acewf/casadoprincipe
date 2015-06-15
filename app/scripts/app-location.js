@@ -41,6 +41,8 @@ define(['location'], function(gallery) {
                 $('.location section.content').addClass('show-address');
             });
             $('.origenbox button.close').click(function(){
+                var boxElem = $('.box-calculate-route');
+                boxElem.show();
                 $('.location section.content').removeClass('show-address');
             });
             
@@ -55,7 +57,7 @@ define(['location'], function(gallery) {
                 var directionsService = new google.maps.DirectionsService();
                 directionsDisplay = new google.maps.DirectionsRenderer();
                 var mapOptions = {
-                  center: new google.maps.LatLng(38.7166513,-9.1493584),
+                  center: new google.maps.LatLng(38.7167952,-9.148363),
                   zoom: 18,
                   scaleControl: false,
                   mapTypeControl: false,
@@ -65,7 +67,7 @@ define(['location'], function(gallery) {
                 var el = document.getElementById('map-canvas');
                 var map = new google.maps.Map(el, mapOptions);
                 var marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(38.7166513,-9.1493584),
+                    position: new google.maps.LatLng(38.7167952,-9.148363),
                     icon: 'http://www.casadoprincipe.pt/images/position-marker.png',
                     map: map
                 });
@@ -123,7 +125,7 @@ define(['location'], function(gallery) {
                     size: new google.maps.Size(71, 71),
                     origin: new google.maps.Point(0, 0),
                     anchor: new google.maps.Point(17, 34),
-                    scaledSize: new google.maps.Size(25, 25)
+                    scaledSize: new google.maps.Size(20, 20)
                   };
                 }
             }  
@@ -136,7 +138,7 @@ define(['location'], function(gallery) {
             boxElem.hide();
             var request = {
                 origin:$('#originfield').val(),
-                destination:'PRAÇA DO PRÍNCIPE REAL,  23 LISBOA',
+                destination:'PRAÇA DO PRÍNCIPE REAL, 23 LISBOA',
                 travelMode: google.maps.TravelMode.DRIVING
             };
             directionsService.route(request, function(result, status) {
@@ -145,6 +147,9 @@ define(['location'], function(gallery) {
                 }
             });
         }
+        this.destroy = function(){
+
+        };
     	this.init = function(){
             this.putStates();
             var handler = new ContentLoader();

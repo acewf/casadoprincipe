@@ -2,8 +2,8 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta charset="utf-8">        
-<link rel="alternate" href="http://www.casadoprincipe.pt/pt-pt/" hreflang="pt-PT"  />
-<link rel="alternate" href="http://es.example.com/en-us/" hreflang="en-US" />
+<link rel="alternate" href="http://www.casadoprincipe.pt/pt/" hreflang="pt-PT"  />
+<link rel="alternate" href="http://www.casadoprincipe.pt/en/" hreflang="en-US" />
 <title>Casa do Príncipe – Elegant Facilities & Premium Services – modern Comfort</title>
 <meta property="og:image" content="http://www.casadoprincipe.pt/imagens-share/share-home-compressor.png" />
 <meta name="author" content="www.euro-m.pt" />
