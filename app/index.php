@@ -23,12 +23,14 @@
             $Adress = new AdressChecker();
             $booktext = 'BOOK A ROOM';
 
+
             if ($lang!=='en' && $lang!=='en/' && $lang!=='pt' && $lang!=='pt/') {
                 $lang='en/';
+            } else if($lang=='en' || $lang=='en/'){
+                $booktext = 'BOOK A ROOM';
             } else {
                 $booktext = 'RESERVAS'; 
-            }
-            
+            }            
             $pathObj = $Adress->getPhpToUrl('');
         ?>
         <?php include(dirname(__FILE__).'/includes/head/'.$pathObj->headfile.'.php'); ?>

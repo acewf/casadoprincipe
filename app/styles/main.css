@@ -2383,9 +2383,9 @@ footer ul li {
 }
 
 footer ul li img {
+  border: none;
   vertical-align: middle;
 }
-
 footer .share-logo {
   padding-left: 20px;
   background-image: url(../images/share-img.png);

@@ -46,7 +46,8 @@ define(['appmenu'], function(appmenu) {
         var m = $(".share-logo");
         var l = $(event.target);
         if ( (m[0]!==l[0]) && (!$('.share-elements').hasClass('hide'))) {
-            if(l[0].className!='share-elements'){
+            console.log(l.hasClass('share-elements'));
+            if(!l.hasClass('share-elements')){
                 $('.share-elements').addClass('hide');
             }
         }
@@ -147,6 +148,8 @@ define(['appmenu'], function(appmenu) {
         this.addModule = function(module){
             this.removeModule();
             activeModule = module;
+            //console.log('stButtons.locateElements();',stButtons);
+            stButtons.locateElements();
         }
         
         this.btmenu =  document.getElementById('open-menu');
