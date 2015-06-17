@@ -28,7 +28,6 @@ define(['approomdetail'], function() {
             });
 		    
 		    $('#bookit').click(function(){
-		    	event.preventDefault();
 		    	var urlWithDate = 'http://www.secure-hotel-booking.com/Casa-do-Principe/2E3B/search?hotelId=16384';//$("#AVP").attr("action");
 			    var dataChegada = $('#AVP_arrivalDate').val();
 				var dataSaida =  $('#AVP_exitDate').val();
@@ -47,6 +46,12 @@ define(['approomdetail'], function() {
 				  console.log('Form Sended');
 				});
 				$('#AVP').submit();
+                if (event.preventDefault) {
+                    event.preventDefault();
+                } else {
+                    event.returnValue = false;
+                    return false;
+                }
             });
 
             $('.big-size').click(function(){
@@ -79,13 +84,19 @@ define(['approomdetail'], function() {
             	$('a[href^="'+window.location.href+'"]').addClass('active');
 		    }
 		    var href = window.location.href;
-		    var n = href.indexOf(window.location.origin);
-			var res = href.substring(n+window.location.origin.length+1, href.length);
-		   	var subm = new Loader(window.location.origin+'/includes/address-filter-output.php?url='+res);
+            var baseURL = null;
+            if (window.location.origin) {
+                baseURL = window.location.origin;
+            } else {
+                baseURL = window.location.host;
+            }
+		    var n = href.indexOf(baseURL);
+			var res = href.substring(n+baseURL.length+1, href.length);
+		   	var subm = new Loader(baseURL+'/includes/address-filter-output.php?url='+res);
 	        function Subcompleteload(){
 	        	var data = JSON.parse(subm.data);
                 console.log('language:',language);
-	            mcontent = new Loader(window.location.origin+'/includes/'+language+'submenu/'+data.level+'.php?');
+	            mcontent = new Loader(baseURL+'/includes/'+language+'submenu/'+data.level+'.php?');
 		    	mcontent.addEventListener('complete',completeloadContent);
 	            subm.removeEventListener('complete',Subcompleteload);
 	            subm = null;
@@ -97,13 +108,18 @@ define(['approomdetail'], function() {
             $('.rooms-group #page1').fadeIn();
     		$('.choose-rooms li a').click(function(event){
     			var target = event.target;
-                event.preventDefault();
-                event.stopPropagation();
     			$('.choose-rooms li').removeClass('actived');
     			$(target.parentNode).addClass('actived');
                 var id = this.getAttribute('data-pageid');
                 $('.rooms-group section.rooms-view').fadeOut();
                 $('.rooms-group #'+id).delay(200).fadeIn();
+                if (event.preventDefault) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                } else {
+                    event.returnValue = false;
+                    return false;
+                }
                 return false;
             });
     	};

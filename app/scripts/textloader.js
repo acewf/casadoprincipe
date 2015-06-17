@@ -59,12 +59,60 @@ function Loader(res){
     };
     this.client = new XMLHttpRequest();
     this.client.onload = this.loaded;
-    this.client.open('GET',res);
-    this.client.send();
+    var url = res;
+    console.log(url.indexOf("http://"))
+    if (url.indexOf("http://")===-1) {
+        url = 'http://'+url
+    };
+    console.log('url:>>',url);
+    $.ajax({
+        url: url,
+        type: 'GET',
+        success: function(data) {
+            instance.loaded(data);
+        },
+        error: function(jqXHR, textStatus) {
+            console.log(jqXHR.statusText,textStatus);
+        }
+    });    
+    /*
+    var xmlhttp;
+    if (window.XMLHttpRequest){// code for IE7+, Firefox, Chrome, Opera, Safari
+      xmlhttp=new XMLHttpRequest();
+    } else {// code for IE6, IE5
+      xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange=function() {
+      if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+        console.log(xmlhttp.responseText);
+        }
+    }
+    console.log(res);
+    $.get(res, function(data) {
+        instance.loaded(data);
+    }).done(function() {
+    console.log( "second success" );}).fail(function(e) {
+    console.log( "error" ,e);
+    });
+    */
+    /*
+    console.log(xmlhttp.open,'-##-');
+    xmlhttp.open("GET",res,true);
+    xmlhttp.send();
+    */
+    /*
+    if (this.client.open) {
+        this.client.open('GET',res);
+        this.client.send();
+    } else {
+        console.log('IE 10 CAN´t LOAD');
+    }
+    */
+    
 }
 Loader.prototype.processData = function(data){
     'use strict';
-    this.data = data.target.response;
+    this.data = data;//data.target.response;
     var event;
     var eventName = 'complete';
     this.dispatchEvent(eventName);

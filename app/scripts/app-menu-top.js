@@ -57,9 +57,9 @@ define(['appmenu'], function(appmenu) {
         $('#logo-big').addClass('show');
         $('#logo-small').removeClass('show');
         $('ul.room-choose').removeClass('show-childs');
+        console.log('CLEAR CONTENTS ON MENU');
         $('.sub-menu .suite').html('');
         $('.sub-menu .room-choose').html('');
-
         var loadhome = new ContentLoader();
         loadhome.click(this);
     }
@@ -93,19 +93,25 @@ define(['appmenu'], function(appmenu) {
             $('.sub-menu .suite').html(menucontent.data);
         }
         var href = window.location.href;
-        var n = href.indexOf(window.location.origin);
-        var res = href.substring(n+window.location.origin.length+1, href.length);
-        var filestourl = new Loader(window.location.origin+'/includes/address-filter-output.php?url='+res);
+        var baseURL = null;
+        if (window.location.origin) {
+            baseURL = window.location.origin;
+        } else {
+            baseURL = window.location.host;
+        }
+        var n = href.indexOf(baseURL);
+        var res = href.substring(n+baseURL.length+1, href.length);
+        var filestourl = new Loader(baseURL+'/includes/address-filter-output.php?url='+res);
         function Subcompleteload(ev){
             var data = JSON.parse(filestourl.data);
             if (data.level!=null) {
-                submenu = new Loader(window.location.origin+'/includes/'+language+'submenu/'+data.level+'.php?');
+                submenu = new Loader(baseURL+'/includes/'+language+'submenu/'+data.level+'.php?');
                 submenu.addEventListener('complete',completeloadSubMenu);
                 filestourl.removeEventListener('complete',Subcompleteload);
                 filestourl = null;
             }
             console.log(data);
-            menucontent = new Loader(window.location.origin+'/includes/'+language+'submenu/sub-menu-rooms.php');
+            menucontent = new Loader(baseURL+'/includes/'+language+'submenu/sub-menu-rooms.php');
             menucontent.addEventListener('complete',completeloadContent);
                         
             pagecontent = new ContentLoader();
@@ -238,10 +244,10 @@ define(['appmenu'], function(appmenu) {
     };
     AppEngine.prototype.toggleMenu = function(event){
         var target = event.target;
-        event.preventDefault();
+        
+        
         var el = $('#menu-options');
         var isOpen = parseFloat(el[0].getAttribute('data-open'));
-        console.log('toggle Menu',this,isOpen);
         if (isOpen) {
             el[0].setAttribute('data-open',0);
             el.fadeOut();
@@ -249,14 +255,15 @@ define(['appmenu'], function(appmenu) {
             el[0].setAttribute('data-open',1);
             el.fadeIn();
         }
-    };
-    AppEngine.prototype.toggleLanguage = function(event){
-        var target = event.target;
-        if(event.preventDefault) {
+        if (event.preventDefault) {
             event.preventDefault();
         } else {
             event.returnValue = false;
+            return false;
         }
+    };
+    AppEngine.prototype.toggleLanguage = function(event){
+        var target = event.target;        
         var isOpen = parseFloat(target.getAttribute('data-open'));
         var el = $('#language-options');
         if (isOpen) {
@@ -265,6 +272,12 @@ define(['appmenu'], function(appmenu) {
         } else {
             el[0].setAttribute('data-open',1);
             el.fadeIn();
+        }
+        if(event.preventDefault) {
+            event.preventDefault();
+        } else {
+            event.returnValue = false;
+            return false;
         }
     };
     AppEngine.prototype.forcecloseMenuRooms = function(event){

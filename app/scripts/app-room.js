@@ -18,7 +18,7 @@ define(['approom'], function(appmenu) {
 		    $('footer').show();
 		    $('html,body').animate({scrollTop:0},400);
 		    $('.fotorama').on('fotorama:show',function(){
-		    	console.log('--- Foto Changed ---');
+		    	//console.log('--- Foto Changed ---');
 		    });
 
 		    var delayer=0;
@@ -35,11 +35,19 @@ define(['approom'], function(appmenu) {
 			var mcontent;
 			console.log('APP ROOM CALL LOAD CONTENT');
 		    function completeloadContent(ev){
+		    	console.log('ADDDED');
+		    	console.log(mcontent);
 		    	$('.sub-menu .suite').html(mcontent.data);
 		    	var loadcont = function(res){
 			        window.history.pushState("object or string", "Title", "/"+res);
 			        var mcontent;
-			        var m = new Loader(window.location.origin+'/includes/address-filter-output.php?url='+res);
+			        var baseURL = null;
+			        if (window.location.origin) {
+			            baseURL = window.location.origin;
+			        } else {
+			            baseURL = window.location.host;
+			        }
+			        var m = new Loader(baseURL+'/includes/address-filter-output.php?url='+res);
 			        function completeload(ev){
 			        	var data = JSON.parse(m.data);
 			        	var handler = new ContentLoader();
@@ -53,23 +61,51 @@ define(['approom'], function(appmenu) {
 			    $('.sub-menu .suite li a').click(function(){
 			    	var href = $(this).attr('href');
 			        var datarooms = $(this).attr('data-rooms');
-			        event.preventDefault();
-			        var n = href.indexOf(window.location.origin);
-			        var res = href.substring(n+window.location.origin.length+1, href.length);
+			        var baseURL = null;
+			        if (window.location.origin) {
+			            baseURL = window.location.origin;
+			        } else {
+			            baseURL = window.location.host;
+			        }
+			        var n = href.indexOf(baseURL);
+			        var res = href.substring(n+baseURL.length+1, href.length);
 			        loadcont(res);
+			        if (event.preventDefault) {
+			        	event.preventDefault();
+			        } else {
+			            event.returnValue = false;
+			            return false;
+			        }
 
 			    });
 			    $('.info-room-featured a').click(function(){
 			    	var alink = $(this);
 			    	var href = $(alink).attr('href');
 			        var datarooms = $(this).attr('data-rooms');
-			        event.preventDefault();
-			        var n = href.indexOf(window.location.origin);
-			        var res = href.substring(n+window.location.origin.length+1, href.length);
+			        var baseURL = null;
+			        if (window.location.origin) {
+			            baseURL = window.location.origin;
+			        } else {
+			            baseURL = window.location.host;
+			        }
+			        var n = href.indexOf(baseURL);
+			        var res = href.substring(n+baseURL.length+1, href.length);
 			        loadcont(res);
+			        if (event.preventDefault) {
+			        	event.preventDefault();
+			        } else {
+			            event.returnValue = false;
+			            return false;
+			        }
 			    });
 		    }
-		    mcontent = new Loader(window.location.origin+'/includes/'+language+'submenu/sub-menu-rooms.php');
+		    var baseURL = null;
+	        if (window.location.origin) {
+	            baseURL = window.location.origin;
+	        } else {
+	            baseURL = window.location.host;
+	        }
+		    mcontent = new Loader(baseURL+'/includes/'+language+'submenu/sub-menu-rooms.php');
 		    mcontent.addEventListener('complete',completeloadContent);
 		    $('.logo').addClass('small');
 		    $('ul.suite').addClass('menupos');

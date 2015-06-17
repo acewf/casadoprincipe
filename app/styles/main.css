@@ -107,12 +107,17 @@ section.content {
   width:100%;
   display:inline-block;
 }
+.logo a:visited,
+.logo a:active{
 
+}
 .logo.room img{
   margin-top:-50px;
   height:180px;
 }
-
+.logo img{
+  border: none;
+}
 #logo-big{
   opacity: 0;
 }
@@ -402,7 +407,7 @@ header .right-block {
 }
 
 .options div.lang span {
-  margin-left: 5px;
+  margin-left: 10px;
   width: 9px;
   height: 4px;
   vertical-align: middle;
@@ -867,6 +872,7 @@ article  div.description p {
 }
 
 .small-frame img {
+  border:none;
   width: 100%;
   position: absolute;
   left: 50%;
@@ -877,6 +883,7 @@ article  div.description p {
   -webkit-transition: all 400ms ease-out;
 }
 .room:hover .small-frame img{
+  border:none;
   -webkit-transform: translate(-50%, -50%) scale(1.2);
    transform: translate(-50%, -50%) scale(1.2);
 }
@@ -1695,12 +1702,14 @@ button#bookit{
   position: absolute;
   width: 100%;
   top:76px;
+  -webkit-transform:translate(100%);
   transform:translate(100%);
   -webkit-transition: -webkit-transform 0.3s 0.3s;
   transition: transform 0.3s 0.3s;
   opacity:1;
 }
 .app-history.inside-room.inside-detail.slide-from-right{
+  -webkit-transform:translate(0%);
   transform:translate(0%);
 }
 

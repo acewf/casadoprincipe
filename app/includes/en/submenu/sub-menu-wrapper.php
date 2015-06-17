@@ -7,7 +7,7 @@
 		for ($i=0; $i <count($items) ; $i++) {
 			if (($items[$i]->level!=null) && ($path==$items[$i]->path)) {
 				include(dirname(__FILE__).'/sub-menu-rooms.php');
-			}			
+			}	
 		}
 		?>
 	</ul>

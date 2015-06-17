@@ -150,7 +150,9 @@ if (!isset($basePath)) {
             room[i].style.opacity = '1';
         };
         var history = document.getElementsByClassName('app-history');
-        history[0].style.opacity = '1';        
+        if (history.length>0) {
+            //history[0].style.opacity = '1';     
+        };           
     }
     </script>
 </div>

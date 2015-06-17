@@ -19,7 +19,6 @@ define(['apphome','appmenu'], function(apphome,appmenu) {
             $('.fotorama').fotorama({width: 700,maxwidth: '100%',ratio: 2.51, allowfullscreen: true});
             appmenu.addFotoramEvents();
             var delayer=0;
-            console.log('run put states at home---------');
             $('section.content article').delay(200).each(function(){
                 $(this).delay(delayer).fadeTo(200, 1);
                 delayer+=200;
@@ -43,7 +42,13 @@ define(['apphome','appmenu'], function(apphome,appmenu) {
             $('article.show-rooms a').click(function(){
                 var total = $('.sub-menu .suite li').length;
                 if(total===0){
-                    mcontent = new Loader(window.location.origin+'/includes/'+language+'submenu/sub-menu-rooms.php');
+                    var baseURL = null;
+                    if (window.location.origin) {
+                        baseURL = window.location.origin;
+                    } else {
+                        baseURL = window.location.host;
+                    }
+                    mcontent = new Loader(baseURL+'/includes/'+language+'submenu/sub-menu-rooms.php');
                     mcontent.addEventListener('complete',completeloadContent); 
                 }
                 handler.click(this);

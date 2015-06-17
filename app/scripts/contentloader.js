@@ -41,9 +41,15 @@ function ContentLoader(res){
             enumerable: true
         }
     });
+    var baseURL = null;
+    if (window.location.origin) {
+        baseURL = window.location.origin;
+    } else {
+        baseURL = window.location.host;
+    }
     $.LoadingOverlaySetup({
          color           : "rgba(255, 255, 255, 0.8)",
-         image           : window.location.origin+"/images/loading.gif",
+         image           : baseURL+"/images/loading.gif",
          maxSize         : "100px",
          minSize         : "20px",
          resizeInterval  : 0,
@@ -54,7 +60,16 @@ function ContentLoader(res){
         this.dispatchEvent(evt);
     }
     this.loadAllContent = function(endereco){
-        var maddress = window.location.origin+'/includes/'+endereco+'.php?';
+        var baseURL = null;
+        if (window.location.origin) {
+            baseURL = window.location.origin;
+        } else {
+            baseURL = window.location.host;
+        }
+        if (baseURL.indexOf("http://")===-1) {
+            baseURL = 'http://'+baseURL
+        };
+        var maddress = baseURL+'/includes/'+endereco+'.php?';
         $(".main").LoadingOverlay("show");
         $.ajax({
             cache: false,
@@ -79,7 +94,16 @@ function ContentLoader(res){
         });
     }
     this.loadAHeader= function(endereco){
-        var maddress = window.location.origin+'/includes/head/'+endereco+'.php?';
+        var baseURL = null;
+        if (window.location.origin) {
+            baseURL = window.location.origin;
+        } else {
+            baseURL = window.location.host;
+        }
+        if (baseURL.indexOf("http://")===-1) {
+            baseURL = 'http://'+baseURL
+        };
+        var maddress = baseURL+'/includes/head/'+endereco+'.php?';
         $.ajax({
             cache: false,
             url: maddress,
@@ -96,13 +120,18 @@ function ContentLoader(res){
     this.click = function(scope){
         var href = $(scope).attr('href');
         var datarooms = $(this).attr('data-rooms');
-        event.preventDefault();
-        var n = href.indexOf(window.location.origin);
-        var res = href.substring(n+window.location.origin.length+1, href.length);
-
-
-        console.log('HREF:::',href);
-        console.log('NEW res::',res);
+        
+        var baseURL = null;
+        if (window.location.origin) {
+            baseURL = window.location.origin;
+        } else {
+            baseURL = window.location.host;
+        }
+        if (baseURL.indexOf("http://")===-1) {
+            baseURL = 'http://'+baseURL
+        };
+        var n = href.indexOf(baseURL);
+        var res = href.substring(n+baseURL.length+1, href.length);
         
         if(window.history && window.history.pushState){
             console.log('USE PUSH STATE');
@@ -114,7 +143,7 @@ function ContentLoader(res){
         }
         
         var mcontent;
-        var m = new Loader(window.location.origin+'/includes/address-filter-output.php?url='+res);
+        var m = new Loader(baseURL+'/includes/address-filter-output.php?url='+res);
         function completeload(ev){
             var data = JSON.parse(m.data);
             //loadContent(data.path);
@@ -125,6 +154,12 @@ function ContentLoader(res){
             m = null;
         }        
         m.addEventListener('complete',completeload);
+        if (event.preventDefault) {
+            event.preventDefault();
+        } else {
+            event.returnValue = false;
+            return false;
+        }
     }
 };
 

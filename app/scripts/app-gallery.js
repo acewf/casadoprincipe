@@ -50,7 +50,13 @@ define(['gallery'], function(gallery) {
                         $('.sub-menu .suite').html(mcontent.data);
                     }
                     */
-                    mcontent = new Loader(window.location.origin+'/includes/'+language+'submenu/sub-menu-rooms.php');
+                    var baseURL = null;
+                    if (window.location.origin) {
+                        baseURL = window.location.origin;
+                    } else {
+                        baseURL = window.location.host;
+                    }
+                    mcontent = new Loader(baseURL+'/includes/'+language+'submenu/sub-menu-rooms.php');
                     mcontent.addEventListener('complete',this.completeloadContent); 
                 }
                 handler.click(this);

@@ -26,7 +26,7 @@
             if ($lang!=='en' && $lang!=='en/' && $lang!=='pt' && $lang!=='pt/') {
                 $lang='en/';
             } else {
-                $booktext = 'RESERVAS';
+                $booktext = 'RESERVAS'; 
             }
             
             $pathObj = $Adress->getPhpToUrl('');
@@ -35,8 +35,10 @@
 
         <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet" type="text/css">
         <script type="text/javascript">var switchTo5x=true;</script>
+        
         <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
         <script type="text/javascript">stLight.options({publisher: "fe80fa7d-2045-4199-ba3e-39141283a185", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+
         <script src="//use.typekit.net/tma2rmc.js"></script>
         <script>try{Typekit.load();}catch(e){}</script>
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->

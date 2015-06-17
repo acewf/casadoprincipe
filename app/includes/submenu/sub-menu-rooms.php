@@ -1,4 +1,6 @@
 <?php
+ header('Access-Control-Allow-Origin: *');  
+
 if (!isset($basePath)) {
     $folder = '/';
     if($_SERVER['SERVER_NAME']==='127.0.0.1'){

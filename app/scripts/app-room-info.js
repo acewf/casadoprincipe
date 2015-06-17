@@ -35,12 +35,18 @@ define(['approominfo'], function(appmenu) {
     	this.goRoom = function(){
 	        var href = $(this).attr('href');
 	        var datarooms = $(this).attr('data-rooms');
-	        event.preventDefault();
-	        var n = href.indexOf(window.location.origin);
-	        var res = href.substring(n+window.location.origin.length+1, href.length);
-	        window.history.pushState("object or string", "Title", "/"+res);
+	        
+	        var baseURL = null;
+            if (window.location.origin) {
+                baseURL = window.location.origin;
+            } else {
+                baseURL = window.location.host;
+            }
+	        var n = href.indexOf(baseURL);
+	        var res = href.substring(n+baseURL.length+1, href.length);
+	        window.history.pushState('', 'Title', '/'+res);
 	        var mcontent;
-	        var m = new Loader(window.location.origin+'/includes/address-filter-output.php?url='+res);
+	        var m = new Loader(baseURL+'/includes/address-filter-output.php?url='+res);
 	        function completeload(ev){
 	        	var data = JSON.parse(m.data);
 	            var handler = new ContentLoader();
@@ -49,6 +55,12 @@ define(['approominfo'], function(appmenu) {
 	            m = null;
 	        }        
 	        m.addEventListener('complete',completeload);
+	        if (event.preventDefault) {
+	        	event.preventDefault();
+		    } else {
+	            event.returnValue = false;
+	            return false;
+	        }
     	}
 
     	this.loadPageAndMenu = function(){
@@ -59,14 +71,20 @@ define(['approominfo'], function(appmenu) {
 	            $('ul.room-choose li a').click(instance.goRoom);
 				$('.info-room-featured a').click(instance.goRoom);			
 		    }
+		    var baseURL = null;
+            if (window.location.origin) {
+                baseURL = window.location.origin;
+            } else {
+                baseURL = window.location.host;
+            }
 		    var href = window.location.href;
-		    var n = href.indexOf(window.location.origin);
-			var res = href.substring(n+window.location.origin.length+1, href.length);			
-		   	var subm = new Loader(window.location.origin+'/includes/address-filter-output.php?url='+res);
+		    var n = href.indexOf(baseURL);
+			var res = href.substring(n+baseURL.length+1, href.length);			
+		   	var subm = new Loader(baseURL+'/includes/address-filter-output.php?url='+res);
 	        function Subcompleteload(ev){
 	        	var data = JSON.parse(subm.data);
 
-	            mcontent = new Loader(window.location.origin+'/includes/'+language+'submenu/'+data.level+'.php?');
+	            mcontent = new Loader(baseURL+'/includes/'+language+'submenu/'+data.level+'.php?');
 		    	mcontent.addEventListener('complete',completeloadContent);
 	            subm.removeEventListener('complete',Subcompleteload);
 	            subm = null;
