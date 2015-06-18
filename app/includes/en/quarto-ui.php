@@ -145,7 +145,7 @@ if (!isset($basePath)) {
     if (typeof requirejs == 'function') {
         require(['approom','appmenu'],function(module,appmenu){
             try{
-                appmenu.addModule(module);
+                appmenu.addModule(module,'approom');
                 module.init();
             }catch(err) {
                 console.log(err.message);

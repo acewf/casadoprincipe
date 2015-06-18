@@ -126,6 +126,18 @@ define(['appmenu'], function(appmenu) {
     })
     
     var AppEngine = function(){
+        var pageCompare = {};
+        pageCompare['apphome'] = 'home';
+        pageCompare['approom'] = 'room';
+        pageCompare['casadoprincipe'] = 'casadoprincipe';
+        pageCompare['facilitiesservices'] = 'facilities';
+        pageCompare['history'] = 'history';
+        pageCompare['gallery'] = 'gallery';
+        pageCompare['location'] = 'location';
+        pageCompare['personalize'] = 'personalize';
+        pageCompare['contacts'] = 'contacts';
+        pageCompare['approomdetail'] = 'room-detail';
+        pageCompare['approominfo'] = 'room-info';
         //var instance = this;
         var activeModule = null;
         this.init = function(){
@@ -145,7 +157,21 @@ define(['appmenu'], function(appmenu) {
             };
             activeModule = null;
         }
-        this.addModule = function(module){
+        this.addModule = function(module,area){
+            //_gaq.push(['_trackPageview', pageCompare[area], 'urlchange'])
+            console.log(pageCompare[area]);
+            var baseURL = null;
+            if (window.location.origin) {
+                baseURL = window.location.origin;
+            } else {
+                baseURL = window.location.host;
+            }
+            var href = window.location.href;
+            var n = href.indexOf(baseURL);
+            var res = href.substring(n+baseURL.length+1, href.length);
+
+
+            ga('send', 'event', 'category', 'action', {'page': res});
             this.removeModule();
             activeModule = module;
             //console.log('stButtons.locateElements();',stButtons);

@@ -53,7 +53,7 @@ if (!isset($basePath)) {
     if (typeof requirejs == 'function') {
         requirejs(['location','appmenu'],function(module,appmenu){
             try{
-                appmenu.addModule(module);
+                appmenu.addModule(module,'location');
                 module.init();
             }catch(err) {
                 console.log(err.message);

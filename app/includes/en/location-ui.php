@@ -52,7 +52,7 @@ With a privileged location, it faces the well-known Príncipe Real garden and th
     if (typeof requirejs == 'function') {
         requirejs(['location','appmenu'],function(module,appmenu){
             try{
-                appmenu.addModule(module);
+                appmenu.addModule(module,'location');
                 module.init();
             }catch(err) {
                 console.log(err.message);

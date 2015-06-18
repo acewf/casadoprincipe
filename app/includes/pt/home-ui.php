@@ -127,14 +127,14 @@ Este íntimo e acolhedor Bed &amp; Breakfast, com os seus quartos espaçosos e c
     	    <!--<h3>Royal Prince, King D. Pedro V</h3>-->
     	    <h3>Principe Real, Rei D. Pedro V</h3>
     	    <p class="small-text">A história do enigmático Príncipe Real, D. Pedro V, que empresta o nome a este B&amp;B, lança as bases para a sua estadia inesquecível em Lisboa. Cada um dos 9 quartos e suites, em estilo palaciano, recordam uma parte da vida deste Príncipe.</p>
-    	    <a href="<?php echo $basePath.$lang; ?>casa-do-principe" target="_self"><h4>Conheça O Rei</h4></a>
+    	    <a href="<?php echo $basePath.$lang; ?>history" target="_self"><h4>Conheça O Rei</h4></a>
     	</div>
     </section>
     <script>
     if (typeof requirejs == 'function') {
         requirejs(['apphome','appmenu'],function(module,appmenu){
             try{
-                appmenu.addModule(module);
+                appmenu.addModule(module,'apphome');
                 module.init();
             }catch(err) {
                 console.log(err.message);

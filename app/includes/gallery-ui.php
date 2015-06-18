@@ -48,7 +48,7 @@ if (!isset($basePath)) {
     if (typeof requirejs == 'function') {
         requirejs(['gallery','appmenu'],function(module,appmenu){
             try{
-                appmenu.addModule(module);
+                appmenu.addModule(module,'gallery');
                 module.init();
             }catch(err) {
                 console.log(err.message);

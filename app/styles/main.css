@@ -1836,7 +1836,7 @@ section.content .origenbox input,
 }
 .contact form ul li textarea#message.show-error,
 .contact form ul li input.show-error{
-  border-color:#B22D00;
+  border-color:#1B842C;
 }
 .contact .feedback.show {
   background-color:#B22D00;
@@ -1846,6 +1846,9 @@ section.content .origenbox input,
   font-size:.9em;
   text-align:center;
   color:#fff;
+}
+.contact .feedback.show.sucess{
+  background-color:#3B7B00;
 }
 
 .contact .parsley-required{

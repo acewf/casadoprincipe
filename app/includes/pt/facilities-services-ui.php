@@ -72,7 +72,7 @@ if (!isset($basePath)) {
     if (typeof requirejs == 'function') {
         require(['facilitiesservices','appmenu'],function(module,appmenu){
             try{
-                appmenu.addModule(module);
+                appmenu.addModule(module,'facilitiesservices');
                 module.init();
             }catch(err) {
                 console.log(err.message);

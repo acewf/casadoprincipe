@@ -200,7 +200,7 @@ if (!isset($basePath)) {
     if (typeof requirejs == 'function') {
         var myApp = require(['approomdetail','appmenu'],function(module,appmenu){
             try{
-                appmenu.addModule(module);
+                appmenu.addModule(module,'approomdetail');
                 module.init();
             }catch(err) {
                 console.log(err.message);

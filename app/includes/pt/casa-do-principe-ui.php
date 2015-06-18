@@ -63,7 +63,7 @@ if (!isset($basePath)) {
     if (typeof requirejs == 'function') {
         require(['casadoprincipe','appmenu'],function(module,appmenu){
             try{
-                appmenu.addModule(module);
+                appmenu.addModule(module,'casadoprincipe');
                 module.init();
             }catch(err) {
                 console.log(err.message);

@@ -130,7 +130,7 @@ if (!isset($basePath)) {
     if (typeof requirejs == 'function') {
         requirejs(['apphome','appmenu'],function(module,appmenu){
             try{
-                appmenu.addModule(module);
+                appmenu.addModule(module,'apphome');
                 module.init();
             }catch(err) {
                 console.log(err.message);

@@ -7,9 +7,12 @@ define(['contacts'], function() {
     'use strict';
     //Uses extras in here.
     console.log('APP HOME DEFINED**');
-
+    var numbers = {};
     function APP(){
         this.putStates=function(){  
+            numbers.one = Math.floor((Math.random() * 20) + 1);
+            numbers.two = Math.floor((Math.random() * 20) + 1);
+            numbers.total = numbers.one+numbers.two;
             $('.sub-menu .suite').html('');
             $('.sub-menu .room-choose').html('');
             $('#logo-big').removeClass('show');
@@ -19,7 +22,8 @@ define(['contacts'], function() {
             $('.logo').removeClass('small');
             $('#formcontact').parsley();
             $('footer').show();
-
+            $('#security').val(numbers.one+"+"+numbers.two+"=?");   
+             $('#security').attr('data-defaultValue',numbers.one+"+"+numbers.two+"=?");
             
             var delayer=0;
             $('section').delay(200).each(function(){
@@ -52,6 +56,17 @@ define(['contacts'], function() {
                 });
             });
 
+            $('#formcontact #security').focusout(function() {
+                if ($('#formcontact #security').val()==='') {
+                    $('#security').val(numbers.one+"+"+numbers.two+"=?"); 
+                };
+            });
+            $('#formcontact #security').focusin(function() {
+                if ($('#formcontact #security').val()===$('#security').attr('data-defaultValue')) {
+                    $('#security').val(''); 
+                };
+            });
+
 
             $('#submitcontact').click(function(){
                 var nomeValid = $('#formcontact #nome');
@@ -82,15 +97,21 @@ define(['contacts'], function() {
                     m  = $(liEmail).find('.parsley-errors-list');
                     emailValid.removeClass('show-error');
                     m.html('');
-                }              
+                }          
+                var securValid = false;
                 if (!securityValid.parsley().isValid() || (securityValid.val()===securityValid.attr('data-defaultValue'))) {                    
                     m  = $(liSecurity).find('.parsley-errors-list');
                     securityValid.addClass('show-error');
                     m.html('<li class="parsley-required">Wrong answer</li>');
-                } else {
+                } else if((numbers.one+numbers.two)===parseFloat(securityValid.val())){
                     m  = $(liSecurity).find('.parsley-errors-list');
                     securityValid.removeClass('show-error');
                     m.html('');
+                    securValid = true;
+                } else{
+                    m  = $(liSecurity).find('.parsley-errors-list');
+                    securityValid.addClass('show-error');
+                    m.html('<li class="parsley-required">Wrong answer</li>');
                 }
                 if (!messageValid.parsley().isValid()) {                    
                     m  = $(liMessage).find('.parsley-errors-list');
@@ -102,12 +123,33 @@ define(['contacts'], function() {
                     m.html('');
                 }
 
+                formValid = $('#formcontact').parsley().isValid();
+                if (formValid) {
+                    formValid = securValid;
+                };
+
+                console.log(formValid)
+
                 if (!formValid) {
                     $('.contact .feedback').html('Message incomplete. Please fill out the requiered fields.');
                     $('.contact .feedback').addClass('show');
                 } else {
                     $('.contact .feedback').html('');
                     $('.contact .feedback').removeClass('show');
+
+                    $.post("http://casadoprincipe.pt/contact-process.php", $("#formcontact").serialize(), function(data){
+                        //do stuff here...
+                        console.log('FEEDBACK EMAIL SEND',data);
+                        $('.contact .feedback').html('Message Sended.');
+                        $('.contact .feedback').addClass('show');
+                        $('.contact .feedback').addClass('sucess');
+
+                        setTimeout(function(){ 
+                            $('.contact .feedback').removeClass('sucess');
+                            $('.contact .feedback').removeClass('show');
+                            $('.contact .feedback').html('');
+                        }, 8000);
+                    });
                     //console.log('form is ready');
                 }
             });            

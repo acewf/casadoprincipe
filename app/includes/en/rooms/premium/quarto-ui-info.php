@@ -54,7 +54,7 @@ if (!isset($basePath)) {
     if (typeof requirejs == 'function') {
         require(['approominfo','appmenu'],function(module,appmenu){
                 try{
-                    appmenu.addModule(module);
+                    appmenu.addModule(module,'approominfo');
                     module.init();
                 }catch(err) {
                     console.log(err.message);

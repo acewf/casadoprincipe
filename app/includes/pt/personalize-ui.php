@@ -70,7 +70,7 @@ if (!isset($basePath)) {
 if (typeof requirejs == 'function') {
     requirejs(['personalize','appmenu'],function(module,appmenu){
         try{
-            appmenu.addModule(module);
+            appmenu.addModule(module,'personalize');
             module.init();
         }catch(err) {
             console.log(err.message);

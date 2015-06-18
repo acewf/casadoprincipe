@@ -45,7 +45,9 @@ define(['approomdetail'], function() {
              	$('#AVP').submit(function() {
 				  console.log('Form Sended');
 				});
-				$('#AVP').submit();
+                ga('send', 'event', 'button', 'click', {'page': urlWithDate});
+                window.open(urlWithDate);
+				//$('#AVP').submit();
                 if (event.preventDefault) {
                     event.preventDefault();
                 } else {

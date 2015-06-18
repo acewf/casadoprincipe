@@ -71,7 +71,7 @@ Our team is available for a tailor made service before, during and after your st
 if (typeof requirejs == 'function') {
     requirejs(['personalize','appmenu'],function(module,appmenu){
         try{
-            appmenu.addModule(module);
+            appmenu.addModule(module,'personalize');
             module.init();
         }catch(err) {
             console.log(err.message);
