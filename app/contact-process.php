@@ -1,6 +1,8 @@
 <?php 
-header('Access-Control-Allow-Origin: casadoprincipe.pt');
-header('Access-Control-Allow-Origin: casadoprincipe.com');
+header('Access-Control-Allow-Origin: http://casadoprincipe.pt');
+header('Access-Control-Allow-Origin: http://casadoprincipe.com');
+header('Access-Control-Allow-Origin: http://www.casadoprincipe.pt');
+header('Access-Control-Allow-Origin: http://www.casadoprincipe.com');
 
 if($_POST['email']){ $email = $_POST['email']; } else { $email = "no email"; }
 if($_POST['nome']){ $nome = $_POST['nome']; } else { $nome = "no name"; }

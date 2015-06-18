@@ -56,6 +56,9 @@ define(['contacts'], function() {
                 });
             });
 
+            var text = $('#formcontact span#code').html()+' ('+numbers.one+'+'+numbers.two+'=?)';
+            $('#formcontact span#code').html(text);
+
             $('#formcontact #security').focusout(function() {
                 if ($('#formcontact #security').val()==='') {
                     $('#security').val(numbers.one+"+"+numbers.two+"=?"); 
@@ -67,6 +70,27 @@ define(['contacts'], function() {
                 };
             });
 
+            var messages = {};
+            messages.en = {};
+            messages.en['nome'] = 'This field is required';
+            messages.en['email'] = 'Incorrect email format.';
+            messages.en['security'] = 'Wrong answer';
+            messages.en['message'] = 'This field is required';
+            messages.en['sucesssend'] = 'Message Sended.';
+
+            messages.pt = {};
+            messages.pt['nome'] = 'Este campo é obrigatório';
+            messages.pt['email'] = 'Email com formato incorrecto';
+            messages.pt['security'] = 'Resposta errada';
+            messages.pt['message'] = 'Este campo é obrigatório';
+            messages.pt['sucesssend'] = 'Mensagem Enviada.';
+
+            var ling = null;
+            if(language==='en' || language==='en/'){
+                ling='en';
+            } else {
+                ling='pt';
+            }
 
             $('#submitcontact').click(function(){
                 var nomeValid = $('#formcontact #nome');
@@ -83,7 +107,7 @@ define(['contacts'], function() {
                 if (!nomeValid.parsley().isValid()) {                    
                     m  = $(liNome).find('.parsley-errors-list');
                     nomeValid.addClass('show-error');
-                    m.html('<li class="parsley-required">This field is required</li>');
+                    m.html('<li class="parsley-required">'+messages[ling]['nome']+'</li>');
                 } else {
                     m  = $(liNome).find('.parsley-errors-list');
                     nomeValid.removeClass('show-error');
@@ -92,7 +116,7 @@ define(['contacts'], function() {
                 if (!emailValid.parsley().isValid()) {                    
                     m  = $(liEmail).find('.parsley-errors-list');
                     emailValid.addClass('show-error');
-                    m.html('<li class="parsley-required">Incorrect email format.</li>');
+                    m.html('<li class="parsley-required">'+messages[ling]['email']+'</li>');
                 } else {
                     m  = $(liEmail).find('.parsley-errors-list');
                     emailValid.removeClass('show-error');
@@ -102,7 +126,7 @@ define(['contacts'], function() {
                 if (!securityValid.parsley().isValid() || (securityValid.val()===securityValid.attr('data-defaultValue'))) {                    
                     m  = $(liSecurity).find('.parsley-errors-list');
                     securityValid.addClass('show-error');
-                    m.html('<li class="parsley-required">Wrong answer</li>');
+                    m.html('<li class="parsley-required">'+messages[ling]['security']+'</li>');
                 } else if((numbers.one+numbers.two)===parseFloat(securityValid.val())){
                     m  = $(liSecurity).find('.parsley-errors-list');
                     securityValid.removeClass('show-error');
@@ -111,12 +135,12 @@ define(['contacts'], function() {
                 } else{
                     m  = $(liSecurity).find('.parsley-errors-list');
                     securityValid.addClass('show-error');
-                    m.html('<li class="parsley-required">Wrong answer</li>');
+                    m.html('<li class="parsley-required">'+messages[ling]['email']+'</li>');
                 }
                 if (!messageValid.parsley().isValid()) {                    
                     m  = $(liMessage).find('.parsley-errors-list');
                     messageValid.addClass('show-error');
-                    m.html('<li class="parsley-required">This field is required</li>');
+                    m.html('<li class="parsley-required">'+messages[ling]['message']+'</li>');
                 } else {
                     m  = $(liMessage).find('.parsley-errors-list');
                     messageValid.removeClass('show-error');
@@ -140,17 +164,30 @@ define(['contacts'], function() {
                     $.post("http://casadoprincipe.pt/contact-process.php", $("#formcontact").serialize(), function(data){
                         //do stuff here...
                         console.log('FEEDBACK EMAIL SEND',data);
-                        $('.contact .feedback').html('Message Sended.');
+                        $('.contact .feedback').html(messages[ling]['sucesssend']);
                         $('.contact .feedback').addClass('show');
                         $('.contact .feedback').addClass('sucess');
 
-                        setTimeout(function(){ 
+
+                        $('.contact ul').hide();
+                        $('.contact #submitcontact').hide();
+                        $('.contact #clearform').removeClass('hide');
+
+
+                        $('.contact #clearform').click(function(){
                             $('.contact .feedback').removeClass('sucess');
                             $('.contact .feedback').removeClass('show');
                             $('.contact .feedback').html('');
-                        }, 8000);
+                            $('.contact ul').show();
+                            $('.contact #submitcontact').show();
+                            $('.contact #clearform').addClass('hide');
+                            $('#formcontact #nome').val('');
+                            $('#formcontact #email').val('');
+                            $('#formcontact #security').val('');
+                            $('#formcontact #message').val('');
+
+                        });
                     });
-                    //console.log('form is ready');
                 }
             });            
         };

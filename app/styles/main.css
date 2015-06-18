@@ -1436,8 +1436,9 @@ div.img-content img{
 }
 .location .box-show-calculate-route{
   position: absolute;
-  right: 20px;
+  width: 50px;
   margin-top:20px;
+  right: 0;
   z-index: 20;
   padding: 10px;
   display: inline-block;
@@ -1446,6 +1447,15 @@ div.img-content img{
   border-radius: 2px;
   height: 50px;
   cursor:pointer;
+}
+
+.location button.close{
+    right: initial;
+}
+.location button.close:before,
+.location button.close:after{
+  background-color: #fff;
+  height: 5px;
 }
 .location .box-show-calculate-route .icon-inline{
   margin-left: 0;
@@ -1836,7 +1846,7 @@ section.content .origenbox input,
 }
 .contact form ul li textarea#message.show-error,
 .contact form ul li input.show-error{
-  border-color:#1B842C;
+  border-color:#B22D00;
 }
 .contact .feedback.show {
   background-color:#B22D00;
@@ -2361,6 +2371,9 @@ div#stOCWrapper{
 }
 footer .share-elements.hide{
   display:none;
+}
+form#formcontact a.hide{
+  display: none;
 }
 footer ul {
   color: #fff;

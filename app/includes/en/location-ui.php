@@ -12,8 +12,8 @@ if (!isset($basePath)) {
 <div class="page-content location">
     <section class="content">
         <article class="origenbox">
-            <button class="close"></button>
-            <input id="originfield" type="text" value="Local Origem">
+            
+            <input id="originfield" type="text" value="Location">
             <button id="searchlocation">get directions</button>
             <div id="directionsPanel"></div>
         </article>
@@ -22,6 +22,7 @@ if (!isset($basePath)) {
             <button>Calculate Route</button>
         </article>
         <article class="box-show-calculate-route">
+            <button class="close"></button>
             <div class="icon icon-inline icon-angle-left"></div>
         </article>
         <div id="map-canvas"></div>

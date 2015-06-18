@@ -21,9 +21,9 @@ define(['location'], function(gallery) {
             $('ul.suite').removeClass('menupos');
             $('.logo').removeClass('small');
             $('footer').show();
-            $('.box-show-calculate-route').hide();
+            $('.location button.close').hide();
             $('#originfield').click(function(){
-                if ($(this).val()=='Local Origem') {
+                if (($(this).val()=='Indicar Local') || ($(this).val()=='Location')) {
                     $(this).val('');
                 };
             });
@@ -40,15 +40,27 @@ define(['location'], function(gallery) {
 
             $('.box-calculate-route button').click(function(){
                 $('.location section.content').addClass('show-address');
+                $('.location button.close').show();
+                $('.location div.icon').hide();
             });
             $('.box-show-calculate-route').click(function(){
-                $('.location section.content').addClass('show-address');
+                console.log('ddd',$('.location section.content').hasClass('show-address'));
+                if (!$('.location section.content').hasClass('show-address')) {
+                    $('.location section.content').addClass('show-address');
+                    $('.location button.close').show();
+                    $('.location div.icon').hide();
+                } else {
+                    $('.location button.close').hide();
+                    $('.location div.icon').show();
+                    $('.box-show-calculate-route').show();
+                    $('.location section.content').removeClass('show-address');
+                }
+                
             });
-            $('.origenbox button.close').click(function(){
+            $('.location button.close').click(function(){
                 //var boxElem = $('.box-calculate-route');
                 //boxElem.show();
-                $('.box-show-calculate-route').show();
-                $('.location section.content').removeClass('show-address');
+                console.log('AAAA');
             });
             
             var GoogleMapsLoader = require('google-maps');      // only for common js environments

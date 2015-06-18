@@ -45,7 +45,7 @@ if (!isset($basePath)) {
                         <input type="email" id="email"  name="email" data-parsley-trigger="change" required />
                     </li>
                     <li>
-                        <span>SECURITY CODE</span>
+                        <span id="code">SECURITY CODE</span>
                         <input type="text" id="security" data-defaultValue='14+8=?'  name="security" value="14+8=?"  required/>
                     </li>
                     <li>
@@ -54,6 +54,7 @@ if (!isset($basePath)) {
                     </li>
                 </ul>
                 <a id="submitcontact">SUBMIT</a>
+                <a id="clearform" class="hide">NEW MESSAGE</a>
             </form>
             </div>
     </section>       
