@@ -1080,20 +1080,20 @@ nav.sub-menu ul li span:after {
 }
 
 nav.sub-menu ul li span:before {
-  -webkit-transform: translate(0px,5px) rotate(-135deg);
+  -webkit-transform: translate(1px,8px) rotate(-135deg);
   transform: translate(1px,8px) rotate(-135deg);
 }
 
 nav.sub-menu ul li span:after {
-  -webkit-transform: translate(-6px,5px) rotate(-45deg);
+  -webkit-transform: translate(-6px,8px) rotate(-45deg);
   transform: translate(-6px,8px) rotate(-45deg);
 }
 nav.sub-menu ul li:hover span:before {
-  -webkit-transform: translate(-2px,4px) rotate(-135deg);
+  -webkit-transform: translate(-2px,8px) rotate(-135deg);
   transform: translate(-2px,8px) rotate(-135deg);
 }
 nav.sub-menu ul li:hover span:after {
-  -webkit-transform: translate(-2px,4px) rotate(-45deg);
+  -webkit-transform: translate(-2px,8px) rotate(-45deg);
   transform: translate(-2px,8px) rotate(-45deg);
 }
 nav.sub-menu ul li a:hover{
