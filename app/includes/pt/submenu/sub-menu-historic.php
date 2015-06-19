@@ -17,4 +17,4 @@ if (!isset($basePath)) {
 <li><a href="<?php echo $basePath.$lang; ?>suites-rooms/historic/king">Quarto Rei D. Fernando II</a></li>
 <li><a href="<?php echo $basePath.$lang; ?>suites-rooms/historic/sintra">Quarto da Serra de Sintra</a></li>
 <li><a href="<?php echo $basePath.$lang; ?>suites-rooms/historic/voyages">Quarto das Viagens</a></li>
-<li class="active"><span></span><a href="<?php echo $basePath.$lang; ?>suites-rooms"><p>Historic Rooms</p><p>suites and rooms</p></a></li>
+<li class="active"><span></span><a href="<?php echo $basePath.$lang; ?>suites-rooms"><p>QUARTOS HISTÓRICOS</p><p>Quartos e suites</p></a></li>

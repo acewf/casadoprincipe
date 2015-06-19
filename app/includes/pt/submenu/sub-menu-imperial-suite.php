@@ -14,4 +14,4 @@ if (!isset($basePath)) {
 }
 ?>
 <li><a href="<?php echo $basePath.$lang; ?>suites-rooms/imperial/king">SUITE REI D. PEDRO V</a></li>
-<li class="active"><span></span><a href="<?php echo $basePath.$lang; ?>suites-rooms"><p>Suite Imperial</p><p>suites and rooms</p></a></li>
+<li class="active"><span></span><a href="<?php echo $basePath.$lang; ?>suites-rooms"><p>Suite Imperial</p><p>Quartos e suites</p></a></li>

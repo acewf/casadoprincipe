@@ -58,14 +58,14 @@ if (!isset($basePath)) {
                 <p>Embodying elegance and character, this room aims to reflect the Queen D. Maria II spirit, the mother of D. Pedro V, the Royal Prince. The ornamented flowers of the ceiling and the vivacious colours of the decoration aim to make this room a graceful tribute to this Queen, who was such an important piece for the strong personality of the Royal Prince.</p>
                 <div class="image-frame show-frame">
                     <div class="frame-inside show-frame" data-transition="crossfade">
-                        <img alt="destaque 3" src="<?php echo "$basePath"; ?>images/principe-moldura.png">
+                        <img alt="destaque 3" src="<?php echo "$basePath"; ?>images/fotos-personagens-quartos/rainha-maria-II-moldura.jpg">
                     </div>
                 </div>
             </div><div class="right-block">
                 <ul>
                     <li>Size: 15m² / 161 sq.ft</li>
                     <li>Free WiFi high speed internet access</li>
-                    <li>Queen bed (160cmx200cm/ 626⁄6´´ x 79 ½´´)</li>
+                    <li>Queen bed (160cmx200cm/ 62 <sup>6/6''</sup> x 79 <sup>1/2''</sup>)</li>
                     <li>Window overlooking the Botanical Garden trees</li>
                     <li>Breakfast buffet</li>
                     <li>Occupancy: 2</li>
@@ -86,7 +86,7 @@ if (!isset($basePath)) {
             <div class="rooms-types">
                 <ul class="choose-rooms">
                     <li class="actived"><a data-pageid="page1" href="<?php echo $basePath.$lang; ?>suites-rooms/imperial/king">IMPERIAL SUITE</a></li>
-                    <li><a data-pageid="page2" href="<?php echo $basePath.$lang; ?>suites-rooms/royal">ROYAL ROOMS</a></li>
+                    <li><a data-pageid="page2" href="<?php echo $basePath.$lang; ?>suites-rooms/royal">ROYAL SUITE</a></li>
                     <li><a data-pageid="page3" href="<?php echo $basePath.$lang; ?>suites-rooms/premium">PREMIUM ROOMS</a></li>
                 </ul>
             </div>
@@ -150,7 +150,7 @@ if (!isset($basePath)) {
         <div class="group-text-img">
             <div class="img-content">
                 <div>
-                    <img alt="image D. Pedro" src="<?php echo "$basePath"; ?>images/principe-big.png">
+                    <img alt="image D. Pedro" src="<?php echo "$basePath"; ?>images/fotos-personagens-quartos/rainha-maria-II-big.jpg">
                 </div>
             </div>
         </div><div class="text-content">

@@ -30,7 +30,7 @@ if (!isset($basePath)) {
     <section class="app-history inside-room">
         <div class="group-text-img">
             <div class="description">
-                <p class="small-text">Our friendly and highly professional staff caters to all needs during your visit, hoping to make this a memorable stay whether travelling for business, leisure or with your family.</p>
+                <p class="small-text">As one of the city´s best located accommodations, Casa do Príncipe can claim pride of place in its setting:  the Príncipe Real square (Praça do Príncipe Real), one of the main historic neighborhoods right in the heart of Lisbon.</p>
             </div>
             <div class="img-content">
                 <img alt="image D. Pedro" src="<?php echo "$basePath"; ?>images/streetview.jpg">

@@ -67,7 +67,9 @@ section.content {
 /* ----- MENU AND SOME UI STYLES --------- */
 /* ----------------------------------------*/
 /* ----------------------------------------*/
-
+sup{
+    font-size: .7em;
+}
 .open-menu {
   position: relative;
   width: 50px;
@@ -1207,7 +1209,7 @@ section.app-history,
 }
 .page-content.history .app-history.inside-room .img-content{
   max-height: 1087px;
-  min-height: 1000px;
+  min-height: 1194px;
   overflow:initial;
 }
 #AVP{
@@ -1234,6 +1236,11 @@ section.app-history,
   background-color: #fff;
   text-align: center;
   vertical-align: top;
+}
+div.page-content.history .app-history .description{
+  margin-top: 80px;
+  width: 90%;
+  margin-left: 5%;
 }
 .homepage .app-history .description{
     height: 100%;

@@ -55,7 +55,7 @@ if (!isset($basePath)) {
                 <p>As viagens de um jovem Príncipe Real em busca de conhecimento deram o mote para este quarto. O tecto ornamentado em tons de azul fazem-no deambular entre o céu e o mar, capturando as influências de uma Europa do século XIX, tal como era vista pelos olhos ansiosos de um jovem Príncipe, que em breve seria Rei.</p>
                 <div class="image-frame show-frame">
                     <div class="frame-inside show-frame" data-transition="crossfade">
-                        <img alt="destaque 3" src="<?php echo "$basePath"; ?>images/principe-moldura.png">
+                        <img alt="destaque 3" src="<?php echo "$basePath"; ?>images/fotos-personagens-quartos/voyages-moldura.jpg">
                     </div>
                 </div>
             </div><div class="right-block">
@@ -147,7 +147,7 @@ if (!isset($basePath)) {
         <div class="group-text-img">
             <div class="img-content">
                 <div>
-                    <img alt="image D. Pedro" src="<?php echo "$basePath"; ?>images/principe-big.png">
+                    <img alt="image D. Pedro" src="<?php echo "$basePath"; ?>images/fotos-personagens-quartos/voyages-big.jpg">
                 </div>
             </div>
         </div><div class="text-content">

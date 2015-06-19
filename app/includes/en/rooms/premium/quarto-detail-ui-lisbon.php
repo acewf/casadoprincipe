@@ -62,7 +62,7 @@ if (!isset($basePath)) {
                 <ul>
                     <li>Size: 20m² / 215 sq.ft</li>
                     <li>Free WiFi high speed internet access</li>
-                    <li>Extra large Queen bed (180cmx200cm/ 705⁄5´´ x 79½´´) or two twin beds - at your choice</li>
+                    <li>Extra large Queen bed (180cmx200cm/ 70 <sup>5/5''</sup> x 79 <sup>1/2''</sup>) or two twin beds - at your choice</li>
                     <li>Balcony overlooking the Botanical Garden trees and the Lisbon hills</li>
                     <li>Occupancy: 2 adults</li>
                         <li>Up to 1 baby under 3 years old may use a crib – subject to availability. * Extra charge</li>
@@ -84,7 +84,7 @@ if (!isset($basePath)) {
             <div class="rooms-types">
                 <ul class="choose-rooms">
                     <li class="actived"><a data-pageid="page1" href="<?php echo $basePath.$lang;; ?>suites-rooms/imperial/king">IMPERIAL SUITE</a></li>
-                    <li><a data-pageid="page2" href="<?php echo "$basePath"; ?>suites-rooms/royal">ROYAL ROOMS</a></li>
+                    <li><a data-pageid="page2" href="<?php echo "$basePath"; ?>suites-rooms/royal">ROYAL SUITE</a></li>
                     <li><a data-pageid="page3" href="<?php echo "$basePath"; ?>suites-rooms/historic">HISTORIC ROOMS</a></li>
                 </ul>
             </div>

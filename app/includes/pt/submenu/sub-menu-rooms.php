@@ -15,5 +15,5 @@ if (!isset($basePath)) {
 ?>
 <li><a data-rooms="imperial" href="<?php echo $basePath.$lang; ?>suites-rooms/imperial/king">SUITE IMPERIAL</a></li>
 <li><a data-rooms="royal" href="<?php echo $basePath.$lang; ?>suites-rooms/royal">SUITES REAIS</a></li>
-<li><a data-rooms="premium" href="<?php echo $basePath.$lang; ?>suites-rooms/premium">PREMIUM ROOMS</a></li>
-<li><a data-rooms="historic" href="<?php echo $basePath.$lang; ?>suites-rooms/historic">HISTORIC ROOMS</a></li>
+<li><a data-rooms="premium" href="<?php echo $basePath.$lang; ?>suites-rooms/premium">QUARTOS PREMIUM</a></li>
+<li><a data-rooms="historic" href="<?php echo $basePath.$lang; ?>suites-rooms/historic">QUARTOS HISTÓRICOS</a></li>

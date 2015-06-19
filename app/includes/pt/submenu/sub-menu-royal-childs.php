@@ -15,4 +15,4 @@ if (!isset($basePath)) {
 ?>
 <li><a href="<?php echo $basePath.$lang; ?>suites-rooms/royal/queen">Suite Rainha D. Estefânia</a></li>
 <li><a href="<?php echo $basePath.$lang; ?>suites-rooms/royal/palace">Suite Palácio</a></li>
-<li class="active"><span></span><a href="<?php echo $basePath.$lang; ?>suites-rooms"><p>Suites Reais</p><p>suites and rooms</p></a></li>
+<li class="active"><span></span><a href="<?php echo $basePath.$lang; ?>suites-rooms"><p>Suites Reais</p><p>Quartos e suites</p></a></li>

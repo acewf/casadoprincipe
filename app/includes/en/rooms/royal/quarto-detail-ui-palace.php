@@ -67,7 +67,7 @@ if (!isset($basePath)) {
                 <ul>
                     <li>Size: 35m² / 376 sq.ft</li>
                     <li>Free WiFi high speed internet access</li>
-                    <li>Extra large Queen bed (180cmx200cm/ 705⁄5 x 79½´´) or two twin beds - at your choice</li>
+                    <li>Extra large Queen bed (180cmx200cm/ 70 <sup>5/5''</sup> x 79 <sup>1/2''</sup>) or two twin beds - at your choice</li>
                     <li>Windows overlooking the Príncipe Real garden</li>
                     <li>Seating and relaxing area</li>
                     <li>Sofa double bed in the lounge area</li>

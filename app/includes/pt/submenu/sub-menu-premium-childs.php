@@ -15,4 +15,4 @@ if (!isset($basePath)) {
 ?>
 <li><a href="<?php echo $basePath.$lang; ?>suites-rooms/premium/arts">Quarto das Artes</a></li>
 <li><a href="<?php echo $basePath.$lang; ?>suites-rooms/premium/lisbon">Quarto da Cidade de Lisboa</a></li>
-<li class="active"><span></span><a href="<?php echo $basePath.$lang; ?>suites-rooms"><p>Quartos Premium</p><p>suites and rooms</p></a></li>
+<li class="active"><span></span><a href="<?php echo $basePath.$lang; ?>suites-rooms"><p>Quartos Premium</p><p>Quartos e suites</p></a></li>

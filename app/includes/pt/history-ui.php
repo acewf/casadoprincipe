@@ -16,6 +16,9 @@ if (!isset($basePath)) {
                     <img alt="image D. Pedro" src="<?php echo "$basePath"; ?>images/principe-big.png">
                 </div>
             </div>
+            <div class="description">
+                <p class="small-text">“O Santo”, o “Esperançoso”, o “Bem-amado” foram os cognomes com que a História o baptizou.</p>
+            </div>
         </div><div class="text-content">
             <div>
                 <!--

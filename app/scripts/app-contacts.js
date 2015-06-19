@@ -72,18 +72,20 @@ define(['contacts'], function() {
 
             var messages = {};
             messages.en = {};
+            messages.en['geral'] = 'Message incomplete. Please fill out the requiered fields';
             messages.en['nome'] = 'This field is required';
             messages.en['email'] = 'Incorrect email format.';
             messages.en['security'] = 'Wrong answer';
             messages.en['message'] = 'This field is required';
-            messages.en['sucesssend'] = 'Message Sended.';
+            messages.en['sucesssend'] = 'Message sent. Thank you.';
 
             messages.pt = {};
+            messages.pt['geral'] = 'Mensagem incompleta. Por favor preencha todos os campos.';
             messages.pt['nome'] = 'Este campo é obrigatório';
             messages.pt['email'] = 'Email com formato incorrecto';
             messages.pt['security'] = 'Resposta errada';
             messages.pt['message'] = 'Este campo é obrigatório';
-            messages.pt['sucesssend'] = 'Mensagem Enviada.';
+            messages.pt['sucesssend'] = 'Mensagem Enviada. Muito obrigado.';
 
             var ling = null;
             if(language==='en' || language==='en/'){
@@ -91,6 +93,14 @@ define(['contacts'], function() {
             } else {
                 ling='pt';
             }
+
+            var baseURL = null;
+            if (window.location.origin) {
+                baseURL = window.location.origin;
+            } else {
+                baseURL = window.location.host;
+            }
+            if (window.location.origin) {};
 
             $('#submitcontact').click(function(){
                 var nomeValid = $('#formcontact #nome');
@@ -135,7 +145,7 @@ define(['contacts'], function() {
                 } else{
                     m  = $(liSecurity).find('.parsley-errors-list');
                     securityValid.addClass('show-error');
-                    m.html('<li class="parsley-required">'+messages[ling]['email']+'</li>');
+                    m.html('<li class="parsley-required">'+messages[ling]['security']+'</li>');
                 }
                 if (!messageValid.parsley().isValid()) {                    
                     m  = $(liMessage).find('.parsley-errors-list');
@@ -155,13 +165,17 @@ define(['contacts'], function() {
                 console.log(formValid)
 
                 if (!formValid) {
-                    $('.contact .feedback').html('Message incomplete. Please fill out the requiered fields.');
+                    $('.contact .feedback').html(messages[ling]['geral']);
                     $('.contact .feedback').addClass('show');
                 } else {
                     $('.contact .feedback').html('');
                     $('.contact .feedback').removeClass('show');
-
-                    $.post("http://casadoprincipe.pt/contact-process.php", $("#formcontact").serialize(), function(data){
+                    var valuesend = $("#formcontact").serialize();
+                    console.log('-->',valuesend);
+                    var result = valuesend.replace(/%0D/g, "<br>");
+                    result = result.replace(/%0A/g, "<br>");
+                    console.log('-->',result);
+                    $.post(baseURL+"/contact-process.php",result, function(data){
                         //do stuff here...
                         console.log('FEEDBACK EMAIL SEND',data);
                         $('.contact .feedback').html(messages[ling]['sucesssend']);

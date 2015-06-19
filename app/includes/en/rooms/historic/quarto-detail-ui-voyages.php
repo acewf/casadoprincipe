@@ -63,7 +63,7 @@ if (!isset($basePath)) {
                     <li>Size: 14m² / 150 sq.ft</li>
                     <li>Welcome drink on arrival</li>
                     <li>Free WiFi high speed internet access</li>
-                    <li>Queen bed (160cmx200cm/ 626⁄6´´ x 79½´´)</li>
+                    <li>Queen bed (160cmx200cm/ 62 <sup>6/6''</sup> x 79 <sup>1/2''</sup>)</li>
                     <li>Window overlooking the Botanical garden trees</li>
                     <li>Breakfast buffet</li>
                     <li>Occupancy: 2</li>
@@ -84,7 +84,7 @@ if (!isset($basePath)) {
             <div class="rooms-types">
                 <ul class="choose-rooms">
                     <li class="actived"><a data-pageid="page1" href="<?php echo $basePath.$lang; ?>suites-rooms/imperial/king">IMPERIAL SUITE</a></li>
-                    <li><a data-pageid="page2" href="<?php echo $basePath.$lang; ?>suites-rooms/royal">ROYAL ROOMS</a></li>
+                    <li><a data-pageid="page2" href="<?php echo $basePath.$lang; ?>suites-rooms/royal">ROYAL SUITE</a></li>
                     <li><a data-pageid="page3" href="<?php echo $basePath.$lang; ?>suites-rooms/premium">PREMIUM ROOMS</a></li>
                 </ul>
             </div>

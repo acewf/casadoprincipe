@@ -16,6 +16,9 @@ if (!isset($basePath)) {
                     <img alt="image D. Pedro" src="<?php echo "$basePath"; ?>images/principe-big.png">
                 </div>
             </div>
+            <div class="description">
+                <p class="small-text">“The Saint”, “the Hopeful”, “the Beloved One”, were some of the names used to describe him.</p>
+            </div>
         </div><div class="text-content">
             <div>
                 <!--

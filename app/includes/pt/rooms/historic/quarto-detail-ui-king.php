@@ -55,7 +55,7 @@ if (!isset($basePath)) {
                 <p>Este quarto foi inspirado no pai do Príncipe Real, D. Fernando. Os tons mornos de caramelo e dourado na decoração e a beleza dos trabalhos do tecto recolhem a sobriedade e firmeza deste Rei.</p>
                 <div class="image-frame show-frame">
                     <div class="frame-inside show-frame" data-transition="crossfade">
-                        <img alt="destaque 3" src="<?php echo "$basePath"; ?>images/principe-moldura.png">
+                        <img alt="destaque 3" src="<?php echo "$basePath"; ?>images/fotos-personagens-quartos/fernando-II-moldura.jpg">
                     </div>
                 </div>
             </div><div class="right-block">
@@ -147,7 +147,7 @@ if (!isset($basePath)) {
         <div class="group-text-img">
             <div class="img-content">
                 <div>
-                    <img alt="image D. Pedro" src="<?php echo "$basePath"; ?>images/principe-big.png">
+                    <img alt="image D. Pedro" src="<?php echo "$basePath"; ?>images/fotos-personagens-quartos/fernando-II-big.jpg">
                 </div>
             </div>
         </div><div class="text-content">
