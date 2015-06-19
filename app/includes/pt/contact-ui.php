@@ -22,6 +22,7 @@ if (!isset($basePath)) {
                         <li>1250-184 Lisboa</li>
                         <li>Tel +351 218 264 183</li>
                         <li>+351 935 743 078</li>
+                        <li>GPS: 38° 43' 32'' N,  9' 8' 46'' O</li>
                         <li><a href="mailto:info@casadoprincipe.com">Email: info@casadoprincipe.com</a></li>
                     </ul>
                     <a href="https://www.google.pt/maps/place/Pra%C3%A7a+do+Pr%C3%ADncipe+Real+23,+1250-096+Lisboa/@38.7166278,-9.1493433,17z/data=!3m1!4b1!4m2!3m1!1s0xd19337ec47b8b81:0x490ba0d459bfd352" target="_blank">OPEN MAP</a>

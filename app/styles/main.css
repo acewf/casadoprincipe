@@ -1590,6 +1590,7 @@ div.img-content img{
 .overlay {
   display: none;
   position: fixed;
+  z-index: 100;
   width: 100%;
   height: 100%;
   font-size: medium;
@@ -1876,6 +1877,9 @@ section.content .origenbox input,
   padding: 0;
   color: inherit;
   margin-top: 0;
+  text-align: left;
+  font-size: 1em;
+  width: 100%;
 }
 .contact .center-content{
   min-width: 450px;

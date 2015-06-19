@@ -91,7 +91,7 @@ if (!isset($basePath)) {
             </div>
             <div class="rooms-types">
                 <ul class="choose-rooms">
-                    <li class="actived"><a data-pageid="page1" href="<?php echo $basePath.$lang; ?>suites-rooms/royal">ROYAL SUITE</a></li>
+                    <li class="actived"><a data-pageid="page1" href="<?php echo $basePath.$lang; ?>suites-rooms/royal">ROYAL SUITES</a></li>
                     <li><a data-pageid="page2" href="<?php echo $basePath.$lang; ?>suites-rooms/premium">PREMIUM ROOMS</a></li>
                     <li><a data-pageid="page3" href="<?php echo $basePath.$lang; ?>suites-rooms/historic">HISTORIC ROOMS</a></li>
                 </ul>

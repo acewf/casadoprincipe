@@ -47,14 +47,15 @@ function ContentLoader(res){
     } else {
         baseURL = window.location.host;
     }
-    $.LoadingOverlaySetup({
+    var settings = {
          color           : "rgba(255, 255, 255, 0.8)",
          image           : baseURL+"/images/loading.gif",
          maxSize         : "100px",
          minSize         : "20px",
          resizeInterval  : 0,
          size            : "50%"
-    });
+    };
+    $.LoadingOverlaySetup(settings);
     this.loaded = function(data){  
         var evt = new Event('complete');
         this.dispatchEvent(evt);
@@ -70,7 +71,7 @@ function ContentLoader(res){
             baseURL = 'http://'+baseURL
         };
         var maddress = baseURL+'/includes/'+endereco+'.php?';
-        $(".main").LoadingOverlay("show");
+        $(".main").LoadingOverlay("show",settings,true);
         $.ajax({
             cache: false,
             url: maddress,
@@ -84,7 +85,7 @@ function ContentLoader(res){
                     try{
                         $(msnode).append(newDiv[0].innerHTML);
                         $(".main").LoadingOverlay("hide", true);
-                        instance.loaded(null);
+                        //instance.loaded(null);
                     }catch(err) {
                         console.log(err.message);
                     }            

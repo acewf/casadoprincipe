@@ -60,7 +60,7 @@ if (!isset($basePath)) {
                 <p>The Palace Suite is an ode to the Palace of Necessidades, where the Royal Prince, D. Pedro V, was born and lived. The palette of elegant greens, the stunning stuccowork ceiling and the carefully chosen furniture makes us feel we too can dream away as if we were in a room of the Palace, waltzing our way through the hallways.</p>
                 <div class="image-frame show-frame">
                     <div class="frame-inside show-frame" data-transition="crossfade">
-                        <img alt="destaque 3" src="<?php echo "$basePath"; ?>images/principe-moldura.png">
+                        <img alt="destaque 3" src="<?php echo "$basePath"; ?>images/fotos-personagens-quartos/necessidades-moldura.jpg">
                     </div>
                 </div>
             </div><div class="right-block">
@@ -174,7 +174,7 @@ if (!isset($basePath)) {
         <div class="group-text-img">
             <div class="img-content">
                 <div>
-                    <img alt="image D. Pedro" src="<?php echo "$basePath"; ?>images/principe-big.png">
+                    <img alt="image D. Pedro" src="<?php echo "$basePath"; ?>images/fotos-personagens-quartos/necessidades-big.jpg">
                 </div>
             </div>
         </div><div class="text-content">

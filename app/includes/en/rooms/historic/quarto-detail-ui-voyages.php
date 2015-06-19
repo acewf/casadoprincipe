@@ -55,7 +55,7 @@ if (!isset($basePath)) {
                 <p>This room is inspired by the early voyages and travelling endured by the Royal Prince to bring new knowledge to Portugal.  This room´s decoration with its blue stuccowork ceiling calls us to wander between sea and sky while capturing the influences of a 19th century Europe, as seen by the keen eyes of a young Prince, soon to be King.</p>
                 <div class="image-frame show-frame">
                     <div class="frame-inside show-frame" data-transition="crossfade">
-                        <img alt="destaque 3" src="<?php echo "$basePath"; ?>images/principe-moldura.png">
+                        <img alt="destaque 3" src="<?php echo "$basePath"; ?>images/fotos-personagens-quartos/voyages-moldura.jpg">
                     </div>
                 </div>
             </div><div class="right-block">
@@ -84,7 +84,7 @@ if (!isset($basePath)) {
             <div class="rooms-types">
                 <ul class="choose-rooms">
                     <li class="actived"><a data-pageid="page1" href="<?php echo $basePath.$lang; ?>suites-rooms/imperial/king">IMPERIAL SUITE</a></li>
-                    <li><a data-pageid="page2" href="<?php echo $basePath.$lang; ?>suites-rooms/royal">ROYAL SUITE</a></li>
+                    <li><a data-pageid="page2" href="<?php echo $basePath.$lang; ?>suites-rooms/royal">ROYAL SUITES</a></li>
                     <li><a data-pageid="page3" href="<?php echo $basePath.$lang; ?>suites-rooms/premium">PREMIUM ROOMS</a></li>
                 </ul>
             </div>
@@ -148,7 +148,7 @@ if (!isset($basePath)) {
         <div class="group-text-img">
             <div class="img-content">
                 <div>
-                    <img alt="image D. Pedro" src="<?php echo "$basePath"; ?>images/principe-big.png">
+                    <img alt="image D. Pedro" src="<?php echo "$basePath"; ?>images/fotos-personagens-quartos/voyages-big.jpg">
                 </div>
             </div>
         </div><div class="text-content">

@@ -183,7 +183,7 @@ define(['contacts'], function() {
                         $('.contact .feedback').addClass('sucess');
 
 
-                        $('.contact ul').hide();
+                        $('.contact #formcontact ul').hide();
                         $('.contact #submitcontact').hide();
                         $('.contact #clearform').removeClass('hide');
 

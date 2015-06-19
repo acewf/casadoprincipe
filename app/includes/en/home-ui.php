@@ -74,7 +74,7 @@ if (!isset($basePath)) {
         </article>
         <article class="reasons">
             <h2>located in one of the most trendy and exciting areas</h2>
-            <div class="description"><p>Casa do Príncipe is located in one of its trendy and most exciting areas of Lisbon, facing the Príncipe Real Garden. With spacious and sunny rooms, this intimate B&amp;B will make you feel at home with the comfort and quality of a hotel, benefiting from its spectacular location at walking distance from fashionable shops and city sights, signature restaurants and all that makes Lisbon Europe’s most well-kept secret.</p></div>
+            <div class="description"><p>Casa do Príncipe is located in one of the trendiest and most exciting areas of Lisbon, facing the Príncipe Real Garden. With spacious and sunny rooms, this intimate B&amp;B will make you feel at home with the comfort and quality of a hotel, benefiting from its spectacular location at walking distance from fashionable shops and city sights, signature restaurants and all that makes Lisbon Europe’s most well-kept secret.</p></div>
         </article>
         <article class="show-rooms">
             <div class="center-title">

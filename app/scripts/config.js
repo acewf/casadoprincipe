@@ -26,7 +26,7 @@ var require = {
         textloader: '../scripts/textloader',
         contentloader: '../scripts/contentloader',
         domainrequest: '../scripts/jquery.xdomainrequest.min',
-        loadingoverlay: '../scripts/loadingoverlay.min',
+        loadingoverlay: '../scripts/loadingoverlay',
         jquery: 'jquery/dist/jquery',
         parsley: 'parsleyjs/dist/parsley.min',
         bootstrap: 'bootstrap/dist/js/bootstrap',

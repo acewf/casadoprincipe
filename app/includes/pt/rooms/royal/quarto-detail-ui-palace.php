@@ -60,7 +60,7 @@ if (!isset($basePath)) {
                 <p>A suite do Palácio é inspirada no Palácio das Necessidades, onde o Príncipe Real, D. Pedro V, nasceu e viveu. Os elegantes tons de verde, os tectos trabalhados e a mobília cuidadosamente escolhida, transportam-no para os infindáveis corredores do Palácio. </p>
                 <div class="image-frame show-frame">
                     <div class="frame-inside show-frame" data-transition="crossfade">
-                        <img alt="destaque 3" src="<?php echo "$basePath"; ?>images/principe-moldura.png">
+                        <img alt="destaque 3" src="<?php echo "$basePath"; ?>images/fotos-personagens-quartos/necessidades-moldura.jpg">
                     </div>
                 </div>
             </div><div class="right-block">
@@ -172,7 +172,7 @@ if (!isset($basePath)) {
         <div class="group-text-img">
             <div class="img-content">
                 <div>
-                    <img alt="image D. Pedro" src="<?php echo "$basePath"; ?>images/principe-big.png">
+                    <img alt="image D. Pedro" src="<?php echo "$basePath"; ?>images/fotos-personagens-quartos/necessidades-big.jpg">
                 </div>
             </div>
         </div><div class="text-content">
