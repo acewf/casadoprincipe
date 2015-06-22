@@ -16,7 +16,7 @@ if (!isset($basePath)) {
         <div class="group-text-img">
             <div class="description">
                 <div class="text-center">
-                    <p class="small-text">endereço, telefone e e-mail</p>
+                    <p class="small-text">address, telephone and email</p>
                     <ul>
                         <li>Praça do Príncipe Real, n. 23 – 1º</li>
                         <li>1250-184 Lisboa</li>
@@ -33,12 +33,12 @@ if (!isset($basePath)) {
             </div>
         </div><div class="text-content">
             <div class="center-content">
-            <h3>Sinta-se à vontade para nos perguntar qualquer questão. Respondemos rapidamente.</h3>
+            <h3>feel free to ask us any question. we will get back to you very very shortly</h3>
             <form id="formcontact" action="process-service.php" data-parsley-validate>
                 <div class="feedback"></div>
                 <ul>
                     <li>
-                        <span>Nome</span>
+                        <span>Name</span>
                         <input type="text" id="nome"  name="nome" data-parsley-trigger="change" required/>
                     </li>
                     <li>
@@ -46,24 +46,16 @@ if (!isset($basePath)) {
                         <input type="email" id="email"  name="email" data-parsley-trigger="change" required />
                     </li>
                     <li>
-<<<<<<< HEAD:app/includes/contact-ui.php
-                        <span>CAPTCHA</span>
-=======
                         <span id="code">SECURITY CODE</span>
->>>>>>> a0c03b28ce75073e97a855b60ac297ae9fbcde3b:app/includes/en/contact-ui.php
                         <input type="text" id="security" data-defaultValue='14+8=?'  name="security" value="14+8=?"  required/>
                     </li>
                     <li>
-                        <span>A SUA MENSAGEM</span>
+                        <span>YOUR MESSAGE</span>
                         <textarea id="message" name="message"  required></textarea>
                     </li>
                 </ul>
-<<<<<<< HEAD:app/includes/contact-ui.php
-                <a id="submitcontact">ENVIAR</a>
-=======
                 <a id="submitcontact">SUBMIT</a>
                 <a id="clearform" class="hide">NEW MESSAGE</a>
->>>>>>> a0c03b28ce75073e97a855b60ac297ae9fbcde3b:app/includes/en/contact-ui.php
             </form>
             </div>
     </section>       

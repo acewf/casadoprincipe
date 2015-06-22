@@ -13,8 +13,7 @@ class AdressChecker
     public $myPaths;
     public function initPaths(){
         $basefolder = '';
-        $this->myPaths = array();   
-<<<<<<< HEAD
+        $this->myPaths = array();
         $this->generatePath($basefolder.'','home-ui','en/',null,'en/head-index');
         $this->generatePath($basefolder.'en/','home-ui','en/',null,'en/head-index');
         $this->generatePath($basefolder.'en/home','home-ui','en/',null,'head-index');
@@ -45,43 +44,10 @@ class AdressChecker
         $this->generatePath($basefolder.'en/suites-rooms/historic/king','quarto-detail-ui-king','en/rooms/historic/','sub-menu-historic-childs','en/head-suits-rooms-king');
         $this->generatePath($basefolder.'en/suites-rooms/historic/sintra','quarto-detail-ui-sintra','en/rooms/historic/','sub-menu-historic-childs','en/head-suits-rooms-sintra');
         $this->generatePath($basefolder.'en/suites-rooms/historic/voyages','quarto-detail-ui-voyages','en/rooms/historic/','sub-menu-historic-childs','en/head-suits-rooms-voyages');
-=======
-        $this->generatePath($basefolder.'','home-ui','en/',null,'head-index');
-        $this->generatePath($basefolder.'en/','home-ui','en/',null,'head-index');
-        $this->generatePath($basefolder.'en/home','home-ui','en/',null,'head-index');
-        $this->generatePath($basefolder.'en/casa-do-principe','casa-do-principe-ui','en/',null,'head-casa-do-principe');
-        $this->generatePath($basefolder.'en/facilities-services','facilities-services-ui','en/',null,'head-facilities-services');
-        $this->generatePath($basefolder.'en/history','history-ui','en/',null,'head-history');
-        $this->generatePath($basefolder.'index.php','home-ui','en/',null,'head-index');
-        $this->generatePath($basefolder.'en/gallery','gallery-ui','',null,'head-gallery');
-        $this->generatePath($basefolder.'en/location','location-ui','en/',null,'head-location');
-        $this->generatePath($basefolder.'en/personalize-your-stay','personalize-ui','en/',null,'head-personalize');
-        $this->generatePath($basefolder.'en/contacts','contact-ui','en/',null,'head-contact');
-        // ------------ Suite Rooms ------------- //
-        $this->generatePath($basefolder.'en/suites-rooms/','quarto-ui','en/','sub-menu-rooms','head-suits-rooms');
-        $this->generatePath($basefolder.'en/suites-rooms/imperial','quarto-ui-info','en/rooms/imperial/','sub-menu-imperial-suite','head-suits-rooms-imperial');
-        $this->generatePath($basefolder.'en/suites-rooms/royal','quarto-ui-info','en/rooms/royal/','sub-menu-royal','head-suits-rooms-imperial');
-        $this->generatePath($basefolder.'en/suites-rooms/premium','quarto-ui-info','en/rooms/premium/','sub-menu-premium','head-suits-rooms-imperial');
-        $this->generatePath($basefolder.'en/suites-rooms/historic','quarto-ui-info','en/rooms/historic/','sub-menu-historic','head-suits-rooms-imperial');
-        // ------------ Imperial ------------- //
-        $this->generatePath($basefolder.'en/suites-rooms/imperial/king','quarto-detail-ui','en/rooms/imperial/','sub-menu-imperial-suite-childs','head-suits-rooms-king');
-        // ------------ Royal ------------- //
-        $this->generatePath($basefolder.'en/suites-rooms/royal/queen','quarto-detail-ui-queen','en/rooms/royal/','sub-menu-royal-childs','head-suits-rooms-queen');
-        $this->generatePath($basefolder.'en/suites-rooms/royal/palace','quarto-detail-ui-palace','en/rooms/royal/','sub-menu-royal-childs','head-suits-rooms-palace');
-        // ------------ Premium ------------- //
-        $this->generatePath($basefolder.'en/suites-rooms/premium/arts','quarto-detail-ui-arts','en/rooms/premium/','sub-menu-premium-childs','head-suits-rooms-arts');
-        $this->generatePath($basefolder.'en/suites-rooms/premium/lisbon','quarto-detail-ui-lisbon','en/rooms/premium/','sub-menu-premium-childs','head-suits-rooms-lisbon');
-        // ------------ Historic  ------------- //
-        $this->generatePath($basefolder.'en/suites-rooms/historic/queen','quarto-detail-ui-queen','en/rooms/historic/','sub-menu-historic-childs','head-suits-rooms-historic-queen');
-        $this->generatePath($basefolder.'en/suites-rooms/historic/king','quarto-detail-ui-king','en/rooms/historic/','sub-menu-historic-childs','head-suits-rooms-king');
-        $this->generatePath($basefolder.'en/suites-rooms/historic/sintra','quarto-detail-ui-sintra','en/rooms/historic/','sub-menu-historic-childs','head-suits-rooms-sintra');
-        $this->generatePath($basefolder.'en/suites-rooms/historic/voyages','quarto-detail-ui-voyages','en/rooms/historic/','sub-menu-historic-childs','head-suits-rooms-voyages');
->>>>>>> a0c03b28ce75073e97a855b60ac297ae9fbcde3b
         // ------------  ------------- //
 
 
         // ------------ PT ------------- //
-<<<<<<< HEAD
         $this->generatePath($basefolder.'pt/','home-ui','pt/',null,'pt/head-index');
         $this->generatePath($basefolder.'pt/home','home-ui','pt/',null,'pt/head-index');
         $this->generatePath($basefolder.'pt/casa-do-principe','casa-do-principe-ui','pt/',null,'pt/head-casa-do-principe');
@@ -111,37 +77,7 @@ class AdressChecker
         $this->generatePath($basefolder.'pt/suites-rooms/historic/king','quarto-detail-ui-king','pt/rooms/historic/','sub-menu-historic-childs','pt/head-suits-rooms-king');
         $this->generatePath($basefolder.'pt/suites-rooms/historic/sintra','quarto-detail-ui-sintra','pt/rooms/historic/','sub-menu-historic-childs','pt/head-suits-rooms-sintra');
         $this->generatePath($basefolder.'pt/suites-rooms/historic/voyages','quarto-detail-ui-voyages','pt/rooms/historic/','sub-menu-historic-childs','pt/head-suits-rooms-voyages');
-=======
-        $this->generatePath($basefolder.'pt/','home-ui','pt/',null,'head-index');
-        $this->generatePath($basefolder.'pt/home','home-ui','pt/',null,'head-index');
-        $this->generatePath($basefolder.'pt/casa-do-principe','casa-do-principe-ui','pt/',null,'head-casa-do-principe');
-        $this->generatePath($basefolder.'pt/facilities-services','facilities-services-ui','pt/',null,'head-facilities-services');
-        $this->generatePath($basefolder.'pt/history','history-ui','pt/',null,'head-history');
-        $this->generatePath($basefolder.'index.php','home-ui','pt/',null,'head-index');
-        $this->generatePath($basefolder.'pt/gallery','gallery-ui','',null,'head-gallery');
-        $this->generatePath($basefolder.'pt/location','location-ui','pt/',null,'head-location');
-        $this->generatePath($basefolder.'pt/personalize-your-stay','personalize-ui','pt/',null,'head-personalize');
-        $this->generatePath($basefolder.'pt/contacts','contact-ui','pt/',null,'head-contact');
-        // ------------ Suite Rooms ------------- //
-        $this->generatePath($basefolder.'pt/suites-rooms/','quarto-ui','pt/','sub-menu-rooms','head-suits-rooms');
-        $this->generatePath($basefolder.'pt/suites-rooms/imperial','quarto-ui-info','pt/rooms/imperial/','sub-menu-imperial-suite','head-suits-rooms-imperial');
-        $this->generatePath($basefolder.'pt/suites-rooms/royal','quarto-ui-info','pt/rooms/royal/','sub-menu-royal','head-suits-rooms-imperial');
-        $this->generatePath($basefolder.'pt/suites-rooms/premium','quarto-ui-info','pt/rooms/premium/','sub-menu-premium','head-suits-rooms-imperial');
-        $this->generatePath($basefolder.'pt/suites-rooms/historic','quarto-ui-info','pt/rooms/historic/','sub-menu-historic','head-suits-rooms-imperial');
-        // ------------ Imperial ------------- //
-        $this->generatePath($basefolder.'pt/suites-rooms/imperial/king','quarto-detail-ui','pt/rooms/imperial/','sub-menu-imperial-suite-childs','head-suits-rooms-king');
-        // ------------ Royal ------------- //
-        $this->generatePath($basefolder.'pt/suites-rooms/royal/queen','quarto-detail-ui-queen','pt/rooms/royal/','sub-menu-royal-childs','head-suits-rooms-queen');
-        $this->generatePath($basefolder.'pt/suites-rooms/royal/palace','quarto-detail-ui-palace','pt/rooms/royal/','sub-menu-royal-childs','head-suits-rooms-palace');
-        // ------------ Premium ------------- //
-        $this->generatePath($basefolder.'pt/suites-rooms/premium/arts','quarto-detail-ui-arts','pt/rooms/premium/','sub-menu-premium-childs','head-suits-rooms-arts');
-        $this->generatePath($basefolder.'pt/suites-rooms/premium/lisbon','quarto-detail-ui-lisbon','pt/rooms/premium/','sub-menu-premium-childs','head-suits-rooms-lisbon');
-        // ------------ Historic  ------------- //
-        $this->generatePath($basefolder.'pt/suites-rooms/historic/queen','quarto-detail-ui-queen','pt/rooms/historic/','sub-menu-historic-childs','head-suits-rooms-historic-queen');
-        $this->generatePath($basefolder.'pt/suites-rooms/historic/king','quarto-detail-ui-king','pt/rooms/historic/','sub-menu-historic-childs','head-suits-rooms-king');
-        $this->generatePath($basefolder.'pt/suites-rooms/historic/sintra','quarto-detail-ui-sintra','pt/rooms/historic/','sub-menu-historic-childs','head-suits-rooms-sintra');
-        $this->generatePath($basefolder.'pt/suites-rooms/historic/voyages','quarto-detail-ui-voyages','pt/rooms/historic/','sub-menu-historic-childs','head-suits-rooms-voyages');
->>>>>>> a0c03b28ce75073e97a855b60ac297ae9fbcde3b
+
         // ------------  ------------- //
     }
     public function generatePath($compare,$file,$localPath,$levelMenu,$headfile)

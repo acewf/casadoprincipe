@@ -14,15 +14,18 @@ if (!isset($basePath)) {
             <div class="frame-inside" data-transition="crossfade">
                 <div class="fotorama fotorama__wrap fotorama__wrap--css3 fotorama__wrap--slide fotorama__wrap--no-controls" data-nav="false" data-arrows="true" data-click="true" data-swipe="true" data-allowfullscreen="true" data-loop="true" data-autoplay="true" data-stopautoplayontouch="false"  data-width="100%" data-ratio="1432/577">
                     <div class="featured-content">
-                        <!--<div class="info-room-featured">
+                        <div class="info-room-featured">
                             <h3>King suite</h3>
                             <p>Spacious bedroom with lounge area, balcony overlooking the Príncipe Real garden, with three large windows that fill the room with natural light, creating a bright but relaxing atmosphere.</p>
                             <a href="<?php echo "$basePath"; ?>suites/" target="_self"><button>go previus</button></a>
-                        </div>-->
-                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/suites-and-rooms/historic/king-fernando/historic-king-fernando-01.jpg">
+                        </div>                    
+                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/sintra-pena-palacio.jpg">
                     </div>
                     <div class="featured-content">
-                        <img alt="destaque 2" src="<?php echo "$basePath"; ?>images/suites-and-rooms/historic/king-fernando/historic-king-fernando-02.jpg">
+                        <img alt="destaque 2" src="<?php echo "$basePath"; ?>images/fotos-sintra-palacio-da-pena-050.jpg">
+                    </div>
+                    <div class="featured-content">
+                        <img alt="destaque 3" src="<?php echo "$basePath"; ?>images/palacio-da-liberdade-interior1.jpg">
                     </div>
                 </div>
             </div>
@@ -32,44 +35,31 @@ if (!isset($basePath)) {
                 <div class="input-daterange input-group" id="datepicker">
                 <div class="group-dates-boxes">
                 <div class="box-date chech-in"> <div data-icon="a" class="icon icon-calendar">
-                </div><div class="text-field-container"><input type="text" class="input-sm form-control" id="AVP_arrivalDate" name="arrivalDate" value="Check-in"/></div><div data-icon="a" class="icon icon-caret-down-two"></div>
+                </div><div class="text-field-container"><input type="text" class="input-sm form-control" id="AVP_arrivalDate" name="arrivalDate" value="Check In"/></div><div data-icon="a" class="icon icon-caret-down-two"></div>
                 </div><div class="box-date chech-out"><div data-icon="a" class="icon icon-calendar">
-                </div><div class="text-field-container"><input type="text" class="input-sm form-control" id="AVP_exitDate" name="end" value="Check-out"/></div><div data-icon="a" class="icon icon-caret-down-two"></div>
-                </div></div></div><div class="bookregister"><button id="bookit">RESERVE ONLINE<div class="icon icon-arrow-right"></div></button></div></div></form>
+                </div><div class="text-field-container"><input type="text" class="input-sm form-control" id="AVP_exitDate" name="end" value="Check Out"/></div><div data-icon="a" class="icon icon-caret-down-two"></div>
+                </div></div></div><div class="bookregister"><button id="bookit">BOOK NOW<div class="icon icon-arrow-right"></div></button></div></div></form>
         </article>
 
         <article class="show-room-info">
             <div class="center-title">
-                <h3>Quarto Rei D. Fernando II</h3>
-                <div class="description"><p>Quarto com vista para o Jardim Botânico e com um imponente e original tecto detalhadamente estucado. </p></div>
+                <h3>King suite</h3>
+                <div class="description"><p>Spacious bedroom with lounge area, balcony overlooking the Príncipe Real garden, with three large windows that fill the room with natural light, creating a bright but relaxing atmosphere.</p></div>
             </div>
         </article>
 
         <article class="show-room-description">
             <div class="left-block">
-                <p>Este quarto foi inspirado no pai do Príncipe Real, D. Fernando. Os tons mornos de caramelo e dourado na decoração e a beleza dos trabalhos do tecto recolhem a sobriedade e firmeza deste Rei.</p>
+                <p>Indulge in the glamour of this imperial suite that pays tribute to the Príncipe Real (Royal Prince) D. Pedro V, who inspired the name our B&amp;B. This room´s decoration embodies the elegance and honour that characterized him. Let yourself be dazzled by the amazing stuccowork ceilings of this suite, taking you back in time to the elegant 19th century.</p>
                 <div class="image-frame show-frame">
                     <div class="frame-inside show-frame" data-transition="crossfade">
-                        <img alt="destaque 3" src="<?php echo "$basePath"; ?>images/fotos personagens quartos/principe-moldura.png">
+                        <img alt="destaque 3" src="<?php echo "$basePath"; ?>images/principe-moldura.png">
                     </div>
                 </div>
             </div><div class="right-block">
                 <ul>
-                    <li>15m²</li>
-                    <li>Acesso a internet de alta velocidade</li>
-                    <li>Cama de casal (160cmx200cm)</li>
-                    <li>Janela com vista sobre as árvores do Jardim Botânico</li>
-                    <li>Ocupação: 2 adultos</li>
-                    <li>Pequeno-Almoço buffet</li>
-                    <li>Televisão plasma de ecrã plano
-                    <li>Ar condicionado</li>
-                    <li>Amenities de casa-de-banho premium</li>
-                    <li>Serviços domésticos diários</li>
-                    <li>Cofre no quarto</li>
-                    <li>Secador de cabelo</li>
-
-
-                    <!--<li>Extra large Queen bed or two twin beds</li>
+                    <li>Size: 45m² /484 sq.ft</li>
+                    <li>Extra large Queen bed or two twin beds</li>
                     <li>Balcony overlooking the Príncipe Real garden</li>
                     <li>Seating and relaxing area</li>
                     <li>Sofa double bed in the lounge area</li>
@@ -79,97 +69,83 @@ if (!isset($basePath)) {
                     <li>Balcony overlooking the Príncipe Real garden</li>
                     <li>Seating and relaxing area</li>
                     <li>Sofa double bed in the lounge area</li>
-                    <li>Premium bathroom amenities</li>-->
+                    <li>Premium bathroom amenities</li>
                 </ul>
-                <a class="big-size"><h4>Sobre o Rei D. Fernando II<div class="icon icon-arrow-right"></div></h4></a>
+                <a class="big-size" href="" target="_self"><h4>About King D. Pedro V<div class="icon icon-arrow-right"></div></h4></a>
             </div>
         </article>
         <article class="show-rooms">
             <div class="center-title">
-                <h3>mais quartos &amp; suites</h3>
+                <h3>more rooms &amp; suites</h3>
             </div>
             <div class="rooms-types">
                 <ul class="choose-rooms">
-                    <li class="actived"><a data-pageid="page1" href="<?php echo "$basePath"; ?>suites-rooms/imperial">SUITE IMPERIAL</a></li>
-                    <li><a data-pageid="page2" href="<?php echo "$basePath"; ?>suites-rooms/royal">SUITES REAIS</a></li>
-                    <li><a data-pageid="page3" href="<?php echo "$basePath"; ?>suites-rooms/premium">QUARTOS PREMIUM</a></li>
+                    <li class="actived"><a data-pageid="page1" href="<?php echo "$basePath"; ?>suites-rooms/royal">ROYAL SUITES</a></li>
+                    <li><a data-pageid="page2" href="<?php echo "$basePath"; ?>suites-rooms/premium">PREMIUM ROOMS</a></li>
+                    <li><a data-pageid="page3" href="<?php echo "$basePath"; ?>suites-rooms/historic">HISTORIC ROOMS</a></li>
                 </ul>
             </div>
             <div class="rooms-group">
                 <section class="rooms-view" id="page1">
-                  <!--imperial-->
                     <article class="room" >
-                        <a href="<?php echo "$basePath"; ?>suites-rooms/imperial">
-                        <div class="small-frame">
-                            <img alt="Quarto Imperial" src="<?php echo "$basePath"; ?>images/thumbs-suites-and-rooms/thumb-imperial.jpg">
-                        </div>
-                        <h5>Suite Imperial</h5>
+                        <a href="">
+                            <div class="small-frame">
+                                <img alt="Quarto Imperial" src="<?php echo "$basePath"; ?>images/img-moldura.png">
+                            </div>
+                            <h5>Imperial Suite</h5>
+                        </a>
+                    </article><article class="room">
+                        <a href="">
+                            <div class="small-frame">
+                                <img alt="Quarto Royal" src="<?php echo "$basePath"; ?>images/img-moldura.png">
+                            </div>
+                            <h5>Royal Suites</h5>
                         </a>
                     </article>
-                  <!--/imperial-->
                 </section>
                 <section class="rooms-view" id="page2">
-                  <!--royal-->
                     <article class="room" >
-                        <a href="<?php echo "$basePath"; ?>suites-rooms/royal/queen">
+                        <a href="">
                             <div class="small-frame">
-                                <img alt="Suite Rainha D. Estefânia" src="<?php echo "$basePath"; ?>images/thumbs-suites-and-rooms/thumb-royal-estefania.jpg">
+                                <img alt="Quarto Imperial" src="<?php echo "$basePath"; ?>images/img-moldura.png">
                             </div>
-                            <h5>Suite Rainha D. Estefânia</h5>
+                            <h5>Imperial Suite</h5>
                         </a>
-                    </article>
-                    <article class="room">
-                        <a href="<?php echo "$basePath"; ?>suites-rooms/royal/palace">
+                    </article><article class="room">
+                        <a href="">
                             <div class="small-frame">
-                                <img alt="Suite Palácio" src="<?php echo "$basePath"; ?>images/thumbs-suites-and-rooms/thumb-royal-palace.jpg">
+                                <img alt="Quarto Royal" src="<?php echo "$basePath"; ?>images/img-moldura.png">
                             </div>
-                            <h5>Suite Palácio</h5>
+                            <h5>Royal Suites</h5>
                         </a>
-                    </article>
-                  <!--/royal-->
+                    </article><article class="room">
+                        <a href="">
+                            <div class="small-frame">
+                                <img alt="Quarto Royal" src="<?php echo "$basePath"; ?>images/img-moldura.png">
+                            </div>
+                            <h5>Royal Suites</h5>
+                        </a>
+                    </article>                    
                 </section>
                 <section class="rooms-view" id="page3">
-                  <!--premium-->
                     <article class="room" >
-                    <a href="<?php echo "$basePath"; ?>suites-rooms/premium/arts">
+                        <a href="">
                             <div class="small-frame">
-                                <img alt="Quarto das Artes" src="<?php echo "$basePath"; ?>images/thumbs-suites-and-rooms/thumb-premium-arts.jpg">
+                                <img alt="Quarto Imperial" src="<?php echo "$basePath"; ?>images/img-moldura.png">
                             </div>
-                            <h5>Quarto das Artes</h5>
+                            <h5>Imperial Suite</h5>
+                        </a>
+                    </article><article class="room">
+                        <a href="">
+                            <div class="small-frame">
+                                <img alt="Quarto Royal" src="<?php echo "$basePath"; ?>images/img-moldura.png">
+                            </div>
+                            <h5>Royal Suites</h5>
                         </a>
                     </article>
-                    <article class="room">
-                    <a href="<?php echo "$basePath"; ?>suites-rooms/premium/lisbon">
-                            <div class="small-frame">
-                                <img alt="Quarto da Cidade de Lisboa" src="<?php echo "$basePath"; ?>images/thumbs-suites-and-rooms/thumb-premium-lisboa.jpg">
-                            </div>
-                            <h5>Quarto da Cidade de Lisboa</h5>
-                        </a>
-                    <!--/premium-->
                 </section>
             </div>
         </article>
-    </section>
-    <section class="app-history inside-room inside-detail">
-        <div class="back-detail-room">VOLTAR PARA O QUARTO REI D. FERNANDO II</div>
-        <div class="group-text-img">
-            <div class="img-content">
-                <div>
-                    <img alt="image D. Pedro" src="<?php echo "$basePath"; ?>images/fotos personagens quartos/principe-big.png">
-                </div>
-            </div>
-        </div><div class="text-content">
-            <div>
-            <div class="description-location">
-                <h2>QUEM ERA O REI D. FERNANDO II?</h2>
-                <h3>A austeridade e sobriedade que caracterizavam D. Fernando II estão reflectidas neste quarto. Nascido em Viena, D. Fernando II veio para Portugal para casar com a sua rainha, D. Maria II, e desta união nasceu D. Pedro V.</h3>
-                <p>
-                  Apesar de muito reservado e discreto, D. Fernando II era um amante das artes e um apaixonado pela natureza, pelo que ordenou a construção do Palácio da Pena, no cimo da Serra de Sintra, que permanece até hoje o derradeiro tributo à sua dedicação a Portugal.<br><br>
-                  D. Fernando II transmitiu ao Príncipe Real, seu filho, algumas das características que melhor o definiam, como a sua solenidade e temperança, mas também uma sensibilidade especial para as artes e uma visão romântica, ainda que reservada, do mundo como deveria ser e não como ele realmente era. <br><br>
-                  D. Fernando sempre procurou perceber uma cultura que não era a sua, questionando os hábitos e mentalidade do povo português, que nunca o aceitou plenamente. A morte inesperada da Rainha obrigou-o a superar a dor da sua perda mais rápido que o coração permite, para se tornar Regente de Portugal até à maioridade do seu filho, D. Pedro V (o Príncipe Real), altura em que lhe passou as rédeas de um país que nunca fora o seu.
-                </p>
-            </div>
-        </div>
     </section>
     <script>
     if (typeof requirejs == 'function') {
