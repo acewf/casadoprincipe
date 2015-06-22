@@ -8,8 +8,8 @@ if (!isset($basePath)) {
     }
 }
 ?>
-<li><a href="<?php echo "$basePath"; ?>suites-rooms/historic/queen">Queen D. Maria II Room</a></li>
-<li><a href="<?php echo "$basePath"; ?>suites-rooms/historic/king">King D. Fernando II Room</a></li>
-<li><a href="<?php echo "$basePath"; ?>suites-rooms/historic/sintra">Sintra Mountains Room</a></li>
-<li><a href="<?php echo "$basePath"; ?>suites-rooms/historic/voyages">Voyages Room</a></li>
+<li><a href="<?php echo "$basePath"; ?>suites-rooms/historic/queen">Quarto Rainha D. Maria II</a></li>
+<li><a href="<?php echo "$basePath"; ?>suites-rooms/historic/king">Quarto Rei D. Fernando II</a></li>
+<li><a href="<?php echo "$basePath"; ?>suites-rooms/historic/sintra">Quarto da Serra de Sintra</a></li>
+<li><a href="<?php echo "$basePath"; ?>suites-rooms/historic/voyages">Quarto das Viagens</a></li>
 <li class="active"><span></span><a href="<?php echo "$basePath"; ?>suites-rooms">Historic Rooms</a></li>

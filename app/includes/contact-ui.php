@@ -16,7 +16,7 @@ if (!isset($basePath)) {
         <div class="group-text-img">
             <div class="description">
                 <div class="text-center">
-                    <p class="small-text">address, telephone and email</p>
+                    <p class="small-text">endereço, telefone e e-mail</p>
                     <ul>
                         <li>Praça do Príncipe Real, n. 23 – 1º</li>
                         <li>1250-184 Lisboa</li>
@@ -32,12 +32,12 @@ if (!isset($basePath)) {
             </div>
         </div><div class="text-content">
             <div class="center-content">
-            <h3>feel free to ask us any question. we will get back to you very very shortly</h3>
+            <h3>Sinta-se à vontade para nos perguntar qualquer questão. Respondemos rapidamente.</h3>
             <form id="formcontact" action="process-service.php" data-parsley-validate>
                 <div class="feedback"></div>
                 <ul>
                     <li>
-                        <span>Name</span>
+                        <span>Nome</span>
                         <input type="text" id="nome"  name="nome" data-parsley-trigger="change" required/>
                     </li>
                     <li>
@@ -45,15 +45,15 @@ if (!isset($basePath)) {
                         <input type="email" id="email"  name="email" data-parsley-trigger="change" required />
                     </li>
                     <li>
-                        <span>SECURITY CODE</span>
+                        <span>CAPTCHA</span>
                         <input type="text" id="security" data-defaultValue='14+8=?'  name="security" value="14+8=?"  required/>
                     </li>
                     <li>
-                        <span>YOUR MESSAGE</span>
+                        <span>A SUA MENSAGEM</span>
                         <textarea id="message" name="message"  required></textarea>
                     </li>
                 </ul>
-                <a id="submitcontact">SUBMIT</a>
+                <a id="submitcontact">ENVIAR</a>
             </form>
             </div>
     </section>       

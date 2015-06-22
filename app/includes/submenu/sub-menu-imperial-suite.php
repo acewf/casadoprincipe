@@ -8,5 +8,5 @@ if (!isset($basePath)) {
     }
 }
 ?>
-<li><a href="<?php echo "$basePath"; ?>suites-rooms/imperial/queen">QUEEN D. ESTEFÂNIA</a></li>
-<li class="active"><span></span><a href="<?php echo "$basePath"; ?>suites-rooms">Imperial Suite</a></li>  
+<li><a href="<?php echo "$basePath"; ?>suites-rooms/imperial/queen">SUITE REI D. PEDRO V</a></li>
+<li class="active"><span></span><a href="<?php echo "$basePath"; ?>suites-rooms">Suite Imperial</a></li>

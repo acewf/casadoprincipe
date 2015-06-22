@@ -9,4 +9,4 @@ if (!isset($basePath)) {
 }
 ?>
 <li><a href="<?php echo "$basePath"; ?>suites-rooms/premium">King D. Pedro V</a></li>
-<li class="active"><span></span><a href="<?php echo "$basePath"; ?>suites-rooms">Imperial Suite</a></li>
+<li class="active"><span></span><a href="<?php echo "$basePath"; ?>suites-rooms">Suite Imperial</a></li>

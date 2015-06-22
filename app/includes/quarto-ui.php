@@ -18,11 +18,11 @@ if (!isset($basePath)) {
                   <div class="featured-content">
 
                         <div class="info-room-featured">
-                            <!--<h3>Queen D. Estefânia</h3>
-                            <p>Spacious bedroom with lounge area, balcony overlooking the Príncipe Real garden, with three large windows that fill the room with natural light, creating a bright but relaxing atmosphere.</p>
-                            <a href="<?php echo "$basePath"; ?>suites-rooms/royal" target="_self"><button>SEE DETAILS</button></a>-->
+                            <h3>Suite Rei D. Pedro V</h3>
+                            <p>Quarto espaçoso com área de estar, varanda com vista sobre o Jardim do Príncipe Real, com três amplas janelas que enchem o quarto de luz natural, criando um ambiente luminoso e relaxante.</p>
+                            <a href="<?php echo "$basePath"; ?>suites-rooms/royal" target="_self"><button>VER DETALHES</button></a>
                         </div>
-
+                        <div class="transparent-shadow" style="background-color: rgba(0, 0, 0, .3)"></div>
                         <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/suites-and-rooms/slider-geral/imperial-01.jpg">
 
                   </div>
@@ -30,11 +30,11 @@ if (!isset($basePath)) {
                   <div class="featured-content">
 
                         <div class="info-room-featured">
-                            <!--<h3>Queen D. Estefânia</h3>
-                            <p>Spacious bedroom with lounge area, balcony overlooking the Príncipe Real garden, with three large windows that fill the room with natural light, creating a bright but relaxing atmosphere.</p>
-                            <a href="<?php echo "$basePath"; ?>suites-rooms/royal" target="_self"><button>SEE DETAILS</button></a>-->
+                            <h3>Suite Rainha D. Estefânia</h3>
+                            <p>Quarto amplo com área de estar, três grandes janelas e uma varanda com vista para as árvores do Jardim Botânico, que criam um ambiente refrescante e relaxante- apesar de estar no centro da cidade pode ouvir o cantar dos pássaros que por aqui voam.</p>
+                            <a href="<?php echo "$basePath"; ?>suites-rooms/royal" target="_self"><button>VER DETALHES</button></a>
                         </div>
-
+                        <div class="transparent-shadow" style="background-color: rgba(0, 0, 0, .3)"></div>
                         <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/suites-and-rooms/slider-geral/royal-estefania-01.jpg">
 
                   </div>
@@ -42,11 +42,11 @@ if (!isset($basePath)) {
                   <div class="featured-content">
 
                         <div class="info-room-featured">
-                            <!--<h3>Queen D. Estefânia</h3>
-                            <p>Spacious bedroom with lounge area, balcony overlooking the Príncipe Real garden, with three large windows that fill the room with natural light, creating a bright but relaxing atmosphere.</p>
-                            <a href="<?php echo "$basePath"; ?>suites-rooms/royal" target="_self"><button>SEE DETAILS</button></a>-->
+                            <h3>Suite Palácio</h3>
+                            <p>Quarto espaçoso equipado com área de lounge, duas grandes janelas com vista sobre o Jardim do Príncipe Real e uma relaxante atmosfera palaciana.</p>
+                            <a href="<?php echo "$basePath"; ?>suites-rooms/royal" target="_self"><button>VER DETALHES</button></a>
                         </div>
-
+                        <div class="transparent-shadow" style="background-color: rgba(0, 0, 0, .3)"></div>
                         <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/suites-and-rooms/slider-geral/royal-palace-01.jpg">
 
                   </div>
@@ -54,11 +54,11 @@ if (!isset($basePath)) {
                   <div class="featured-content">
 
                         <div class="info-room-featured">
-                            <!--<h3>Queen D. Estefânia</h3>
-                            <p>Spacious bedroom with lounge area, balcony overlooking the Príncipe Real garden, with three large windows that fill the room with natural light, creating a bright but relaxing atmosphere.</p>
-                            <a href="<?php echo "$basePath"; ?>suites-rooms/royal" target="_self"><button>SEE DETAILS</button></a>-->
+                            <h3>Quarto das Artes</h3>
+                            <p>Quarto com vista panorâmica para o Jardim do Príncipe Real.</p>
+                            <a href="<?php echo "$basePath"; ?>suites-rooms/royal" target="_self"><button>VER DETALHES</button></a>
                         </div>
-
+                        <div class="transparent-shadow" style="background-color: rgba(0, 0, 0, .3)"></div>
                         <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/suites-and-rooms/slider-geral/premium-arts-01.jpg">
 
                   </div>
@@ -66,11 +66,11 @@ if (!isset($basePath)) {
                   <div class="featured-content">
 
                         <div class="info-room-featured">
-                            <!--<h3>Queen D. Estefânia</h3>
-                            <p>Spacious bedroom with lounge area, balcony overlooking the Príncipe Real garden, with three large windows that fill the room with natural light, creating a bright but relaxing atmosphere.</p>
-                            <a href="<?php echo "$basePath"; ?>suites-rooms/royal" target="_self"><button>SEE DETAILS</button></a>-->
+                            <h3>Quarto da Cidade de Lisboa</h3>
+                            <p>Quarto com varanda para o Jardim Botânico e para a cidade, decorado com azulejos tradicionais portugueses. Embora esteja no centro de Lisboa, descontraia a ler o seu livro e a ouvir o vento nas copas das árvores.</p>
+                            <a href="<?php echo "$basePath"; ?>suites-rooms/royal" target="_self"><button>VER DETALHES</button></a>
                         </div>
-
+                        <div class="transparent-shadow" style="background-color: rgba(0, 0, 0, .3)"></div>
                         <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/suites-and-rooms/slider-geral/premium-lisbon-01.jpg">
 
                   </div>
@@ -78,11 +78,11 @@ if (!isset($basePath)) {
                   <div class="featured-content">
 
                         <div class="info-room-featured">
-                            <!--<h3>Queen D. Estefânia</h3>
-                            <p>Spacious bedroom with lounge area, balcony overlooking the Príncipe Real garden, with three large windows that fill the room with natural light, creating a bright but relaxing atmosphere.</p>
-                            <a href="<?php echo "$basePath"; ?>suites-rooms/royal" target="_self"><button>SEE DETAILS</button></a>-->
+                            <h3>Quarto Rainha D. Maria II</h3>
+                            <p>Quarto com tecto ornamentado com flores e tons de morango, acolchoado por um brilhante chão de madeira antiga.</p>
+                            <a href="<?php echo "$basePath"; ?>suites-rooms/royal" target="_self"><button>VER DETALHES</button></a>
                         </div>
-
+                        <div class="transparent-shadow" style="background-color: rgba(0, 0, 0, .3)"></div>
                         <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/suites-and-rooms/slider-geral/historic-queen-maria-01.jpg">
 
                   </div>
@@ -90,42 +90,38 @@ if (!isset($basePath)) {
                   <div class="featured-content">
 
                         <div class="info-room-featured">
-                            <!--<h3>Queen D. Estefânia</h3>
-                            <p>Spacious bedroom with lounge area, balcony overlooking the Príncipe Real garden, with three large windows that fill the room with natural light, creating a bright but relaxing atmosphere.</p>
-                            <a href="<?php echo "$basePath"; ?>suites-rooms/royal" target="_self"><button>SEE DETAILS</button></a>-->
+                            <h3>Quarto Rei D. Fernando II</h3>
+                            <p>Quarto com vista para o Jardim Botânico e com um imponente e original tecto detalhadamente estucado. </p>
+                            <a href="<?php echo "$basePath"; ?>suites-rooms/royal" target="_self"><button>VER DETALHES</button></a>
                         </div>
-
+                        <div class="transparent-shadow" style="background-color: rgba(0, 0, 0, .3)"></div>
                         <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/suites-and-rooms/slider-geral/historic-king-fernando-01.jpg">
 
                   </div>
 
                   <div class="featured-content">
 
-                        <!--<div class="info-room-featured">
-                            <h3>Queen D. Estefânia</h3>
-                            <p>Spacious bedroom with lounge area, balcony overlooking the Príncipe Real garden, with three large windows that fill the room with natural light, creating a bright but relaxing atmosphere.</p>
-                            <a href="<?php echo "$basePath"; ?>suites-rooms/royal" target="_self"><button>SEE DETAILS</button></a>
-                        </div>-->
-
+                        <div class="info-room-featured">
+                            <h3>Quarto da Serra de Sintra</h3>
+                            <p>Quarto com vista para o Jardim do Príncipe Real e com uma decoração simultaneamente muito distinta e fresca.</p>
+                            <a href="<?php echo "$basePath"; ?>suites-rooms/royal" target="_self"><button>VER DETALHES</button></a>
+                        </div>
+                        <div class="transparent-shadow" style="background-color: rgba(0, 0, 0, .3)"></div>
                         <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/suites-and-rooms/slider-geral/historic-sintra-01.jpg">
 
                   </div>
 
                   <div class="featured-content">
 
-                        <!--<div class="info-room-featured">
-                            <h3>Queen D. Estefânia</h3>
-                            <p>Spacious bedroom with lounge area, balcony overlooking the Príncipe Real garden, with three large windows that fill the room with natural light, creating a bright but relaxing atmosphere.</p>
-                            <a href="<?php echo "$basePath"; ?>suites-rooms/royal" target="_self"><button>SEE DETAILS</button></a>
-                        </div>-->
-
+                        <div class="info-room-featured">
+                            <h3>Quarto das Viagens</h3>
+                            <p>Quarto com tecto ornamentado realçado com tons de azul e com vista sobre as árvores do Jardim Botânico.</p>
+                            <a href="<?php echo "$basePath"; ?>suites-rooms/royal" target="_self"><button>VER DETALHES</button></a>
+                        </div>
+                        <div class="transparent-shadow" style="background-color: rgba(0, 0, 0, .3)"></div>
                         <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/suites-and-rooms/slider-geral/historic-voyages-01.jpg">
 
                   </div>
-
-                        <!--<div class="featured-content">
-                            <img alt="destaque 2" src="<?php echo "$basePath"; ?>images/dsc_0281.jpg">
-                        </div>-->
 
                 </div>
             </div>
@@ -133,9 +129,9 @@ if (!isset($basePath)) {
     </section>
     <section class="app-history inside-room home-rooms">
         <div class="description offset">
-            <p class="small-text">Charming suites and rooms with the modern comfort of a hotel in an exceptional location in the historic center of Lisbon</p>
+            <p class="small-text">Quartos e suites de charme com o conforto moderno de um hotel, numa localização premium no centro histórico de Lisboa</p>
         </div><div class="text-content">
-            <div class="description-location positionsys"><p>Casa do Príncipe takes its name after the Royal Prince, King D. Pedro V, whose story sets the tone for your unforgettable stay in Lisbon. Each of its 9 palatial suites and rooms refer to a meaningful part of this King’s life.</p></div>
+            <div class="description-location positionsys"><p>A Casa do Príncipe leva o seu nome após o Prince Real , o Rei D. Pedro V , cuja história dá o tom para a sua estadia inesquecível em Lisboa. Cada um dos 9 quartos e suites, em estilo palaciano, recordam uma parte da vida deste Príncipe.</p></div>
         </div>
     </section>
     <script>

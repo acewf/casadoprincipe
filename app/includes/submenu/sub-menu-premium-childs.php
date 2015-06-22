@@ -8,6 +8,6 @@ if (!isset($basePath)) {
     }
 }
 ?>
-<li><a href="<?php echo "$basePath"; ?>suites-rooms/premium/arts">Arts Room</a></li>
-<li><a href="<?php echo "$basePath"; ?>suites-rooms/premium/lisbon">Lisbon City Room</a></li>
-<li class="active"><span></span><a href="<?php echo "$basePath"; ?>suites-rooms">Premium Rooms</a></li>
+<li><a href="<?php echo "$basePath"; ?>suites-rooms/premium/arts">Quarto das Artes</a></li>
+<li><a href="<?php echo "$basePath"; ?>suites-rooms/premium/lisbon">Quarto da Cidade de Lisboa</a></li>
+<li class="active"><span></span><a href="<?php echo "$basePath"; ?>suites-rooms">Quartos Premium</a></li>

@@ -45,7 +45,7 @@
             <div id="language-options" class="overlay">
                 <nav class="choose-lang">
                     <button class="close"></button>
-                    <h3>Select Language</h3>
+                    <h3>Selecione o Idioma</h3>
                     <ul>
                         <li><a href="en">English</a></li>
                         <li><a href="pt">Português</a></li>
@@ -55,17 +55,25 @@
             <div id="menu-options" class="overlay yellow">
                 <button class="close"></button>
                 <nav class="choose-menu">
-                    <a href="https://www.secure-hotel-booking.com/smart/Casa-do-Principe/2E3B/en/" target="_blank">
-                        <h3>Book a Room</h3>
+                    <a href="https://www.secure-hotel-booking.com/smart/Casa-do-Principe/2E3B/pt/" target="_blank">
+                        <h3>Reserve Online</h3>
                     </a>
                     <ul>
+                    <!--<li><a href="<?php //echo "$basePath"; ?>home">Home</a></li>
+                        <li><a href="<?php //echo "$basePath"; ?>casa-do-principe">A Casa do Príncipe</a></li>
+                        <li><a href="<?php //echo "$basePath"; ?>suites-rooms">Quartos & Suites</a></li>
+                        <li><a href="<?php //echo "$basePath"; ?>gallery">Galeria</a></li>
+                        <li><a href="<?php //echo "$basePath"; ?>location">Onde Estamos</a></li>
+                        <li><a href="<?php //echo "$basePath"; ?>personalize-your-stay">Personalize a sua Estadia</a></li>
+                        <li><a href="<?php //echo "$basePath"; ?>contacts">Contactos</a></li>-->
+
                         <li><a href="<?php echo "$basePath"; ?>home">Home</a></li>
-                        <li><a href="<?php echo "$basePath"; ?>casa-do-principe">Casa do príncipe</a></li>
-                        <li><a href="<?php echo "$basePath"; ?>suites-rooms">Suites and rooms</a></li>
-                        <li><a href="<?php echo "$basePath"; ?>gallery">Gallery</a></li>
-                        <li><a href="<?php echo "$basePath"; ?>location">Location</a></li>
-                        <li><a href="<?php echo "$basePath"; ?>personalize-your-stay">Personalize your stay</a></li>
-                        <li><a href="<?php echo "$basePath"; ?>contacts">Contacts</a></li>
+                        <li><a href="<?php echo "$basePath"; ?>casa-do-principe">A Casa do Príncipe</a></li>
+                        <li><a href="<?php echo "$basePath"; ?>suites-rooms">Quartos & Suites</a></li>
+                        <li><a href="<?php echo "$basePath"; ?>location">Onde Estamos</a></li>
+                        <li><a href="<?php echo "$basePath"; ?>gallery">Galeria</a></li>
+                        <li><a href="<?php echo "$basePath"; ?>personalize-your-stay">Personalize a Sua Estadia</a></li>
+                        <li><a href="<?php echo "$basePath"; ?>contacts">Contactos</a></li>
                     </ul>
                 </nav>
             </div>
@@ -84,8 +92,8 @@
                         </nav>
                     </div><div class="right-block">
                         <div class="options">
-                            <a href="https://www.secure-hotel-booking.com/smart/Casa-do-Principe/2E3B/en/" target="_blank">
-                            <button id="bookroom" data-open="0" class="booking">BOOK A ROOM</button></a><div id="open-lang" data-open="0" class="lang">English<span></span></div>
+                            <a href="https://www.secure-hotel-booking.com/smart/Casa-do-Principe/2E3B/pt/" target="_blank">
+                            <button id="bookroom" data-open="0" class="booking">RESERVE ONLINE</button></a><div id="open-lang" data-open="0" class="lang">Português<span></span></div>
                         </div>
                     </div>
                 </header>

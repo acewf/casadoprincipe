@@ -14,15 +14,21 @@ if (!isset($basePath)) {
             <div class="frame-inside" data-transition="crossfade">
                 <div class="fotorama fotorama__wrap fotorama__wrap--css3 fotorama__wrap--slide fotorama__wrap--no-controls" data-nav="false" data-arrows="true" data-click="true" data-swipe="true" data-allowfullscreen="true" data-loop="true" data-autoplay="true" data-stopautoplayontouch="false"  data-width="100%" data-ratio="1432/577">
                     <div class="featured-content">
-                        <div class="info-room-featured">
+                        <!--<div class="info-room-featured">
                             <h3>Palace Room</h3>
-                            <p>Spacious bedroom with lounge area, balcony overlooking the Príncipe Real garden, with three large windows that fill the room with natural light, creating a bright but relaxing atmosphere.</p>
+                            <p>Spacious bedroom with lounge area, two large windows facing the Príncipe Real garden, creating a fresh and relaxing palatial ambience.</p>
                             <a href="<?php echo "$basePath"; ?>suites/" target="_self"><button>go previus</button></a>
-                        </div>                    
-                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/royal/48077149.jpg">
+                        </div>-->
+                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/suites-and-rooms/royal-suits/palace-suite/royal-palace-01.jpg">
                     </div>
                     <div class="featured-content">
-                        <img alt="destaque 2" src="<?php echo "$basePath"; ?>images/royal/48077149.jpg">
+                        <img alt="destaque 2" src="<?php echo "$basePath"; ?>images/suites-and-rooms/royal-suits/palace-suite/royal-palace-02.jpg">
+                    </div>
+                    <div class="featured-content">
+                        <img alt="destaque 3" src="<?php echo "$basePath"; ?>images/suites-and-rooms/royal-suits/palace-suite/royal-palace-03.jpg">
+                    </div>
+                    <div class="featured-content">
+                        <img alt="destaque 4" src="<?php echo "$basePath"; ?>images/suites-and-rooms/royal-suits/palace-suite/royal-palace-04.jpg">
                     </div>
                 </div>
             </div>
@@ -32,30 +38,47 @@ if (!isset($basePath)) {
                 <div class="input-daterange input-group" id="datepicker">
                 <div class="group-dates-boxes">
                 <div class="box-date chech-in"> <div data-icon="a" class="icon icon-calendar">
-                </div><div class="text-field-container"><input type="text" class="input-sm form-control" id="AVP_arrivalDate" name="arrivalDate" value="Check In"/></div><div data-icon="a" class="icon icon-caret-down-two"></div>
+                </div><div class="text-field-container"><input type="text" class="input-sm form-control" id="AVP_arrivalDate" name="arrivalDate" value="Check-in"/></div><div data-icon="a" class="icon icon-caret-down-two"></div>
                 </div><div class="box-date chech-out"><div data-icon="a" class="icon icon-calendar">
-                </div><div class="text-field-container"><input type="text" class="input-sm form-control" id="AVP_exitDate" name="end" value="Check Out"/></div><div data-icon="a" class="icon icon-caret-down-two"></div>
-                </div></div></div><div class="bookregister"><button id="bookit">BOOK NOW<div class="icon icon-arrow-right"></div></button></div></div></form>
+                </div><div class="text-field-container"><input type="text" class="input-sm form-control" id="AVP_exitDate" name="end" value="Check-out"/></div><div data-icon="a" class="icon icon-caret-down-two"></div>
+                </div></div></div><div class="bookregister"><button id="bookit">RESERVE ONLINE<div class="icon icon-arrow-right"></div></button></div></div></form>
         </article>
         <article class="show-room-info">
             <div class="center-title">
-                <h3>Palace Room</h3>
-                <div class="description"><p>Spacious bedroom with lounge area, balcony overlooking the Príncipe Real garden, with three large windows that fill the room with natural light, creating a bright but relaxing atmosphere.</p></div>
+                <h3>Suite Palácio</h3>
+                <div class="description"><p>Quarto espaçoso equipado com área de lounge, duas grandes janelas com vista sobre o Jardim do Príncipe Real e uma relaxante atmosfera palaciana.</p></div>
             </div>
         </article>
 
         <article class="show-room-description">
             <div class="left-block">
-                <p>Indulge in the glamour of this imperial suite that pays tribute to the Príncipe Real (Royal Prince) D. Pedro V, who inspired the name our B&amp;B. This room´s decoration embodies the elegance and honour that characterized him. Let yourself be dazzled by the amazing stuccowork ceilings of this suite, taking you back in time to the elegant 19th century.</p>
+                <p>A suite do Palácio é inspirada no Palácio das Necessidades, onde o Príncipe Real, D. Pedro V, nasceu e viveu. Os elegantes tons de verde, os tectos trabalhados e a mobília cuidadosamente escolhida, transportam-no para os infindáveis corredores do Palácio. </p>
                 <div class="image-frame show-frame">
                     <div class="frame-inside show-frame" data-transition="crossfade">
-                        <img alt="destaque 3" src="<?php echo "$basePath"; ?>images/principe-moldura.png">
+                        <img alt="destaque 3" src="<?php echo "$basePath"; ?>images/fotos personagens quartos/principe-moldura.png">
                     </div>
                 </div>
             </div><div class="right-block">
                 <ul>
-                    <li>Size: 45m² /484 sq.ft</li>
-                    <li>Extra large Queen bed or two twin beds</li>
+                    <li>35m²</li>
+                    <li>Acesso a internet de alta velocidade</li>
+                    <li>Cama de casal king size (180cmx200cm) ou duas individuais</li>
+                    <li>Janelas com vista para o Jardim do Príncipe Real</li>
+                    <li>Zona de estar confortável</li>
+                    <li>Sofá cama na zona de estar</li>
+                    <li>Ocupação: 2 adultos</li>
+                        <li>Uma ou duas crianças com menos de 16 anos podem usar o sofa cama. *Custo adicional</li>
+                        <li>Um bebé até aos 3 anos pode usar a cama de grades (dependente da disponibilidade). *Custo adicional</li>
+                    <li>Pequeno-Almoço buffet ou servido no quarto – à sua escolha</li>
+                    <li>Televisão plasma de ecrã plano</li>
+                    <li>Ar condicionado</li>
+                    <li>Amenities de casa-de-banho premium</li>
+                    <li>Serviços domésticos diários</li>
+                    <li>Cofre no quarto</li>
+                    <li>Secador de cabelo</li>
+
+
+                    <!--<li>Extra large Queen bed or two twin beds</li>
                     <li>Balcony overlooking the Príncipe Real garden</li>
                     <li>Seating and relaxing area</li>
                     <li>Sofa double bed in the lounge area</li>
@@ -65,103 +88,112 @@ if (!isset($basePath)) {
                     <li>Balcony overlooking the Príncipe Real garden</li>
                     <li>Seating and relaxing area</li>
                     <li>Sofa double bed in the lounge area</li>
-                    <li>Premium bathroom amenities</li>
+                    <li>Premium bathroom amenities</li>-->
                 </ul>
-                <a class="big-size" href="" target="_self"><h4>About King D. Pedro V<div class="icon icon-arrow-right"></div></h4></a>
+                <a class="big-size"><h4>Sobre o Palácio das Necessidades e a sua ligação ao Príncipe Real<div class="icon icon-arrow-right"></div></h4></a>
             </div>
         </article>
         <article class="show-rooms">
             <div class="center-title">
-                <h3>more rooms & suites</h3>
+                <h3>mais quartos & suites</h3>
             </div>
             <div class="rooms-types">
                 <ul class="choose-rooms">
-                    <li class="actived"><a data-pageid="page1" href="<?php echo "$basePath"; ?>suites-rooms/royal">ROYAL SUITES</a></li>
-                    <li><a data-pageid="page2" href="<?php echo "$basePath"; ?>suites-rooms/premium">PREMIUM ROOMS</a></li>
-                    <li><a data-pageid="page3" href="<?php echo "$basePath"; ?>suites-rooms/historic">HISTORIC ROOMS</a></li>
+                    <li class="actived"><a data-pageid="page1" href="<?php echo "$basePath"; ?>suites-rooms/imperial">SUITE IMPERIAL</a></li>
+                    <li><a data-pageid="page2" href="<?php echo "$basePath"; ?>suites-rooms/premium">QUARTOS PREMIUM</a></li>
+                    <li><a data-pageid="page3" href="<?php echo "$basePath"; ?>suites-rooms/historic">QUARTOS HISTÓRICOS</a></li>
                 </ul>
             </div>
             <div class="rooms-group">
                 <section class="rooms-view" id="page1">
+                  <!--imperial-->
                     <article class="room" >
-                        <a href="">
-                            <div class="small-frame">
-                                <img alt="Quarto Imperial" src="<?php echo "$basePath"; ?>images/img-moldura.png">
-                            </div>
-                            <h5>Imperial Suite</h5>
-                        </a>
-                    </article><article class="room">
-                        <a href="">
-                            <div class="small-frame">
-                                <img alt="Quarto Royal" src="<?php echo "$basePath"; ?>images/img-moldura.png">
-                            </div>
-                            <h5>Royal Suites</h5>
+                        <a href="<?php echo "$basePath"; ?>suites-rooms/imperial">
+                        <div class="small-frame">
+                            <img alt="Quarto Imperial" src="<?php echo "$basePath"; ?>images/thumbs-suites-and-rooms/thumb-imperial.jpg">
+                        </div>
+                        <h5>Suite Imperial</h5>
                         </a>
                     </article>
+                  <!--/imperial-->
                 </section>
                 <section class="rooms-view" id="page2">
+                  <!--premium-->
                     <article class="room" >
-                        <a href="">
+                    <a href="<?php echo "$basePath"; ?>suites-rooms/premium/arts">
                             <div class="small-frame">
-                                <img alt="Quarto Imperial" src="<?php echo "$basePath"; ?>images/img-moldura.png">
+                                <img alt="Quarto das Artes" src="<?php echo "$basePath"; ?>images/thumbs-suites-and-rooms/thumb-premium-arts.jpg">
                             </div>
-                            <h5>Imperial Suite</h5>
-                        </a>
-                    </article><article class="room">
-                        <a href="">
-                            <div class="small-frame">
-                                <img alt="Quarto Royal" src="<?php echo "$basePath"; ?>images/img-moldura.png">
-                            </div>
-                            <h5>Royal Suites</h5>
-                        </a>
-                    </article><article class="room">
-                        <a href="">
-                            <div class="small-frame">
-                                <img alt="Quarto Royal" src="<?php echo "$basePath"; ?>images/img-moldura.png">
-                            </div>
-                            <h5>Royal Suites</h5>
-                        </a>
-                    </article>                    
-                </section>
-                <section class="rooms-view" id="page3">
-                    <article class="room" >
-                        <a href="">
-                            <div class="small-frame">
-                                <img alt="Quarto Imperial" src="<?php echo "$basePath"; ?>images/img-moldura.png">
-                            </div>
-                            <h5>Imperial Suite</h5>
-                        </a>
-                    </article><article class="room">
-                        <a href="">
-                            <div class="small-frame">
-                                <img alt="Quarto Royal" src="<?php echo "$basePath"; ?>images/img-moldura.png">
-                            </div>
-                            <h5>Royal Suites</h5>
+                            <h5>Quarto das Artes</h5>
                         </a>
                     </article>
+                    <article class="room">
+                    <a href="<?php echo "$basePath"; ?>suites-rooms/premium/lisbon">
+                            <div class="small-frame">
+                                <img alt="Quarto da Cidade de Lisboa" src="<?php echo "$basePath"; ?>images/thumbs-suites-and-rooms/thumb-premium-lisboa.jpg">
+                            </div>
+                            <h5>Quarto da Cidade de Lisboa</h5>
+                        </a>
+                    <!--/premium-->
+                </section>
+                <section class="rooms-view" id="page3">
+                  <!--historic-->
+                    <article class="room" >
+                    <a href="<?php echo "$basePath"; ?>suites-rooms/historic/queen">
+                            <div class="small-frame">
+                                <img alt="Quarto Rainha D. Maria II" src="<?php echo "$basePath"; ?>images/thumbs-suites-and-rooms/thumb-historic-maria.jpg">
+                            </div>
+                            <h5>Quarto Rainha D. Maria II</h5>
+                        </a>
+                    </article>
+                    <article class="room">
+                    <a href="<?php echo "$basePath"; ?>suites-rooms/historic/king">
+                            <div class="small-frame">
+                                <img alt="Quarto Rei D. Fernando II" src="<?php echo "$basePath"; ?>images/thumbs-suites-and-rooms/thumb-historic-fernando.jpg">
+                            </div>
+                            <h5>Quarto Rei D. Fernando II</h5>
+                        </a>
+                    </article>
+                    <article class="room">
+                    <a href="<?php echo "$basePath"; ?>suites-rooms/historic/sintra">
+                            <div class="small-frame">
+                                <img alt="Quarto da Serra de Sintra" src="<?php echo "$basePath"; ?>images/thumbs-suites-and-rooms/thumb-historic-sintra.jpg">
+                            </div>
+                            <h5>Quarto da Serra de Sintra</h5>
+                        </a>
+                    </article>
+                    <article class="room">
+                    <a href="<?php echo "$basePath"; ?>suites-rooms/historic/voyages">
+                            <div class="small-frame">
+                                <img alt="Quarto das Viagens" src="<?php echo "$basePath"; ?>images/thumbs-suites-and-rooms/thumb-historic-voyages.jpg">
+                            </div>
+                            <h5>Quarto das Viagens</h5>
+                        </a>
+                    </article>
+                  <!--/historic-->
                 </section>
             </div>
         </article>
     </section>
     <section class="app-history inside-room inside-detail">
-        <div class="back-detail-room">BACK TO KING D. PEDRO V SUITE</div>
+        <div class="back-detail-room">VOLTAR PARA O SUITE PALÁCIO</div>
         <div class="group-text-img">
             <div class="img-content">
                 <div>
-                    <img alt="image D. Pedro" src="<?php echo "$basePath"; ?>images/principe-big.png">
+                    <img alt="image D. Pedro" src="<?php echo "$basePath"; ?>images/fotos personagens quartos/principe-big.png">
                 </div>
             </div>
-        </div>
-        <div class="text-content">
+        </div><div class="text-content">
             <div>
             <div class="description-location">
-                <h2>WHO WAS THE ROYAL PRINCE?</h2>
-                <h3>the answer to this question is as enigmatic as the prince himself.</h3>
-                <p>Born in Lisbon in 1837, the Prince soon displayed great curiosity about everything that surrounded him, becoming eager to learn more and more about the world he lived in. Every bit of knowledge he gathered started weighing upon him, as he grew into a very private and isolated young man with a loud mind, racing with intricate thoughts and plans for the country he would soon reign. It is often said that quiet people have the loudest mind, and that was precisely the case.<br>
-                He found true comfort and understanding in the loving arms of his wife, Queen D. Estefânia (Queen Stephanie). It was one of those rare cases of love at first sight, for they only met on their wedding day, which was very common at the time. Queen D. Estefânia understood and eased his troubles as no one could, their naïveté and innocence moving all those around them. It was truly the love story of the century and moulded every inch of the Royal Prince’s character.<br>
-                He devoted his life to his country, seeking to further develop it and to bring comfort to the people, through many investments, some of them personal. He founded schools and hospitals, visited and comforted the sick and he was the stable figure that Portugal desperately needed.<br><br>
-                The Praça do Príncipe Real (Royal Prince Square) was named after him by his loving mother, Queen D. Maria II, and has kept his name ever since, marking its place in the front row of Lisbon’s history.<br><br>
-                His tragic death, at 24 years old of age, was mourned throughout Europe, leaving the weight of the crown to his brother D. Luís. However, the role he played in History still fills books and fables with the adventures and reflections of a mind very much ahead of its time. The sharp mind of the Royal Prince.
+                <h2>O Palácio das Necessidades e a sua ligação ao Príncipe Real</h2>
+                <h3>A atmosfera real do Palácio das Necessidades, em Lisboa, é projectada neste quarto.</h3>
+                <p>
+                  O Palácio das Necessidades foi a primeira testemunha do nascimento do Príncipe Real, uma ocasião de grande solenidade, uma vez que foi o primeiro príncipe a nascer e a ser baptizado no palácio desde o regresso da Família Real do seu longo exílio no Brasil.<br><br>
+                  O Palácio não era só a casa da Família Real, era também um núcleo de negociações e decisões políticas, um nicho que combinava a vida pessoal e política.<br><br>
+                  Este encantador Palácio do século XIX, com os seus corredores intermináveis e escadarias de mármore rosado, rodeado pela Tapada das Necessidades - uma mata de 10 hectares - fora antes um Convento, um destino de peregrinações e local de devoção à Nossa Senhora das Necessidades.<br><br>
+                  O Palácio foi o cenário de todos os grandes acontecimentos da vida do Príncipe Real: o seu nascimento, o seu baptismo – em grande pompa e circunstância - e o seu casamento. Foi também dentro das arcadas do palácio que professou o seu amor por D. Estefânia, sua mulher, onde trocaram votos e sonharam na sua noite de núpcias, e onde passaram os seus dias de felicidade.<br><br>
+                  O Palácio das Necessidades, onde hoje é o Ministério dos Negócios Estrangeiros, está cheio destas memórias vivas do Príncipe Real, o eco dos seus passos nos corredores, as suas pistas por descobrir nos jardins e a sua vida relembrada por todos os que visitam o Palácio.
                 </p>
             </div>
         </div>
