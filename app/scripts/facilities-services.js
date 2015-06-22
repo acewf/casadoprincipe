@@ -38,9 +38,18 @@ define(['facilitiesservices'], function(appmenu) {
                 $('nav.sub-menu ul li a').removeClass('active');
                 $('.sub-menu a[href^="'+window.location.href+'"]').addClass('active');
             }
-            mcontent = new Loader(window.location.origin+'/includes/menu/menu-facilities-services.php');
+            var baseURL = null;
+            if (window.location.origin) {
+                baseURL = window.location.origin;
+            } else {
+                baseURL = window.location.host;
+            }
+            mcontent = new Loader(baseURL+'/includes/menu/menu-facilities-services.php');
             mcontent.addEventListener('complete',completeloadContent);            
     	}
+        this.destroy = function(){
+
+        };
     }
     var appmodule= new APPmodule();
     return appmodule;

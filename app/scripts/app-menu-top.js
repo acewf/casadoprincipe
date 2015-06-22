@@ -46,7 +46,8 @@ define(['appmenu'], function(appmenu) {
         var m = $(".share-logo");
         var l = $(event.target);
         if ( (m[0]!==l[0]) && (!$('.share-elements').hasClass('hide'))) {
-            if(l[0].className!='share-elements'){
+            console.log(l.hasClass('share-elements'));
+            if(!l.hasClass('share-elements')){
                 $('.share-elements').addClass('hide');
             }
         }
@@ -57,10 +58,9 @@ define(['appmenu'], function(appmenu) {
         $('#logo-big').addClass('show');
         $('#logo-small').removeClass('show');
         $('ul.room-choose').removeClass('show-childs');
+        console.log('CLEAR CONTENTS ON MENU');
         $('.sub-menu .suite').html('');
         $('.sub-menu .room-choose').html('');
-
-
         var loadhome = new ContentLoader();
         loadhome.click(this);
     }
@@ -78,6 +78,11 @@ define(['appmenu'], function(appmenu) {
         var submenu;
         var menucontent;
         var pagecontent;
+        console.log('popstate Occur:',event);
+        if (event.state==null) {
+            return;
+        };
+
         function completeloadSubMenu(ev){
             $('ul.room-choose').html(submenu.data);
             var handler = new ContentLoader();
@@ -89,62 +94,141 @@ define(['appmenu'], function(appmenu) {
             $('.sub-menu .suite').html(menucontent.data);
         }
         var href = window.location.href;
-        var n = href.indexOf(window.location.origin);
-        var res = href.substring(n+window.location.origin.length+1, href.length);
-        var filestourl = new Loader(window.location.origin+'/includes/address-filter-output.php?url='+res);
+        var baseURL = null;
+        if (window.location.origin) {
+            baseURL = window.location.origin;
+        } else {
+            baseURL = window.location.host;
+        }
+        var n = href.indexOf(baseURL);
+        var res = href.substring(n+baseURL.length+1, href.length);
+        var filestourl = new Loader(baseURL+'/includes/address-filter-output.php?url='+res);
         function Subcompleteload(ev){
             var data = JSON.parse(filestourl.data);
             if (data.level!=null) {
-                submenu = new Loader(window.location.origin+'/includes/submenu/'+data.level+'.php?');
+                submenu = new Loader(baseURL+'/includes/'+language+'submenu/'+data.level+'.php?');
                 submenu.addEventListener('complete',completeloadSubMenu);
                 filestourl.removeEventListener('complete',Subcompleteload);
                 filestourl = null;
             }
             console.log(data);
-            menucontent = new Loader(window.location.origin+'/includes/submenu/sub-menu-rooms.php');
+            menucontent = new Loader(baseURL+'/includes/'+language+'submenu/sub-menu-rooms.php');
             menucontent.addEventListener('complete',completeloadContent);
                         
             pagecontent = new ContentLoader();
+            pagecontent.addEventListener('complete',completeloadContent);
             pagecontent.loadAllContent(data.path);
             pagecontent.loadAHeader(data.headfile);
-            pagecontent.addEventListener('complete',completeloadContent);
+            
            
         }        
         filestourl.addEventListener('complete',Subcompleteload);
     })
     
     var AppEngine = function(){
+        var pageCompare = {};
+        pageCompare['apphome'] = 'home';
+        pageCompare['approom'] = 'room';
+        pageCompare['casadoprincipe'] = 'casadoprincipe';
+        pageCompare['facilitiesservices'] = 'facilities';
+        pageCompare['history'] = 'history';
+        pageCompare['gallery'] = 'gallery';
+        pageCompare['location'] = 'location';
+        pageCompare['personalize'] = 'personalize';
+        pageCompare['contacts'] = 'contacts';
+        pageCompare['approomdetail'] = 'room-detail';
+        pageCompare['approominfo'] = 'room-info';
         //var instance = this;
+        var activeModule = null;
         this.init = function(){
             console.log('AQUI ARRRANCA APP ENGINE MENU');
         }
+        this.destroy = function(scope){
+
+        }
+        this.removeModule = function(){
+            if (activeModule!=null) {
+                try {
+                    activeModule.destroy();
+                }
+                catch(e){
+                    console.log('error destroy module',e);
+                }                
+            };
+            activeModule = null;
+        }
+        this.addModule = function(module,area){
+            //_gaq.push(['_trackPageview', pageCompare[area], 'urlchange'])
+            console.log(pageCompare[area]);
+            var baseURL = null;
+            if (window.location.origin) {
+                baseURL = window.location.origin;
+            } else {
+                baseURL = window.location.host;
+            }
+            var href = window.location.href;
+            var n = href.indexOf(baseURL);
+            var res = href.substring(n+baseURL.length+1, href.length);
+
+
+            ga('send', 'event', 'category', 'action', {'page': res});
+            this.removeModule();
+            activeModule = module;
+            //console.log('stButtons.locateElements();',stButtons);
+            stButtons.locateElements();
+        }
+        
         this.btmenu =  document.getElementById('open-menu');
         this.btlang =  document.getElementById('open-lang');
         this.addEvents();
     };
     AppEngine.prototype.addEventListener = function(a,b){
-      this[a] = b;
+        'use strict';
+        if(this.addEventListener){
+            this[a] = b;
+            //this.addEventListener(a,b,false);
+        }else if(this.attachEvent && htmlEvents['on'+a]){// IE < 9
+            this.attachEvent('on'+a,b);
+        }else{
+            this['on'+a]=b;
+        }
     };
     AppEngine.prototype.removeEventListener = function(a){
+      'use strict';
       this[a] = null;
+      b = null;
     };
     AppEngine.prototype.dispatchEvent = function(event){
-     var callFunctionOn = this[event.type];
-      if(callFunctionOn!==undefined){
-        if (!event.preventDefault) {
-          event.preventDefault = function() {
-          event.returnValue = false;
-          };
+        'use strict';
+        var event;
+        if(document.createEvent){
+            event = document.createEvent('HTMLEvents');
+            event.initEvent(eventName,true,true);
+        }else if(document.createEventObject){// IE < 9
+            event = document.createEventObject();
+            event.eventType = eventName;
+        } else {
         }
-        try{
-          callFunctionOn(event);
-        }
-        catch(err){
-          console.log('Error:',err);
-        }
-      } else {
-        console.log('the '+event.type+' listener doesn´t exist');
-      }     
+        event.eventName = eventName;
+        if(this.dispatchEvent){
+            var callFunctionOn = this[event.eventName];
+            if (!(typeof description === 'function')) {
+                return;
+            };
+            try{
+              callFunctionOn(event);
+            }
+            catch(err){
+              console.log('Error:',err);
+            }
+            //this.dispatchEvent(event);
+        }else if(this.fireEvent && htmlEvents['on'+eventName]){// IE < 9
+            this.fireEvent('on'+event.eventType,event);// can trigger only real event (e.g. 'click')
+        }else if(this[eventName]){
+            this[eventName]();
+        }else if(el['on'+eventName]){
+            this['on'+eventName]();
+        }    
     };
     AppEngine.prototype.addEvents = function(){
         var d = $('#menu-options .close');//document.getElementsByClassName('close');
@@ -176,18 +260,6 @@ define(['appmenu'], function(appmenu) {
             var eventD = new Event('mousedown');
             d.dispatchEvent(eventD);
             return;
-            /*
-             var evt;
-             console.log('@photogoNext-#-#');
-            var eventName = 'mousedown';
-            var ms = $(d);
-            console.log(ms)
-            ms.trigger(eventName);
-            ms.trigger('mouseup');            
-            //var eventD = new Event('mousedown');
-            //d.dispatchEvent(evt);
-            //$('.fotorama').show('>');
-            */
         }
     };
     AppEngine.prototype.photogPrev = function(){
@@ -198,28 +270,13 @@ define(['appmenu'], function(appmenu) {
             d.dispatchEvent(eventD);
             return;
         }
-        /*
-        var evt; 
-        var eventName = 'mousedown';
-
-        if(document.createEvent){
-            evt = document.createEvent('HTMLEvents');
-            evt.initEvent(eventName,true,true);
-        }else if(document.createEventObject){// IE < 9
-            event = document.createEventObject();
-            event.eventType = eventName;
-        }
-        event.eventName = eventName;
-        //var eventD = new Event('mousedown');
-        //d.dispatchEvent(evt);
-        */
     };
     AppEngine.prototype.toggleMenu = function(event){
         var target = event.target;
-        event.preventDefault();
+        
+        
         var el = $('#menu-options');
         var isOpen = parseFloat(el[0].getAttribute('data-open'));
-        console.log('toggle Menu',this,isOpen);
         if (isOpen) {
             el[0].setAttribute('data-open',0);
             el.fadeOut();
@@ -227,14 +284,15 @@ define(['appmenu'], function(appmenu) {
             el[0].setAttribute('data-open',1);
             el.fadeIn();
         }
-    };
-    AppEngine.prototype.toggleLanguage = function(event){
-        var target = event.target;
-        if(event.preventDefault) {
+        if (event.preventDefault) {
             event.preventDefault();
         } else {
             event.returnValue = false;
+            return false;
         }
+    };
+    AppEngine.prototype.toggleLanguage = function(event){
+        var target = event.target;        
         var isOpen = parseFloat(target.getAttribute('data-open'));
         var el = $('#language-options');
         if (isOpen) {
@@ -243,6 +301,12 @@ define(['appmenu'], function(appmenu) {
         } else {
             el[0].setAttribute('data-open',1);
             el.fadeIn();
+        }
+        if(event.preventDefault) {
+            event.preventDefault();
+        } else {
+            event.returnValue = false;
+            return false;
         }
     };
     AppEngine.prototype.forcecloseMenuRooms = function(event){

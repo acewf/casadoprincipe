@@ -11,6 +11,7 @@ define(['personalize'], function(gallery) {
     function APP(){
         this.putStates=function(){
             $('.sub-menu .suite').html('');
+            $('.sub-menu .room-choose').html('');
             $('#logo-big').removeClass('show');
             $('#logo-small').addClass('show');
             $('ul.room-choose').addClass('show-childs');
@@ -29,6 +30,9 @@ define(['personalize'], function(gallery) {
                 delayer+=200;
             });
         }
+        this.destroy = function(){
+
+        };
     	this.init = function(){
             this.putStates();
             var handler = new ContentLoader();
@@ -39,7 +43,13 @@ define(['personalize'], function(gallery) {
                 var total = $('.sub-menu .suite li').length;
                 if(total===0){
                      var mcontent;
-                    mcontent = new Loader(window.location.origin+'/includes/submenu/sub-menu-rooms.php');
+                    var baseURL = null;
+                    if (window.location.origin) {
+                        baseURL = window.location.origin;
+                    } else {
+                        baseURL = window.location.host;
+                    }
+                    mcontent = new Loader(baseURL+'/includes/'+language+'submenu/sub-menu-rooms.php');
                     mcontent.addEventListener('complete',completeloadContent); 
                 }
                 handler.click(this);

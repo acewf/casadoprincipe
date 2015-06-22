@@ -14,14 +14,16 @@ define(['location'], function(gallery) {
         var instance =this;
         this.putStates=function(){
             $('.sub-menu .suite').html('');
+            $('.sub-menu .room-choose').html('');
             $('#logo-big').removeClass('show');
             $('#logo-small').addClass('show');
             $('ul.room-choose').addClass('show-childs');
             $('ul.suite').removeClass('menupos');
             $('.logo').removeClass('small');
             $('footer').show();
+            $('.location button.close').hide();
             $('#originfield').click(function(){
-                if ($(this).val()=='Local Origem') {
+                if (($(this).val()=='Indicar Local') || ($(this).val()=='Location')) {
                     $(this).val('');
                 };
             });
@@ -38,9 +40,27 @@ define(['location'], function(gallery) {
 
             $('.box-calculate-route button').click(function(){
                 $('.location section.content').addClass('show-address');
+                $('.location button.close').show();
+                $('.location div.icon').hide();
             });
-            $('.origenbox button.close').click(function(){
-                $('.location section.content').removeClass('show-address');
+            $('.box-show-calculate-route').click(function(){
+                console.log('ddd',$('.location section.content').hasClass('show-address'));
+                if (!$('.location section.content').hasClass('show-address')) {
+                    $('.location section.content').addClass('show-address');
+                    $('.location button.close').show();
+                    $('.location div.icon').hide();
+                } else {
+                    $('.location button.close').hide();
+                    $('.location div.icon').show();
+                    $('.box-show-calculate-route').show();
+                    $('.location section.content').removeClass('show-address');
+                }
+                
+            });
+            $('.location button.close').click(function(){
+                //var boxElem = $('.box-calculate-route');
+                //boxElem.show();
+                console.log('AAAA');
             });
             
             var GoogleMapsLoader = require('google-maps');      // only for common js environments
@@ -49,12 +69,11 @@ define(['location'], function(gallery) {
             var elemt = null;
             var mapDiv;
             GoogleMapsLoader.load(function(google) {
-                console.log('maps api loaded');
                 var directionsDisplay;
                 var directionsService = new google.maps.DirectionsService();
                 directionsDisplay = new google.maps.DirectionsRenderer();
                 var mapOptions = {
-                  center: new google.maps.LatLng(38.7166513,-9.1493584),
+                  center: new google.maps.LatLng(38.7170702,-9.1489789),
                   zoom: 18,
                   scaleControl: false,
                   mapTypeControl: false,
@@ -64,7 +83,7 @@ define(['location'], function(gallery) {
                 var el = document.getElementById('map-canvas');
                 var map = new google.maps.Map(el, mapOptions);
                 var marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(38.7166513,-9.1493584),
+                    position: new google.maps.LatLng(38.7170702,-9.1489789),
                     icon: 'http://www.casadoprincipe.pt/images/position-marker.png',
                     map: map
                 });
@@ -86,7 +105,7 @@ define(['location'], function(gallery) {
 
                     };
                     if(elemt!=null){
-                        var matrix = mapDiv.style.transform;
+                        var matrix = mapDiv.style.transform.match(/-?[\d\.]+/g);
                         var values = matrix.match(/-?[\d\.]+/g);
                         var xOff = parseFloat(values[4]);
                         var yOff = parseFloat(values[5]);
@@ -122,7 +141,7 @@ define(['location'], function(gallery) {
                     size: new google.maps.Size(71, 71),
                     origin: new google.maps.Point(0, 0),
                     anchor: new google.maps.Point(17, 34),
-                    scaledSize: new google.maps.Size(25, 25)
+                    scaledSize: new google.maps.Size(20, 20)
                   };
                 }
             }  
@@ -135,7 +154,7 @@ define(['location'], function(gallery) {
             boxElem.hide();
             var request = {
                 origin:$('#originfield').val(),
-                destination:'PRAÇA DO PRÍNCIPE REAL,  23 LISBOA',
+                destination:'Praça Príncipe Real 23, Lisboa',
                 travelMode: google.maps.TravelMode.DRIVING
             };
             directionsService.route(request, function(result, status) {
@@ -144,6 +163,9 @@ define(['location'], function(gallery) {
                 }
             });
         }
+        this.destroy = function(){
+
+        };
     	this.init = function(){
             this.putStates();
             var handler = new ContentLoader();
@@ -154,8 +176,13 @@ define(['location'], function(gallery) {
                 var total = $('.sub-menu .suite li').length;
                 if(total===0){
                      var mcontent;
-                    
-                    mcontent = new Loader(window.location.origin+'/includes/submenu/sub-menu-rooms.php');
+                    var baseURL = null;
+                    if (window.location.origin) {
+                        baseURL = window.location.origin;
+                    } else {
+                        baseURL = window.location.host;
+                    }
+                    mcontent = new Loader(baseURL+'/includes/'+language+'submenu/sub-menu-rooms.php');
                     mcontent.addEventListener('complete',completeloadContent); 
                 }
                 handler.click(this);

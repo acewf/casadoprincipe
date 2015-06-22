@@ -59,25 +59,63 @@ function Loader(res){
     };
     this.client = new XMLHttpRequest();
     this.client.onload = this.loaded;
-    this.client.open('GET',res);
-    this.client.send();
+    var url = res;
+    console.log(url.indexOf("http://"))
+    if (url.indexOf("http://")===-1) {
+        url = 'http://'+url
+    };
+    console.log('url:>>',url);
+    $.ajax({
+        url: url,
+        type: 'GET',
+        success: function(data) {
+            instance.loaded(data);
+        },
+        error: function(jqXHR, textStatus) {
+            console.log(jqXHR.statusText,textStatus);
+        }
+    });    
+    /*
+    var xmlhttp;
+    if (window.XMLHttpRequest){// code for IE7+, Firefox, Chrome, Opera, Safari
+      xmlhttp=new XMLHttpRequest();
+    } else {// code for IE6, IE5
+      xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange=function() {
+      if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+        console.log(xmlhttp.responseText);
+        }
+    }
+    console.log(res);
+    $.get(res, function(data) {
+        instance.loaded(data);
+    }).done(function() {
+    console.log( "second success" );}).fail(function(e) {
+    console.log( "error" ,e);
+    });
+    */
+    /*
+    console.log(xmlhttp.open,'-##-');
+    xmlhttp.open("GET",res,true);
+    xmlhttp.send();
+    */
+    /*
+    if (this.client.open) {
+        this.client.open('GET',res);
+        this.client.send();
+    } else {
+        console.log('IE 10 CAN´t LOAD');
+    }
+    */
+    
 }
 Loader.prototype.processData = function(data){
     'use strict';
-    var evt = new Event('complete');
-    /*
+    this.data = data;//data.target.response;
+    var event;
     var eventName = 'complete';
-    if(document.createEvent){
-        evt = document.createEvent(htmlEvents);
-        evt.initEvent(eventName,true,true);
-    }else if(document.createEventObject){// IE < 9
-        event = document.createEventObject();
-        event.eventType = eventName;
-    }
-    event.eventName = eventName;
-    */
-    this.data = data.target.responseText;
-    this.dispatchEvent(evt);
+    this.dispatchEvent(eventName);
 };
 Loader.prototype.handler = function(data){
     'use strict';
@@ -86,29 +124,48 @@ Loader.prototype.handler = function(data){
 
 Loader.prototype.addEventListener = function(a,b){
   'use strict';
-  this[a] = b;
+    if(this.addEventListener){
+        this[a] = b;
+        //this.addEventListener(type,handler,false);
+    }else if(this.attachEvent && htmlEvents['on'+a]){// IE < 9
+        this.attachEvent('on'+a,b);
+    }else{
+        this['on'+a]=b;
+    }
+    //this[a] = b;
 };
 Loader.prototype.removeEventListener = function(a,b){
     'use strict';
   this[a] = null;
   b = null;
 };
-Loader.prototype.dispatchEvent = function(event){
+Loader.prototype.dispatchEvent = function(eventName){
     'use strict';
-    var callFunctionOn = this[event.type];
-    if(callFunctionOn!==undefined){
-        if (!event.preventDefault) {
-            event.preventDefault = function() {
-            event.returnValue = false;
-        };
+    var event;
+    if(document.createEvent){
+        event = document.createEvent('HTMLEvents');
+        event.initEvent(eventName,true,true);
+    }else if(document.createEventObject){// IE < 9
+        event = document.createEventObject();
+        event.eventType = eventName;
+    } else {
+        console.log('c');
     }
-    try{
-      callFunctionOn(event);
-    }
-    catch(err){
-      console.log('Error:',err);
-    }
-  } else {
-    console.log('the '+event.type+' listener doesn´t exist');
-  }       
+    event.eventName = eventName;
+    if(this.dispatchEvent){
+        var callFunctionOn = this[event.eventName];
+        try{
+          callFunctionOn(event);
+        }
+        catch(err){
+          console.log('Error:',err);
+        }
+        //this.dispatchEvent(event);
+    }else if(this.fireEvent && htmlEvents['on'+eventName]){// IE < 9
+        this.fireEvent('on'+event.eventType,event);// can trigger only real event (e.g. 'click')
+    }else if(this[eventName]){
+        this[eventName]();
+    }else if(el['on'+eventName]){
+        this['on'+eventName]();
+    }    
 };

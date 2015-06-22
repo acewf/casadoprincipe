@@ -1,0 +1,9 @@
+To: ace.wf.home@gmail.com
+Subject: Contacto mensagem site
+From: website casa do principe <noreplay@casadoprincipe.pt>
+X-Sender: <website casa do principe <noreplay@casadoprincipe.pt>>
+X-Mailer: PHP
+X-Priority: 1
+Content-Type:text/html; charset="utf-8"
+
+<p> Nome: Pedro</p><p> Email: ace.wf.home@gmail.com</p><p> Mensagem: ABC<br>D<br>Avcx<br>D<br>APedro é isto</p>

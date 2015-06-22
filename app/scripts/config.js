@@ -25,7 +25,8 @@ var require = {
         library: '../scripts/library',
         textloader: '../scripts/textloader',
         contentloader: '../scripts/contentloader',
-        loadingoverlay: '../scripts/loadingoverlay.min',
+        domainrequest: '../scripts/jquery.xdomainrequest.min',
+        loadingoverlay: '../scripts/loadingoverlay',
         jquery: 'jquery/dist/jquery',
         parsley: 'parsleyjs/dist/parsley.min',
         bootstrap: 'bootstrap/dist/js/bootstrap',
@@ -48,6 +49,13 @@ var require = {
                 'textloader'
             ],
             exports: 'appmenu'
+        },
+        textloader: {
+            deps: [
+                'jquery',
+                'domainrequest'
+            ],
+            exports: 'textloader'
         },
         apphome: {
             deps: [

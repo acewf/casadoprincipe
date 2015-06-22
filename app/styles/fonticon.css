@@ -37,7 +37,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.icon-inline{
+  font-size:1.6em;
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: middle;
+}
 .icon-calendar:before {
   content: "a";
 }

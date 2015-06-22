@@ -37,7 +37,7 @@ LoadingOverlay - A flexible loading overlay jQuery plugin
 			case "show":
 				var settings = $.extend(true, {}, _defaults, options);
 				return this.each(function(){
-					_Show(this, settings, false);
+					_Show(this, settings, true);
 				});
 				
 			case "hide":

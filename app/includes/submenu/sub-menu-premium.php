@@ -6,8 +6,19 @@ if (!isset($basePath)) {
     } else {
         $basePath = 'http://'.$_SERVER['SERVER_NAME'].$folder; 
     }
+    $findme = '/';
+    $mystring = $_SERVER['HTTP_REFERER'];
+    $mystring = substr($mystring, strlen($basePath));
+    $pos = strpos($mystring, $findme);
+    $lang = substr($mystring, 0,$pos+1);
 }
 ?>
+<<<<<<< HEAD
 <li><a href="<?php echo "$basePath"; ?>suites-rooms/premium/arts">Quarto das Artes</a></li>
 <li><a href="<?php echo "$basePath"; ?>suites-rooms/premium/lisbon">Quarto da Cidade de Lisboa</a></li>
 <li class="active"><span></span><a href="<?php echo "$basePath"; ?>suites-rooms">Quartos Premium</a></li>
+=======
+<li><a href="<?php echo $basePath.$lang; ?>suites-rooms/premium/arts">Arts Room</a></li>
+<li><a href="<?php echo $basePath.$lang; ?>suites-rooms/premium/lisbon">Lisbon City Room</a></li>
+<li class="active"><span></span><a href="<?php echo $basePath.$lang; ?>suites-rooms"><p>Premium Rooms</p><p>suites and rooms</p></a></li>
+>>>>>>> a0c03b28ce75073e97a855b60ac297ae9fbcde3b
