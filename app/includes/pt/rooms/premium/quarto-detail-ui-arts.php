@@ -80,7 +80,7 @@ if (!isset($basePath)) {
                     <li>Cofre no quarto</li>
                     <li>Secador de cabelo</li>
                 </ul>
-                <a class="big-size"><h4>Príncipe Real as artes</h4> <div class="icon icon-inline icon-angle-right"></div></a>
+                <a class="big-size"><h4>O Princípe Real e as Artes</h4> <div class="icon icon-inline icon-angle-right"></div></a>
             </div>
         </article>
         <article class="show-rooms">

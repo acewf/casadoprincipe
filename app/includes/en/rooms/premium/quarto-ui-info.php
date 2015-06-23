@@ -20,25 +20,28 @@ if (!isset($basePath)) {
             <div class="frame-inside"data-transition="crossfade">
                 <div class="fotorama fotorama__wrap fotorama__wrap--css3 fotorama__wrap--slide fotorama__wrap--no-controls" data-nav="false" data-autoplay="true" data-arrows="true" data-click="true" data-swipe="true" data-allowfullscreen="true" data-loop="true" data-stopautoplayontouch="true"  data-width="100%" data-ratio="1432/577">
                     <div class="featured-content">
+
                         <div class="info-room-featured">
                             <h3>Arts Room</h3>
                             <p>Bedroom with wooden floors and scenic view to the Principe Real garden.</p>
                             <a href="<?php echo $basePath.$lang; ?>suites-rooms/premium/arts" target="_self"><button>SEE DETAILS</button></a>
                         </div>
                         <div class="transparent-shadow" style="background-color: rgba(0, 0, 0, .2)"></div>
-                        <!--<div class="transparent-shadow"></div>-->
-                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/suites-and-rooms/premium-suites/arts/premium-arts-01.jpg">
-                    </div>
-                    <div class="featured-content">
+                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/suites-and-rooms/slider-geral/premium-arts-01.jpg">
+
+                  </div>
+
+                  <div class="featured-content">
+
                         <div class="info-room-featured">
                             <h3>Lisbon City Room</h3>
                             <p>Bedroom with balcony overviewing the Botanical Garden and the city, decorated with antique and traditional Portuguese tiles - although located in the center of Lisbon, you can read your book, looking at the trees and listening to the birds.</p>
                             <a href="<?php echo $basePath.$lang; ?>suites-rooms/premium/lisbon" target="_self"><button>SEE DETAILS</button></a>
                         </div>
                         <div class="transparent-shadow" style="background-color: rgba(0, 0, 0, .1)"></div>
-                        <!--<div class="transparent-shadow"></div>-->
-                        <img alt="destaque 2" src="<?php echo "$basePath"; ?>images/suites-and-rooms/premium-suites/lisbon/premium-lisbon-01.jpg">
-                    </div>
+                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/suites-and-rooms/slider-geral/premium-lisbon-01.jpg">
+
+                  </div>
                 </div>
             </div>
         </article>

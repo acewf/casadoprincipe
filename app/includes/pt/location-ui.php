@@ -17,7 +17,7 @@ if (!isset($basePath)) {
             <div id="directionsPanel"></div>
         </article>
         <article class="box-calculate-route">
-            <div class="actual-address">Casa Do Principe<br> Praça do Príncipe Real, n. 23 – 1º</div>
+            <div class="actual-address">Casa Do Principe<br> Praça do Príncipe Real, n. 23 – 1º<br>GPS: 38° 43′ 32′′ N,  9° 8′ 46′′ O</div>
             <button>Calcular Rota</button>
         </article>
         <article class="box-show-calculate-route">
@@ -38,7 +38,7 @@ if (!isset($basePath)) {
         </div><div class="text-content">
             <div class="center-content">
             <!--<h3>Casa do Príncipe is at a short distance from Lisbon’s main cultural landmarks</h3>-->
-            <h3>A Casa do Príncipe deixa-o a uma curta distância das lojas mais arrojadas e modernas atracções turísticas</h3>
+            <h3>A Casa do Príncipe deixa-o a uma curta distância das lojas mais arrojadas e reconhecidas atracções turísticas</h3>
             <p>
                 Esta praça efusiva e borbulhante é o rosto cosmopolita da cidade, e nela podem encontrar-se as lojas mais modernas e restaurantes conceituados, sentado considerada a zona mais animada de Lisboa.<br><br>
                 Este alojamento conta com uma vista cénica para o Jardim Botânico e Jardim do Príncipe Real, a poucos passos do icónico Bairro Alto (1 min. a pé), e na porta de entrada para o centro histórico de Lisboa – a minutos do Chiado, Rossio, Avenida da Liberdade e do vibrante Cais do Sodré, onde se encontra o famoso Mercado da Ribeira, entre outros restaurantes e bares de renome. Com esta envolvência, a Casa do Príncipe está na posição ideal para lhe oferecer uma estadia memorável e uma experiência inesquecível de Lisboa.<br><br>

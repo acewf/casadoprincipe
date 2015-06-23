@@ -18,7 +18,7 @@ if (!isset($basePath)) {
             <div id="directionsPanel"></div>
         </article>
         <article class="box-calculate-route">
-            <div class="actual-address">Casa Do Principe<br> Praça do Príncipe Real, n. 23 – 1º</div>
+            <div class="actual-address">Casa Do Principe<br> Praça do Príncipe Real, n. 23 – 1º<br>GPS: 38° 43′ 32′′ N,  9° 8′ 46′′ O</div>
             <button>Calculate Route</button>
         </article>
         <article class="box-show-calculate-route">

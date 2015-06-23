@@ -156,7 +156,7 @@ if (!isset($basePath)) {
         </div><div class="text-content">
             <div>
             <div class="description-location">
-                <h2>QUEM È A RAINHA D. MARIA II?</h2>
+                <h2>QUEM É A RAINHA D. MARIA II?</h2>
                 <h3>A História recorda a Rainha D. Maria II de Portugal como “a Educadora” ou a “Boa Mãe”, deixando, por vezes, de fora a sua gentileza de coração que era pouco habitual na altura. Era uma mãe muito devota, e uma firme crente na importância de uma educação equilibrada para os seus filhos.</h3>
                 <p>
                   Após dois casamentos falhados, casou com D. Fernando II, com quem partilhava a paixão pela educação, que passou também para os filhos de ambos. Reinou numa época de grande controvérsia política, logo após uma guerra civil devastante, encontrando grande conforto nas conversas que tinha com a sua prima, a Rainha Vitória de Inglaterra, com quem se correspondia com frequência.<br><br>

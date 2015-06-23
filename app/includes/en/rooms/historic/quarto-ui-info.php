@@ -26,35 +26,43 @@ if (!isset($basePath)) {
                             <a href="<?php echo $basePath.$lang; ?>suites-rooms/historic/queen" target="_self"><button>SEE DETAILS</button></a>
                         </div>
                         <div class="transparent-shadow" style="background-color: rgba(0, 0, 0, .1)"></div>
-                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/suites-and-rooms/historic/queen-maria/historic-queen-maria-01.jpg">
-                    </div>
-                    <div class="featured-content">
+                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/suites-and-rooms/slider-geral/historic-queen-maria-01.jpg">
+
+                  </div>
+
+                  <div class="featured-content">
+
                         <div class="info-room-featured">
                             <h3>King D. Fernando II Room</h3>
                             <p>Bedroom with wooden floors and stuccowork ceiling.</p>
                             <a href="<?php echo $basePath.$lang; ?>suites-rooms/historic/king" target="_self"><button>SEE DETAILS</button></a>
                         </div>
                         <div class="transparent-shadow" style="background-color: rgba(0, 0, 0, .2)"></div>
-                        <img alt="destaque 2" src="<?php echo "$basePath"; ?>images/suites-and-rooms/historic/king-fernando/historic-king-fernando-01.jpg">
-                    </div>
-                    <div class="featured-content">
+                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/suites-and-rooms/slider-geral/historic-king-fernando-01.jpg">
+
+                  </div>
+
+                  <div class="featured-content">
+
                         <div class="info-room-featured">
                             <h3>Sintra Mountains Room</h3>
                             <p>Bedroom with wooden floors and views to the Príncipe Real garden.</p>
                             <a href="<?php echo $basePath.$lang; ?>suites-rooms/historic/sintra" target="_self"><button>SEE DETAILS</button></a>
                         </div>
                         <div class="transparent-shadow" style="background-color: rgba(0, 0, 0, .1)"></div>
-                        <img alt="destaque 3" src="<?php echo "$basePath"; ?>images/suites-and-rooms/historic/sintra/historic-sintra-01.jpg">
-                    </div>
-                    <div class="featured-content">
+                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/suites-and-rooms/slider-geral/historic-sintra-01.jpg">
+                  </div>
+                  <div class="featured-content">
+
                         <div class="info-room-featured">
                             <h3>Voyages Room</h3>
                             <p>Bedroom with wooden floor and stuccowork ceiling enhanced with shades of blue.</p>
                             <a href="<?php echo $basePath.$lang; ?>suites-rooms/historic/voyages" target="_self"><button>SEE DETAILS</button></a>
                         </div>
                         <div class="transparent-shadow" style="background-color: rgba(0, 0, 0, .2)"></div>
-                        <img alt="destaque 4" src="<?php echo "$basePath"; ?>images/suites-and-rooms/historic/voyages/historic-voyages-01.jpg">
-                    </div>
+                        <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/suites-and-rooms/slider-geral/historic-voyages-01.jpg">
+
+                  </div>
                 </div>
             </div>
         </article>

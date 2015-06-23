@@ -57,7 +57,7 @@ if (!isset($basePath)) {
                 <p>Relaxe no conforto e elegância desta suite decorada ao estilo da Rainha D. Estefânia, mulher do Príncipe Real. Em suaves tons de cor-de-rosa e com soalhos em parquet originais do século XIX, este espaço é um tributo vivo aos traços únicos da personalidade de Estefânia, reflectindo a sua bondade e compaixão. As figuras angelicais esculpidas nos trabalhos de estuque no tecto inspiram um sonho celestial.</p>
                 <div class="image-frame show-frame">
                     <div class="frame-inside show-frame" data-transition="crossfade">
-                        <img alt="destaque 3" src="<?php echo "$basePath"; ?>images/principe-moldura.png">
+                        <img alt="destaque 3" src="<?php echo "$basePath"; ?>images/fotos-personagens-quartos/rainha-moldura.png">
                     </div>
                 </div>
             </div><div class="right-block">
@@ -167,7 +167,7 @@ if (!isset($basePath)) {
         <div class="group-text-img">
             <div class="img-content">
                 <div>
-                    <img alt="image D. Pedro" src="<?php echo "$basePath"; ?>images/principe-big.png">
+                    <img alt="image D. Pedro" src="<?php echo "$basePath"; ?>images/fotos-personagens-quartos/rainha-big.png">
                 </div>
             </div>
         </div><div class="text-content">

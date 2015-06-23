@@ -34,7 +34,7 @@ if (!isset($basePath)) {
                 </div>
                 <div class="fotorama fotorama__wrap fotorama__wrap--css3 fotorama__wrap--slide fotorama__wrap--no-controls" data-allowfullscreen="native" data-allowfullscreen="true" data-nav="false" data-autoplay="true"  data-arrows="true" data-click="true" data-swipe="true"  data-loop="true" data-stopautoplayontouch="true"  data-width="100%" data-ratio="1432/577">
                     <div class="featured-content">
-                        <p>A Casa do Príncipe é um B&amp;B de charme no centro de Lisboa</p>
+                        <p>A Casa do Príncipe é um Bed&amp;Breakfast de charme no centro de Lisboa</p>
                         <div class="transparent-shadow"></div>
                         <img alt="destaque 1" src="<?php echo "$basePath"; ?>images/slider-home/01.jpg">
                     </div>
