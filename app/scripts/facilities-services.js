@@ -44,7 +44,13 @@ define(['facilitiesservices'], function(appmenu) {
             } else {
                 baseURL = window.location.host;
             }
-            mcontent = new Loader(baseURL+'/includes/menu/menu-facilities-services.php');
+            var urlpath = 'en';
+            if (language=="en/" || language=="en") {
+
+            } else {
+                urlpath = 'pt';
+            }
+            mcontent = new Loader(baseURL+'/includes/menu/'+urlpath+'/menu-facilities-services.php');
             mcontent.addEventListener('complete',completeloadContent);            
     	}
         this.destroy = function(){
