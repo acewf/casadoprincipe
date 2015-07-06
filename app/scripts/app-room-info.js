@@ -68,6 +68,10 @@ define(['approominfo'], function(appmenu) {
     		var instance = this;
     		function completeloadContent(ev){
 		    	$('ul.room-choose').html(mcontent.data);
+		    	var find = '/';
+		    	var re = new RegExp(find, 'g');
+		    	var str = res.replace(re, '-');
+		    	$('nav.sub-menu').attr("id",str);
 	            $('ul.room-choose li a').click(instance.goRoom);
 				$('.info-room-featured a').click(instance.goRoom);			
 		    }
@@ -81,6 +85,7 @@ define(['approominfo'], function(appmenu) {
 		    var n = href.indexOf(baseURL);
 			var res = href.substring(n+baseURL.length+1, href.length);			
 		   	var subm = new Loader(baseURL+'/includes/address-filter-output.php?url='+res);
+
 	        function Subcompleteload(ev){
 	        	var data = JSON.parse(subm.data);
 

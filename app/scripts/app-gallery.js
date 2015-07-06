@@ -21,6 +21,12 @@ define(['gallery'], function(gallery) {
             $('ul.room-choose').addClass('show-childs');
             $('ul.suite').removeClass('menupos');
             $('.logo').removeClass('small');
+
+            var res = 'gallery'
+            var find = '/';
+            var re = new RegExp(find, 'g');
+            var str = res.replace(re, '-');
+            $('nav.sub-menu').attr("id",str);
             //$('.fotorama').fotorama();
             /*
             $('.fotorama').load([

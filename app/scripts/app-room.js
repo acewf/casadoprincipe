@@ -47,6 +47,10 @@ define(['approom'], function(appmenu) {
 			        } else {
 			            baseURL = window.location.host;
 			        }
+			        var find = '/';
+			    	var re = new RegExp(find, 'g');
+			    	var str = res.replace(re, '-');
+			    	$('nav.sub-menu').attr("id",str);
 			        var m = new Loader(baseURL+'/includes/address-filter-output.php?url='+res);
 			        function completeload(ev){
 			        	var data = JSON.parse(m.data);

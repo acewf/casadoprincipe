@@ -28,6 +28,12 @@ define(['location'], function(gallery) {
                 };
             });
 
+            var res = 'location'
+            var find = '/';
+            var re = new RegExp(find, 'g');
+            var str = res.replace(re, '-');
+            $('nav.sub-menu').attr("id",str);
+
             var input = document.getElementById('originfield');
             var markers;
             var delayer=0;
@@ -66,9 +72,19 @@ define(['location'], function(gallery) {
             var GoogleMapsLoader = require('google-maps');      // only for common js environments
             var searchBox;
             GoogleMapsLoader.LIBRARIES = ['places'];
+            GoogleMapsLoader.VERSION = '3.14';
+            GoogleMapsLoader.LANGUAGE = '3.14';
             var elemt = null;
             var mapDiv;
-            GoogleMapsLoader.load(function(google) {
+            var mapslang = '';
+            if(language==='pt' || language==='pt/'){
+                mapslang = 'pt-PT';
+            } else {
+                mapslang = 'en-GB';
+            }
+
+            
+            function googleControler(google) {
                 var directionsDisplay;
                 var directionsService = new google.maps.DirectionsService();
                 directionsDisplay = new google.maps.DirectionsRenderer();
@@ -78,6 +94,7 @@ define(['location'], function(gallery) {
                   scaleControl: false,
                   mapTypeControl: false,
                   scrollwheel: false,
+                  language:mapslang,
                   mapTypeId: google.maps.MapTypeId.ROADMAP
                 }
                 var el = document.getElementById('map-canvas');
@@ -124,7 +141,9 @@ define(['location'], function(gallery) {
                     }
                 });
                 //google.maps.event.addListener(map, 'drag', function() {} );
-            }); 
+            }
+            /////"visualization", "1", {"callback" : pageLoaded}
+            GoogleMapsLoader.load(googleControler,'3',{"language" : mapslang}); 
             var places_changed = function() {
                 var places = searchBox.getPlaces();
                 if (places.length == 0) {
@@ -151,7 +170,16 @@ define(['location'], function(gallery) {
             var directionsService = instance.directionsService;
             var directionsDisplay = instance.directionsDisplay;
             var boxElem = $('.box-calculate-route');
-            boxElem.hide();
+            if (window.innerHeight>730) {
+             boxElem.hide();
+            }
+            var mapslang = '';
+            if(language==='pt' || language==='pt/'){
+                mapslang = 'pt-PT';
+            } else {
+                mapslang = 'en-GB';
+            }
+            console.log(language,'mapslang:',mapslang);
             var request = {
                 origin:$('#originfield').val(),
                 destination:'Praça Príncipe Real 23, Lisboa',

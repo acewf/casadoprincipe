@@ -1,0 +1,1330 @@
+/*--------- COMEÇA WIDTH ---------*/
+
+@media only screen and (max-width: 1500px) {
+
+  /*--- COMEÇA HOMEPAGE ---*/
+
+  .homepage .app-history .description {
+    padding: 80px;
+  }
+
+  /*--- ACABA HOMEPAGE ---*/
+
+}
+
+@media only screen and (max-width: 1280px) {
+
+  /*--- COMEÇA HOMEPAGE ---*/
+
+  .homepage .app-history .description {
+    padding: 30px;
+  }
+
+  .small-frame {
+    width: 242px !important;
+  }
+
+  /*--- ACABA HOMEPAGE ---*/
+
+}
+
+@media only screen and (max-width: 1245px) {
+
+  /*--- COMEÇA HOMEPAGE ---*/
+
+  .homepage .app-history .description {
+    padding: 60px;
+  }
+
+  /*--- ACABA HOMEPAGE ---*/
+
+}
+
+@media only screen and (max-width: 1214px) {
+
+  /*--- COMEÇA SUB-MENU ---*/
+  
+  nav.sub-menu ul li {
+    min-width: 170px !important;
+  }
+
+  nav.sub-menu ul li a {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  
+  nav.sub-menu ul li.active a {
+    margin-left: 10%;
+  }
+  
+  nav.sub-menu ul li span {
+    margin-left: 5px !important;
+  }
+
+  /*--- ACABA SUB-MENU ---*/
+
+}
+
+@media only screen and (max-width: 1170px) {
+
+  /*--- COMEÇA FOOTER ---*/
+
+  footer ul li {
+    margin-top: 30px !important;
+  }
+  
+  footer ul li:nth-child(1) {
+    margin-top: 0 !important;
+  }
+  
+  footer .share-elements {
+    margin-top: -49px !important;
+  }
+
+  /*--- ACABA FOOTER ---*/
+
+}
+
+@media only screen and (max-width: 1150px) {
+
+  /*--- COMEÇA SUITES-ROOMS ---*/
+
+  .description.offset {
+    padding: 80px !important;
+    margin-top: -30px !important;
+  }
+
+  /*--- ACABA SUITES-ROOMS ---*/
+
+  /*--- COMEÇA IMPERIAL / KING ---*/
+
+  .room-detail .show-room-description .left-block, .room-detail .show-room-description .right-block, .facilities .left-block, .facilities .right-block {
+    width: 45% !important;
+  }
+
+  /*--- ACABA IMPERIAL / KING ---*/
+
+  /*--- COMEÇA CONTACTOS ---*/
+
+  .contact .text-center {
+    width: 355px !important;
+  }
+
+  /*--- ACABA CONTACTOS ---*/
+}
+
+@media only screen and (max-width: 1070px) {
+
+  /*--- COMEÇA HISTÓRIA ---*/
+
+  .page-content.history .app-history.inside-room .img-content img {
+    height: auto !important;
+    width: 100% !important;
+  }
+
+  /*--- ACABA HISTÓRIA ---*/
+
+  /*--- COMEÇA IMPERIAL / KING ---*/
+
+  .small-frame {
+    width: 232px !important;
+  }
+
+  /*--- ACABA IMPERIAL / KING ---*/
+
+  /*--- COMEÇA CONTACTOS ---*/
+
+  .contact .center-content {
+    min-width: 400px !important;
+  }
+
+  /*--- ACABA CONTACTOS ---*/
+
+    div.img-content img {
+    width: 100% !important;
+    height: auto !important;
+    position: relative !important;
+  }
+
+}
+
+@media only screen and (max-width: 1024px) {
+
+  /*--- COMEÇA HOMEPAGE ---*/
+
+  .reasons h2 {
+    margin-right: 20px !important;
+  }
+
+  .small-frame {
+    width: 202px !important;
+  }
+
+  .homepage .img-content {
+    width: 70% !important;
+  }
+
+  .homepage .app-history .description {
+    width: 70% !important;
+  }
+
+  .featured-content p {
+    top: 45% !important;
+  }
+
+  /*--- ACABA HOMEPAGE ---*/
+  
+  /*--- COMEÇA SUITES-ROOMS / ROOM-DESCRIPTION ---*/
+  
+  .inside-room.room-detail .show-rooms {
+    margin-top: 50px !important;
+  }
+  
+  .page-content.spec-room {
+    margin-bottom: 50px !important;
+  }
+  
+  /*--- ACABA SUITES-ROOMS / ROOM-DESCRIPTION ---*/
+
+  /*--- COMEÇA LOCALIZAÇAO ---*/
+
+  .location .center-content {
+    min-width: 0 !important;
+  }
+
+  /*--- ACABA LOCALIZAÇÃO ---*/
+
+  /*--- COMEÇA PERSONALIZAÇÃO ---*/
+
+  .personalize .app-history.inside-room .description-location {
+    margin-top: 0px !important;
+  }
+
+  /*--- ACABA PERSONALIZAÇÃO ---*/
+
+  .spec-room .inside-room .description-location {
+    margin-top: 50px !important;
+  }
+
+}
+
+@media only screen and (max-width: 970px) {
+
+  /*--- COMEÇA SUB-MENU ---*/
+  
+  nav.sub-menu ul li {
+    min-width: 150px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  
+  nav.sub-menu ul li a {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  
+  nav.sub-menu ul li:nth-child(4) {
+    min-width: 0px !important;
+  }
+  
+  nav.sub-menu ul li:nth-child(5) {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    min-width: 152px !important;
+  }
+  
+  nav.sub-menu ul li span {
+    margin-left: -3px !important;
+    margin-top: -10px !important;
+  }
+  
+  nav.sub-menu ul li.active a {
+    margin-left: 12% !important;
+  }
+
+  /*--- ACABA SUB-MENU ---*/
+
+}
+
+@media only screen and (max-width: 920px) {
+
+  /*--- COMEÇA HOMEPAGE ---*/
+
+  .reasons h2 {
+    width: 36%;
+  }
+
+  .frame-inside a.link-legenda {
+    bottom: 20px !important;
+  }
+
+  /*--- ACABA HOMEPAGE ---*/
+
+  /*--- COMEÇA HISTÓRIA ---*/
+
+  .app-history .description {
+    padding: 30px !important;
+    margin-top: 0px !important;
+  }
+
+  /*--- ACABA HISTÓRIA ---*/
+
+  /*--- COMEÇA SUITES-ROOMS ---*/
+
+  .inside-room .featured-content h3 {
+    margin-bottom: 0;
+    margin-top: 2em;
+  }
+
+  /*--- ACABA SUITES-ROOMS ---*/
+
+  /*--- COMEÇA IMPERIAL / KING ---*/
+
+  .room-detail .booker .input-daterange {
+    width: 554px !important;
+  }
+
+  .booker .group-dates-boxes {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+
+  /*--- ACABA IMPERIAL / KING ---*/
+
+  .show-room-description a.big-size {
+    min-width: 340px !important;
+  }
+
+  .show-room-description a {
+    margin-left: 30px;
+  }
+
+  /*--- COMEÇA CONTACTOS ---*/
+
+  .contact .center-content {
+    min-width: 330px !important;
+  }
+
+  /*--- ACABA CONTACTOS ---*/
+  
+}
+
+@media only screen and (max-width: 865px) {
+
+  /*--- COMEÇA HOMEPAGE ---*/
+
+  .homepage .content article div.description {
+    width: 50% !important;
+  }
+
+  .reasons h2 {
+    width: 38%;
+  }
+
+  .small-frame {
+    width: 182px !important;
+  }
+
+  .room h5 {
+    font-size: .9em !important;
+  }
+
+  /*--- ACABA HOMEPAGE ---*/
+
+}
+
+@media only screen and (max-width: 805px) {
+
+  /*--- COMEÇA SUB-MENU ---*/
+
+  nav.sub-menu {
+    position: relative !important;
+    height: auto !important;
+    display: block !important;
+  }
+
+  nav.sub-menu ul.suite {
+    width: 100%;
+  }
+
+  nav.sub-menu ul li {
+    width: 50% !important;
+  }
+
+  nav.sub-menu ul li a {
+    border-left: none !important;
+  }
+  
+  nav.sub-menu ul {
+    height: 0px !important;
+  }
+  
+  .app-history.inside-room.inside-detail.slide-from-right {
+    z-index: 5;
+  }
+  
+  ul.room-choose.show-childs {
+    position: relative;
+    width: 100%;
+  }
+  
+  nav.sub-menu ul.suite {
+    transform: translate(0px,-130px) !important;
+    -webkit-transform: translate(0px,-130px) !important;
+    display: none !important;
+  }
+  
+  nav.sub-menu ul.suite.menupos {
+   transform: translate(0px,0px) !important;
+   -webkit-transform: translate(0px,0px) !important;
+   display: table !important;
+  }
+  
+  nav.sub-menu ul.room-choose.show-childs {
+   transform: translate(0px,-130px) !important;
+   -webkit-transform: translate(0px,-0px) !important;
+   display: table !important;
+  }
+  
+  nav.sub-menu ul.room-choose {
+    transform: translate(0px,-330px) !important;
+    -webkit-transform: translate(0px,-330px) !important;
+    display: none !important;
+  }
+  
+  nav.sub-menu ul li {
+    min-width: 0 !important;
+    height: 40px !important;
+    float: left;
+  }
+  
+  nav.sub-menu ul li.active a {
+    margin-left: 13% !important;
+  }
+  
+  nav.sub-menu ul li:nth-child(5) {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    min-width: inherit !important;
+  }
+
+  /*--- ACABA SUB-MENU ---*/
+
+}
+
+@media only screen and (max-width: 800px) {
+
+  /*--- COMEÇA HOMEPAGE ---*/
+
+  .reasons h2 {
+    width: 70%;
+    text-align: center;
+    margin-right: 0 !important;
+  }
+
+  .homepage .content article div.description {
+    width: 70% !important;
+  }
+
+  .homepage .content article div.description:before {
+    margin: auto;
+  }
+
+  .homepage .img-content {
+    width: 100% !important;
+  }
+
+  .homepage .app-history .description {
+    width: 100% !important;
+  }
+
+  .small-frame {
+    width: 282px !important;
+  }
+
+  .room {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .frame-inside .page-marker {
+    display: none;
+  }
+
+  .frame-inside a.link-legenda {
+    bottom: 10px !important;
+  }
+  
+  .reasons {
+    margin-top: 70px !important;
+  }
+  
+  .reasons:nth-child(2) {
+    margin-top: 140px !important;
+  }
+  
+  .show-rooms {
+    margin-top: 50px !important;
+  }
+  
+  .homepage .app-history {
+    margin-top: 70px !important;
+  }
+  
+  .app-history .description h3 {
+    padding: 0px !important;
+  }
+
+  /*--- ACABA HOMEPAGE ---*/
+
+  /*--- COMEÇA CASA DO PRINCIPE ---*/
+
+  .principe-house .app-history.inside-room .text-content > div > div.description-location {
+    width: 80% !important;
+  }
+
+  .img-content {
+    min-height: inherit !important;
+  }
+
+  /*--- ACABA CASA DO PRINCIPE ---*/
+
+  /*--- COMEÇA HISTÓRIA ---*/
+
+  .principe-house .group-text-img {
+    width: 100% !important;
+    margin-top: 0 !important;
+  }
+
+  .principe-house .app-history.inside-room .text-content {
+    width: 100% !important;
+    margin-bottom: 10%;
+  }
+
+  .principe-house .app-history.inside-room .description-location {
+    margin-top: 10% !important;
+  }
+
+  .principe-house  .app-history .description {
+    text-align: center !important;
+  }
+
+  .principe-house div.img-content img {
+    position: relative;
+  }
+
+  .page-content.history .app-history.inside-room .img-content {
+    min-height: inherit !important;
+  }
+  
+  .page-content.history .description {
+    margin-top: 5% !important;
+    margin-bottom: 5% !important;
+  }
+
+  /*--- ACABA HISTÓRIA  ---*/
+
+  /*--- COMEÇA INSTALAÇÕES E SERVIÇOS ---*/
+
+  .facilities .group-text-img {
+    width: 100% !important;
+    margin-top: 0 !important;
+  }
+
+  .app-history.inside-room .text-content {
+    position: relative !important;
+  }
+
+  .center-content {
+    width: 80% !important;
+    margin: auto;
+    position: relative !important;
+    left: 0% !important;
+    top: 0% !important;
+    transform: translate(0) !important;
+    -webkit-transform: translate(0) !important;
+  }
+
+  .facilities .inside-room .text-content {
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+
+  .facilities .img-content {
+    min-height: inherit;
+  }
+
+  /*--- ACABA INSTALAÇÕES E SERVIÇOS ---*/
+
+  /*--- COMEÇA SUITES AND ROOMS ---*/
+  
+  .inside-room .featured-content h3 {
+    margin-top: 0;
+  }
+
+  .generic-room .featured-content p {
+    margin-top: 0;
+  }
+
+  .generic-room .description.offset {
+    width: 100% !important;
+  }
+
+  .generic-room .app-history.inside-room .description-location {
+    position: relative;
+    margin-top: 2% !important;
+    float: left;
+  }
+
+  .generic-room .app-history.inside-room.home-rooms div.description-location:before {
+    margin: auto;
+  }
+  
+  .room-detail .show-room-description {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+  }
+  
+  .show-room-description .image-frame {
+    margin-top: 40px !important;
+  }
+  
+  .room-detail .show-room-description .left-block, .room-detail .show-room-description .right-block, .facilities .left-block, .facilities .right-block {
+    margin-bottom: 6% !important;
+  }
+  
+  .show-room-description a {
+    margin-top: 40px !important;
+  }
+
+  /*--- ACABA SUITES AND ROOMS ---*/
+
+  /*--- COMEÇA IMPERIAL ---*/
+
+  .room-detail .booker .input-daterange {
+    width: 424px !important;
+  }
+
+  .room-detail .booker .bookregister {
+    width: 146px !important;
+  }
+
+  .booker .group-dates-boxes {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .room-detail .show-room-description .left-block, .room-detail .show-room-description .right-block, .facilities .left-block, .facilities .right-block {
+    width: 85% !important;
+    margin-bottom: 10%;
+  }
+
+  .inside-room.room-detail .show-room-info h3:after {
+    margin-left: 0;
+    margin: auto;
+  }
+
+  .show-room-description .left-block p {
+    text-align: left !important;
+  }
+
+  .right-block ul {
+    margin-left: 20px !important;
+  }
+
+  .rooms-group .rooms-view {
+    position: relative !important;
+  }
+
+  .room-detail .small-frame {
+    width: 272px !important;
+  }
+
+  .inside-room.room-detail .show-rooms {
+    margin-top: 0px !important;
+  }
+
+  /*--- ACABA IMPERIAL ---*/
+
+  /*--- COMEÇA IMPERIAL / KING ---*/
+
+  .spec-room  .inside-detail .group-text-img .img-content {
+    min-height: inherit !important;
+    overflow: hidden;
+  }
+
+  .spec-room .inside-room .description-location {
+    margin-top: 0% !important;
+    float: none;
+  }
+
+  .spec-room .group-text-img, .page-content.history .group-text-img {
+    width: 100% !important;
+  }
+
+  .spec-room  .content.inside-room.room-detail article.show-room-info div.description {
+    max-width: 80%;
+  }
+
+  .show-room-description a {
+    margin-left: 0px;
+  }
+
+  .show-room-description a.big-size {
+    min-width: 260px !important;
+  }
+
+  .inside-room.room-detail .show-room-description a h4 {
+    font-size: 12px !important;
+  }
+  
+  .back-detail-room {
+    position: initial !important;
+    text-align: right;
+    min-height: 50px;
+    padding-right: 3%;
+    padding-top: 15px;
+    background-color: #f4f4f4;
+  }
+  
+  .page-content.spec-room {
+    margin-bottom: 0px !important;
+  }
+
+  /*--- ACABA IMPERIAL / KING ---*/
+
+  /*--- COMEÇA LOCALIZAÇÂO ---*/
+
+  .location .group-text-img {
+    width: 100% !important;
+    margin-top: 0px !important;
+  }
+
+  .location .app-history.inside-room .text-content {
+    width: 100%;
+  }
+
+  .location .center-content {
+    margin-top: 10% !important;
+  }
+
+  .location div.img-content img {
+    position: relative;
+  }
+  
+  .personalize .center-content, .location .center-content {
+    margin-bottom: 40px !important;
+  }
+  
+  .location .center-content {
+    margin-top: 4% !important;
+  }
+  
+  .location .text-content p {
+    margin-top: 5px !important;
+  }
+  
+  .generic-room .app-history.inside-room .text-content {
+    height: 290px !important;
+  }
+
+  /*--- ACABA LOCALIZAÇÂO ---*/
+
+  /*--- COMEÇA PERSONALIZAÇÃO ---*/
+
+  .personalize .text-content {
+    width: 100% !important;
+  }
+
+  .personalize .group-text-img {
+    width: 100% !important;
+    margin-top: 0 !important;
+  }
+
+  .personalize .img-content {
+    min-height: inherit;
+  }
+
+  .personalize .center-content {
+    margin-top: 5% !important;
+  }
+
+  .personalize .description-location {
+    width: 100% !important;
+  }
+
+  .personalize div.img-content img {
+    position: relative;
+  }
+
+  /*--- ACABA PERSONALIZAÇÃO ---*/
+
+  /*--- COMEÇA CONTACTOS ---*/
+
+  .contact .group-text-img {
+    width: 100% !important;
+  }
+
+  .contact .text-center {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .contact ul {
+    text-align: inherit !important;
+  }
+
+  .contact .text-content, .app-history.inside-room .text-content {
+    width: 100% !important;
+  }
+
+  .contact .app-history.contact .text-content {
+    margin-top: 4%;
+    position: relative;
+  }
+
+  .contact .img-content {
+    min-height: inherit;
+  }
+
+  .contact div.img-content img {
+    position: relative;
+  }
+
+  .contact form a, .contact form span {
+    margin-left: 0 !important;
+  }
+  
+  .app-history.contact ul li a {
+    text-align: inherit !important;
+  }
+
+  /*--- ACABA CONTACTOS ---*/
+
+}
+
+@media only screen and (max-width: 630px) {
+
+  /*--- COMEÇA NAV ---*/
+
+  .logo.small {
+    width: 170px !important;
+  }
+
+  /*--- ACABA NAV ---*/
+
+}
+
+@media only screen and (max-width: 600px) {
+
+  /*--- COMEÇA IMPERIAL / KING ---*/
+
+  .room-detail .booker .input-daterange {
+    width: 394px !important;
+  }
+
+  /*--- ACABA IMPERIAL / KING ---*/
+
+  .personalize .description-location {
+    width: 80% !important;
+  }
+
+}
+
+@media only screen and (max-width: 585px) {
+  
+  /*--- COMEÇA SUITES-ROOMS / DESCRIÇÃO DOS QUARTOS ---*/
+  
+  ul.choose-rooms li {
+    display: block !important;
+    margin: 20px !important;
+    min-height: 30px;
+  }
+  
+  ul.choose-rooms li.actived:after {
+    margin: 0px auto;
+  }
+  
+  /*--- ACABA SUITES-ROOMS / DESCRIÇÃO DOS QUARTOS ---*/
+  
+}
+
+@media only screen and (max-width: 570px) {
+
+  /*--- COMEÇA IMPERIAL / KING ---*/
+
+  .room-detail .booker .input-daterange {
+    width: 90% !important;
+  }
+
+  .room-detail .booker .bookregister {
+    width: 90% !important;
+  }
+
+  .show-room-info {
+    margin-top: 100px !important;
+  }
+
+  /*--- ACABA IMPERIAL / KING ---*/
+
+}
+
+@media only screen and (max-width: 550px) {
+
+  /*--- COMEÇA NAV ---*/
+
+  .logo a img:nth-child(1) {
+    display: none;
+  }
+
+  .logo a img:nth-child(2) {
+    opacity: 1 !important;
+  }
+
+  .options a {
+    display: none;
+  }
+
+  .cd-nav-trigger {
+    left: 58% !important;
+  }
+
+  header .right-block {
+    min-width: 30px !important;
+    margin-right: 40px !important;
+  }
+
+  .right-block .options {
+    left: 5px !important;
+    width: 100px !important;
+  }
+
+  nav.choose-lang {
+    width: 358px !important;
+  }
+
+  .featured-content p {
+    top: 40% !important;
+  }
+
+  .logo.small {
+    width: 170px !important;
+  }
+
+  .options .lang {
+    width: 107px !important;
+    margin-left: 0 !important;
+  }
+
+  /*--- ACABA NAV ---*/
+
+}
+
+@media only screen and (max-width: 500px) {
+  
+  /*--- COMEÇA HOMEPAGE ---*/
+  
+  .frame-inside .fotorama .fotorama__stage {
+    min-height: 170px !important;
+  }
+  
+  .frame-inside a.link-legenda {
+    bottom: -83px !important;
+    width: 100% !important;
+  }
+  
+  /*--- ACABA HOMEPAGE ---*/
+
+  /*--- COMEÇA SUITES-ROOMS ---*/
+
+  .inside-room .featured-content p {
+    display: none;
+  }
+
+  .info-room-featured a button {
+    width: 220px;
+  }
+
+  /*--- ACABA SUITES-ROOMS ---*/
+  
+  /*--- COMEÇA SUITES-ROOMS / PÁGINA DA CATEGORIA ---*/
+  
+  .datepicker.dropdown-menu {
+    background-color: #323232;
+    width: 280px;
+    height: 345px;
+    border: none;
+    border-radius: 0;
+  }
+  
+  /*--- ACABA SUITES-ROOMS / PÁGINA DA CATEGORIA ---*/
+  
+  /*--- COMEÇA SUITES-ROOMS / DESCRIÇÃO DOS QUARTOS ---*/
+  
+  .room-detail .booker .input-daterange {
+    height: auto !important;
+  }
+  
+  .box-date {
+    width: 100% !important;
+    min-height: 50px;
+    margin-top: 20px;
+  }
+  
+  /*--- ACABA SUITES-ROOMS / DESCRIÇÃO DOS QUARTOS ---*/
+
+}
+
+@media only screen and (max-width: 466px) {
+
+  /*--- COMEÇA SUB-MENU ---*/
+
+  nav.sub-menu ul li:nth-child(2) a {
+    border-left: none !important;
+  }
+
+  /*--- ACABA SUB-MENU ---*/
+
+}
+
+@media only screen and (max-width: 450px) {
+
+  /*--- COMEÇA HOME ---*/
+
+  .homepage .featured-content p {
+    font-size: 1.9em !important;
+    width: 370px !important;
+  }
+
+  /*--- ACABA HOME ---*/
+
+  /*--- COMEÇA NAV ---*/
+
+    nav.choose-menu {
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  /*--- ACABA NAV ---*/
+  
+  /*--- COMEÇA SUITES-ROOMS / DESCRIÇÃO DOS QUARTOS ---*/
+  
+  .featured-content p {
+    width: 320px !important;
+  }
+  
+  /*--- ACABA SUITES-ROOMS / DESCRIÇÃO DOS QUARTOS ---*/
+
+}
+
+@media only screen and (max-width: 414px) {
+
+  /*--- COMEÇA SUB-MENU ---*/
+
+  nav.sub-menu ul li:nth-child(4) a {
+    border-left: none !important;
+  }
+
+  /*--- ACABA SUB-MENU ---*/
+
+}
+
+@media only screen and (max-width: 399px) {
+
+  /*--- COMEÇA NAV ---*/
+
+  header .right-block {
+    margin-right: 19% !important;
+  }
+
+  .cd-nav-trigger {
+    top: 35% !important;
+    left: 75% !important;
+  }
+
+  .right-block .options {
+    top: 73% !important;
+  }
+
+  nav.choose-lang {
+    width: 278px !important;
+  }
+
+  /*--- ACABA NAV ---*/
+
+  /*--- COMEÇA HOME ---*/
+
+  .homepage .featured-content p {
+    width: 280px !important;
+  }
+  
+  .frame-inside .legenda .title {
+    font-size: 20px !important;
+  }
+  
+  .frame-inside .legenda p {
+    font-size: 12px !important;
+  }
+
+  /*--- ACABA HOME ---*/
+
+  /*--- COMEÇA SUITES-ROOMS ---*/
+
+  .info-room-featured a button {
+    width: 180px;
+  }
+  
+  .info-room-featured a button {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+
+  /*--- ACABA SUITES-ROOMS ---*/
+
+  /*--- COMEÇA SUITES-ROOMS / DESCRIÇÃO DOS QUARTOS ---*/
+
+  .right-block ul {
+    margin-left: 0px !important;
+  }
+  
+  .show-room-description a.big-size {
+    min-width: 290px !important;
+  }
+
+  .show-room-description a {
+    padding: 30px 15px !important;
+  }
+
+  /*--- ACABA SUITES-ROOMS / DESCRIÇÃO DOS QUARTOS ---*/
+
+  /*--- COMEÇA PERSONALIZAÇÃO ---*/
+
+  .personalize .center-content {
+    min-width: 300px !important;
+  }
+
+  /*--- ACABA PERSONALIZAÇÃO ---*/
+
+  /*--- COMEÇA CONTACTOS ---*/
+
+  .contact ul li {
+    font-size: 0.9em;
+  }
+
+  .contact .center-content {
+    min-width: 280px !important;
+  }
+
+  /*--- ACABA CONTACTOS ---*/
+
+}
+
+@media only screen and (max-width: 379px) {
+  
+  /*--- COMEÇA LOCALIZAÇÃO ---*/
+  
+  .location .box-show-calculate-route {
+    width: 120px !important;
+    right: -70px !important;
+  }
+  
+  .location .box-show-calculate-route .icon-inline {
+    margin-left: -70px !important;
+  }
+  
+  .location button.close {
+    right: 15px !important;
+  }
+  
+  section.content .origenbox input {
+    margin-left: 70px !important;
+    margin-top: 20px;
+  }
+  
+  #searchlocation {
+    margin-left: 70px !important;
+    margin-top: 5px !important;
+  }
+  
+  .adp, .adp table {
+    width: 95%;
+  }
+  
+  /*--- ACABA LOCALIZAÇÂO ---*/
+  
+}
+
+@media only screen and (max-width: 472px) {
+  
+  /*--- COMEÇA SUITES-ROOMS ---*/
+  
+  .inside-room .featured-content h3 {
+    font-size: 1.6em !important;
+  }
+  
+  /*--- ACABA SUITES-ROOMS ---*/
+  
+}
+
+@media only screen and (max-width: 350px) {
+  
+  /*--- COMEÇA FOOTER ---*/
+  
+  footer {
+    height: 292px !important;
+  }
+  
+  footer ul {
+    padding: 0px !important;
+  }
+  
+  /*--- ACABA FOOTER ---*/
+  
+}
+
+@media only screen and (max-width: 340px) {
+  
+  /*--- COMEÇA SUITES-ROOMS / DESCRIÇÃO DOS QUARTOS ---*/
+
+  .show-room-description a.big-size {
+    left: -2% !important;
+  }
+
+  /*--- ACABA SUITES-ROOMS / DESCRIÇÃO DOS QUARTOS ---*/
+  
+}
+
+@media only screen and (max-width: 338px) {
+  
+  /*--- COMEÇA SUITES-ROOMS / DESCRIÇÃO DOS QUARTOS ---*/
+
+  .logo.small {
+    width: 160px !important;
+  }
+  
+  /*--- ACABA SUITES-ROOMS / DESCRIÇÃO DOS QUARTOS ---*/
+  
+}
+
+@media only screen and (max-width: 330px) {
+  
+  /*--- COMEÇA SUITES-ROOMS / DESCRIÇÃO DOS QUARTOS ---*/
+
+  .show-room-description a.big-size {
+    left: -4% !important;
+  }
+
+  /*--- ACABA SUITES-ROOMS / DESCRIÇÃO DOS QUARTOS ---*/
+  
+}
+
+  /*--------- ACABA WIDTH ---------*/
+
+  /*--------- COMEÇA HEIGHT ---------*/
+
+@media screen and (max-width: 800px) and (max-height: 736px) {
+
+    /*--- COMEÇA LOCALIZAÇÃO ---*/
+    
+    #map-canvas {
+      height: 200px !important;
+    }
+    
+    .location .box-calculate-route div.actual-address {
+      width: 100% !important;
+    }
+    
+    .location .box-calculate-route div.actual-address:after {
+      border-left: 0px !important;
+      border-right: 0px !important;
+      border-bottom: 0px !important;
+    }
+    
+    .location > .content {
+      height: 330px;
+    }
+    
+    .location .box-calculate-route {
+      width: 100%;
+      border-radius: 0 !important;
+      margin-left: 0 !important;
+      margin-top: 150px !important;
+      left: 0 !important;
+      transform: translate(0%,0%) !important;
+      -webkit-transform: translate(0%,0%) !important;
+    }
+    
+    .location section.content.show-address {
+      height: 330px;
+    }
+    
+    #directionsPanel {
+      height: 100% !important;
+    }
+    
+    /*--- ACABA LOZALIZAÇÃO ---*/
+    
+}
+
+@media only screen and (max-height: 730px) {
+
+    /*--- COMEÇA NAV ---*/
+
+    nav.choose-menu ul {
+      line-height: 0.95em !important;
+    }
+
+    /*--- ACABA NAV ---*/
+    
+    /*--- COMEÇA CONTACTOS ---*/
+    
+    .contact section.content {
+      display: none !important;
+    }
+    
+    .contact .description {
+      margin-top: 15px !important;
+    }
+    
+    /*--- ACABA CONTACTOS ---*/
+}
+
+@media only screen and (max-height: 650px) {
+
+    /*--- COMEÇA NAV ---*/
+
+    nav.choose-menu {
+      top: 55% !important;
+    }
+
+    /*--- ACABA NAV ---*/
+}
+
+@media only screen and (max-height: 570px) {
+
+    /*--- COMEÇA NAV ---*/
+    
+    nav.choose-menu h3 {
+      padding: 5px !important;
+      padding-left: 30px !important;
+      padding-right: 30px !important;
+    }
+
+    nav.choose-menu ul {
+      line-height: 0.55em !important;
+    }
+    
+    nav.choose-menu ul li {
+      margin: 20px !important;
+    }
+    
+    .yellow button.close {
+      top: 42px !important;
+      right: 10px !important;
+    }
+
+    /*--- ACABA NAV ---*/
+
+}
+
+  /*--------- ACABA HEIGHT ---------*/

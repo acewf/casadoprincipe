@@ -8,6 +8,13 @@ define(['casadoprincipe'], function(appmenu) {
     //Uses extras in here.
     function APPmodule(){
         this.init = function(){
+
+            var res = 'casadoprincipe'
+            var find = '/';
+            var re = new RegExp(find, 'g');
+            var str = res.replace(re, '-');
+            $('nav.sub-menu').attr("id",str);
+
             $('.sub-menu .suite').html('');
             $('.room-choose').html('');
             $('.logo').addClass('small');
@@ -49,6 +56,7 @@ define(['casadoprincipe'], function(appmenu) {
             } else {
                 urlpath = 'pt';
             }
+
             mcontent = new Loader(baseURL+'/includes/menu/'+urlpath+'/menu-facilities-services.php');
             mcontent.addEventListener('complete',completeloadContent);            
         }

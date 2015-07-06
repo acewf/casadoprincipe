@@ -69,6 +69,7 @@ section.content {
 /* ----------------------------------------*/
 sup{
     font-size: .7em;
+    vertical-align: baseline;
 }
 .open-menu {
   position: relative;

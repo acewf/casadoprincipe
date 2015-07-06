@@ -18,6 +18,13 @@ define(['apphome','appmenu'], function(apphome,appmenu) {
              $('footer').show();
             $('.fotorama').fotorama({width: 700,maxwidth: '100%',ratio: 2.51, allowfullscreen: true});
             appmenu.addFotoramEvents();
+
+            var res = 'home'
+            var find = '/';
+            var re = new RegExp(find, 'g');
+            var str = res.replace(re, '-');
+            $('nav.sub-menu').attr("id",str);
+
             var delayer=0;
             $('section.content article').delay(200).each(function(){
                 $(this).delay(delayer).fadeTo(200, 1);

@@ -21,6 +21,12 @@ define(['approomdetail'], function() {
 		    $('footer').show();
             $('html,body').animate({scrollTop:0},400);
 
+            var res = 'room-detail'
+            var find = '/';
+            var re = new RegExp(find, 'g');
+            var str = res.replace(re, '-');
+            $('nav.sub-menu').attr("id",str);
+
 		    var delayer=0;
             $('section.content article').delay(200).each(function(){
                 $(this).delay(delayer).fadeTo(200, 1);

@@ -19,6 +19,12 @@ define(['personalize'], function(gallery) {
             $('.logo').removeClass('small');
             $('footer').show();
 
+            var res = 'personalize'
+            var find = '/';
+            var re = new RegExp(find, 'g');
+            var str = res.replace(re, '-');
+            $('nav.sub-menu').attr("id",str);
+
             var delayer=0;
             $('section.content article').delay(200).each(function(){
                 $(this).delay(delayer).fadeTo(200, 1);

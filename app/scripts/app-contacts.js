@@ -24,6 +24,12 @@ define(['contacts'], function() {
             $('footer').show();
             $('#security').val(numbers.one+"+"+numbers.two+"=?");   
              $('#security').attr('data-defaultValue',numbers.one+"+"+numbers.two+"=?");
+
+             var res = 'contacts'
+            var find = '/';
+            var re = new RegExp(find, 'g');
+            var str = res.replace(re, '-');
+            $('nav.sub-menu').attr("id",str);
             
             var delayer=0;
             $('section').delay(200).each(function(){
